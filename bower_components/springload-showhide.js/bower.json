@@ -1,0 +1,29 @@
+{
+  "name": "springload-showhide.js",
+  "version": "0.0.3",
+  "description": "Show and hide content via data-attribute hooks",
+  "main": "show-hide.js",
+  "keywords": [
+    "UI",
+    "Interaction patterns",
+    "Show/Hide",
+    "Toggle",
+    "CSS Animations"
+  ],
+  "authors": [
+    "Springload"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/springload/ShowHide.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "browser.js": "*",
+    "jquery": "~1.9.1"
+  }
+}

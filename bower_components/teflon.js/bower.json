@@ -1,0 +1,29 @@
+{
+  "name": "Teflon",
+  "main": "teflon.js",
+  "version": "0.1.0",
+  "description": "A slippery image slider",
+  "keywords": [
+    "Image",
+    "slider",
+    "responsive",
+    "images"
+  ],
+  "authors": [
+    "Josh Barr",
+    "Springload"
+  ],
+  "license": "MIT",
+  "homepage": "http://springload.co.nz",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "on-media-query": "*",
+    "browser.js": "*"
+  }
+}

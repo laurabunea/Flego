@@ -1,0 +1,82 @@
+/**
+
+## Navigation
+
+Turns a list into a horizontal block of inline-blocks;
+
+```html
+<ul class='nav'>
+    <li class='active'>
+        <a href='#'>
+            active list item
+        </a>
+    </li>
+    <li class=''>
+        <a href='#'>
+            list item
+        </a>
+    </li>
+    <li class=''>
+        <a href='#'>
+            list item
+        </a>
+    </li>
+    <li class=''>
+        <a href='#'>
+            list item
+        </a>
+    </li>
+</ul>
+```
+
+*/
+
+.nav { /* div */
+    @extend .clearfix; /* This extend is found in core */
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+    .nav > li {
+        @extend %inline-block; /* This extend is found in core */
+        margin-top: 0;
+    }
+
+
+/**
+
+### Sub navigation
+
+```html
+<dl class='sub-nav'>
+    <dt>Filter:</dt>
+    <dd class='active'><a href='#'>All</a></dd>
+    <dd><a href='#'>Active</a></dd>
+    <dd><a href='#'>Pending</a></dd>
+    <dd><a href='#'>Suspended</a></dd>
+</dl>
+```
+
+*/
+
+.sub-nav {
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
+
+    .sub-nav > dt,
+    .sub-nav > dd {
+        float: left;
+    }
+
+    .sub-nav > dd {
+        margin-left: $bs-xs;
+    }
+
+
+    .sub-nav > .active a {
+
+    }

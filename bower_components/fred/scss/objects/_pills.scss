@@ -1,0 +1,40 @@
+/*
+
+## Pills
+
+Pills have fully rounded ends, lozenges have only their corners rounded.
+
+```html
+<p>This <span class="pill">here</span> is a pill!</p>
+<p>This <span class="lozenge">here</span> is a lozenge!</p>
+```
+
+*/
+
+.pill {
+    @extend %inline-block; /* This extend is found in core */
+
+    // These numbers set in ems mean that, at its narrowest, a lozenge will be
+    // the same width as the `line-height` set on the `html` element.
+    // This allows us to use the `.loz` in almost any `font-size` we wish.
+
+    min-width:    ($base-line-height * 0.666667) * 1em;
+    padding-right:($base-line-height * 0.166667) * 1em;
+    padding-left: ($base-line-height * 0.166667) * 1em;
+    /* =1.50em */
+    text-align:center;
+
+    color: $pill-font-color;
+    background-color: $pill-bg-color;
+
+    // Normally we’d use border-radius:100%; but instead here we just use an
+    // overly large number; `border-radius:100%;` would create an oval on
+    // non-square elements whereas we just want to round the ends of an element.
+
+    border-radius:100px;
+}
+
+.lozenge {
+    @extend .pill;
+    border-radius: 0.25em;
+}

@@ -1,0 +1,10 @@
+.valign-text-top {vertical-align:text-top}
+
+.sidebar .nav > li { 
+    display:block;
+}
+
+.img--responsive {
+    //hmm there seems to be a space added for no reason this fixes it, I coudl also change it to middle not sure what one to use. 
+    vertical-align: top;
+}

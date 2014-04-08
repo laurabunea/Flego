@@ -1,0 +1,20 @@
+.sidebar {}
+    .sidebar h1 {
+        background-image: url("../images/lego.png");
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+    }
+
+        .sidebar h1 > a {
+            padding-top: 7em;
+        }
+
+.page:before {
+    border-right: 1px solid #E6EBEB;
+    content: "";
+    display: block;
+    left:0;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+}

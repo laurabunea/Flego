@@ -1,0 +1,42 @@
+{
+  "name": "Fred",
+  "version": "0.4.4",
+  "description": "A friendly front-end framework",
+  "main": [
+    "dist/lib/fred.scss",
+    "dist/fred.css"
+  ],
+  "keywords": [
+    "Sass",
+    "css",
+    "framework"
+  ],
+  "authors": [
+    "Laura Bunea",
+    "Josh Barr",
+    "Thomas Winter",
+    "Springload"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/springload/fred.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "2.1.3"
+  },
+  "_release": "0.4.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.4",
+    "commit": "bb8440f7067cc6fb3a7891c13a9fd795fc17df77"
+  },
+  "_source": "git://github.com/springload/fred.git",
+  "_target": "~0.4.4",
+  "_originalSource": "fred",
+  "_direct": true
+}

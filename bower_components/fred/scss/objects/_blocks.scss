@@ -1,0 +1,45 @@
+/**
+
+## Generic blocks
+
+```html
+<div class='block-xs block--green'>
+       ...
+</div>
+```
+
+*/
+
+// making sure the first element has no margin on it
+%block {
+    @extend .clearfix; /* This extend is found in core */
+    margin-top:1em;
+}
+
+.block--stacked {
+   //only use this id we don't want a top margin on it
+   margin-top:0!important;
+}
+
+    .block-xxxs,
+    .block-xxs,
+    .block-xs,
+    .block-s,
+    .block-m,
+    .block-l,
+    .block-xl,
+    .block-xxl,
+    .block-xxxl {
+        @extend %block;
+        > :first-child {
+            margin-top:0;
+        }
+    }
+
+
+
+@each $breakpoint in $fred-block-breakpoints {
+    @include media($breakpoint) {
+        @include fred-sizer("block", $blockPrefixes, $breakpoint, "padding", $blockSizes);
+    }
+}

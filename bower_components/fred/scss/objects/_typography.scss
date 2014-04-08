@@ -1,0 +1,316 @@
+/**
+
+## Typography
+
+*/
+
+
+// By default, and set the line-height.
+
+html,
+body {
+    font-size: 100%;
+    line-height: $base-line-height;
+}
+
+
+// onMediaQuery sets the font-family on HTML, so declare your font-family
+// on the body element instead.
+
+body {
+    @extend .font-primary;
+}
+
+/**
+
+### Font declarations
+
+```html
+<p class="font-primary">This is the primary font</p>
+<p class="font-primary--light">This is the primary font in light</p>
+<p class="font-primary--bold">This is the primary font in bold</p>
+<p class="font-size-xxxxl">Some huge text</p>
+<p class="font-size-xxxs">Some tiny text</p>
+```
+*/
+
+
+.font-primary {
+    @include font($font-primary, $primary-font-weight , normal);
+}
+    .font-primary--light {
+      @include font($font-primary-light, $primary-font-weight--light , normal);
+      .ie8 & {
+        font-family:$font-primary-light;
+      }
+    }
+
+    .font-primary--light-italic {
+      @include font($font-primary-light-italic, $primary-font-weight--light , italic);
+      .ie8 & {
+        font-family:$font-primary-light-italic;
+      }
+    }
+
+    .font-primary--italic {
+        @include font($font-primary-italic, $primary-font-weight , italic);
+        .ie8 & {
+            font-family:$font-primary-italic;
+        }
+    }
+
+    .font-primary--bold {
+        @include font($font-primary-bold, $primary-font-weight--bold , normal);
+        .ie8 & {
+            font-family:$font-primary-bold;
+        }
+    }
+
+    .font-primary--bold-italic {
+        @include font($font-primary-bold-italic, $primary-font-weight--bold , italic);
+        .ie8 & {
+            font-family:$font-primary-bold-italic;
+        }
+    }
+
+.sans       { font-family:$sans-serif-stack; }
+.serif      { font-family:$serif-stack; }
+
+.font-size-xxxxl                { @include font-size($font-size-xxxxl); }
+.font-size-xxxl                 { @include font-size($font-size-xxxl); }
+.font-size-xxl                  { @include font-size($font-size-xxl); }
+.font-size-xl                   { @include font-size($font-size-xl); }
+.font-size-l                    { @include font-size($font-size-l); }
+.font-size-m                    { @include font-size($font-size-m); }
+.font-size-s                    { @include font-size($font-size-s); }
+.font-size-xs                   { @include font-size($font-size-xs); }
+.font-size-xxs                  { @include font-size($font-size-xxs); }
+.font-size-xxxs                 { @include font-size($font-size-xxxs); }
+
+
+// Headings
+// ----------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6, p, .text, li, code {
+     @extend .mb-0;
+    &:first-child {
+        @extend .mt-0;
+    }
+}
+
+/**
+
+### Header styles
+
+NOTE: These can change per project depending on what font etc you use :)
+
+```html
+<h1> H1 Heading 1 </h1>
+<h1 class='h2'> H1 Heading with a class of H2 </h1>
+<h2> H2 Heading </h2>
+<h2 class='h4'> H2 Heading with a class of H4 </h2>
+<h4 class='h4'> H4 Heading  </h4>
+```
+
+*/
+
+.h0 {
+    @extend .font-size-xxxxl;
+}
+
+h1, .h1 {
+    @extend .font-size-xxxl;
+    line-height: $line-height-xxxl;
+    margin-top: pxem($base-spacing, $font-size-xxxl);
+}
+
+h2, .h2 {
+    @extend .font-size-xxl;
+    line-height: $line-height-xxl;
+    margin-top: pxem($base-spacing, $font-size-xxl);
+}
+
+h3, .h3 {
+    @extend .font-size-xl;
+    line-height: $line-height-xl;
+    margin-top: pxem($base-spacing, $font-size-xl);
+}
+
+h4, .h4 {
+    @extend .font-size-l;
+    line-height: $line-height-l;
+    margin-top: px-to-em($base-spacing, $font-size-l);
+}
+
+h5, .h5 {
+    @extend .font-size-m;
+    line-height: $line-height-m;
+    margin-top: px-to-em($base-spacing, $font-size-m);
+}
+
+h6, .h6 {
+    @extend .font-size-s;
+    line-height: $line-height-s;
+    margin-top: px-to-em($base-spacing, $font-size-s);
+}
+
+
+p, .text, li, code, dt, dd {
+    @extend .font-size-xs;
+    line-height: $line-height-xs;
+    margin-top: px-to-em($base-spacing--xs, $font-size-xs);
+}
+
+strong, b {
+    .ie8 & {
+        @extend .font-primary--bold;
+    }
+}
+
+em, i {
+    .ie8 & {
+        @extend .font-primary--italic;
+    }
+}
+
+
+/**
+
+### Paragraph styles
+
+```html
+<p class="intro">I am an intro paragraph</p>
+<p>I am a plain paragraph</p>
+<p class="small">I am a small paragraph</p>
+<p class="tiny">I am a tiny paragraph</p>
+<p class="caption">I am a caption</p>
+<p class="pullquote">I am a pullquote</p>
+
+```
+
+Also
+* .text-muted
+* .text-warning
+* .text-success
+* .text-danger
+
+*/
+
+.intro {
+    @extend .font-size-s;
+}
+
+.small {
+    @extend .font-size-xxs;
+    line-height:$line-height-xxs;
+}
+
+.tiny {
+    @extend .font-size-xxxs;
+    line-height:$line-height-xxxs;
+}
+
+.caption {
+    @extend .font-size-xxs;
+}
+
+.pullquote {
+    @extend .font-size-m;
+}
+
+.text-muted {
+    color: $text-muted;
+}
+
+.text-warning {
+    color: $text-warning;
+}
+
+.text-success {
+    color: $text-success;
+}
+.text-danger {
+    color: $text-danger;
+}
+
+
+// hr
+// ----------------------------------------------------------------------------
+
+hr {
+    border: none;
+    height: 1px;
+}
+
+
+/**
+
+### Text helpers
+
+```html
+<p class="uppercase">Uppercase</p>
+<p class="lowercase">Lowercase</p>
+<p class="text--overflow">These heading classes are helpful when you have a heading that is semantically correct but the default size is not what you are after.</p>
+
+```
+
+Also
+* .text-left
+* .text-right
+* .text-center
+* .text-nowrap
+
+*/
+.uppercase              { text-transform:uppercase; }
+.lowercase              { text-transform:lowercase; }
+
+.text-left              { text-align: left; }
+.text-right             { text-align: right; }
+.text-center            { text-align: center; }
+.text-nowrap            { white-space: nowrap; }
+
+.text--overflow {
+    @extend %inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/**
+
+### Blockquotes
+
+```html
+<div class="blockquote">
+    <p class="lowercase">
+        I'm a quote
+    </p>
+    <cite class='text-right block-element mt-s'>- Fred</cite>
+</div>
+
+```
+
+*/
+.blockquote, 
+blockquote {
+  
+  text-indent:$block-quote-indent;
+
+  p:before {
+    content:"";
+  }
+  p:after{
+    content:"";
+  }
+  p:first-of-type:before{
+    content:"#{$open-quote}";
+  }
+  p:last-of-type:after{
+    content:"#{$close-quote}";
+  }
+
+}
+
+
+

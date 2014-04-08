@@ -1,0 +1,55 @@
+.bl--grey {
+    border-left:1px solid #E6EBEB;
+}
+hr {
+    background-color:#E6EBEB;
+    height:1px;
+}
+
+%on-hover{
+    cursor: pointer;
+}
+
+$primary-color:#37B67F;
+
+.gallery--item:hover {
+    @extend %on-hover;
+    background-color:$primary-color;
+    color:#fff;
+}
+
+
+
+.featured {
+    background-color:$primary-color; 
+    color:#fff;
+    a {
+        color:#fff;
+    }
+}
+
+%primary-color {
+    color:$primary-color;
+}
+
+%primary-link {
+    color:$primary-color;
+    &:hover {
+        color:darken($primary-color, 10%);
+    }
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5 {
+    @extend %primary-color
+}
+
+a {
+    @extend %primary-link;
+}
+hr {
+    margin:0;
+}

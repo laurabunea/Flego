@@ -1,0 +1,4 @@
+# allows robots for all pages
+User-agent: *
+Sitemap: /xml-sitemap/
+Disallow:

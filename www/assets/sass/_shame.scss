@@ -1,0 +1,16 @@
+
+.lego {
+
+}
+
+    .lego--heading {
+        @extend .mt-0; 
+        @extend .pl-l; 
+        @extend .pt-m;
+        @extend .pb-m;
+        @extend .small;
+        @extend .text-muted;
+        @extend .uppercase;
+        @extend .font-primary--light;
+        background-color:black;
+    }

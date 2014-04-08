@@ -1,0 +1,707 @@
+/**
+
+# Meet Fred, the friendly front-end framework
+
+
+Fred helps jump-start your front-end projects. He's a super flexible little guy with a 
+nice grunt-powered CLI.
+
+### How Fred Works
+
+Fred aims to solve a classic front-end problem: sharing and re-using common components between
+projects, while allowing each project to retain custom variables and configuration.
+
+You include '_fred.scss' in your project, and customise its behavior in '_fred-theme.scss'. 
+When there's an update to Fred, you can update it with a 'bower update' and get all the new
+Fred goodness in your project right away, without losing your settings. 
+
+
+## Getting started
+
+One liner:
+
+```bash
+bower install fred && cp bower_components/Fred.scss/dist/lib/fred.scss path-to-sass-folder/lib/_fred.scss && cp bower_components/Fred.scss/dist/_fred-theme.scss path-to-sass-folder/_fred-theme.scss 
+```
+
+This should give you the following structure in your sass dir:
+
+```
+path-to-sass-folder/
+    |--lib/
+    |----_fred.scss
+    |--_fred-theme.scss
+    |--screen.scss (or whatever your main sass file is)
+```
+
+Now you can include Fred in your `screen.scss`:
+```scss
+// screen.scss
+@include "lib/fred"
+
+
+// Your stylesheet can now use Fred! 
+
+.my-selector {
+  @extend %antialiased;
+}
+
+.my-other-selector {
+  @extend .mt-m--q-large;
+}
+
+You can customise your installation from within the fred directory. Here's a one-liner:
+
+```bash
+> cd bower_components/fred && npm install && grunt
+```
+
+...and follow the directions of your trained cabin crew:
+
+```bash
+> cd Fred.scss/
+> grunt 
+[?] Do you want to customise Fred's modules? (y/N)
+[?] Which modules would you like to include? (Press <space> to select)
+ ❯⬡ scss/objects/_arrows.scss
+  ⬡ scss/objects/_badge.scss
+  ⬡ scss/objects/_block-grid.scss
+  ⬡ scss/objects/_blocks.scss
+  ⬡ scss/objects/_breadcrumbs.scss
+  ⬡ scss/objects/_button-group.scss
+  ⬡ scss/objects/_buttons.scss
+  ⬡ scss/objects/_caret.scss
+  ⬡ scss/objects/_close.scss
+  ⬡ scss/objects/_forms.scss
+  ⬡ scss/objects/_grid.scss
+  ⬡ scss/objects/_headings.scss
+  ⬡ scss/objects/_icon-text.scss
+  ⬡ scss/objects/_images.scss
+  ⬡ scss/objects/_links.scss
+  ⬡ scss/objects/_lists.scss
+  ⬡ scss/objects/_media.scss
+  ⬡ scss/objects/_nav.scss
+  ⬡ scss/objects/_pagination.scss
+  ⬡ scss/objects/_pills.scss
+  ⬡ scss/objects/_radii.scss
+  ⬡ scss/objects/_ratio.scss
+  ⬡ scss/objects/_spacing.scss
+  ⬡ scss/objects/_split.scss
+  ⬡ scss/objects/_typography.scss
+  ⬡ scss/objects/_visibility.scss
+```
+
+*/
+
+@import "../_fred-theme.scss";
+
+
+/**
+---------------------------------------
+# Customising Fred
+
+Fred has a very small core, and a number of optional modules. By default, it includes all of them.
+
+To change what's included, you can run `grunt` inside the Fred package that bower downloads for you.
+
+Follow the instructions of your cabin crew and you'll be rocking your custom-built Fred in
+no time.
+
+```
+> cd Fred.scss/
+> grunt 
+[?] Do you want to customise Fred's modules? (y/N)
+[?] Which modules would you like to include? (Press <space> to select)
+ ❯⬡ scss/objects/_arrows.scss
+  ⬡ scss/objects/_badge.scss
+  ⬡ scss/objects/_block-grid.scss
+  ⬡ scss/objects/_blocks.scss
+  ⬡ scss/objects/_breadcrumbs.scss
+  ⬡ scss/objects/_button-group.scss
+  ⬡ scss/objects/_buttons.scss
+  ⬡ scss/objects/_caret.scss
+  ⬡ scss/objects/_close.scss
+  ⬡ scss/objects/_forms.scss
+  ⬡ scss/objects/_grid.scss
+  ⬡ scss/objects/_headings.scss
+  ⬡ scss/objects/_icon-text.scss
+  ⬡ scss/objects/_images.scss
+  ⬡ scss/objects/_links.scss
+  ⬡ scss/objects/_lists.scss
+  ⬡ scss/objects/_media.scss
+  ⬡ scss/objects/_nav.scss
+  ⬡ scss/objects/_pagination.scss
+  ⬡ scss/objects/_pills.scss
+  ⬡ scss/objects/_radii.scss
+  ⬡ scss/objects/_ratio.scss
+  ⬡ scss/objects/_spacing.scss
+  ⬡ scss/objects/_split.scss
+  ⬡ scss/objects/_typography.scss
+  ⬡ scss/objects/_visibility.scss
+```
+
+That's about all for how to work with Fred. Next, let's look at what it actually gives you.
+
+----
+
+## Core
+
+
+### Making browsers behave
+Fred includes most of [normalize.css](https://github.com/necolas/normalize.css) v2.1.3. 
+
+You can read the documentation on the normalize site. 
+
+----
+
+*/
+
+// ! normalize.css v2.1.3 | MIT License | git.io/normalize
+
+//   ==========================================================================
+//   HTML5 display definitions
+//   ==========================================================================
+
+
+// Correct `block` display not defined in IE 8/9.
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+// Correct `inline-block` display not defined in IE 8/9.
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+//
+// Prevent modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
+//
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+//
+// Address `[hidden]` styling not present in IE 8/9.
+// Hide the `template` element in IE, Safari, and Firefox < 22.
+//
+
+[hidden],
+template {
+    display: none;
+}
+
+// -----------------------------------------------------------------------------
+// Base
+// -----------------------------------------------------------------------------
+
+
+// 1. Set default font family to sans-serif.
+// 2. Prevent iOS text size adjust after orientation change, without disabling
+//    user zoom.
+
+html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+// Remove default margin.
+
+body {
+    margin: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Links
+// -----------------------------------------------------------------------------
+
+// Remove the gray background color from active links in IE 10.
+
+a {
+    background: transparent;
+}
+
+// Address `outline` inconsistency between Chrome and other browsers.
+
+a:focus {
+    outline: thin dotted;
+}
+
+// Improve readability when focused and also mouse hovered in all browsers.
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+// Address variable `h1` font-size and margin within `section` and `article`
+// contexts in Firefox 4+, Safari 5, and Chrome.
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+// Address styling not present in IE 8/9, Safari 5, and Chrome.
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+// Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+
+b,
+strong {
+    font-weight: bold;
+}
+
+// Address styling not present in Safari 5 and Chrome.
+
+dfn {
+    font-style: italic;
+}
+
+// Address differences between Firefox and other browsers.
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+// Address styling not present in IE 8/9.
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+// Correct font family set oddly in Safari 5 and Chrome.
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+// Improve readability of pre-formatted text in all browsers.
+
+pre {
+    white-space: pre-wrap;
+}
+
+// Set consistent quote types.
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+// Address inconsistent and variable font size in all browsers.
+
+small {
+    font-size: 80%;
+}
+
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+// -----------------------------------------------------------------------------
+// Embedded content
+// -----------------------------------------------------------------------------
+
+// Remove border when inside `a` element in IE 8/9.
+
+img {
+    border: 0;
+}
+
+// Correct overflow displayed oddly in IE 9.
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+// -----------------------------------------------------------------------------
+// Figures
+// -----------------------------------------------------------------------------
+
+// Address margin not present in IE 8/9 and Safari 5.
+
+figure {
+    margin: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Tables
+// -----------------------------------------------------------------------------
+
+// Remove most spacing between table cells.
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+// -----------------------------------------------------------------------------
+// Positioning - Absolute, Floating and Clearfixing
+// -----------------------------------------------------------------------------
+
+%relative   { position: relative; }
+%absolute   { position: absolute; }
+
+.absolute   { @extend %absolute; }
+.relative   { @extend %relative; }
+
+.left       { float:left; }
+.right      { float:right; }
+
+
+    .absolute--bottom-left {
+        @extend %absolute;
+        bottom:0;
+        left:0;
+    }
+
+    .absolute--bottom-right {
+        @extend %absolute;
+        bottom:0;
+        right:0;
+    }
+
+    .absolute--top-left {
+        @extend %absolute;
+        top:0;
+        left:0;
+    }
+
+    .absolute--top-right {
+        @extend %absolute;
+        top:0;
+        right:0;
+    }
+
+%center-element {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+// Vertical alignment utilities
+
+%align--top {
+    vertical-align: top ;
+}
+
+%align--middle {
+    vertical-align: middle;
+}
+
+%align--baseline {
+    vertical-align: baseline;
+}
+
+%align--bottom {
+    vertical-align: bottom;
+}
+
+
+.align--top {
+    @extend %align--top;
+}
+
+.align--middle {
+    @extend %align--middle;
+}
+
+.align--baseline {
+    @extend %align--baseline;
+}
+
+.align--bottom {
+    @extend %align--bottom;
+}
+
+// -----------------------------------------------------------------------------
+// Inline block
+// -----------------------------------------------------------------------------
+// zoom fix for IE6/7 so they correctly display inline-block elements
+// (forces hasLayout)
+
+/**
+### Inline blocks
+
+Inline blocks are handy for everything. We don't often support projects in IE7 and
+below, but since it's trivial to hack it in, we've included it here. 
+
+To cut down on rules in your stylesheet, you can extend this placeholder in your code.
+
+```
+%inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+
+.my-icon {
+    @extend %inline-block;
+}
+
+```
+
+*/
+
+%inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.inline-block { @extend %inline-block; }
+.block-element { display: block; }
+
+%border {
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+/**
+### Clearfixing
+
+Table-pseudo element clearfix. It is good.
+
+```scss
+.my-floater {
+    @extend %clearfix;
+}
+```
+
+Or, heaven forbid, in your markup:
+
+```html
+<div class='clearfix'>
+    <div class='left'>
+        Hey i'm floating!
+    </div>
+</div>
+```
+
+*/
+
+%clearfix{
+    /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+    *zoom: 1;
+}
+
+%clearfix:before {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+%clearfix:after {
+    clear: both;
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix           { @extend %clearfix; }
+.overflow-hidden    { overflow: hidden; }
+
+
+
+/**
+
+###Screen reader content
+
+We've found some odd bugs with the -999px textindent hack. 
+Clipping is much better since it doesn't require a 999 x [your-line-height]px region to be drawn.
+
+This is borrowed from Bootstrap.
+
+```html
+ <a class="sr-only" href="#content">Skip to main content</a>
+```
+
+*/
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Fix webkit bug
+// -----------------------------------------------------------------------------
+
+
+/**
+
+### Fixing Chrome/WebKit type rendering
+
+Since v22, Chrome makes fat sausage horrible web typography. Fix it with
+these properties right here:
+
+```html
+<div class='my-black-box antialiased'>
+    <h1>Knocked out white text!</h1>  
+</div>
+```
+
+But wait! That screws with everything on Windows Vista Chrome... right?
+
+Yeah, it does. If you're using our [Browser.js](http://springload.github.io/Browser.js),
+it'll automatically add `isWindowsChrome` to the documentElement, and we set
+the antialiasing back to classic sub-pixel mode:
+
+```scss
+.isWindowsChrome %fix-webkit-font-rendering  {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+```
+
+In your markup:
+```html
+<html class='isWindowsChrome'>
+
+<!-- some time later -->
+
+<div class='my-black-box antialiased'>
+    <h1>Hey i'll look good on Vista!</h1>  
+</div>
+
+```
+*/
+
+%fix-webkit-font-rendering {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+}
+
+.isWindowsChrome %fix-webkit-font-rendering  {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.antialiased {
+    @extend %fix-webkit-font-rendering;
+}
+
+
+/**
+### Magic tricks
+
+Showing and hiding things with a pre-emptive `important`  
+
+```html
+<div class='hide'>Shorthand display: none !important;</div>
+<div class='show'>Shorthand display: block !important;</div>
+<div class='hidden'>Shorthand visibility: hidden !important;</div>
+<div class='visible'>Shorthand visibility: visible !important;</div>
+```
+
+*/
+
+
+%hide { display: none !important; }
+%show { display: block !important; }
+
+.hide { @extend %hide; }
+.show { @extend %show; }
+
+%visible    {visibility: visible !important;}
+%hidden     {visibility: hidden !important;}
+.visible    { @extend %visible; }
+.hidden     { @extend %hidden; }
+
+/**
+
+### Append and Prepend
+
+Place something before or after an element
+
+```html
+<p class="prepend" data-prepend="email:">&nbsp;email@gmail.com</p>
+<p class="append" data-append="is my email">email@gmail.com&nbsp;</p>
+```
+
+*/
+
+.prepend{
+    &:before{
+        content: attr(data-prepend);
+        display: inline-block;
+    }
+}
+
+.append{
+    &:after{
+        content: attr(data-append);
+        display: inline-block;
+    }
+}
+
+/**
+
+That wraps up the core of Fred. Some simple resets, helpers, and alignment classes. 
+
+---
+
+# Modules
+
+Modules are intended as stand-alone functional blocks that you can optionally include
+in your build. We usually include all modules for development, then re-build the 
+library with only components we've used in production.
+
+
+By default, Fred will build and include all the following modules. 
+
+*/

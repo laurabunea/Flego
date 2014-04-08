@@ -1,0 +1,280 @@
+/**
+
+## Lists
+
+### Un styled list
+
+```html
+<ul class='list-unstyled mt-s'>
+    <li>
+        unstyled list item 1
+    </li>
+    <li>
+        unstyled list item 2
+    </li>
+</ul>
+```
+
+### Styled list
+
+```html
+<ul class='list-styled'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+<hr />
+<ul class='list-styled--alpha'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+<hr />
+<ul class='list-styled--dashed'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+<hr />
+<ul class='list-styled--decimal'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+```
+
+### Inline list
+
+```html
+<ul class='list--inline'>
+    <li> inline list item 1 </li>
+    <li> inline list item 2 </li>
+<ul>
+```
+
+*/
+
+.list-unstyled {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+    .list-unstyled > li {
+        list-style: none;
+//        margin: 0;    // There isn't usually a margin set on li's...
+    }
+
+    .list--inline {
+        @extend .clearfix; /* This extend is found in core */
+        @extend .list-unstyled; 
+    }
+
+    .list--inline > li {
+        @extend %inline-block; /* This extend is found in core */
+        margin: 0;
+    }
+
+//default list style in this case its circles
+%list-styled {
+    margin-top: $bs-xs; //same as the margin top on p tags
+    padding-left: $bs-m;
+}
+
+
+.list-styled {
+    @extend %list-styled;
+    list-style: circle;
+}
+
+    //decimal list
+    .list-styled--decimal,
+    .list-decimal {
+        @extend %list-styled;
+        list-style: decimal-leading-zero;
+        padding-left: $bs-l;
+    }
+
+    //alpha list
+    .list-styled--alpha,
+    .list-alpha {
+        @extend %list-styled;
+        list-style: lower-alpha;
+    }
+
+
+.list-dashed {
+    margin-left: 1em;
+    margin-top: 0;
+    @extend %list-styled;
+
+    & > li {
+        text-indent: -0.5em;
+
+        & > * {
+            text-indent: 0;
+        }
+
+        &:before {
+            content:"\2013";
+            position:relative;
+            left:-0.5em;
+        }
+    }
+}
+
+.list-plain {
+    margin-top: $bs-xs;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+
+/**
+
+### Block list
+
+Throws a list into a vertical stack. Handy for things like navigation.
+
+
+*/
+.block-list {
+    @extend .list-unstyled;
+    > li {
+        display: block;
+    }
+}
+
+
+/**
+
+### Definition lists __Fred is stil working on this__
+
+Defaults to being stacked without any of the below styles applied
+
+```html
+<dl>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+```
+
+*/
+
+dl {
+    @extend .mt-m;
+}
+    dt,
+    dd {
+        line-height: $line-height-xs;
+    }
+    dt {
+        font-weight: bold;
+    }
+    dd {
+      margin-left: 0; // Undo browser default
+    }
+
+// TODO !
+/**
+
+### Horizontal descrption list
+
+To make the description list horizontal apply the class 'dl-horizontal' aswell the fraction ...
+
+```html
+<dl class='dl-horizontal dl-horizontal--1-4 '>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+
+<hr class='mt-m'/>
+
+<dl class='dl-horizontal dl-horizontal--1-3 '>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+
+<hr class='mt-m'/>
+
+<dl class='dl-horizontal dl-horizontal--1-2 '>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+```
+*/
+
+.dl-horizontal {
+    margin:0;
+    font-size: 0;                       /* [2] */
+    text-align: justify;                /* [1] */
+   
+    .ie8 & {
+        // This fixes and issue mentioned above
+        text-justify:normal;
+    }
+    > dt, 
+    > dd {
+        @extend .inline-block; // This extend is found in core
+        @extend %align--top; // This extend is found in core
+        font-size: medium;
+    }
+    // think about breaking this up so its not always like this
+    > dt { text-align: right; }
+    > dd { text-align: left; }
+}
+
+    .dl-horizontal:after {
+        @extend %inline-block; // This extend is found in core
+        content: '';
+        height: 0;
+        width:100%;
+    }
+    
+    .dl-horizontal--dt-left {
+        > dt { text-align: left; }
+        > dd { text-align: left; }
+    }
+
+    .dl-horizontal--split {
+        > dt { text-align: left; }
+        > dd { text-align: right; }
+    }
+
+
+    .dl-horizontal--1-4 {
+        > dt { width:24%; }
+        > dd { width:74%; }
+    }
+
+    .dl-horizontal--1-3 {
+        > dt { width:32%; }
+        > dd { width:65%; }
+    }
+
+    .dl-horizontal--1-2 {
+        > dt { width:49%; }
+        > dd { width:49%; }
+    }
+

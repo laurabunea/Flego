@@ -1,0 +1,31 @@
+/**
+
+## Close icon
+
+```html
+Close icon: <span class="close"></span>
+```
+
+*/
+
+.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+    .close:after {
+        @extend %inline-block; /* This extend is found in core */
+        @extend %align--middle; /* This extend is found in core */
+        content: "\00d7";
+        font-size: 1.5em;
+        line-height: 0;
+        opacity: 0.2;
+        
+    }
+
+    .close:hover:after {
+        opacity: 1;
+    }

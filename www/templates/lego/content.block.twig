@@ -1,0 +1,22 @@
+
+<div class='grid '>
+    {% for key, value in data.content %}
+        <div class='grid__item {{data.colSize}}'>
+            <div class='block-{{data.blockSize}} block--stacked {{ data.isStacked }}'>
+
+                <h2 class='{{data.headingSize}}'>
+                    {{ value.heading }}
+                </h2>
+                
+                <p>
+                    {{ value.copy }}
+                </p>
+                <p>
+                    <a href='{{ data.link-href }}'>
+                        {{ value.link }}
+                    </a>
+                </p>
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+   {% endfor %}
+</div><!-- ends -->

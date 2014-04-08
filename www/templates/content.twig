@@ -1,0 +1,10 @@
+{% extends "template.twig" %}
+{% extends "macros.twig" %}
+
+{% block content %}
+
+    {% set data = {'title':'title text', 'strapline':'strapline text', 'intro':'intro text'} %}
+
+    {{ macros.lego('content','intro', { title:"#{data.title}", strapline:"#{data.strapline}", intro: "#{data.intro}" }) }}
+
+{% endblock %}

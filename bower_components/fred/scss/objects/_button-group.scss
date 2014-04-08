@@ -1,0 +1,149 @@
+/**
+
+## Button group
+
+Contain buttons in a horizontal group.
+----------------------------------------------------------------------------
+Borrowed from Twitter Bootstrap and put on a border-radius diet.
+
+*/
+
+
+// Make the div behave like a button
+.btn-group,
+.btn-group-vertical {
+    @extend %relative; //in core
+    @extend %inline-block; //in core
+    @extend %align--middle;// in core. This match .btn alignment given font-size hack above
+
+    > .btn {
+        @extend %relative; //in core
+        @extend .left; //in core
+        // Bring the "active" button to the front
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 2;
+        }
+        &:focus {
+            // Remove focus outline when dropdown JS adds it after closing the menu
+            outline: none;
+        }
+    }
+}
+
+// Prevent double borders when buttons are next to each other
+.btn-group {
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: -1px;
+    }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+    @extend %clearfix;
+
+    .btn-group {
+        @extend .left; //in core
+    }
+    // Space out series of button groups
+    > .btn,
+    > .btn-group {
+        + .btn,
+        + .btn-group {
+            margin-left: .3125em;
+        }
+    }
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0;
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group > .btn:first-child {
+    margin-left: 0;
+    &:not(:last-child) {
+//        @include vendor(border-right-radius, 0);
+    }
+}
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+//    .border-left-radius(0);
+}
+
+// Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
+.btn-group > .btn-group {
+    @extend .left; /* This extend is found in core */
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+}
+.btn-group > .btn-group:first-child {
+    > .btn:last-child {
+//        @include vendor(border-right-radius, 0);
+    }
+}
+.btn-group > .btn-group:last-child > .btn:first-child {
+//    @include vendor(border-left-radius, 0);
+}
+
+
+
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-group-xs > .btn { font-size: pxem($font-size-xxs); }
+.btn-group-sm > .btn { font-size: pxem($font-size-m); }
+.btn-group-lg > .btn { font-size: pxem($font-size-l); }
+
+
+// Vertical button groups
+// ----------------------
+
+.btn-group-vertical {
+    > .btn,
+    > .btn-group {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    // Clear floats so dropdown menus can be properly placed
+    > .btn-group {
+        @extend %clearfix;
+        > .btn {
+            float: none;
+        }
+    }
+
+    > .btn + .btn,
+    > .btn + .btn-group,
+    > .btn-group + .btn,
+    > .btn-group + .btn-group {
+        margin-top: -1px;
+        margin-left: 0;
+    }
+}
+
+// Justified button groups
+// -----------------------
+
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    .btn {
+        float: none;
+        display: table-cell;
+        width: 1%;
+    }
+}

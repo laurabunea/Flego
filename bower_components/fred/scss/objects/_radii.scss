@@ -1,0 +1,46 @@
+/**
+
+## Radii
+
+```html
+<div class='block--color-3 block-xs radius-s'>
+    Check out my corners
+</div>
+<div class='block--color-3 block-xs radius'>
+    Check out my corners
+</div>
+<div class='block--color-3 block-xs radius-l'>
+    Check out my corners
+</div>
+<div class='block--color-3 block-xs circle'>
+    I'm nearly a circle, wohoo
+</div>
+```
+
+*/
+
+
+// Border radii
+@if $radius-s {
+    .radius-s {
+        @include vendor(border-radius, 2px 2px 2px 2px);
+    }
+}
+
+@if $radius {
+    .radius {
+        @include vendor(border-radius, 5px 5px 5px 5px);
+    }
+}
+
+@if $radius-l {
+    .radius-l {
+        @include vendor(border-radius, 10px 10px 10px 10px);
+    }
+}
+
+@if $radius-circle {
+    .circle {
+        @include vendor(border-radius, 35em);
+    }
+}

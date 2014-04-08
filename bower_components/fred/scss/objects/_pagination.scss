@@ -1,0 +1,83 @@
+/**
+
+## Pagination
+
+```html
+<ul class='pagination'>
+    <li class='pagination__first'>
+         <a href='#'>
+            First
+        </a>
+    </li>
+    <li class='pagination__prev'>
+        <a href='#'></a>
+    </li>
+    <li class='pagination__current'>
+        <a href='#'>
+            1
+        </a>
+    </li>
+    <li class='pagination__more'>
+        <a href='#'></a>
+    </li>
+    <li>
+        <a href="#">
+            10
+        </a>
+    </li>
+    <li class='pagination__next'>
+        <a href='#'></a>
+    </li>
+    <li class='pagination__last'>
+        <a href='/page/last'>
+            Last
+        </a>
+    </li>
+ </ul>
+```
+
+*/
+
+.pagination {
+    @extend .nav;
+    // Remove whitespace caused by `inline-block`.
+    letter-spacing: -0.31em;
+    word-spacing: -0.43em;
+}
+
+    .pagination > li{
+        @extend %inline-block; /* This extend is found in core */
+        margin-top: 0;
+        padding:$base-spacing-unit / 2;
+        letter-spacing:normal;
+        word-spacing:normal;
+    }
+
+        .pagination > li > a{
+            padding:$base-spacing-unit / 2 $bs-0;
+            margin:-$base-spacing-unit / 2 $bs-0;
+        }
+
+    .pagination__current {
+        font-weight: bold;
+    }
+
+    .pagination__first > a:before,
+    .pagination__last > a:before,
+    .pagination__more > a:before {
+        display: inline-block;
+    }
+
+    .pagination__last > a:after {
+        content: "\203A";
+    }
+
+    .pagination__first > a:before {
+        content: "\2039";
+    }
+
+    .pagination__more > a:before {
+        content: "\2026";
+    }
+
+

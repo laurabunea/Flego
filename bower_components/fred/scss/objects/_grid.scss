@@ -1,0 +1,412 @@
+/**
+
+## Grids
+
+###  Inline Grid
+Sets the child elements to take up full justified width of the parent.
+The prefix class is 'col' (although you can change this in the variables file) and the suffix is the fraction you require.
+
+```html
+<div class='grid'>
+    <div class='grid__item col'>
+       <div class='block--color-2 block-s'>
+            <p>
+                full width
+            </p>
+        </div>
+    </div>
+</div>
+
+Example two
+<div class='grid'>
+    <div class='grid__item col-2-4' >
+        <div class='block--color-3 block-s'>
+            <p>
+                50%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-2-4'>
+        <div class='block--color-3 block-s'>
+            <p>
+                50%
+            </p>
+        </div>
+    </div>
+</div>
+
+Example three
+<div class='grid'>
+    <div class='grid__item col-1-4'>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4 '>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4 '>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+</div>
+
+Example four
+<div class='grid'>
+    <div class='grid__item col-6-10'>
+        <div class='ts-block block-s'>
+            <p>
+                60%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-4-10'>
+        <div class='ts-block block-s'>
+            <p>
+                40%
+            </p>
+        </div>
+    </div>
+</div>
+
+Example five
+<div class='grid'>
+    <div class='grid__item col-8-10'>
+        <div class='tt-block block-s'>
+            <p>
+                80%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-2-10'>
+        <div class='tt-block block-s'>
+            <p>
+                20%
+            </p>
+        </div>
+    </div>
+</div>
+
+Vertical align these grid items in the middle
+<div class='grid grid--middle'>
+    <div class='grid__item col-1-4'>
+        <div class='block-xxxl block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+        <div class='block-xl block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+        <div class='block-m block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+       <div class='block-xs block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+</div>
+```
+
+
+#### Inline Grid - Responsive
+
+This works exactly the same as what's mentioned above.
+You just need to add an extra suffix onto the classes which relates to the breakpoint you want to target.
+
+```html
+<div class='grid'>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-4-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                1<br />
+                <strong>Mobile:</strong> full width<br />
+                <strong>Skinny:</strong> 1/2 <br />
+                <strong>Desktop:</strong> 1/4 <br />
+                <strong>Wide:</strong> 40/60
+           </p>
+        </div>
+    </div>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-6-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                2
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-4-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                3
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-6-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                4
+            </p>
+        </div>
+    </div>
+</div>
+```
+
+
+#### Responsive Grid with pre-defined number of equally sized columns
+
+```html
+<div class='grid text-left grid--2-col grid--4-col--q-medium grid--6-col--q-large'>
+    <div class='grid__item'>
+       <div class='block--color-2 block-s'>
+            <p>
+                1
+           </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-1 block-s'>
+            <p>
+                2
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-3 block-s'>
+            <p>
+                3
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-2 block-s'>
+            <p>
+                4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-1 block-s'>
+            <p>
+                5
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-3 block-s'>
+            <p>
+                6
+            </p>
+        </div>
+    </div>
+</div>
+```
+
+*/
+
+// Inline block grid
+// -----------------------------------------------------------------------------
+// [1] Sets the child elements to take up full justified width of the parent
+// [2] Overcomes an issue where the :after element blows out the bottom.
+// [3] A fix for Internet Explorer 8/9
+
+ .grid {
+    font-size: 0;                           /* [2] */
+    text-align: justify;                    /* [1] */
+    // text-justify: distribute-all-lines;  /* [3] */
+
+    // Not sure if we need the last line as it stuffs up text align:center
+    .ie8 & {
+        // This fixes and issue mentioned above
+        text-justify:normal;
+    }
+}
+
+    // Font-size medium reset the block to the context of body (ie, 16px)
+    .grid > *,
+    .grid__item {
+        @extend %inline-block; // This extend is found in core
+        @extend %align--top; // This extend is found in core
+        @extend .text-left; // This extend is found in core
+        font-size: medium;
+
+    }
+
+
+    .grid:after,
+    .grid__break {
+        @extend %inline-block; // This extend is found in core
+        content: '';
+        height: 0;
+        width:100%;
+    }
+
+
+    // Vertical align these grid items in the middle!
+
+    .grid--middle > .grid__item {
+        @extend %align--middle; // This extend is found in core
+    }
+
+    .grid--bottom > .grid__item {
+        @extend %align--bottom; // This extend is found in core
+    }
+
+
+
+/**
+
+### Float Grid
+
+Sometimes you don't want an inline block grid, you want a float grid.
+Fred doesn't mind what grid you use :).
+
+```html
+<div class='grid-float'>
+    <div class='col-1-3 '>
+        <div class='ts-block'>
+            ...
+        </div>
+    </div>
+    <div class='col-1-3 '>
+        <div class='ts-block'>
+            ...
+        </div>
+    </div>
+    <div class='col-1-3 '>
+        <div class='ts-block'>
+            ...
+        </div>
+    </div>
+</div>
+```
+
+*/
+
+
+.grid-float {
+    width: 100%;
+}
+
+    .grid-float:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .grid-float > [class^=#{quote($grid-column-name)}] {
+        @extend .left; //in core
+    }
+
+
+
+// Print grid classnames
+
+.#{$grid-column-name} {
+    width: 100%;
+}
+
+
+// Print column widths via a handy mixin.
+
+@mixin grid-columns($name: $grid-column-name, $stops: 10, $fractional: false, $breakpointSuffix: false) {
+    @for $i from 1 to $stops {
+        $colName: $i;
+        $width: $i / $stops * 100;
+        @if $fractional {
+            $colName: #{$i + "-"  + $stops};
+        }
+        @if $breakpointSuffix {
+            $colName: #{$colName + $breakpointSuffix};
+        }
+        .#{$name}-#{$colName} {
+            width: #{$width + "%"};
+        }
+    }
+}
+
+@each $breakpoint in $fred-grid-breakpoints {
+    @if $breakpoint == "default" {
+        @each $division in $grid-divisions {
+            @include grid-columns($stops: $division, $fractional: true);
+        }
+    } @else {
+        @include media($breakpoint) {
+            $suffix: $breakpoint-classname-prefix + $breakpoint;
+            @each $division in $grid-divisions {
+                @include grid-columns($name: $grid-column-name, $stops: $division, $fractional: true, $breakpointSuffix: $suffix);
+            }
+            .#{$grid-column-name + "-auto" + $suffix} {
+                width: auto;
+            }
+            .#{$grid-column-name + $suffix} {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// Responsive grid lists
+
+@mixin grid-list-columns($columns: 4, $breakpointSuffix: false) {
+    $prefix: grid;
+    $colName: #{"-"+$columns+"-"+$grid-column-name};
+    // subtract column margins from total available width
+    $colMargin: .04;
+    $width: ( 1 - ( ($columns - 1) * $colMargin ) ) / $columns * 100;
+    @if $breakpointSuffix {
+        $colName: #{$colName + $breakpointSuffix};
+    }
+    .#{$prefix}-#{$colName} > * {
+        width: #{$width + "%"};
+    }
+    .#{$prefix}-#{$colName} > *  {
+        margin-right: #{ ($colMargin * 100) + "%"};
+    }
+    .#{$prefix}-#{$colName} > *:nth-child(#{$columns}n) {
+        margin-right: 0;
+    }
+}
+
+@each $breakpoint in $fred-grid-breakpoints {
+    @if $breakpoint == "default" {
+        @each $division in $grid-number-columns {
+            @include grid-list-columns($columns: $division);
+        }
+    } @else {
+        @include media($breakpoint) {
+            $suffix: $breakpoint-classname-prefix + $breakpoint;
+            @each $division in $grid-number-columns {
+                @include grid-list-columns($columns: $division, $breakpointSuffix: $suffix);
+            }
+        }
+    }
+}

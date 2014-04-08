@@ -1,0 +1,14 @@
+{
+    "name": "freds-precious",
+    "version": "0.0.0",
+    "dependencies": {
+        "browser.js":"*"
+,"fred":"*"
+ ,"on-media-query":"*"
+,"FancyInputs":"*"
+,"teflon.js":"*"
+,"springload-showhide.js":"*"
+,"quicktube.js":"*"
+    }
+}
+

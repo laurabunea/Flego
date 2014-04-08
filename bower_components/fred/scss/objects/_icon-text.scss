@@ -1,0 +1,41 @@
+/**
+
+## Icons with text
+
+```html
+<p>
+    <a class='icon-text ' href='#'>
+        <i class='i icon-placeholder'></i>
+        A link with an icon
+    </a>
+</p>
+
+<p class='icon-text--rev' href=''>
+    A paragraph with an icon on the other side
+    <i class='i icon-placeholder '></i>
+</p>
+```
+
+*/
+
+//.icon-text,
+//.icon-text--rev{/* a, div, etc */
+//    @extend %inline-block; /* This extend is found in core */
+//}
+
+.i{
+    @extend %align--middle; //in core 
+    overflow: hidden; /* for IE6 */
+    // SMACSS line-height: 0; ?
+    .icon-text &,
+    .btn--icon & {
+        margin-right: $base-spacing-unit/3;
+        @extend %inline-block; /* This extend is found in core */
+    }
+
+    .icon-text--rev &,
+    .btn--icon-rev &{
+        margin-left: $base-spacing-unit/3;
+        @extend %inline-block; /* This extend is found in core */
+    }
+}

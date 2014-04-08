@@ -1,0 +1,252 @@
+/**
+
+## Visibility
+
+### Hidden
+
+Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.
+
+```html
+<div class='block-s block--color-2 hidden--q-small'>
+    hide this block on mobile
+</div>
+<div class='block-s block--color-1 hidden--q-medium'>
+    hide this block on skinny
+</div>
+<div class='block-s tp-block hidden--q-medium-down'>
+    hide this block skinny down
+</div>
+<div class='block-s block--color-3 hidden--q-medium-up'>
+    hide this block on a medium screen, large screen and xlarge screen
+</div>
+<div class='block-s block--color-2 hidden--q-large'>
+    hide this block on desktop
+</div>
+<div class='block-s ts-block hidden--q-large-up'>
+    hide this block desktop up
+</div>
+<div class='block-s tt-block hidden--q-xlarge'>
+    hide this block on wide
+</div>
+```
+
+### Visibile
+
+Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.
+
+```html
+<div class='block-s block--color-2 visible--q-small'>
+    show this block on small screen
+</div>
+<div class='block-s block--color-3 visible--q-medium'>
+    show this block on a medium screen
+</div>
+<div class='block-s block--color-3 visible--q-medium-down'>
+    Show this block on a medium screen and small screen
+</div>
+<div class='block-s block--color-2 visible--q-medium-up'>
+    Show this block on a medium screen, large screen and xlarge screen
+</div>
+<div class='block-s tt-block visible--q-large'>
+    Show this block on a large screen
+</div>
+<div class='block-s block--color-3 visible--q-large-up'>
+    Show this block on a large and xlarge screen
+</div>
+<div class='block-s block--color-1 visible--q-xlarge'>
+    show this block on a xlarge screen
+</div>
+```
+
+*/
+
+
+
+
+
+// Hide an element, but make it visible to screen readers
+// ----------------------------------------------------------------------------
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+// Hide an element
+// ----------------------------------------------------------------------------
+
+.hidden, .hide {
+    display: none;
+}
+
+
+// Common visible and hidden classes
+// ----------------------------------------------------------------------------
+
+//Show / Hide this element on a small screen
+@media only screen and (max-width: $breakpoint-small-max) {
+    .visible--q-small {
+        display:block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .visible--q-medium,
+    .visible--q-large,
+    .visible--q-xlarge {
+        display: none;
+    }
+    .hidden--q-small {
+        display: none !important;
+    }
+
+}
+
+//Show / Hide this element on a medium screen
+@media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-medium-max) {
+    .visible--q-medium {
+        display:block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .visible--q-small,
+    .visible--q-large,
+    .visible--q-xlarge {
+        display: none;
+    }
+    .hidden--q-medium {
+        display: none !important;
+    }
+}
+
+//Show / Hide this element on a large screen
+@media only screen and (min-width:$breakpoint-large) and (max-width: $breakpoint-large-max){
+
+    .visible--q-large {
+        display:block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .visible--q-small,
+    .visible--q-medium,
+    .visible--q-xlarge {
+        display: none;
+    }
+    .hidden--q-large {
+        display: none !important;
+    }
+}
+
+//Show / Hide this element on a xlarge screen
+@media only screen and (min-width: $breakpoint-xlarge) {
+
+    .visible--q-xlarge {
+        display:block;
+        &.inline {
+            display: inline;
+        }
+    }
+
+    .visible--q-small,
+    .visible--q-medium,
+    .visible--q-large {
+        display: none;
+    }
+    .hidden--q-xlarge {
+        display: none !important;
+    }
+}
+
+// or do you just include skinny and mobile classes class='visible--q-small visible--q-medium'
+
+//Show / Hide this element on a small screen and down
+@media only screen and (max-width: $breakpoint-small-max) {
+    .visible--q-small-down {
+        display: block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .visible--q-medium-up {
+        display: none;
+    }
+    .hidden--q-small-down {
+        display: none !important;
+    }
+}
+
+
+//Show / Hide this element on a medium screen and down
+@media only screen and (max-width: $breakpoint-medium-max) {
+    .visible--q-medium-down {
+        display: block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .visible--q-large-up {
+        display: none;
+    }
+    .hidden--q-medium-down {
+        display: none !important;
+    }
+}
+//Show / Hide this element on a medium screen and up
+@media only screen and (min-width: $breakpoint-medium) {
+    .visible--q-medium-up {
+        display: block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .visible--q-small-down {
+        display: none;
+    }
+    .hidden--q-medium-up {
+        display: none !important;
+    }
+}
+
+
+//Show / Hide this element on a large screen and down
+@media only screen and (max-width: $breakpoint-large-max ) {
+    .visible--q-large-down {
+        display: block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .hidden--q-large-down {
+        display: none !important;
+    }
+}
+
+//Show / Hide this element on a large screen and up
+@media only screen and (min-width: $breakpoint-large ) {
+    .visible--q-large-up {
+        display: block;
+        &.inline {
+            display: inline;
+        }
+    }
+    .visible--q-medium-down {
+        display: none;
+    }
+    .hidden--q-large-up {
+        display: none !important;
+    }
+}
+
+
+//Show / Hide this element on a xlarge screen and up
+@media only screen and (min-width: $breakpoint-xlarge ) {
+    .visible--q-large-down {
+        display: none;
+    }
+}

@@ -1,0 +1,311 @@
+// ============================================================================
+// FRED
+// ============================================================================
+//
+// Friendly front-end framework.
+//
+// Made by Springload
+//
+// With guest appearances from Inuit.css, Twitter Bootstrap and Foundation
+
+
+// ----------------------------------------------------------------------------
+// Typography
+// ----------------------------------------------------------------------------
+
+$sans-serif-stack:              'Open Sans', sans-serif;
+$serif-stack:                   "georgia", serif;
+
+$font-primary:                   $sans-serif-stack;
+
+// These variables are used to describe the font-family you want to serve
+// to IE8 and other detestable browers that don't entirely support
+// fonts with more than four variations. 
+$font-primary-light:             $sans-serif-stack;
+$font-primary-light-italic:      $sans-serif-stack;    
+$font-primary-italic:            $sans-serif-stack;
+$font-primary-bold:              $sans-serif-stack;
+$font-primary-bold-italic:       $sans-serif-stack;
+
+//font-weights
+$primary-font-weight:                      400;
+$primary-font-weight--light:               300;
+$primary-font-weight--bold:                600;
+
+// Specify some font sizes to get your project rolling. These are predominantly
+// used by _typography.scss and _forms.scss
+
+$font-size-xxxxl:               72;     //h0
+$font-size-xxxl:                36;     //h1
+$font-size-xxl:                 32;     //h2
+$font-size-xl:                  22;     //h3
+$font-size-l:                   20;     //h4
+$font-size-m:                   18;     //h5
+$font-size-s:                   16;     //h6 & .intro
+$font-size-xs:                  14;     //p
+$font-size-xxs:                 12;     //.small
+$font-size-xxxs:                11;     //.tiny
+
+$base-line-height:              1.428571429; // 20/14
+
+$line-height-xxxxl:               1;                //h0
+$line-height-xxxl:                1;                //h1
+$line-height-xxl:                 1.2;              //h2
+$line-height-xl:                  1.2;              //h3
+$line-height-l:                   1.33333333;       //h4
+$line-height-m:                   1.2;              //h5
+$line-height-s:                   1.2;              //h6 & .intro
+$line-height-xs:                  1.5;              //p
+$line-height-xxs:                 1.4;              //.small
+$line-height-xxxs:                1.4;              //.tiny
+
+
+// ----------------------------------------------------------------------------
+// Spacing
+// ----------------------------------------------------------------------------
+
+// Everything inherits from the base spacing unit. Pick this number wisely. 
+// It should probably relate somehow to your line-height;
+
+$base-spacing:                  24;
+$base-spacing-unit:             1.5em;
+
+
+// Compute a range of expansions to the base spacing, to use in our mixins:
+
+$bs-0:                         0;
+$bs-xxxs:                      $base-spacing-unit / 4;     // 6px
+$bs-xxs:                       $base-spacing-unit / 3;     // 8px
+$bs-xs:                        $base-spacing-unit / 2;     // 12px
+$bs-s:                         $base-spacing-unit / 1.5;   // 16px
+$bs-m:                         $base-spacing-unit;         // 24px
+$bs-l:                         $base-spacing-unit * 1.5;   // 36px
+$bs-xl:                        $base-spacing-unit * 2;     // 48px
+$bs-xxl:                       $base-spacing-unit * 3;     // 72px
+$bs-xxxl:                      $base-spacing-unit * 4;     // 96px
+
+$base-spacing--xs:  $base-spacing / 2;
+
+// Build some SaSS lists of our spacing classes, and map them to 
+// a consistent set of class modifiers so that anything we size
+// has a consistent naming convention:
+
+$sizePrefixes:
+    "-0",
+    "-xxxs",
+    "-xxs",
+    "-xs",
+    "-s",
+    "-m",
+    "-l",
+    "-xl",
+    "-xxl",
+    "-xxxl";
+
+$sizes:
+    $bs-0, $bs-xxxs, $bs-xxs, $bs-xs, $bs-s, $bs-m, $bs-l, $bs-xl, $bs-xxl, $bs-xxxl;
+
+
+// -----------------------------------------------------------------------------
+// Blocks
+// -----------------------------------------------------------------------------
+/* 
+* The block prefixes need to match up with the $block sizes below otherwise the 
+* array will through an error or we could create an argument and pass in size 
+prefixes and minus the ones we dont need eg block-0 hmmm 
+*/
+
+$blockPrefixes:
+    "-xxxs",
+    "-xxs",
+    "-xs",
+    "-s",
+    "-m",
+    "-l",
+    "-xl",
+    "-xxl",
+    "-xxxl";
+
+$block-xxxs:                   $bs-xxxs $bs-xxxs;        // 6px 6px
+$block-xxs:                    $bs-xxxs $bs-xxs;         // 6px 8px
+$block-xs:                     $bs-xxs $bs-xs;           // 8px 12px
+$block-s:                      $bs-xs $bs-s;             // 12px 16px
+$block-m:                      $bs-m $bs-m;              // 24px 24px
+$block-l:                      $bs-l $bs-l;              // 36px 36px
+$block-xl:                     $bs-l $bs-xl;             // 36px 48px
+$block-xxl:                    $bs-xl $bs-xxl;           // 48px 72px
+$block-xxxl:                   $bs-xxl $bs-xxxl;         // 72px 96px
+
+$blockSizes:
+    $block-xxxs,
+    $block-xxs,
+    $block-xs,
+    $block-s,
+    $block-m,
+    $block-l,
+    $block-xl,
+    $block-xxl,
+    $block-xxxl;
+
+
+// -----------------------------------------------------------------------------
+// Media queries
+// -----------------------------------------------------------------------------
+
+// General approach to media queries:
+// - Assume `no media` as the first query.
+// - The `small` breakpoint just gets @media only screen { @content }
+// - `small-only` applies a max-width to prevent an upward cascade.
+//
+// Sizing guide:
+//
+// xsmall       | small mobiles, fridges, watches etc
+// small        | mobiles, some internet-of-things displays
+// medium       | tablet devices, netbooks, mobiles in landscape
+// large        | screens > 960px
+// xlarge       | wide screen devices > 1200px
+// xxlarge      | in our experience, things need adjusting > 1440px
+// xxxlarge     | Full HD
+
+$breakpoint-none:"";
+$breakpoint-xxlarge-name: "xxlarge";
+$breakpoint-xlarge-name: "xlarge";
+$breakpoint-large-name: "large";
+$breakpoint-medium-name: "medium";
+$breakpoint-small-name: "small";
+$breakpoint-classname-prefix: "--q-";
+
+// Set media queries in ems. If you're wondering, we remove 0.01em
+// from the next breakpoint up, so that the breakpoints don't
+// overlap. For instance:
+//
+// @media only screen and (max-width: 47.99em);
+// @media only screen and (min-width: 48em);
+
+$breakpoint-xsmall:     25em;   // The mighty LG Android!
+$breakpoint-small:      30em;   // Portrait regular mobiles//480px
+$breakpoint-small-max:  47.99em;
+$breakpoint-medium:     48em;   // Skinny 768px
+$breakpoint-medium-max: 59.99em;
+$breakpoint-large:      60em;   // Desktop 960px
+$breakpoint-large-max:  74.99em;
+$breakpoint-xlarge:     75em;   // Wide 1200px
+$breakpoint-xxlarge:    90em;   // Wide 1440px
+$breakpoint-xxxlarge:   120em;  // Full HD
+
+$breakpoints:
+        (
+            small "only screen"
+        ),
+        (
+            small-only "only screen and (max-width: #{$breakpoint-small-max})"
+        ),
+        (
+            medium "only screen and (min-width: #{$breakpoint-medium})"
+        ),
+        (
+            medium-only "only screen and (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-medium-max})"
+        ),
+        (
+            medium-down "only screen and (max-width: #{$breakpoint-medium})"
+        ),
+        (
+            large "only screen and (min-width: #{$breakpoint-large})"
+        ),
+        (
+            large-only "only screen and (min-width: #{$breakpoint-large}) and (max-width: #{$breakpoint-large-max})"
+        ),
+        (
+            xlarge "only screen and (min-width: #{$breakpoint-xlarge})"
+        ),
+        (
+            screen "only screen"
+        ),
+        (
+            landscape "only screen and (orientation: landscape)"
+        ),
+        (
+            portrait "only screen and (orientation: portrait)"
+        )
+;
+
+$testing: "";
+
+// -----------------------------------------------------------------------------
+// Grid
+// -----------------------------------------------------------------------------
+
+$fred-grid-breakpoints:     default, small, medium, large, xlarge;
+$grid-column-name:          "col";
+$grid-divisions:            3, 4, 5, 10;
+$grid-float-padding:        1em; // false to disable.
+$grid-number-columns:       1, 2, 3, 4, 5, 6, 8;
+
+// -----------------------------------------------------------------------------
+// Fred module config
+// -----------------------------------------------------------------------------
+
+// These instruct Fred on how to generate just the bits you want.
+
+// Make a range of blocks for the given breakpoints
+$fred-block-breakpoints: default, small, medium, large, xlarge;
+
+// Generate margin classes for the given breakpoints
+//
+// mt   | margin-top
+// mb   | margin-bottom
+// mr   | margin-right
+// ml   | margin-left
+
+$fred-margin-breakpoints: default, small, medium, large, xlarge;
+$fred-margin-types: "mt", "mb", "ml", "mr";
+
+// Generate padding classes for the given breakpoints
+//
+// pt   | padding-top
+// pb   | padding-bottom
+// pr   | padding-right
+// pl   | padding-left
+
+$fred-padding-breakpoints: default, small, medium, large, xlarge;
+$fred-padding-types: "pt", "pb", "pl", "pr";
+
+// -----------------------------------------------------------------------------
+// Colours
+// -----------------------------------------------------------------------------
+
+$bg-color:                      #EEEEEE;
+$base-font-color:               #2E2F2B;
+$hr-colour:                     #e5e5e5;
+
+// Links
+$base-link-color:               #2F72BA;
+$base-link-hover-color:         darken($base-link-color, 15%);
+$lits-block-color:              #ccc;
+$sub-header:                    #999;
+
+// Text emphasis colours
+$text-success:                  #468847;
+$text-warning:                  #c09853;
+$text-danger:                   #b94a48;
+$text-muted:                    #999;
+
+
+// Pills, lozenges and badges
+$pill-font-color:               #fff;
+$pill-bg-color:                 #333;
+$badge-font-color:              #fff;
+$badge-bg-color:                #333;
+$lozenge-radius:                .25em;
+
+
+// Radii (set to false to disable)
+$radius:            .3125em;
+$radius-s:          .125em;
+$radius-l:          .625em;
+$radius-circle:     35em;
+
+//blockquotes
+$open-quote:    \201C;
+$close-quote:   \201D;
+$block-quote-indent:-0.6em;

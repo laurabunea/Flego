@@ -1,0 +1,354 @@
+$carousel-bullet-size: 10px;
+$carousel-bullet-color-active: red;
+$carousel-bullet-color: #555;
+$carousel-transition-duration: 600ms;
+
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+.teflon-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-bottom: calc(9 / 16 * 100%);
+    // some images aren't exactly 100% of width and this shows on the right..needs a fix
+    background: #000;
+}
+
+.teflon {
+    font-family: sans-serif;
+}
+
+.teflon {
+    position: absolute;
+    overflow: hidden;
+    top:0; right:0; bottom:0; left:0;
+    z-index: 1;
+}
+
+    .teflon__item {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .teflon__list {
+        list-style: none;
+
+        & > li {
+            margin-bottom: 0;
+        }
+    }
+
+    .teflon_list,
+    .teflon_item {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .teflon__list,
+    .teflon__item,
+    .teflon__item > img {
+        @include vendor(transform, translateZ(0));
+    }
+
+    .teflon__image,
+    .teflon__item > img {
+        @include vendor(transition, opacity 300ms linear 200ms);
+    }
+
+    .teflon__list {
+        padding: 0;
+        max-width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        font-size: 0px;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    .teflon__item {
+        width: 100%;
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+        font-size: medium;
+
+        -webkit-perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        filter: inherit;
+
+
+        & > img {
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            position: relative;
+            visibility: visible;
+            //-webkit-perspective: 1000;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -moz-user-drag: none;
+            user-drag: none;
+
+            // Make IE8 inherit the opacity correctly.
+            filter: inherit;
+
+            // Make the images slightly extend the .teflon__item frame to make the transition oh so nice
+            // width: 100%;
+            $extend-percentage: 3.5%;
+            width: 100% + $extend-percentage;
+            margin-left: -#{$extend-percentage / 2};
+            margin-right: -#{$extend-percentage / 2};
+            margin-top: -#{$extend-percentage * (9/16) / 2};
+            margin-bottom: -#{ ($extend-percentage * (9/16)) / 2};
+            max-width: none;
+        }
+    }
+
+    .teflon__item--loading {
+        // Add a spinner if that's your thang:
+        // background-image: url(/assets/images/spinner-dark.gif);
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        & > img {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .teflon__indicator {
+        display: none;
+    }
+
+    .teflon__bullet {
+        padding: 5px 0;
+        display: inline-block;
+        &:first-child{
+            padding-left: 15px;
+        }
+        &:last-child{
+            padding-right: 15px;
+        }
+        i{
+            display: inline-block;
+            width: $carousel-bullet-size;
+            height: $carousel-bullet-size;
+            @include vendor(border-radius, $carousel-bullet-size/2);
+            background: $carousel-bullet-color;
+            margin: 0 0.26em;
+        }
+        &.active{
+            i{
+                background: $carousel-bullet-color-active;
+            }
+        }
+    }
+
+
+    .teflon__arrow_wrap {
+        white-space: nowrap;
+        margin: 0;
+
+        padding-top: $grid--gutter-padding / 2; // mimic the content padding
+
+        @include media('wide') {
+            padding-top: $grid--gutter-padding; // mimic the content padding
+        }
+
+        @include media('mobile-only') {
+            padding-top: 0;
+        }
+    }
+
+    .teflon__arrow{
+        cursor: pointer;
+        margin-top: 0;
+        padding: 0 0.3em 0.3em 0;
+    }
+
+    .teflon__back{
+        padding-left: 0;
+        margin-right: 0.5em;
+    }
+
+    .teflon__next{
+    }
+
+    .teflon__image[data-not-loaded] {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    // rotate stuff
+    @include media($type: 'skinny-up', $wrapping-selector: true) {
+        .teflon__navigation_wrap,
+        .rotate__wrap {
+            position: relative;
+            // right: -56.25%;
+            right: 0;
+        }
+
+        .teflon__navigation,
+        .rotate__content {
+            @include vendor(backface-visibility, hidden);
+            @include vendor(transform, rotate(-90deg));
+            @include vendor(transform-origin, top left);
+            position: absolute;
+            right: -56.25%;
+            text-align: center;
+            top: inherit;
+            width: 56.25%; // this is positioned inside a 16:9 ratio div, so rotated, the width becomes the height: 56.25%
+            z-index: 10;
+
+            .teflon__index {
+                display: block;
+                position: absolute;
+                left: 0; right:0; top:1.25em;
+                text-align: center;
+
+                .teflon__index_max {
+                    &:before {
+                        content : "/";
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+@mixin keyframes ($animation-name){
+    @-webkit-keyframes $animation-name{
+        @content;
+    }
+
+    @-moz-keyframes $animation-name{
+         @content;
+    }
+
+    @-ms-keyframes $animation-name{
+         @content;
+    }
+
+    @-o-keyframes $animation-name{
+         @content;
+    }
+
+    @keyframes $animation-name{
+        @content;
+    }
+}
+
+
+
+
+
+/**
+ * Quick and dirty animation classes
+ *
+ */
+
+@include keyframes(slideOutLeft) {
+    0% {
+        @include vendor(transform, translateX(0));
+    }
+    100% {
+        @include vendor(transform, translateX(-15px));
+        opacity: 0;
+    }
+}
+
+@include keyframes(slideInRight) {
+    0% {
+        @include vendor(transform, translateX(15px));
+    }
+    100% {
+        @include vendor(transform, translateX(0));
+    }
+}
+
+@include keyframes(slideInLeft) {
+    0% {
+        @include vendor(transform, translateX(-15px));
+    }
+    100% {
+        @include vendor(transform, translateX(0));
+    }
+}
+
+@include keyframes(slideOutRight) {
+    0% {
+        @include vendor(transform, translateX(0));
+    }
+    100% {
+        @include vendor(transform, translateX(15px));
+        opacity: 0;
+    }
+}
+
+
+.slideOutRight {
+    @include vendor(animation, slideOutRight $carousel-transition-duration both ease-in-out);
+}
+
+.slideInLeft {
+    @include vendor(animation, slideInLeft $carousel-transition-duration both ease-in-out);
+    z-index: -1;
+}
+
+.slideOutLeft {
+    @include vendor(animation, slideOutLeft $carousel-transition-duration both ease-in-out);
+}
+
+.slideInRight {
+    @include vendor(animation, slideInRight $carousel-transition-duration both ease-in-out);
+    z-index: -1;
+}
+
+
+// Loading styles
+.teflon:after {
+    transition: opacity 30ms ease-in;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    padding-top: 26%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 10;
+    color: #fff;
+}
+
+.teflon--loading:after {
+    opacity: 1;
+    background: rgba(0,0,0,0.5);
+    content: url(/images/nom-nom-nom.gif);
+}
+
+.teflon--clickable {
+    cursor: pointer;
+}
+    // Do something fancy on hover?
+    .teflon--clickable:hover {
+
+    }

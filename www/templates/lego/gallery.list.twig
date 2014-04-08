@@ -1,0 +1,10 @@
+<div class='grid gallery'>
+    <!-- loop over gallery items -->  
+    {% for key, value in data.gallery %}
+        <div class='grid__item {{data.colSize}} gallery--item'>
+            <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>         
+                <img src='{{value.image}}' class='img--responsive' alt='{{value.caption}}' title='{{value.caption}}'> 
+            </div><!--block ends-->
+        </div><!--grid item ends-->
+   {% endfor %}
+</div><!-- ends -->

@@ -1,0 +1,63 @@
+
+                                      $$$$                               =$$$                                         =$$$
+                                      $$$$                               =$$$                                         =$$$
+                                      :++,                               =$$$                                         =$$$
+                                                                         =$$$                                         =$$$
+  ~I$$$$I~   ~??: I$$$7+    ???? .7$= ????  ???.~7$$$7.     ,+$$$$~ ???~ =$$$     :$$$$7+       ,7$$$7~~???    :?$$$$:=$$$     ,~+++=.        .=+++++~:.    ,~+~
+7$$$$$$$$$$= =$$$$$$$$$$$$  ?$$$$$$$= $$$$  $$$$$$$$$$$$  :$$$$$$$$$$$$~ =$$$   ?$$$$$$$$$$   ,$$$$$$$$$$$$  =$$$$$$$$$$$$   .+++++++++     .+++++++++++++++++:
+$$$$   .$$$$ :$$$$~. :$$$$, +$$$$$?~, $$$$  $$$$?:  7$$$  $$$$=.  I$$$$: =$$$  ?$$$I,  7$$$+ .$$$$I  :7$$$$  $$$$=  .$$$$$   ~+++  .+++    .+++++++++++++++++:
+$$$$?=::     :$$$~    ~$$$+ =$$$?     $$$$  $$$7    =$$$  $$$$     :$$$: =$$$ :$$$$     ?$$$ =$$$~     $$$$  $$$7     +$$$   ~+++   ~++,   :+++++++++++++++++
+,7$$$$$$$$$+ :$$$      ?$$? =$$$      $$$$  $$$?    =$$$  $$$?      $$$: =$$$ =$$$$     :$$$:?$$$      $$$$  $$$=     =$$$   .+++++++++    ++++++++++++++++
+   ,==?7$$$$ :$$$.    .$$$? =$$$      $$$$  $$$?    =$$$  $$$$     =$$$: =$$$ :$$$$     +$$$,=$$$,     $$$$  $$$I     =$$$     ++++++=.    +++~,=+++++++~
+$$$+    $$$$ :$$$7    7$$$: =$$$      $$$$  $$$?    =$$$  $$$$7=:~$$$$$: =$$$  7$$$:   =$$$? ,$$$$:   ~$$$$  $$$$.   +$$$$       +++=    .=+++.
+$$$$$$$$$$$+ :$$$$$$$$$$$7  =$$$      $$$$  $$$?    =$$$   :$$$$$$$7$$$: =$$$   ~$$$$$$$$$$    $$$$$$$$$$$$  ,7$$$$$$$$$$$       ,+++++++++++
+ :$$$$$$$7   :$$$:$$$$$$,   =$$$      $$$$  $$$?    =$$$     ,???+  $$$: =$$$    :7$$$$$$,     .+$$$$$7=$$$    ?$$$$$I,$$$:        ~+++++++.
+             :$$$                                         ==I$     =$$$:
+             :$$$                                         +$$$$$$$$$$$,
+             :$$$                                          ,$$$$$$$$7:
+                                                              ,:::
+/* SITE */
+    Title: freds precious
+    Language: English
+
+
+/* COMPANIES */
+
+    Web site build by Springload
+    Website: http://springload.co.nz/
+    Contact: hello@springload.co.nz
+    Twitter: @springloadnz
+
+/* TEAM */
+
+    Account Manager:
+    Contact:  [at] springload.co.nz
+    From: Wellington, New Zealand
+
+    Design Director:
+    Contact:  [at] springload.co.nz
+    Twitter: @
+    From: Wellington, New Zealand
+
+    Technical Direction:
+    Contact:  [at] springload.co.nz
+    Twitter: @
+    From: Wellington, New Zealand
+
+    Lead Design:
+    Contact:  [at] springload.co.nz
+    Twitter: @
+    From: Wellington, New Zealand
+
+    Back-End:
+    Contact:  [at] springload.co.nz
+    Twitter: @
+    From: Wellington, New Zealand
+
+    Front-End:
+    Contact: [at] springload.co.nz
+    Twitter:
+    From: Wellington, New Zealand
+
+
+

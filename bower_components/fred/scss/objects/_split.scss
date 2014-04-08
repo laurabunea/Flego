@@ -1,0 +1,27 @@
+
+/**
+
+## Split
+
+Simple split item for creating two elements floated away from one another
+
+```html
+<p class='split'>
+    Item
+    <span class='split__right'>
+        $value
+    </span>
+</p>
+```
+*/
+
+.split {
+    text-align:left;
+    list-style:none;
+    margin-left:0;
+}
+    .split__right {
+        text-align:right;
+        float:right;
+        clear:left;
+    }

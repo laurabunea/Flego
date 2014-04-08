@@ -1,0 +1,4 @@
+{% macro lego(type, data) %}
+    {% include "lego/" ~ type ~ ".twig" ignore missing with { 'data': data } %} 
+{% endmacro %}
+

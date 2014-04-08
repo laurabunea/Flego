@@ -1,0 +1,19 @@
+{
+  "name": "freds-precious",
+  "version": "0.0.0",
+  "dependencies": {
+  	"grunt":"~0.4.0",
+  	"grunt-sass":"*",
+  	"grunt-contrib-copy": "*",
+  	"grunt-contrib-clean": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-svgmin": "*",
+  	"grunt-contrib-uglify": "*",
+  	"grunt-contrib-jshint": "*",
+  	"grunt-contrib-concat": "*",
+  	"grunt-contrib-watch": "*",
+    "grunt-shell": "*",
+    "grunt-subgrunt-io": "*",
+    "grunt-bower-concat": "*"
+  }
+}

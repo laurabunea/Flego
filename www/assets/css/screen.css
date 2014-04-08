@@ -1,0 +1,4277 @@
+/* 
+* The block prefixes need to match up with the $block sizes below otherwise the 
+* array will through an error or we could create an argument and pass in size 
+prefixes and minus the ones we dont need eg block-0 hmmm 
+*/
+/**
+
+# Meet Fred, the friendly front-end framework
+
+
+Fred helps jump-start your front-end projects. He's a super flexible little guy with a 
+nice grunt-powered CLI.
+
+### How Fred Works
+
+Fred aims to solve a classic front-end problem: sharing and re-using common components between
+projects, while allowing each project to retain custom variables and configuration.
+
+You include '_fred.scss' in your project, and customise its behavior in '_fred-theme.scss'. 
+When there's an update to Fred, you can update it with a 'bower update' and get all the new
+Fred goodness in your project right away, without losing your settings. 
+
+
+## Getting started
+
+One liner:
+
+```bash
+bower install fred && cp bower_components/Fred.scss/dist/lib/fred.scss path-to-sass-folder/lib/_fred.scss && cp bower_components/Fred.scss/dist/_fred-theme.scss path-to-sass-folder/_fred-theme.scss 
+```
+
+This should give you the following structure in your sass dir:
+
+```
+path-to-sass-folder/
+    |--lib/
+    |----_fred.scss
+    |--_fred-theme.scss
+    |--screen.scss (or whatever your main sass file is)
+```
+
+Now you can include Fred in your `screen.scss`:
+```scss
+// screen.scss
+@include "lib/fred"
+
+
+// Your stylesheet can now use Fred! 
+
+.my-selector {
+  @extend %antialiased;
+}
+
+.my-other-selector {
+  @extend .mt-m--q-large;
+}
+
+You can customise your installation from within the fred directory. Here's a one-liner:
+
+```bash
+> cd bower_components/fred && npm install && grunt
+```
+
+...and follow the directions of your trained cabin crew:
+
+```bash
+> cd Fred.scss/
+> grunt 
+[?] Do you want to customise Fred's modules? (y/N)
+[?] Which modules would you like to include? (Press <space> to select)
+ ❯⬡ scss/objects/_arrows.scss
+  ⬡ scss/objects/_badge.scss
+  ⬡ scss/objects/_block-grid.scss
+  ⬡ scss/objects/_blocks.scss
+  ⬡ scss/objects/_breadcrumbs.scss
+  ⬡ scss/objects/_button-group.scss
+  ⬡ scss/objects/_buttons.scss
+  ⬡ scss/objects/_caret.scss
+  ⬡ scss/objects/_close.scss
+  ⬡ scss/objects/_forms.scss
+  ⬡ scss/objects/_grid.scss
+  ⬡ scss/objects/_headings.scss
+  ⬡ scss/objects/_icon-text.scss
+  ⬡ scss/objects/_images.scss
+  ⬡ scss/objects/_links.scss
+  ⬡ scss/objects/_lists.scss
+  ⬡ scss/objects/_media.scss
+  ⬡ scss/objects/_nav.scss
+  ⬡ scss/objects/_pagination.scss
+  ⬡ scss/objects/_pills.scss
+  ⬡ scss/objects/_radii.scss
+  ⬡ scss/objects/_ratio.scss
+  ⬡ scss/objects/_spacing.scss
+  ⬡ scss/objects/_split.scss
+  ⬡ scss/objects/_typography.scss
+  ⬡ scss/objects/_visibility.scss
+```
+
+*/
+/* 
+* The block prefixes need to match up with the $block sizes below otherwise the 
+* array will through an error or we could create an argument and pass in size 
+prefixes and minus the ones we dont need eg block-0 hmmm 
+*/
+/**
+---------------------------------------
+# Customising Fred
+
+Fred has a very small core, and a number of optional modules. By default, it includes all of them.
+
+To change what's included, you can run `grunt` inside the Fred package that bower downloads for you.
+
+Follow the instructions of your cabin crew and you'll be rocking your custom-built Fred in
+no time.
+
+```
+> cd Fred.scss/
+> grunt 
+[?] Do you want to customise Fred's modules? (y/N)
+[?] Which modules would you like to include? (Press <space> to select)
+ ❯⬡ scss/objects/_arrows.scss
+  ⬡ scss/objects/_badge.scss
+  ⬡ scss/objects/_block-grid.scss
+  ⬡ scss/objects/_blocks.scss
+  ⬡ scss/objects/_breadcrumbs.scss
+  ⬡ scss/objects/_button-group.scss
+  ⬡ scss/objects/_buttons.scss
+  ⬡ scss/objects/_caret.scss
+  ⬡ scss/objects/_close.scss
+  ⬡ scss/objects/_forms.scss
+  ⬡ scss/objects/_grid.scss
+  ⬡ scss/objects/_headings.scss
+  ⬡ scss/objects/_icon-text.scss
+  ⬡ scss/objects/_images.scss
+  ⬡ scss/objects/_links.scss
+  ⬡ scss/objects/_lists.scss
+  ⬡ scss/objects/_media.scss
+  ⬡ scss/objects/_nav.scss
+  ⬡ scss/objects/_pagination.scss
+  ⬡ scss/objects/_pills.scss
+  ⬡ scss/objects/_radii.scss
+  ⬡ scss/objects/_ratio.scss
+  ⬡ scss/objects/_spacing.scss
+  ⬡ scss/objects/_split.scss
+  ⬡ scss/objects/_typography.scss
+  ⬡ scss/objects/_visibility.scss
+```
+
+That's about all for how to work with Fred. Next, let's look at what it actually gives you.
+
+----
+
+## Core
+
+
+### Making browsers behave
+Fred includes most of [normalize.css](https://github.com/necolas/normalize.css) v2.1.3. 
+
+You can read the documentation on the normalize site. 
+
+----
+
+*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+body {
+  margin: 0; }
+
+a {
+  background: transparent; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap; }
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.relative, .arrow--left, .arrow--right, .arrow--side, .arrow--center, .badge, .btn-group, .btn-group-vertical, .btn-group > .btn, .btn-group-vertical > .btn {
+  position: relative; }
+
+.absolute, .absolute--bottom-left, .absolute--bottom-right, .absolute--top-left, .absolute--top-right, .arrow {
+  position: absolute; }
+
+
+
+.left, .btn-group > .btn, .btn-group-vertical > .btn, .btn-toolbar .btn-group, .btn-group > .btn-group, .grid-float > [class^=col], .media__image {
+  float: left; }
+
+.right, .media--rev > .media__image {
+  float: right; }
+
+.absolute--bottom-left {
+  bottom: 0;
+  left: 0; }
+
+.absolute--bottom-right {
+  bottom: 0;
+  right: 0; }
+
+.absolute--top-left {
+  top: 0;
+  left: 0; }
+
+.absolute--top-right {
+  top: 0;
+  right: 0; }
+
+.arrow--center .arrow {
+  margin-left: auto;
+  margin-right: auto; }
+
+.align--top, .grid > *, .grid__item, .dl-horizontal > dt, .dl-horizontal > dd {
+  vertical-align: top; }
+
+.align--middle, .btn-group, .btn-group-vertical, .btn, .caret, .close:after, .grid--middle > .grid__item, .i {
+  vertical-align: middle; }
+
+.align--baseline, .badge {
+  vertical-align: baseline; }
+
+.align--bottom, .grid--bottom > .grid__item {
+  vertical-align: bottom; }
+
+
+
+
+
+/**
+### Inline blocks
+
+Inline blocks are handy for everything. We don't often support projects in IE7 and
+below, but since it's trivial to hack it in, we've included it here. 
+
+To cut down on rules in your stylesheet, you can extend this placeholder in your code.
+
+```
+%inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+
+.my-icon {
+    @extend %inline-block;
+}
+
+```
+
+*/
+.inline-block, .dl-horizontal > dt, .dl-horizontal > dd, .arrow, .badge, .breadcrumbs > li, .breadcrumbs--arrow > li, .btn-group, .btn-group-vertical, .btn, .caret, .close:after, .grid > *, .grid__item, .grid:after, .grid__break, .icon-text .i, .btn--icon .i, .icon-text--rev .i, .btn--icon-rev .i, .list--inline > li, .dl-horizontal:after, .nav > li, .nav > .pagination, .pagination > li, .pill, .lozenge, .text--overflow {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+
+.block-element {
+  display: block; }
+
+
+/**
+### Clearfixing
+
+Table-pseudo element clearfix. It is good.
+
+```scss
+.my-floater {
+    @extend %clearfix;
+}
+```
+
+Or, heaven forbid, in your markup:
+
+```html
+<div class='clearfix'>
+    <div class='left'>
+        Hey i'm floating!
+    </div>
+</div>
+```
+
+*/
+.clearfix, .block-xxxs, .block-xxs, .block-xs, .block-s, .block-m, .block-l, .block-xl, .block-xxl, .block-xxxl, .list--inline, .nav, .pagination, .btn-toolbar, .btn-group-vertical > .btn-group, .media, .media--rev {
+  /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+  *zoom: 1; }
+
+.clearfix:before, .block-xxxs:before, .block-xxs:before, .block-xs:before, .block-s:before, .block-m:before, .block-l:before, .block-xl:before, .block-xxl:before, .block-xxxl:before, .list--inline:before, .nav:before, .pagination:before, .btn-toolbar:before, .btn-group-vertical > .btn-group:before, .media:before, .media--rev:before {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after, .block-xxxs:after, .block-xxs:after, .block-xs:after, .block-s:after, .block-m:after, .block-l:after, .block-xl:after, .block-xxl:after, .block-xxxl:after, .list--inline:after, .nav:after, .pagination:after, .btn-toolbar:after, .btn-group-vertical > .btn-group:after, .media:after, .media--rev:after {
+  clear: both;
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+
+.overflow-hidden, .media__body, .media--rev > .media__body {
+  overflow: hidden; }
+
+/**
+
+###Screen reader content
+
+We've found some odd bugs with the -999px textindent hack. 
+Clipping is much better since it doesn't require a 999 x [your-line-height]px region to be drawn.
+
+This is borrowed from Bootstrap.
+
+```html
+ <a class="sr-only" href="#content">Skip to main content</a>
+```
+
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+/**
+
+### Fixing Chrome/WebKit type rendering
+
+Since v22, Chrome makes fat sausage horrible web typography. Fix it with
+these properties right here:
+
+```html
+<div class='my-black-box antialiased'>
+    <h1>Knocked out white text!</h1>  
+</div>
+```
+
+But wait! That screws with everything on Windows Vista Chrome... right?
+
+Yeah, it does. If you're using our [Browser.js](http://springload.github.io/Browser.js),
+it'll automatically add `isWindowsChrome` to the documentElement, and we set
+the antialiasing back to classic sub-pixel mode:
+
+```scss
+.isWindowsChrome %fix-webkit-font-rendering  {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+```
+
+In your markup:
+```html
+<html class='isWindowsChrome'>
+
+<!-- some time later -->
+
+<div class='my-black-box antialiased'>
+    <h1>Hey i'll look good on Vista!</h1>  
+</div>
+
+```
+*/
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+.isWindowsChrome .antialiased {
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+
+/**
+### Magic tricks
+
+Showing and hiding things with a pre-emptive `important`  
+
+```html
+<div class='hide'>Shorthand display: none !important;</div>
+<div class='show'>Shorthand display: block !important;</div>
+<div class='hidden'>Shorthand visibility: hidden !important;</div>
+<div class='visible'>Shorthand visibility: visible !important;</div>
+```
+
+*/
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+
+
+.visible {
+  visibility: visible !important; }
+
+.hidden {
+  visibility: hidden !important; }
+
+
+
+/**
+
+### Append and Prepend
+
+Place something before or after an element
+
+```html
+<p class="prepend" data-prepend="email:">&nbsp;email@gmail.com</p>
+<p class="append" data-append="is my email">email@gmail.com&nbsp;</p>
+```
+
+*/
+.prepend:before {
+  content: attr(data-prepend);
+  display: inline-block; }
+
+.append:after {
+  content: attr(data-append);
+  display: inline-block; }
+
+/**
+
+That wraps up the core of Fred. Some simple resets, helpers, and alignment classes. 
+
+---
+
+# Modules
+
+Modules are intended as stand-alone functional blocks that you can optionally include
+in your build. We usually include all modules for development, then re-build the 
+library with only components we've used in production.
+
+
+By default, Fred will build and include all the following modules. 
+
+*/
+/**
+
+## Arrows
+
+Apply the modifier classes to the parent. For instance, this will put an
+arrow in the top left corner of the containing div:
+
+```html
+<div class='arrow--left block-xs block--color-3'>
+    <p> ... </p>
+    <i class='arrow arrow-top'></i>
+</div>
+
+<div class='arrow--right block-xs block--color-3'>
+    <p> ... </p>
+    <i class='arrow arrow-top '></i>
+</div>
+
+<div class='arrow--center block-xs block--color-3'>
+    <p> ... </p>
+    <i class='arrow arrow-bottom '></i>
+</div>
+
+<div class='arrow--side block-xs block--color-3'>
+    <p> ... </p>
+    <i class='arrow arrow-left '></i>
+</div>
+```
+
+*/
+.arrow {
+  /*i,span*/
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0.5em;
+  height: 0;
+  width: 0; }
+
+.arrow-top {
+  border-bottom-color: inherit;
+  border-top-width: 0;
+  top: -0.4em; }
+
+.arrow-bottom {
+  border-bottom-width: 0;
+  border-top-color: inherit;
+  bottom: -0.4em; }
+
+.arrow-left {
+  border-left-width: 0;
+  border-right-color: inherit;
+  left: -0.4em; }
+
+.arrow-right {
+  border-left-color: inherit;
+  border-right-width: 0;
+  right: -0.4em; }
+
+.arrow--left, .arrow--right, .arrow--side, .arrow--center {
+  /*div,block*/ }
+
+.arrow--center .arrow {
+  left: 0;
+  right: 0; }
+
+.arrow--left .arrow {
+  left: 1.5em; }
+
+.arrow--right .arrow {
+  right: 1.5em; }
+
+.arrow--side .arrow {
+  top: 1.5em; }
+
+/**
+
+## Badges
+
+```html
+<a class="xm">Inbox
+    <span class="badge tiny">42</span>
+</a>
+```
+*/
+.badge {
+  /* This extend is found in core */
+  /* This extend is found in core */
+  /* This extend is found in core */
+  line-height: 1.42857;
+  margin-left: 0.3em;
+  min-width: 0.625em;
+  padding: 0.1875em 0.4375em;
+  top: -1px;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #333;
+  border-radius: 100px; }
+  .badge:empty {
+    display: none; }
+
+
+
+
+/**
+
+## Generic blocks
+
+```html
+<div class='block-xs block--green'>
+       ...
+</div>
+```
+
+*/
+.block-xxxs, .block-xxs, .block-xs, .block-s, .block-m, .block-l, .block-xl, .block-xxl, .block-xxxl {
+  /* This extend is found in core */
+  margin-top: 1em; }
+
+.block--stacked {
+  margin-top: 0 !important; }
+
+.block-xxxs > :first-child, .block-xxs > :first-child, .block-xs > :first-child, .block-s > :first-child, .block-m > :first-child, .block-l > :first-child, .block-xl > :first-child, .block-xxl > :first-child, .block-xxxl > :first-child {
+  margin-top: 0; }
+
+.block-xxxs {
+  padding: 0.375em 0.375em; }
+
+.block-xxs {
+  padding: 0.375em 0.5em; }
+
+.block-xs {
+  padding: 0.5em 0.75em; }
+
+.block-s {
+  padding: 0.75em 1em; }
+
+.block-m {
+  padding: 1.5em 1.5em; }
+
+.block-l {
+  padding: 2.25em 2.25em; }
+
+.block-xl {
+  padding: 2.25em 3em; }
+
+.block-xxl {
+  padding: 3em 4.5em; }
+
+.block-xxxl {
+  padding: 4.5em 6em; }
+
+@media only screen and (max-width: 47.99em) {
+  .block-xxxs--q-small {
+    padding: 0.375em 0.375em; }
+  .block-xxs--q-small {
+    padding: 0.375em 0.5em; }
+  .block-xs--q-small {
+    padding: 0.5em 0.75em; }
+  .block-s--q-small {
+    padding: 0.75em 1em; }
+  .block-m--q-small {
+    padding: 1.5em 1.5em; }
+  .block-l--q-small {
+    padding: 2.25em 2.25em; }
+  .block-xl--q-small {
+    padding: 2.25em 3em; }
+  .block-xxl--q-small {
+    padding: 3em 4.5em; }
+  .block-xxxl--q-small {
+    padding: 4.5em 6em; } }
+
+@media only screen and (min-width: 48em) and (max-width: 63.99em) {
+  .block-xxxs--q-medium {
+    padding: 0.375em 0.375em; }
+  .block-xxs--q-medium {
+    padding: 0.375em 0.5em; }
+  .block-xs--q-medium {
+    padding: 0.5em 0.75em; }
+  .block-s--q-medium {
+    padding: 0.75em 1em; }
+  .block-m--q-medium {
+    padding: 1.5em 1.5em; }
+  .block-l--q-medium {
+    padding: 2.25em 2.25em; }
+  .block-xl--q-medium {
+    padding: 2.25em 3em; }
+  .block-xxl--q-medium {
+    padding: 3em 4.5em; }
+  .block-xxxl--q-medium {
+    padding: 4.5em 6em; } }
+
+@media only screen and (min-width: 64em) and (max-width: 74.99em) {
+  .block-xxxs--q-large {
+    padding: 0.375em 0.375em; }
+  .block-xxs--q-large {
+    padding: 0.375em 0.5em; }
+  .block-xs--q-large {
+    padding: 0.5em 0.75em; }
+  .block-s--q-large {
+    padding: 0.75em 1em; }
+  .block-m--q-large {
+    padding: 1.5em 1.5em; }
+  .block-l--q-large {
+    padding: 2.25em 2.25em; }
+  .block-xl--q-large {
+    padding: 2.25em 3em; }
+  .block-xxl--q-large {
+    padding: 3em 4.5em; }
+  .block-xxxl--q-large {
+    padding: 4.5em 6em; } }
+
+@media only screen and (min-width: 75em) {
+  .block-xxxs--q-xlarge {
+    padding: 0.375em 0.375em; }
+  .block-xxs--q-xlarge {
+    padding: 0.375em 0.5em; }
+  .block-xs--q-xlarge {
+    padding: 0.5em 0.75em; }
+  .block-s--q-xlarge {
+    padding: 0.75em 1em; }
+  .block-m--q-xlarge {
+    padding: 1.5em 1.5em; }
+  .block-l--q-xlarge {
+    padding: 2.25em 2.25em; }
+  .block-xl--q-xlarge {
+    padding: 2.25em 3em; }
+  .block-xxl--q-xlarge {
+    padding: 3em 4.5em; }
+  .block-xxxl--q-xlarge {
+    padding: 4.5em 6em; } }
+
+/**
+
+## Breadcrumbs
+
+```html
+<ol class='list-unstyled breadcrumbs pt-breadrumbs mt-s'>
+    <li><a href='#'>Home</a></li>
+    <li><a href='#'>Page</a></li>
+    <li class='#'>Sub page</li>
+</ol>
+```
+
+*/
+.breadcrumbs > li {
+  /* This extend is found in core */ }
+  .breadcrumbs > li + li:before {
+    content: "/\00a0";
+    padding: 0 0.375em; }
+
+.breadcrumbs--arrow > li {
+  /* This extend is found in core */ }
+  .breadcrumbs--arrow > li + li:before {
+    content: "» ";
+    padding: 0 0.375em; }
+
+/**
+
+## Button group
+
+Contain buttons in a horizontal group.
+----------------------------------------------------------------------------
+Borrowed from Twitter Bootstrap and put on a border-radius diet.
+
+*/
+.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active, .btn-group-vertical > .btn:hover, .btn-group-vertical > .btn:focus, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn.active {
+  z-index: 2; }
+.btn-group > .btn:focus, .btn-group-vertical > .btn:focus {
+  outline: none; }
+
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+  margin-left: -1px; }
+
+.btn-toolbar > .btn + .btn, .btn-toolbar > .btn + .btn-group, .btn-toolbar > .btn-group + .btn, .btn-toolbar > .btn-group + .btn-group {
+  margin-left: 0.3125em; }
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0; }
+
+.btn-group > .btn:first-child {
+  margin-left: 0; }
+
+
+.btn-group > .btn-group {
+  /* This extend is found in core */ }
+
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0; }
+
+
+
+.btn-group-xs > .btn {
+  font-size: 0.75em; }
+
+.btn-group-sm > .btn {
+  font-size: 1.25em; }
+
+.btn-group-lg > .btn {
+  font-size: 1.25em; }
+
+.btn-group-vertical > .btn, .btn-group-vertical > .btn-group {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%; }
+.btn-group-vertical > .btn-group > .btn {
+  float: none; }
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn + .btn-group, .btn-group-vertical > .btn-group + .btn, .btn-group-vertical > .btn-group + .btn-group {
+  margin-top: -1px;
+  margin-left: 0; }
+
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate; }
+  .btn-group-justified .btn {
+    float: none;
+    display: table-cell;
+    width: 1%; }
+
+/**
+
+## Buttons
+
+### Button variations
+
+```html
+<p>
+    <a class="btn tp-btn" data-btn-loading-indicator="Thinking...">
+        <span class="btn--label">
+            Button 1
+        </span>
+    </a>
+    <a class="btn ts-btn">
+        Button 2
+    </a>
+    <a class="btn tt-btn">
+        Button 3
+    </a>
+</p>
+```
+
+*/
+.btn {
+  /* [1] */
+  /* [2] */
+  -webkit-border-radius: 0.375em;
+  -moz-border-radius: 0.375em;
+  -ms-border-radius: 0.375em;
+  -o-border-radius: 0.375em;
+  border-radius: 0.375em;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  /* [5] */
+  font-family: inherit;
+  /* [4] */
+  line-height: 2.5;
+  /* [7] */
+  margin: inherit 0 0 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  padding-left: 1.5em;
+  /* [7] */
+  padding-right: 1.5em;
+  /* [7] */
+  padding-top: 0;
+  /* [6] */
+  white-space: nowrap;
+  /* [3] */ }
+  .btn, .btn:hover {
+    text-decoration: none;
+    /* [9] */ }
+  .btn:active, .btn:focus {
+    outline: none; }
+
+/**
+
+### Button modifiers
+
+```html
+<h3 class="btn tp-btn btn--large btn--bounce">
+    Button 1
+</h3>
+<p>
+    <small class="btn tt-btn btn--small btn--bob">
+        Button 2
+    </small>
+</p>
+```
+
+*/
+.btn--large, .btn--icon-large, .btn--icon-large--rev, .btn--icon-only--large {
+  line-height: 3.5; }
+
+.btn--large {
+  padding-right: 3em;
+  padding-left: 3em; }
+
+.btn--small, .btn--icon-small, .btn--icon-small--rev, .btn--icon-only--small {
+  line-height: 2; }
+
+.btn--small {
+  padding-right: 0.75em;
+  padding-left: 0.75em; }
+
+/**
+
+### Pill type buttons with (rounded) ends
+
+```html
+<a class="btn tp-btn btn--soft">
+    Button 1
+</a>
+<a class="btn ts-btn btn--hard">
+    Button 2
+</a>
+```
+
+*/
+.btn--soft {
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+  border-radius: 200px; }
+
+.btn--hard {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0; }
+
+/**
+
+### Block buttons stretch to the full width of their parent (handy!)
+
+```html
+<p>
+    <a class="btn tp-btn btn--block">
+        Button 1
+    </a>
+</p>
+<p>
+    <a class="btn tp-btn btn--block-mobile">
+        Responsinate!
+    </a>
+</p>
+```
+
+*/
+.btn--block {
+  display: block;
+  text-align: center; }
+
+@media only screen and (47.99em) {
+  .btn--block-mobile {
+    text-align: center;
+    display: block; } }
+
+/**
+
+### Submit buttons
+
+FireFox doesn't like line-heights on submit buttons. Stick a class on submit
+buttons and make sure the padding's the same as your default button :)
+
+```html
+<input type='submit' value='Button 3' class='btn btn--submit-small' />
+<input type='submit' value='Button' class='btn btn--submit' />
+<input type='submit' value='Button 2' class='btn btn--submit-large' />
+```
+
+*/
+.btn--submit {
+  line-height: 1;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em; }
+
+.btn--submit-large {
+  line-height: 1;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+
+.btn--submit-small {
+  line-height: 1;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em; }
+
+/**
+
+### Buttons with icons
+
+These assume there's an inline-block element with a class of .i inside the button
+
+```html
+<p>
+    <a class='btn tp-btn btn--icon btn--bounce-icon--left'>
+        <i class='i'>&#9834;</i>
+        A button with .btn--icon
+    </a>
+</p>
+<p>
+    <a class='btn tp-btn btn--icon--rev btn--bounce-icon--bottom'>
+        A button with .btn--icon--rev
+        <i class='i'>&#9835;</i>
+    </a>
+</p>
+<p>
+    <a class='btn ts-btn btn--icon-large btn--bounce-icon--top'>
+        <i class='i'>&#9829;</i>
+        A button with .btn--icon-large
+    </a>
+</p>
+<p>
+    <a class='btn ts-btn btn--icon-large--rev btn--bounce-icon--right'>
+        A button with .btn--icon-large--rev
+        <i class='i'>&#9733;</i>
+    </a>
+</p>
+
+<p>
+    <a class='btn tt-btn btn--icon-small'>
+        <i class='i'>&#163;</i>
+        A button with .btn--icon-small
+    </a>
+</p>
+<p>
+    <small class='btn tt-btn btn--icon-small'>
+        <i class='i'>&#163;</i>
+        A small with .btn--icon-small
+    </small>
+</p>
+```
+
+Buttons can also be icons only:
+
+```html
+<p>
+    <a class='btn tp-btn btn--icon-only--large'>
+        <i class='i'>
+            &#9829;
+        </i>
+    </a>
+    <a class='btn ts-btn btn--icon-only'>
+        <i class='i'>
+            &#9829;
+        </i>
+    </a>
+    <a class='btn tt-btn btn--icon-only--small'>
+        <i class='i'>
+            &#9829;
+        </i>
+    </a>
+    <a class='btn ts-btn btn--icon-only--small btn--soft'>
+        <i class='i'>
+            &#9733;
+        </i>
+    </a>
+    <a class='btn tp-btn btn--icon-only--small btn--hard'>
+        <i class='i'>
+            &#9834;
+        </i>
+    </a>
+</p>
+```
+
+*/
+.btn--icon-only, .btn--icon-only--small, .btn--icon-only--large {
+  text-align: center;
+  min-width: 1em; }
+
+.btn--icon-only {
+  padding-left: 0.9375em;
+  padding-right: 0.9375em; }
+
+.btn--icon-only--small {
+  padding-left: 0.6em;
+  padding-right: 0.6em; }
+
+.btn--icon-only--large {
+  padding-left: 1.66667em;
+  padding-right: 1.66667em; }
+
+.btn--icon {
+  padding-left: 0.75em; }
+  .btn--icon > .i {
+    margin-right: 0.75em; }
+
+.btn--icon--rev {
+  padding-right: 0.75em; }
+  .btn--icon--rev > .i {
+    margin-left: 0.75em; }
+
+.btn--icon-large {
+  padding-left: 1.5em;
+  padding-right: 3em; }
+  .btn--icon-large > .i {
+    margin-right: 0.75em; }
+
+.btn--icon-large--rev {
+  padding-left: 3em;
+  padding-right: 1.5em; }
+  .btn--icon-large--rev > .i {
+    margin-left: 0.75em; }
+
+.btn--icon-small {
+  padding-left: 0.5em;
+  padding-right: 0.75em; }
+  .btn--icon-small > .i {
+    margin-right: 0.375em; }
+
+.btn--icon-small--rev {
+  padding-left: 0.75em;
+  padding-right: 0.375em; }
+  .btn--icon-small--rev > .i {
+    margin-left: 0.75em; }
+
+.btn--bounce, .btn--bob {
+  position: relative;
+  -webkit-transition: bottom 100ms ease-out;
+  -moz-transition: bottom 100ms ease-out;
+  -ms-transition: bottom 100ms ease-out;
+  -o-transition: bottom 100ms ease-out;
+  transition: bottom 100ms ease-out; }
+
+.btn--bounce:active {
+  bottom: -2px; }
+
+.btn--bob:active {
+  bottom: -1px; }
+
+.btn--bounce-icon--right .i, .btn--bounce-icon--left .i, .btn--bounce-icon--bottom .i, .btn--bounce-icon--top .i {
+  position: relative;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms; }
+
+.btn--bounce-icon--right:hover .i {
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -ms-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  left: 0.3125em; }
+
+.btn--bounce-icon--left:hover .i {
+  -webkit-transition-property: right;
+  -moz-transition-property: right;
+  -ms-transition-property: right;
+  -o-transition-property: right;
+  transition-property: right;
+  right: 0.3125em; }
+
+.btn--bounce-icon--bottom:hover .i {
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -ms-transition-property: top;
+  -o-transition-property: top;
+  transition-property: top;
+  top: 0.3125em; }
+
+.btn--bounce-icon--top:hover .i {
+  -webkit-transition-property: bottom;
+  -moz-transition-property: bottom;
+  -ms-transition-property: bottom;
+  -o-transition-property: bottom;
+  transition-property: bottom;
+  bottom: 0.3125em; }
+
+.btn--inset {
+  position: relative; }
+
+.btn--inset:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  -webkit-transition: border-width 100ms ease-out, visibility 100ms;
+  -moz-transition: border-width 100ms ease-out, visibility 100ms;
+  -ms-transition: border-width 100ms ease-out, visibility 100ms;
+  -o-transition: border-width 100ms ease-out, visibility 100ms;
+  transition: border-width 100ms ease-out, visibility 100ms;
+  content: " ";
+  display: block;
+  border-width: 0;
+  border-color: inherit;
+  border-style: solid; }
+
+.btn--inset:hover:after {
+  border-width: 4px;
+  visibility: visible; }
+
+.btn--inset-primary:after {
+  border-color: #3977B1; }
+
+.btn--inset-secondary:after {
+  border-color: #eb3930; }
+
+.btn--inset-large:hover:after {
+  border-width: 8px; }
+
+.btn--inset-small:hover:after {
+  border-width: 1px; }
+
+.btn--spinner {
+  position: relative;
+  cursor: default; }
+
+.btn--spinner .btn--label {
+  opacity: 0;
+  visibility: hidden; }
+
+.btn--spinner:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  content: url('../images/spinner.png');
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
+.btn--spinner--text:after {
+  content: attr(data-btn-loading-indicator); }
+
+/**
+
+## Drop-down caret
+
+```html
+<p>
+    Caret: <span class="caret"></span>
+</p>
+<p>
+    Reversed Caret: <span class="caret caret--rev"></span>
+</p>
+```
+
+
+*/
+.caret {
+  /* This extend is found in core */
+  /* This extend is found in core */
+  border-bottom: 0 dotted;
+  border-left: 0.25em solid transparent;
+  border-right: 0.25em solid transparent;
+  border-top: 0.25em solid #000;
+  height: 0;
+  margin-left: 0.125em;
+  width: 0; }
+
+.caret--rev {
+  border-bottom: 0.25em solid #000;
+  border-top: 0 dotted; }
+
+/**
+
+## Close icon
+
+```html
+Close icon: <span class="close"></span>
+```
+
+*/
+.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none; }
+
+.close:after {
+  /* This extend is found in core */
+  /* This extend is found in core */
+  content: "\00d7";
+  font-size: 1.5em;
+  line-height: 0;
+  opacity: 0.2; }
+
+.close:hover:after {
+  opacity: 1; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+button, input, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+button, input {
+  line-height: normal; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/**
+
+## Grids
+
+###  Inline Grid
+Sets the child elements to take up full justified width of the parent.
+The prefix class is 'col' (although you can change this in the variables file) and the suffix is the fraction you require.
+
+```html
+<div class='grid'>
+    <div class='grid__item col'>
+       <div class='block--color-2 block-s'>
+            <p>
+                full width
+            </p>
+        </div>
+    </div>
+</div>
+
+Example two
+<div class='grid'>
+    <div class='grid__item col-2-4' >
+        <div class='block--color-3 block-s'>
+            <p>
+                50%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-2-4'>
+        <div class='block--color-3 block-s'>
+            <p>
+                50%
+            </p>
+        </div>
+    </div>
+</div>
+
+Example three
+<div class='grid'>
+    <div class='grid__item col-1-4'>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4 '>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4 '>
+        <div class='block--color-1 block-s'>
+            <p>
+                25%
+            </p>
+        </div>
+    </div>
+</div>
+
+Example four
+<div class='grid'>
+    <div class='grid__item col-6-10'>
+        <div class='ts-block block-s'>
+            <p>
+                60%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-4-10'>
+        <div class='ts-block block-s'>
+            <p>
+                40%
+            </p>
+        </div>
+    </div>
+</div>
+
+Example five
+<div class='grid'>
+    <div class='grid__item col-8-10'>
+        <div class='tt-block block-s'>
+            <p>
+                80%
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-2-10'>
+        <div class='tt-block block-s'>
+            <p>
+                20%
+            </p>
+        </div>
+    </div>
+</div>
+
+Vertical align these grid items in the middle
+<div class='grid grid--middle'>
+    <div class='grid__item col-1-4'>
+        <div class='block-xxxl block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+        <div class='block-xl block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+        <div class='block-m block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col-1-4'>
+       <div class='block-xs block--color-1 pl-s'>
+            <p>
+                1/4
+            </p>
+        </div>
+    </div>
+</div>
+```
+
+
+#### Inline Grid - Responsive
+
+This works exactly the same as what's mentioned above.
+You just need to add an extra suffix onto the classes which relates to the breakpoint you want to target.
+
+```html
+<div class='grid'>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-4-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                1<br />
+                <strong>Mobile:</strong> full width<br />
+                <strong>Skinny:</strong> 1/2 <br />
+                <strong>Desktop:</strong> 1/4 <br />
+                <strong>Wide:</strong> 40/60
+           </p>
+        </div>
+    </div>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-6-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                2
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-4-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                3
+            </p>
+        </div>
+    </div>
+    <div class='grid__item col col-2-4--q-medium col-1-4--q-large col-6-10--q-xlarge'>
+       <div class='block--color-2 block-s'>
+            <p>
+                4
+            </p>
+        </div>
+    </div>
+</div>
+```
+
+
+#### Responsive Grid with pre-defined number of equally sized columns
+
+```html
+<div class='grid text-left grid--2-col grid--4-col--q-medium grid--6-col--q-large'>
+    <div class='grid__item'>
+       <div class='block--color-2 block-s'>
+            <p>
+                1
+           </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-1 block-s'>
+            <p>
+                2
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-3 block-s'>
+            <p>
+                3
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-2 block-s'>
+            <p>
+                4
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-1 block-s'>
+            <p>
+                5
+            </p>
+        </div>
+    </div>
+    <div class='grid__item'>
+       <div class='block--color-3 block-s'>
+            <p>
+                6
+            </p>
+        </div>
+    </div>
+</div>
+```
+
+*/
+.grid {
+  font-size: 0;
+  /* [2] */
+  text-align: justify;
+  /* [1] */ }
+  .ie8 .grid {
+    text-justify: normal; }
+
+.grid > *, .grid__item {
+  font-size: medium; }
+
+.grid:after, .grid__break {
+  content: '';
+  height: 0;
+  width: 100%; }
+
+
+
+/**
+
+### Float Grid
+
+Sometimes you don't want an inline block grid, you want a float grid.
+Fred doesn't mind what grid you use :).
+
+```html
+<div class='grid-float'>
+    <div class='col-1-3 '>
+        <div class='ts-block'>
+            ...
+        </div>
+    </div>
+    <div class='col-1-3 '>
+        <div class='ts-block'>
+            ...
+        </div>
+    </div>
+    <div class='col-1-3 '>
+        <div class='ts-block'>
+            ...
+        </div>
+    </div>
+</div>
+```
+
+*/
+.grid-float {
+  width: 100%; }
+
+.grid-float:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+.col {
+  width: 100%; }
+
+.col-1-3 {
+  width: 33.33333%; }
+
+.col-2-3 {
+  width: 66.66667%; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-2-4 {
+  width: 50%; }
+
+.col-3-4 {
+  width: 75%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-2-5 {
+  width: 40%; }
+
+.col-3-5 {
+  width: 60%; }
+
+.col-4-5 {
+  width: 80%; }
+
+.col-1-10 {
+  width: 10%; }
+
+.col-2-10 {
+  width: 20%; }
+
+.col-3-10 {
+  width: 30%; }
+
+.col-4-10 {
+  width: 40%; }
+
+.col-5-10 {
+  width: 50%; }
+
+.col-6-10 {
+  width: 60%; }
+
+.col-7-10 {
+  width: 70%; }
+
+.col-8-10 {
+  width: 80%; }
+
+.col-9-10 {
+  width: 90%; }
+
+@media only screen and (max-width: 47.99em) {
+  .col-1-3--q-small {
+    width: 33.33333%; }
+  .col-2-3--q-small {
+    width: 66.66667%; }
+  .col-1-4--q-small {
+    width: 25%; }
+  .col-2-4--q-small {
+    width: 50%; }
+  .col-3-4--q-small {
+    width: 75%; }
+  .col-1-5--q-small {
+    width: 20%; }
+  .col-2-5--q-small {
+    width: 40%; }
+  .col-3-5--q-small {
+    width: 60%; }
+  .col-4-5--q-small {
+    width: 80%; }
+  .col-1-10--q-small {
+    width: 10%; }
+  .col-2-10--q-small {
+    width: 20%; }
+  .col-3-10--q-small {
+    width: 30%; }
+  .col-4-10--q-small {
+    width: 40%; }
+  .col-5-10--q-small {
+    width: 50%; }
+  .col-6-10--q-small {
+    width: 60%; }
+  .col-7-10--q-small {
+    width: 70%; }
+  .col-8-10--q-small {
+    width: 80%; }
+  .col-9-10--q-small {
+    width: 90%; }
+  .col-auto--q-small {
+    width: auto; }
+  .col--q-small {
+    width: 100%; } }
+
+@media only screen and (min-width: 48em) and (max-width: 63.99em) {
+  .col-1-3--q-medium {
+    width: 33.33333%; }
+  .col-2-3--q-medium {
+    width: 66.66667%; }
+  .col-1-4--q-medium {
+    width: 25%; }
+  .col-2-4--q-medium {
+    width: 50%; }
+  .col-3-4--q-medium {
+    width: 75%; }
+  .col-1-5--q-medium {
+    width: 20%; }
+  .col-2-5--q-medium {
+    width: 40%; }
+  .col-3-5--q-medium {
+    width: 60%; }
+  .col-4-5--q-medium {
+    width: 80%; }
+  .col-1-10--q-medium {
+    width: 10%; }
+  .col-2-10--q-medium {
+    width: 20%; }
+  .col-3-10--q-medium {
+    width: 30%; }
+  .col-4-10--q-medium {
+    width: 40%; }
+  .col-5-10--q-medium {
+    width: 50%; }
+  .col-6-10--q-medium {
+    width: 60%; }
+  .col-7-10--q-medium {
+    width: 70%; }
+  .col-8-10--q-medium {
+    width: 80%; }
+  .col-9-10--q-medium {
+    width: 90%; }
+  .col-auto--q-medium {
+    width: auto; }
+  .col--q-medium {
+    width: 100%; } }
+
+@media only screen and (min-width: 64em) and (max-width: 74.99em) {
+  .col-1-3--q-large {
+    width: 33.33333%; }
+  .col-2-3--q-large {
+    width: 66.66667%; }
+  .col-1-4--q-large {
+    width: 25%; }
+  .col-2-4--q-large {
+    width: 50%; }
+  .col-3-4--q-large {
+    width: 75%; }
+  .col-1-5--q-large {
+    width: 20%; }
+  .col-2-5--q-large {
+    width: 40%; }
+  .col-3-5--q-large {
+    width: 60%; }
+  .col-4-5--q-large {
+    width: 80%; }
+  .col-1-10--q-large {
+    width: 10%; }
+  .col-2-10--q-large {
+    width: 20%; }
+  .col-3-10--q-large {
+    width: 30%; }
+  .col-4-10--q-large {
+    width: 40%; }
+  .col-5-10--q-large {
+    width: 50%; }
+  .col-6-10--q-large {
+    width: 60%; }
+  .col-7-10--q-large {
+    width: 70%; }
+  .col-8-10--q-large {
+    width: 80%; }
+  .col-9-10--q-large {
+    width: 90%; }
+  .col-auto--q-large {
+    width: auto; }
+  .col--q-large {
+    width: 100%; } }
+
+@media only screen and (min-width: 75em) {
+  .col-1-3--q-xlarge {
+    width: 33.33333%; }
+  .col-2-3--q-xlarge {
+    width: 66.66667%; }
+  .col-1-4--q-xlarge {
+    width: 25%; }
+  .col-2-4--q-xlarge {
+    width: 50%; }
+  .col-3-4--q-xlarge {
+    width: 75%; }
+  .col-1-5--q-xlarge {
+    width: 20%; }
+  .col-2-5--q-xlarge {
+    width: 40%; }
+  .col-3-5--q-xlarge {
+    width: 60%; }
+  .col-4-5--q-xlarge {
+    width: 80%; }
+  .col-1-10--q-xlarge {
+    width: 10%; }
+  .col-2-10--q-xlarge {
+    width: 20%; }
+  .col-3-10--q-xlarge {
+    width: 30%; }
+  .col-4-10--q-xlarge {
+    width: 40%; }
+  .col-5-10--q-xlarge {
+    width: 50%; }
+  .col-6-10--q-xlarge {
+    width: 60%; }
+  .col-7-10--q-xlarge {
+    width: 70%; }
+  .col-8-10--q-xlarge {
+    width: 80%; }
+  .col-9-10--q-xlarge {
+    width: 90%; }
+  .col-auto--q-xlarge {
+    width: auto; }
+  .col--q-xlarge {
+    width: 100%; } }
+
+.grid--1-col > * {
+  width: 100%; }
+
+.grid--1-col > * {
+  margin-right: 4%; }
+
+.grid--1-col > *:nth-child(1n) {
+  margin-right: 0; }
+
+.grid--2-col > * {
+  width: 48%; }
+
+.grid--2-col > * {
+  margin-right: 4%; }
+
+.grid--2-col > *:nth-child(2n) {
+  margin-right: 0; }
+
+.grid--3-col > * {
+  width: 30.66667%; }
+
+.grid--3-col > * {
+  margin-right: 4%; }
+
+.grid--3-col > *:nth-child(3n) {
+  margin-right: 0; }
+
+.grid--4-col > * {
+  width: 22%; }
+
+.grid--4-col > * {
+  margin-right: 4%; }
+
+.grid--4-col > *:nth-child(4n) {
+  margin-right: 0; }
+
+.grid--5-col > * {
+  width: 16.8%; }
+
+.grid--5-col > * {
+  margin-right: 4%; }
+
+.grid--5-col > *:nth-child(5n) {
+  margin-right: 0; }
+
+.grid--6-col > * {
+  width: 13.33333%; }
+
+.grid--6-col > * {
+  margin-right: 4%; }
+
+.grid--6-col > *:nth-child(6n) {
+  margin-right: 0; }
+
+.grid--8-col > * {
+  width: 9%; }
+
+.grid--8-col > * {
+  margin-right: 4%; }
+
+.grid--8-col > *:nth-child(8n) {
+  margin-right: 0; }
+
+@media only screen and (max-width: 47.99em) {
+  .grid--1-col--q-small > * {
+    width: 100%; }
+  .grid--1-col--q-small > * {
+    margin-right: 4%; }
+  .grid--1-col--q-small > *:nth-child(1n) {
+    margin-right: 0; }
+  .grid--2-col--q-small > * {
+    width: 48%; }
+  .grid--2-col--q-small > * {
+    margin-right: 4%; }
+  .grid--2-col--q-small > *:nth-child(2n) {
+    margin-right: 0; }
+  .grid--3-col--q-small > * {
+    width: 30.66667%; }
+  .grid--3-col--q-small > * {
+    margin-right: 4%; }
+  .grid--3-col--q-small > *:nth-child(3n) {
+    margin-right: 0; }
+  .grid--4-col--q-small > * {
+    width: 22%; }
+  .grid--4-col--q-small > * {
+    margin-right: 4%; }
+  .grid--4-col--q-small > *:nth-child(4n) {
+    margin-right: 0; }
+  .grid--5-col--q-small > * {
+    width: 16.8%; }
+  .grid--5-col--q-small > * {
+    margin-right: 4%; }
+  .grid--5-col--q-small > *:nth-child(5n) {
+    margin-right: 0; }
+  .grid--6-col--q-small > * {
+    width: 13.33333%; }
+  .grid--6-col--q-small > * {
+    margin-right: 4%; }
+  .grid--6-col--q-small > *:nth-child(6n) {
+    margin-right: 0; }
+  .grid--8-col--q-small > * {
+    width: 9%; }
+  .grid--8-col--q-small > * {
+    margin-right: 4%; }
+  .grid--8-col--q-small > *:nth-child(8n) {
+    margin-right: 0; } }
+
+@media only screen and (min-width: 48em) and (max-width: 63.99em) {
+  .grid--1-col--q-medium > * {
+    width: 100%; }
+  .grid--1-col--q-medium > * {
+    margin-right: 4%; }
+  .grid--1-col--q-medium > *:nth-child(1n) {
+    margin-right: 0; }
+  .grid--2-col--q-medium > * {
+    width: 48%; }
+  .grid--2-col--q-medium > * {
+    margin-right: 4%; }
+  .grid--2-col--q-medium > *:nth-child(2n) {
+    margin-right: 0; }
+  .grid--3-col--q-medium > * {
+    width: 30.66667%; }
+  .grid--3-col--q-medium > * {
+    margin-right: 4%; }
+  .grid--3-col--q-medium > *:nth-child(3n) {
+    margin-right: 0; }
+  .grid--4-col--q-medium > * {
+    width: 22%; }
+  .grid--4-col--q-medium > * {
+    margin-right: 4%; }
+  .grid--4-col--q-medium > *:nth-child(4n) {
+    margin-right: 0; }
+  .grid--5-col--q-medium > * {
+    width: 16.8%; }
+  .grid--5-col--q-medium > * {
+    margin-right: 4%; }
+  .grid--5-col--q-medium > *:nth-child(5n) {
+    margin-right: 0; }
+  .grid--6-col--q-medium > * {
+    width: 13.33333%; }
+  .grid--6-col--q-medium > * {
+    margin-right: 4%; }
+  .grid--6-col--q-medium > *:nth-child(6n) {
+    margin-right: 0; }
+  .grid--8-col--q-medium > * {
+    width: 9%; }
+  .grid--8-col--q-medium > * {
+    margin-right: 4%; }
+  .grid--8-col--q-medium > *:nth-child(8n) {
+    margin-right: 0; } }
+
+@media only screen and (min-width: 64em) and (max-width: 74.99em) {
+  .grid--1-col--q-large > * {
+    width: 100%; }
+  .grid--1-col--q-large > * {
+    margin-right: 4%; }
+  .grid--1-col--q-large > *:nth-child(1n) {
+    margin-right: 0; }
+  .grid--2-col--q-large > * {
+    width: 48%; }
+  .grid--2-col--q-large > * {
+    margin-right: 4%; }
+  .grid--2-col--q-large > *:nth-child(2n) {
+    margin-right: 0; }
+  .grid--3-col--q-large > * {
+    width: 30.66667%; }
+  .grid--3-col--q-large > * {
+    margin-right: 4%; }
+  .grid--3-col--q-large > *:nth-child(3n) {
+    margin-right: 0; }
+  .grid--4-col--q-large > * {
+    width: 22%; }
+  .grid--4-col--q-large > * {
+    margin-right: 4%; }
+  .grid--4-col--q-large > *:nth-child(4n) {
+    margin-right: 0; }
+  .grid--5-col--q-large > * {
+    width: 16.8%; }
+  .grid--5-col--q-large > * {
+    margin-right: 4%; }
+  .grid--5-col--q-large > *:nth-child(5n) {
+    margin-right: 0; }
+  .grid--6-col--q-large > * {
+    width: 13.33333%; }
+  .grid--6-col--q-large > * {
+    margin-right: 4%; }
+  .grid--6-col--q-large > *:nth-child(6n) {
+    margin-right: 0; }
+  .grid--8-col--q-large > * {
+    width: 9%; }
+  .grid--8-col--q-large > * {
+    margin-right: 4%; }
+  .grid--8-col--q-large > *:nth-child(8n) {
+    margin-right: 0; } }
+
+@media only screen and (min-width: 75em) {
+  .grid--1-col--q-xlarge > * {
+    width: 100%; }
+  .grid--1-col--q-xlarge > * {
+    margin-right: 4%; }
+  .grid--1-col--q-xlarge > *:nth-child(1n) {
+    margin-right: 0; }
+  .grid--2-col--q-xlarge > * {
+    width: 48%; }
+  .grid--2-col--q-xlarge > * {
+    margin-right: 4%; }
+  .grid--2-col--q-xlarge > *:nth-child(2n) {
+    margin-right: 0; }
+  .grid--3-col--q-xlarge > * {
+    width: 30.66667%; }
+  .grid--3-col--q-xlarge > * {
+    margin-right: 4%; }
+  .grid--3-col--q-xlarge > *:nth-child(3n) {
+    margin-right: 0; }
+  .grid--4-col--q-xlarge > * {
+    width: 22%; }
+  .grid--4-col--q-xlarge > * {
+    margin-right: 4%; }
+  .grid--4-col--q-xlarge > *:nth-child(4n) {
+    margin-right: 0; }
+  .grid--5-col--q-xlarge > * {
+    width: 16.8%; }
+  .grid--5-col--q-xlarge > * {
+    margin-right: 4%; }
+  .grid--5-col--q-xlarge > *:nth-child(5n) {
+    margin-right: 0; }
+  .grid--6-col--q-xlarge > * {
+    width: 13.33333%; }
+  .grid--6-col--q-xlarge > * {
+    margin-right: 4%; }
+  .grid--6-col--q-xlarge > *:nth-child(6n) {
+    margin-right: 0; }
+  .grid--8-col--q-xlarge > * {
+    width: 9%; }
+  .grid--8-col--q-xlarge > * {
+    margin-right: 4%; }
+  .grid--8-col--q-xlarge > *:nth-child(8n) {
+    margin-right: 0; } }
+
+/*
+
+## Headings
+
+```html
+<h1 class="heading heading--keyline mt-m">
+    Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h1>
+
+<h2 class="heading heading--keyline">
+    H2 Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h2>
+
+<h3 class="heading heading--keyline">
+    H3 Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h3>
+
+<h4 class="heading heading--keyline">
+    H4 Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h4>
+```
+
+*/
+.heading > :first-child {
+  margin-top: 0; }
+
+.heading--keyline {
+  padding-bottom: 0.5em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
+
+.heading__subheading {
+  font-weight: normal; }
+
+/**
+
+## Icons with text
+
+```html
+<p>
+    <a class='icon-text ' href='#'>
+        <i class='i icon-placeholder'></i>
+        A link with an icon
+    </a>
+</p>
+
+<p class='icon-text--rev' href=''>
+    A paragraph with an icon on the other side
+    <i class='i icon-placeholder '></i>
+</p>
+```
+
+*/
+.i {
+  overflow: hidden;
+  /* for IE6 */ }
+  .icon-text .i, .btn--icon .i {
+    margin-right: 0.5em;
+    /* This extend is found in core */ }
+  .icon-text--rev .i, .btn--icon-rev .i {
+    margin-left: 0.5em;
+    /* This extend is found in core */ }
+
+/**
+
+## Responsive images
+
+This applies max-width: 100%; and height: auto; to the image so that it scales nicely to the parent element.
+
+```html
+<div class='grid'>
+    <div class='grid__item col-1-4' >
+        <img src='assets/images/fred-logo.png' alt='' class='img--responsive' />
+    </div>
+    <div class='grid__item col-2-3'>
+        <div class='arrow--side block--color-3 block-m'>
+            <p>Resize the browser so you can see me shrink </p>
+            <i class='arrow arrow-left'></i>
+        </div>
+    </div>
+</div>
+```
+
+*/
+.img--responsive {
+  height: auto;
+  width: 100%; }
+
+.img--round {
+  -webkit-border-radius: 30em;
+  -moz-border-radius: 30em;
+  -ms-border-radius: 30em;
+  -o-border-radius: 30em;
+  border-radius: 30em; }
+
+/**
+
+## Links/Anchors
+
+```html
+<p>
+    <a href='' class='clean-link'>
+        I'm a clean link look at me
+    </a>
+</p>
+<p>
+    <a href='' class='is-disabled'>
+        I'm a disabled link
+    </a>
+</p>
+<p>
+    <a href='' class='is-draggable'>
+        I'm a draggable link
+    </a>
+</p>
+
+<ul class='list-styled clean-link-list'>
+    <li>
+        <a href=''>
+            Clean link in a list
+        </a>
+    </li>
+    <li>
+        <a href=''>
+            Clean link in a list
+        </a>
+    </li>
+</ul>
+```
+
+*/
+.clean-link, .clean-link-list a {
+  text-decoration: none; }
+  .clean-link:hover, .clean-link-list a:hover, .clean-link:active, .clean-link-list a:active, .clean-link:focus, .clean-link-list a:focus {
+    text-decoration: none; }
+
+
+
+.is-disabled, .is-disabled * {
+  cursor: default;
+  pointer-events: none !important; }
+
+.is-draggable {
+  cursor: move; }
+
+
+/**
+
+## Lists
+
+### Un styled list
+
+```html
+<ul class='list-unstyled mt-s'>
+    <li>
+        unstyled list item 1
+    </li>
+    <li>
+        unstyled list item 2
+    </li>
+</ul>
+```
+
+### Styled list
+
+```html
+<ul class='list-styled'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+<hr />
+<ul class='list-styled--alpha'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+<hr />
+<ul class='list-styled--dashed'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+<hr />
+<ul class='list-styled--decimal'>
+    <li>
+        Styled list item 1
+    </li>
+    <li>
+        Styled list item 2
+    </li>
+</ul>
+```
+
+### Inline list
+
+```html
+<ul class='list--inline'>
+    <li> inline list item 1 </li>
+    <li> inline list item 2 </li>
+<ul>
+```
+
+*/
+.list-unstyled, .list--inline, .block-list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0; }
+
+.list-unstyled > li, .list-unstyled > .list--inline, .list-unstyled > .block-list {
+  list-style: none; }
+
+.list--inline {
+  /* This extend is found in core */ }
+
+.list--inline > li {
+  /* This extend is found in core */
+  margin: 0; }
+
+.list-styled, .list-styled--decimal, .list-decimal, .list-styled--alpha, .list-alpha, .list-dashed {
+  margin-top: 0.75em;
+  padding-left: 1.5em; }
+
+.list-styled {
+  list-style: circle; }
+
+.list-styled--decimal, .list-decimal {
+  list-style: decimal-leading-zero;
+  padding-left: 2.25em; }
+
+.list-styled--alpha, .list-alpha {
+  list-style: lower-alpha; }
+
+.list-dashed {
+  margin-left: 1em;
+  margin-top: 0; }
+  .list-dashed > li {
+    text-indent: -0.5em; }
+    .list-dashed > li > * {
+      text-indent: 0; }
+    .list-dashed > li:before {
+      content: "\2013";
+      position: relative;
+      left: -0.5em; }
+
+.list-plain {
+  margin-top: 0.75em;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0; }
+
+/**
+
+### Block list
+
+Throws a list into a vertical stack. Handy for things like navigation.
+
+
+*/
+.block-list > li {
+  display: block; }
+
+/**
+
+### Definition lists __Fred is stil working on this__
+
+Defaults to being stacked without any of the below styles applied
+
+```html
+<dl>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+```
+
+*/
+
+dt, dd {
+  line-height: 1.5; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 0; }
+
+/**
+
+### Horizontal descrption list
+
+To make the description list horizontal apply the class 'dl-horizontal' aswell the fraction ...
+
+```html
+<dl class='dl-horizontal dl-horizontal--1-4 '>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+
+<hr class='mt-m'/>
+
+<dl class='dl-horizontal dl-horizontal--1-3 '>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+
+<hr class='mt-m'/>
+
+<dl class='dl-horizontal dl-horizontal--1-2 '>
+    <dt>Description 1</dt>
+    <dd>Info</dd>
+    <dt>Description 2</dt>
+    <dd>Info</dd>
+</dl>
+```
+*/
+.dl-horizontal {
+  margin: 0;
+  font-size: 0;
+  /* [2] */
+  text-align: justify;
+  /* [1] */ }
+  .ie8 .dl-horizontal {
+    text-justify: normal; }
+  .dl-horizontal > dt, .dl-horizontal > dd {
+    font-size: medium; }
+  .dl-horizontal > dt {
+    text-align: right; }
+  .dl-horizontal > dd {
+    text-align: left; }
+
+.dl-horizontal:after {
+  content: '';
+  height: 0;
+  width: 100%; }
+
+.dl-horizontal--dt-left > dt {
+  text-align: left; }
+.dl-horizontal--dt-left > dd {
+  text-align: left; }
+
+.dl-horizontal--split > dt {
+  text-align: left; }
+.dl-horizontal--split > dd {
+  text-align: right; }
+
+.dl-horizontal--1-4 > dt {
+  width: 24%; }
+.dl-horizontal--1-4 > dd {
+  width: 74%; }
+
+.dl-horizontal--1-3 > dt {
+  width: 32%; }
+.dl-horizontal--1-3 > dd {
+  width: 65%; }
+
+.dl-horizontal--1-2 > dt {
+  width: 49%; }
+.dl-horizontal--1-2 > dd {
+  width: 49%; }
+
+/**
+
+## Media blocks
+
+Float an image to the left, with a clearfixed block of content to the right.
+
+```html
+<div class='media'>
+    <img src='assets/images/green-bird.jpg' class='media__image'>
+    <div class='media__body'>
+        <p class='mt-0'>
+            Uncle Bully was pashing when the pearler packing a sad event occured. Oh no! I'm beached as, this carked it seabed is as stoked as a flat stick kumara. Mean while, in a waka, Rhys Darby and Cardigan Bay were up to no good with a bunch of random milks.
+        </p>
+    </div>
+</div>
+<hr class='mt-m' />
+<div class='media--rev'>
+    <img src='assets/images/green-bird.jpg' class='media__image'>
+    <div class='media__body'>
+       <p class=''>
+        I'd slam that clam, good afterble constanoon. The snarky force of his burning my Vogel's was on par with Hercules Morse, as big as a horse's good as mate.
+        </p>
+    </div>
+</div>
+```
+
+*/
+.media {
+  margin-top: 1.5em; }
+
+.media__image {
+  margin-right: 1.5em; }
+
+
+/* Swap the image to the right */
+.media--rev {
+  margin-top: 1.5em; }
+
+.media--rev > .media__image {
+  margin-right: 0;
+  margin-left: 1.5em; }
+
+
+/**
+
+## Navigation
+
+Turns a list into a horizontal block of inline-blocks;
+
+```html
+<ul class='nav'>
+    <li class='active'>
+        <a href='#'>
+            active list item
+        </a>
+    </li>
+    <li class=''>
+        <a href='#'>
+            list item
+        </a>
+    </li>
+    <li class=''>
+        <a href='#'>
+            list item
+        </a>
+    </li>
+    <li class=''>
+        <a href='#'>
+            list item
+        </a>
+    </li>
+</ul>
+```
+
+*/
+.nav, .pagination {
+  /* div */
+  /* This extend is found in core */
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0; }
+
+.nav > li, .nav > .pagination {
+  /* This extend is found in core */
+  margin-top: 0; }
+
+/**
+
+### Sub navigation
+
+```html
+<dl class='sub-nav'>
+    <dt>Filter:</dt>
+    <dd class='active'><a href='#'>All</a></dd>
+    <dd><a href='#'>Active</a></dd>
+    <dd><a href='#'>Pending</a></dd>
+    <dd><a href='#'>Suspended</a></dd>
+</dl>
+```
+
+*/
+.sub-nav {
+  display: block;
+  width: auto;
+  overflow: hidden; }
+
+.sub-nav > dt, .sub-nav > dd {
+  float: left; }
+
+.sub-nav > dd {
+  margin-left: 0.75em; }
+
+
+/**
+
+## Pagination
+
+```html
+<ul class='pagination'>
+    <li class='pagination__first'>
+         <a href='#'>
+            First
+        </a>
+    </li>
+    <li class='pagination__prev'>
+        <a href='#'></a>
+    </li>
+    <li class='pagination__current'>
+        <a href='#'>
+            1
+        </a>
+    </li>
+    <li class='pagination__more'>
+        <a href='#'></a>
+    </li>
+    <li>
+        <a href="#">
+            10
+        </a>
+    </li>
+    <li class='pagination__next'>
+        <a href='#'></a>
+    </li>
+    <li class='pagination__last'>
+        <a href='/page/last'>
+            Last
+        </a>
+    </li>
+ </ul>
+```
+
+*/
+.pagination {
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em; }
+
+.pagination > li {
+  /* This extend is found in core */
+  margin-top: 0;
+  padding: 0.75em;
+  letter-spacing: normal;
+  word-spacing: normal; }
+
+.pagination > li > a {
+  padding: 0.75em 0;
+  margin: -0.75em 0; }
+
+.pagination__current {
+  font-weight: bold; }
+
+.pagination__first > a:before, .pagination__last > a:before, .pagination__more > a:before {
+  display: inline-block; }
+
+.pagination__last > a:after {
+  content: "\203A"; }
+
+.pagination__first > a:before {
+  content: "\2039"; }
+
+.pagination__more > a:before {
+  content: "\2026"; }
+
+/*
+
+## Pills
+
+Pills have fully rounded ends, lozenges have only their corners rounded.
+
+```html
+<p>This <span class="pill">here</span> is a pill!</p>
+<p>This <span class="lozenge">here</span> is a lozenge!</p>
+```
+
+*/
+.pill, .lozenge {
+  /* This extend is found in core */
+  min-width: 0.95238em;
+  padding-right: 0.2381em;
+  padding-left: 0.2381em;
+  /* =1.50em */
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+  border-radius: 100px; }
+
+.lozenge {
+  border-radius: 0.25em; }
+
+/**
+
+## Radii
+
+```html
+<div class='block--color-3 block-xs radius-s'>
+    Check out my corners
+</div>
+<div class='block--color-3 block-xs radius'>
+    Check out my corners
+</div>
+<div class='block--color-3 block-xs radius-l'>
+    Check out my corners
+</div>
+<div class='block--color-3 block-xs circle'>
+    I'm nearly a circle, wohoo
+</div>
+```
+
+*/
+.radius-s {
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -ms-border-radius: 2px 2px 2px 2px;
+  -o-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px; }
+
+.radius {
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -ms-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px; }
+
+.radius-l {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  -o-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px; }
+
+.circle {
+  -webkit-border-radius: 35em;
+  -moz-border-radius: 35em;
+  -ms-border-radius: 35em;
+  -o-border-radius: 35em;
+  border-radius: 35em; }
+
+/**
+
+## Ratio boxes
+
+
+   * .ratio-4-3
+   * .ratio-16-9
+   * .ratio-3-4
+   * .ratio-2-1
+
+
+This box will be 16:9
+
+```html
+<div class='ratio-16-9 block--color-3'>
+    <div class='ratio__content'></div>
+</div>
+```
+
+This box will be a square
+
+```html
+<div class='ratio-square block--color-3'>
+    <div class='ratio__content'></div>
+</div>
+```
+
+*/
+.ratio-square, .ratio-4-3, .ratio-16-9, .ratio-3-4, .ratio-2-1 {
+  overflow: hidden;
+  position: relative; }
+
+.ratio-square:before, .ratio-4-3:before, .ratio-16-9:before, .ratio-3-4:before, .ratio-2-1:before {
+  content: "";
+  display: block;
+  height: 0;
+  padding-top: 100%; }
+
+
+.ratio-2-1:before {
+  padding-top: 50%; }
+
+.ratio-4-3:before {
+  padding-top: 75%; }
+
+.ratio-3-4:before {
+  padding-top: 133.33333%; }
+
+.ratio-16-9:before {
+  padding-top: 56.25%; }
+
+.ratio__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.mt-0, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, .text:first-child, li:first-child, code:first-child, .lego--heading {
+  margin-top: 0; }
+
+.mt-xxxs {
+  margin-top: 0.375em; }
+
+.mt-xxs {
+  margin-top: 0.5em; }
+
+.mt-xs {
+  margin-top: 0.75em; }
+
+.mt-s {
+  margin-top: 1em; }
+
+.mt-m, dl {
+  margin-top: 1.5em; }
+
+.mt-l {
+  margin-top: 2.25em; }
+
+.mt-xl {
+  margin-top: 3em; }
+
+.mt-xxl {
+  margin-top: 4.5em; }
+
+.mt-xxxl {
+  margin-top: 6em; }
+
+.mb-0, h1, h2, h3, h4, h5, h6, p, .text, li, code {
+  margin-bottom: 0; }
+
+.mb-xxxs {
+  margin-bottom: 0.375em; }
+
+.mb-xxs {
+  margin-bottom: 0.5em; }
+
+.mb-xs {
+  margin-bottom: 0.75em; }
+
+.mb-s {
+  margin-bottom: 1em; }
+
+.mb-m {
+  margin-bottom: 1.5em; }
+
+.mb-l {
+  margin-bottom: 2.25em; }
+
+.mb-xl {
+  margin-bottom: 3em; }
+
+.mb-xxl {
+  margin-bottom: 4.5em; }
+
+.mb-xxxl {
+  margin-bottom: 6em; }
+
+.ml-0 {
+  margin-left: 0; }
+
+.ml-xxxs {
+  margin-left: 0.375em; }
+
+.ml-xxs {
+  margin-left: 0.5em; }
+
+.ml-xs {
+  margin-left: 0.75em; }
+
+.ml-s {
+  margin-left: 1em; }
+
+.ml-m {
+  margin-left: 1.5em; }
+
+.ml-l {
+  margin-left: 2.25em; }
+
+.ml-xl {
+  margin-left: 3em; }
+
+.ml-xxl {
+  margin-left: 4.5em; }
+
+.ml-xxxl {
+  margin-left: 6em; }
+
+.mr-0 {
+  margin-right: 0; }
+
+.mr-xxxs {
+  margin-right: 0.375em; }
+
+.mr-xxs {
+  margin-right: 0.5em; }
+
+.mr-xs {
+  margin-right: 0.75em; }
+
+.mr-s {
+  margin-right: 1em; }
+
+.mr-m {
+  margin-right: 1.5em; }
+
+.mr-l {
+  margin-right: 2.25em; }
+
+.mr-xl {
+  margin-right: 3em; }
+
+.mr-xxl {
+  margin-right: 4.5em; }
+
+.mr-xxxl {
+  margin-right: 6em; }
+
+@media only screen and (max-width: 47.99em) {
+  .mt-0--q-small {
+    margin-top: 0; }
+  .mt-xxxs--q-small {
+    margin-top: 0.375em; }
+  .mt-xxs--q-small {
+    margin-top: 0.5em; }
+  .mt-xs--q-small {
+    margin-top: 0.75em; }
+  .mt-s--q-small {
+    margin-top: 1em; }
+  .mt-m--q-small {
+    margin-top: 1.5em; }
+  .mt-l--q-small {
+    margin-top: 2.25em; }
+  .mt-xl--q-small {
+    margin-top: 3em; }
+  .mt-xxl--q-small {
+    margin-top: 4.5em; }
+  .mt-xxxl--q-small {
+    margin-top: 6em; }
+  .mb-0--q-small {
+    margin-bottom: 0; }
+  .mb-xxxs--q-small {
+    margin-bottom: 0.375em; }
+  .mb-xxs--q-small {
+    margin-bottom: 0.5em; }
+  .mb-xs--q-small {
+    margin-bottom: 0.75em; }
+  .mb-s--q-small {
+    margin-bottom: 1em; }
+  .mb-m--q-small {
+    margin-bottom: 1.5em; }
+  .mb-l--q-small {
+    margin-bottom: 2.25em; }
+  .mb-xl--q-small {
+    margin-bottom: 3em; }
+  .mb-xxl--q-small {
+    margin-bottom: 4.5em; }
+  .mb-xxxl--q-small {
+    margin-bottom: 6em; }
+  .ml-0--q-small {
+    margin-left: 0; }
+  .ml-xxxs--q-small {
+    margin-left: 0.375em; }
+  .ml-xxs--q-small {
+    margin-left: 0.5em; }
+  .ml-xs--q-small {
+    margin-left: 0.75em; }
+  .ml-s--q-small {
+    margin-left: 1em; }
+  .ml-m--q-small {
+    margin-left: 1.5em; }
+  .ml-l--q-small {
+    margin-left: 2.25em; }
+  .ml-xl--q-small {
+    margin-left: 3em; }
+  .ml-xxl--q-small {
+    margin-left: 4.5em; }
+  .ml-xxxl--q-small {
+    margin-left: 6em; }
+  .mr-0--q-small {
+    margin-right: 0; }
+  .mr-xxxs--q-small {
+    margin-right: 0.375em; }
+  .mr-xxs--q-small {
+    margin-right: 0.5em; }
+  .mr-xs--q-small {
+    margin-right: 0.75em; }
+  .mr-s--q-small {
+    margin-right: 1em; }
+  .mr-m--q-small {
+    margin-right: 1.5em; }
+  .mr-l--q-small {
+    margin-right: 2.25em; }
+  .mr-xl--q-small {
+    margin-right: 3em; }
+  .mr-xxl--q-small {
+    margin-right: 4.5em; }
+  .mr-xxxl--q-small {
+    margin-right: 6em; } }
+
+@media only screen and (min-width: 48em) and (max-width: 63.99em) {
+  .mt-0--q-medium {
+    margin-top: 0; }
+  .mt-xxxs--q-medium {
+    margin-top: 0.375em; }
+  .mt-xxs--q-medium {
+    margin-top: 0.5em; }
+  .mt-xs--q-medium {
+    margin-top: 0.75em; }
+  .mt-s--q-medium {
+    margin-top: 1em; }
+  .mt-m--q-medium {
+    margin-top: 1.5em; }
+  .mt-l--q-medium {
+    margin-top: 2.25em; }
+  .mt-xl--q-medium {
+    margin-top: 3em; }
+  .mt-xxl--q-medium {
+    margin-top: 4.5em; }
+  .mt-xxxl--q-medium {
+    margin-top: 6em; }
+  .mb-0--q-medium {
+    margin-bottom: 0; }
+  .mb-xxxs--q-medium {
+    margin-bottom: 0.375em; }
+  .mb-xxs--q-medium {
+    margin-bottom: 0.5em; }
+  .mb-xs--q-medium {
+    margin-bottom: 0.75em; }
+  .mb-s--q-medium {
+    margin-bottom: 1em; }
+  .mb-m--q-medium {
+    margin-bottom: 1.5em; }
+  .mb-l--q-medium {
+    margin-bottom: 2.25em; }
+  .mb-xl--q-medium {
+    margin-bottom: 3em; }
+  .mb-xxl--q-medium {
+    margin-bottom: 4.5em; }
+  .mb-xxxl--q-medium {
+    margin-bottom: 6em; }
+  .ml-0--q-medium {
+    margin-left: 0; }
+  .ml-xxxs--q-medium {
+    margin-left: 0.375em; }
+  .ml-xxs--q-medium {
+    margin-left: 0.5em; }
+  .ml-xs--q-medium {
+    margin-left: 0.75em; }
+  .ml-s--q-medium {
+    margin-left: 1em; }
+  .ml-m--q-medium {
+    margin-left: 1.5em; }
+  .ml-l--q-medium {
+    margin-left: 2.25em; }
+  .ml-xl--q-medium {
+    margin-left: 3em; }
+  .ml-xxl--q-medium {
+    margin-left: 4.5em; }
+  .ml-xxxl--q-medium {
+    margin-left: 6em; }
+  .mr-0--q-medium {
+    margin-right: 0; }
+  .mr-xxxs--q-medium {
+    margin-right: 0.375em; }
+  .mr-xxs--q-medium {
+    margin-right: 0.5em; }
+  .mr-xs--q-medium {
+    margin-right: 0.75em; }
+  .mr-s--q-medium {
+    margin-right: 1em; }
+  .mr-m--q-medium {
+    margin-right: 1.5em; }
+  .mr-l--q-medium {
+    margin-right: 2.25em; }
+  .mr-xl--q-medium {
+    margin-right: 3em; }
+  .mr-xxl--q-medium {
+    margin-right: 4.5em; }
+  .mr-xxxl--q-medium {
+    margin-right: 6em; } }
+
+@media only screen and (min-width: 64em) and (max-width: 74.99em) {
+  .mt-0--q-large {
+    margin-top: 0; }
+  .mt-xxxs--q-large {
+    margin-top: 0.375em; }
+  .mt-xxs--q-large {
+    margin-top: 0.5em; }
+  .mt-xs--q-large {
+    margin-top: 0.75em; }
+  .mt-s--q-large {
+    margin-top: 1em; }
+  .mt-m--q-large {
+    margin-top: 1.5em; }
+  .mt-l--q-large {
+    margin-top: 2.25em; }
+  .mt-xl--q-large {
+    margin-top: 3em; }
+  .mt-xxl--q-large {
+    margin-top: 4.5em; }
+  .mt-xxxl--q-large {
+    margin-top: 6em; }
+  .mb-0--q-large {
+    margin-bottom: 0; }
+  .mb-xxxs--q-large {
+    margin-bottom: 0.375em; }
+  .mb-xxs--q-large {
+    margin-bottom: 0.5em; }
+  .mb-xs--q-large {
+    margin-bottom: 0.75em; }
+  .mb-s--q-large {
+    margin-bottom: 1em; }
+  .mb-m--q-large {
+    margin-bottom: 1.5em; }
+  .mb-l--q-large {
+    margin-bottom: 2.25em; }
+  .mb-xl--q-large {
+    margin-bottom: 3em; }
+  .mb-xxl--q-large {
+    margin-bottom: 4.5em; }
+  .mb-xxxl--q-large {
+    margin-bottom: 6em; }
+  .ml-0--q-large {
+    margin-left: 0; }
+  .ml-xxxs--q-large {
+    margin-left: 0.375em; }
+  .ml-xxs--q-large {
+    margin-left: 0.5em; }
+  .ml-xs--q-large {
+    margin-left: 0.75em; }
+  .ml-s--q-large {
+    margin-left: 1em; }
+  .ml-m--q-large {
+    margin-left: 1.5em; }
+  .ml-l--q-large {
+    margin-left: 2.25em; }
+  .ml-xl--q-large {
+    margin-left: 3em; }
+  .ml-xxl--q-large {
+    margin-left: 4.5em; }
+  .ml-xxxl--q-large {
+    margin-left: 6em; }
+  .mr-0--q-large {
+    margin-right: 0; }
+  .mr-xxxs--q-large {
+    margin-right: 0.375em; }
+  .mr-xxs--q-large {
+    margin-right: 0.5em; }
+  .mr-xs--q-large {
+    margin-right: 0.75em; }
+  .mr-s--q-large {
+    margin-right: 1em; }
+  .mr-m--q-large {
+    margin-right: 1.5em; }
+  .mr-l--q-large {
+    margin-right: 2.25em; }
+  .mr-xl--q-large {
+    margin-right: 3em; }
+  .mr-xxl--q-large {
+    margin-right: 4.5em; }
+  .mr-xxxl--q-large {
+    margin-right: 6em; } }
+
+@media only screen and (min-width: 75em) {
+  .mt-0--q-xlarge {
+    margin-top: 0; }
+  .mt-xxxs--q-xlarge {
+    margin-top: 0.375em; }
+  .mt-xxs--q-xlarge {
+    margin-top: 0.5em; }
+  .mt-xs--q-xlarge {
+    margin-top: 0.75em; }
+  .mt-s--q-xlarge {
+    margin-top: 1em; }
+  .mt-m--q-xlarge {
+    margin-top: 1.5em; }
+  .mt-l--q-xlarge {
+    margin-top: 2.25em; }
+  .mt-xl--q-xlarge {
+    margin-top: 3em; }
+  .mt-xxl--q-xlarge {
+    margin-top: 4.5em; }
+  .mt-xxxl--q-xlarge {
+    margin-top: 6em; }
+  .mb-0--q-xlarge {
+    margin-bottom: 0; }
+  .mb-xxxs--q-xlarge {
+    margin-bottom: 0.375em; }
+  .mb-xxs--q-xlarge {
+    margin-bottom: 0.5em; }
+  .mb-xs--q-xlarge {
+    margin-bottom: 0.75em; }
+  .mb-s--q-xlarge {
+    margin-bottom: 1em; }
+  .mb-m--q-xlarge {
+    margin-bottom: 1.5em; }
+  .mb-l--q-xlarge {
+    margin-bottom: 2.25em; }
+  .mb-xl--q-xlarge {
+    margin-bottom: 3em; }
+  .mb-xxl--q-xlarge {
+    margin-bottom: 4.5em; }
+  .mb-xxxl--q-xlarge {
+    margin-bottom: 6em; }
+  .ml-0--q-xlarge {
+    margin-left: 0; }
+  .ml-xxxs--q-xlarge {
+    margin-left: 0.375em; }
+  .ml-xxs--q-xlarge {
+    margin-left: 0.5em; }
+  .ml-xs--q-xlarge {
+    margin-left: 0.75em; }
+  .ml-s--q-xlarge {
+    margin-left: 1em; }
+  .ml-m--q-xlarge {
+    margin-left: 1.5em; }
+  .ml-l--q-xlarge {
+    margin-left: 2.25em; }
+  .ml-xl--q-xlarge {
+    margin-left: 3em; }
+  .ml-xxl--q-xlarge {
+    margin-left: 4.5em; }
+  .ml-xxxl--q-xlarge {
+    margin-left: 6em; }
+  .mr-0--q-xlarge {
+    margin-right: 0; }
+  .mr-xxxs--q-xlarge {
+    margin-right: 0.375em; }
+  .mr-xxs--q-xlarge {
+    margin-right: 0.5em; }
+  .mr-xs--q-xlarge {
+    margin-right: 0.75em; }
+  .mr-s--q-xlarge {
+    margin-right: 1em; }
+  .mr-m--q-xlarge {
+    margin-right: 1.5em; }
+  .mr-l--q-xlarge {
+    margin-right: 2.25em; }
+  .mr-xl--q-xlarge {
+    margin-right: 3em; }
+  .mr-xxl--q-xlarge {
+    margin-right: 4.5em; }
+  .mr-xxxl--q-xlarge {
+    margin-right: 6em; } }
+
+.pt-0 {
+  padding-top: 0; }
+
+.pt-xxxs {
+  padding-top: 0.375em; }
+
+.pt-xxs {
+  padding-top: 0.5em; }
+
+.pt-xs {
+  padding-top: 0.75em; }
+
+.pt-s {
+  padding-top: 1em; }
+
+.pt-m, .lego--heading {
+  padding-top: 1.5em; }
+
+.pt-l {
+  padding-top: 2.25em; }
+
+.pt-xl {
+  padding-top: 3em; }
+
+.pt-xxl {
+  padding-top: 4.5em; }
+
+.pt-xxxl {
+  padding-top: 6em; }
+
+.pb-0 {
+  padding-bottom: 0; }
+
+.pb-xxxs {
+  padding-bottom: 0.375em; }
+
+.pb-xxs {
+  padding-bottom: 0.5em; }
+
+.pb-xs {
+  padding-bottom: 0.75em; }
+
+.pb-s {
+  padding-bottom: 1em; }
+
+.pb-m, .lego--heading {
+  padding-bottom: 1.5em; }
+
+.pb-l {
+  padding-bottom: 2.25em; }
+
+.pb-xl {
+  padding-bottom: 3em; }
+
+.pb-xxl {
+  padding-bottom: 4.5em; }
+
+.pb-xxxl {
+  padding-bottom: 6em; }
+
+.pl-0 {
+  padding-left: 0; }
+
+.pl-xxxs {
+  padding-left: 0.375em; }
+
+.pl-xxs {
+  padding-left: 0.5em; }
+
+.pl-xs {
+  padding-left: 0.75em; }
+
+.pl-s {
+  padding-left: 1em; }
+
+.pl-m {
+  padding-left: 1.5em; }
+
+.pl-l, .lego--heading {
+  padding-left: 2.25em; }
+
+.pl-xl {
+  padding-left: 3em; }
+
+.pl-xxl {
+  padding-left: 4.5em; }
+
+.pl-xxxl {
+  padding-left: 6em; }
+
+.pr-0 {
+  padding-right: 0; }
+
+.pr-xxxs {
+  padding-right: 0.375em; }
+
+.pr-xxs {
+  padding-right: 0.5em; }
+
+.pr-xs {
+  padding-right: 0.75em; }
+
+.pr-s {
+  padding-right: 1em; }
+
+.pr-m {
+  padding-right: 1.5em; }
+
+.pr-l {
+  padding-right: 2.25em; }
+
+.pr-xl {
+  padding-right: 3em; }
+
+.pr-xxl {
+  padding-right: 4.5em; }
+
+.pr-xxxl {
+  padding-right: 6em; }
+
+@media only screen and (max-width: 47.99em) {
+  .pt-0--q-small {
+    padding-top: 0; }
+  .pt-xxxs--q-small {
+    padding-top: 0.375em; }
+  .pt-xxs--q-small {
+    padding-top: 0.5em; }
+  .pt-xs--q-small {
+    padding-top: 0.75em; }
+  .pt-s--q-small {
+    padding-top: 1em; }
+  .pt-m--q-small {
+    padding-top: 1.5em; }
+  .pt-l--q-small {
+    padding-top: 2.25em; }
+  .pt-xl--q-small {
+    padding-top: 3em; }
+  .pt-xxl--q-small {
+    padding-top: 4.5em; }
+  .pt-xxxl--q-small {
+    padding-top: 6em; }
+  .pb-0--q-small {
+    padding-bottom: 0; }
+  .pb-xxxs--q-small {
+    padding-bottom: 0.375em; }
+  .pb-xxs--q-small {
+    padding-bottom: 0.5em; }
+  .pb-xs--q-small {
+    padding-bottom: 0.75em; }
+  .pb-s--q-small {
+    padding-bottom: 1em; }
+  .pb-m--q-small {
+    padding-bottom: 1.5em; }
+  .pb-l--q-small {
+    padding-bottom: 2.25em; }
+  .pb-xl--q-small {
+    padding-bottom: 3em; }
+  .pb-xxl--q-small {
+    padding-bottom: 4.5em; }
+  .pb-xxxl--q-small {
+    padding-bottom: 6em; }
+  .pl-0--q-small {
+    padding-left: 0; }
+  .pl-xxxs--q-small {
+    padding-left: 0.375em; }
+  .pl-xxs--q-small {
+    padding-left: 0.5em; }
+  .pl-xs--q-small {
+    padding-left: 0.75em; }
+  .pl-s--q-small {
+    padding-left: 1em; }
+  .pl-m--q-small {
+    padding-left: 1.5em; }
+  .pl-l--q-small {
+    padding-left: 2.25em; }
+  .pl-xl--q-small {
+    padding-left: 3em; }
+  .pl-xxl--q-small {
+    padding-left: 4.5em; }
+  .pl-xxxl--q-small {
+    padding-left: 6em; }
+  .pr-0--q-small {
+    padding-right: 0; }
+  .pr-xxxs--q-small {
+    padding-right: 0.375em; }
+  .pr-xxs--q-small {
+    padding-right: 0.5em; }
+  .pr-xs--q-small {
+    padding-right: 0.75em; }
+  .pr-s--q-small {
+    padding-right: 1em; }
+  .pr-m--q-small {
+    padding-right: 1.5em; }
+  .pr-l--q-small {
+    padding-right: 2.25em; }
+  .pr-xl--q-small {
+    padding-right: 3em; }
+  .pr-xxl--q-small {
+    padding-right: 4.5em; }
+  .pr-xxxl--q-small {
+    padding-right: 6em; } }
+
+@media only screen and (min-width: 48em) and (max-width: 63.99em) {
+  .pt-0--q-medium {
+    padding-top: 0; }
+  .pt-xxxs--q-medium {
+    padding-top: 0.375em; }
+  .pt-xxs--q-medium {
+    padding-top: 0.5em; }
+  .pt-xs--q-medium {
+    padding-top: 0.75em; }
+  .pt-s--q-medium {
+    padding-top: 1em; }
+  .pt-m--q-medium {
+    padding-top: 1.5em; }
+  .pt-l--q-medium {
+    padding-top: 2.25em; }
+  .pt-xl--q-medium {
+    padding-top: 3em; }
+  .pt-xxl--q-medium {
+    padding-top: 4.5em; }
+  .pt-xxxl--q-medium {
+    padding-top: 6em; }
+  .pb-0--q-medium {
+    padding-bottom: 0; }
+  .pb-xxxs--q-medium {
+    padding-bottom: 0.375em; }
+  .pb-xxs--q-medium {
+    padding-bottom: 0.5em; }
+  .pb-xs--q-medium {
+    padding-bottom: 0.75em; }
+  .pb-s--q-medium {
+    padding-bottom: 1em; }
+  .pb-m--q-medium {
+    padding-bottom: 1.5em; }
+  .pb-l--q-medium {
+    padding-bottom: 2.25em; }
+  .pb-xl--q-medium {
+    padding-bottom: 3em; }
+  .pb-xxl--q-medium {
+    padding-bottom: 4.5em; }
+  .pb-xxxl--q-medium {
+    padding-bottom: 6em; }
+  .pl-0--q-medium {
+    padding-left: 0; }
+  .pl-xxxs--q-medium {
+    padding-left: 0.375em; }
+  .pl-xxs--q-medium {
+    padding-left: 0.5em; }
+  .pl-xs--q-medium {
+    padding-left: 0.75em; }
+  .pl-s--q-medium {
+    padding-left: 1em; }
+  .pl-m--q-medium {
+    padding-left: 1.5em; }
+  .pl-l--q-medium {
+    padding-left: 2.25em; }
+  .pl-xl--q-medium {
+    padding-left: 3em; }
+  .pl-xxl--q-medium {
+    padding-left: 4.5em; }
+  .pl-xxxl--q-medium {
+    padding-left: 6em; }
+  .pr-0--q-medium {
+    padding-right: 0; }
+  .pr-xxxs--q-medium {
+    padding-right: 0.375em; }
+  .pr-xxs--q-medium {
+    padding-right: 0.5em; }
+  .pr-xs--q-medium {
+    padding-right: 0.75em; }
+  .pr-s--q-medium {
+    padding-right: 1em; }
+  .pr-m--q-medium {
+    padding-right: 1.5em; }
+  .pr-l--q-medium {
+    padding-right: 2.25em; }
+  .pr-xl--q-medium {
+    padding-right: 3em; }
+  .pr-xxl--q-medium {
+    padding-right: 4.5em; }
+  .pr-xxxl--q-medium {
+    padding-right: 6em; } }
+
+@media only screen and (min-width: 64em) and (max-width: 74.99em) {
+  .pt-0--q-large {
+    padding-top: 0; }
+  .pt-xxxs--q-large {
+    padding-top: 0.375em; }
+  .pt-xxs--q-large {
+    padding-top: 0.5em; }
+  .pt-xs--q-large {
+    padding-top: 0.75em; }
+  .pt-s--q-large {
+    padding-top: 1em; }
+  .pt-m--q-large {
+    padding-top: 1.5em; }
+  .pt-l--q-large {
+    padding-top: 2.25em; }
+  .pt-xl--q-large {
+    padding-top: 3em; }
+  .pt-xxl--q-large {
+    padding-top: 4.5em; }
+  .pt-xxxl--q-large {
+    padding-top: 6em; }
+  .pb-0--q-large {
+    padding-bottom: 0; }
+  .pb-xxxs--q-large {
+    padding-bottom: 0.375em; }
+  .pb-xxs--q-large {
+    padding-bottom: 0.5em; }
+  .pb-xs--q-large {
+    padding-bottom: 0.75em; }
+  .pb-s--q-large {
+    padding-bottom: 1em; }
+  .pb-m--q-large {
+    padding-bottom: 1.5em; }
+  .pb-l--q-large {
+    padding-bottom: 2.25em; }
+  .pb-xl--q-large {
+    padding-bottom: 3em; }
+  .pb-xxl--q-large {
+    padding-bottom: 4.5em; }
+  .pb-xxxl--q-large {
+    padding-bottom: 6em; }
+  .pl-0--q-large {
+    padding-left: 0; }
+  .pl-xxxs--q-large {
+    padding-left: 0.375em; }
+  .pl-xxs--q-large {
+    padding-left: 0.5em; }
+  .pl-xs--q-large {
+    padding-left: 0.75em; }
+  .pl-s--q-large {
+    padding-left: 1em; }
+  .pl-m--q-large {
+    padding-left: 1.5em; }
+  .pl-l--q-large {
+    padding-left: 2.25em; }
+  .pl-xl--q-large {
+    padding-left: 3em; }
+  .pl-xxl--q-large {
+    padding-left: 4.5em; }
+  .pl-xxxl--q-large {
+    padding-left: 6em; }
+  .pr-0--q-large {
+    padding-right: 0; }
+  .pr-xxxs--q-large {
+    padding-right: 0.375em; }
+  .pr-xxs--q-large {
+    padding-right: 0.5em; }
+  .pr-xs--q-large {
+    padding-right: 0.75em; }
+  .pr-s--q-large {
+    padding-right: 1em; }
+  .pr-m--q-large {
+    padding-right: 1.5em; }
+  .pr-l--q-large {
+    padding-right: 2.25em; }
+  .pr-xl--q-large {
+    padding-right: 3em; }
+  .pr-xxl--q-large {
+    padding-right: 4.5em; }
+  .pr-xxxl--q-large {
+    padding-right: 6em; } }
+
+@media only screen and (min-width: 75em) {
+  .pt-0--q-xlarge {
+    padding-top: 0; }
+  .pt-xxxs--q-xlarge {
+    padding-top: 0.375em; }
+  .pt-xxs--q-xlarge {
+    padding-top: 0.5em; }
+  .pt-xs--q-xlarge {
+    padding-top: 0.75em; }
+  .pt-s--q-xlarge {
+    padding-top: 1em; }
+  .pt-m--q-xlarge {
+    padding-top: 1.5em; }
+  .pt-l--q-xlarge {
+    padding-top: 2.25em; }
+  .pt-xl--q-xlarge {
+    padding-top: 3em; }
+  .pt-xxl--q-xlarge {
+    padding-top: 4.5em; }
+  .pt-xxxl--q-xlarge {
+    padding-top: 6em; }
+  .pb-0--q-xlarge {
+    padding-bottom: 0; }
+  .pb-xxxs--q-xlarge {
+    padding-bottom: 0.375em; }
+  .pb-xxs--q-xlarge {
+    padding-bottom: 0.5em; }
+  .pb-xs--q-xlarge {
+    padding-bottom: 0.75em; }
+  .pb-s--q-xlarge {
+    padding-bottom: 1em; }
+  .pb-m--q-xlarge {
+    padding-bottom: 1.5em; }
+  .pb-l--q-xlarge {
+    padding-bottom: 2.25em; }
+  .pb-xl--q-xlarge {
+    padding-bottom: 3em; }
+  .pb-xxl--q-xlarge {
+    padding-bottom: 4.5em; }
+  .pb-xxxl--q-xlarge {
+    padding-bottom: 6em; }
+  .pl-0--q-xlarge {
+    padding-left: 0; }
+  .pl-xxxs--q-xlarge {
+    padding-left: 0.375em; }
+  .pl-xxs--q-xlarge {
+    padding-left: 0.5em; }
+  .pl-xs--q-xlarge {
+    padding-left: 0.75em; }
+  .pl-s--q-xlarge {
+    padding-left: 1em; }
+  .pl-m--q-xlarge {
+    padding-left: 1.5em; }
+  .pl-l--q-xlarge {
+    padding-left: 2.25em; }
+  .pl-xl--q-xlarge {
+    padding-left: 3em; }
+  .pl-xxl--q-xlarge {
+    padding-left: 4.5em; }
+  .pl-xxxl--q-xlarge {
+    padding-left: 6em; }
+  .pr-0--q-xlarge {
+    padding-right: 0; }
+  .pr-xxxs--q-xlarge {
+    padding-right: 0.375em; }
+  .pr-xxs--q-xlarge {
+    padding-right: 0.5em; }
+  .pr-xs--q-xlarge {
+    padding-right: 0.75em; }
+  .pr-s--q-xlarge {
+    padding-right: 1em; }
+  .pr-m--q-xlarge {
+    padding-right: 1.5em; }
+  .pr-l--q-xlarge {
+    padding-right: 2.25em; }
+  .pr-xl--q-xlarge {
+    padding-right: 3em; }
+  .pr-xxl--q-xlarge {
+    padding-right: 4.5em; }
+  .pr-xxxl--q-xlarge {
+    padding-right: 6em; } }
+
+/**
+
+## Split
+
+Simple split item for creating two elements floated away from one another
+
+```html
+<p class='split'>
+    Item
+    <span class='split__right'>
+        $value
+    </span>
+</p>
+```
+*/
+.split {
+  text-align: left;
+  list-style: none;
+  margin-left: 0; }
+
+.split__right {
+  text-align: right;
+  float: right;
+  clear: left; }
+
+/**
+
+## Typography
+
+*/
+html, body {
+  font-size: 100%;
+  line-height: 1.42857; }
+
+
+/**
+
+### Font declarations
+
+```html
+<p class="font-primary">This is the primary font</p>
+<p class="font-primary--light">This is the primary font in light</p>
+<p class="font-primary--bold">This is the primary font in bold</p>
+<p class="font-size-xxxxl">Some huge text</p>
+<p class="font-size-xxxs">Some tiny text</p>
+```
+*/
+.font-primary, body {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.font-primary--light, h1, .intro, .lego--heading {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+  .ie8 .font-primary--light, .ie8 h1, .ie8 .intro, .ie8 .lego--heading {
+    font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
+
+.font-primary--light-italic, .blockquote {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-style: italic; }
+  .ie8 .font-primary--light-italic, .ie8 .blockquote {
+    font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
+
+.font-primary--italic, .ie8 em, .ie8 i {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic; }
+  .ie8 .font-primary--italic, .ie8 .ie8 em, .ie8 .ie8 em, .ie8 .ie8 i, .ie8 .ie8 i {
+    font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
+
+.font-primary--bold, .ie8 strong, .ie8 b, h3, h4 {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal; }
+  .ie8 .font-primary--bold, .ie8 .ie8 strong, .ie8 .ie8 strong, .ie8 .ie8 b, .ie8 .ie8 b, .ie8 h3, .ie8 h4 {
+    font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
+
+.font-primary--bold-italic {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: italic; }
+  .ie8 .font-primary--bold-italic {
+    font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
+
+.sans {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
+
+.serif {
+  font-family: "georgia", serif; }
+
+.font-size-xxxxl, .h0 {
+  font-size: 72px;
+  font-size: 4.5rem; }
+
+.font-size-xxxl, h1, .h1 {
+  font-size: 36px;
+  font-size: 2.25rem; }
+
+.font-size-xxl, h2, .h2 {
+  font-size: 32px;
+  font-size: 2rem; }
+
+.font-size-xl, h3, .h3 {
+  font-size: 22px;
+  font-size: 1.375rem; }
+
+.font-size-l, h4, .h4 {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.font-size-m, h5, .h5, .pullquote {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.font-size-s, h6, .h6, .intro {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+.font-size-xs, p, .text, li, code, dt, dd {
+  font-size: 16px;
+  font-size: 1rem; }
+
+.font-size-xxs, .small, .lego--heading, .caption {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+.font-size-xxxs, .tiny {
+  font-size: 11px;
+  font-size: 0.6875rem; }
+
+
+/**
+
+### Header styles
+
+NOTE: These can change per project depending on what font etc you use :)
+
+```html
+<h1> H1 Heading 1 </h1>
+<h1 class='h2'> H1 Heading with a class of H2 </h1>
+<h2> H2 Heading </h2>
+<h2 class='h4'> H2 Heading with a class of H4 </h2>
+<h4 class='h4'> H4 Heading  </h4>
+```
+
+*/
+
+h1, .h1 {
+  line-height: 1;
+  margin-top: 0.66667em; }
+
+h2, .h2 {
+  line-height: 1.2;
+  margin-top: 0.75em; }
+
+h3, .h3 {
+  line-height: 1.2;
+  margin-top: 1.09091em; }
+
+h4, .h4 {
+  line-height: 1.33333;
+  margin-top: 1.2em; }
+
+h5, .h5 {
+  line-height: 1.2;
+  margin-top: 1.2em; }
+
+h6, .h6 {
+  line-height: 1.2;
+  margin-top: 1.33333em; }
+
+p, .text, li, code, dt, dd {
+  line-height: 1.5;
+  margin-top: 0.75em; }
+
+
+
+/**
+
+### Paragraph styles
+
+```html
+<p class="intro">I am an intro paragraph</p>
+<p>I am a plain paragraph</p>
+<p class="small">I am a small paragraph</p>
+<p class="tiny">I am a tiny paragraph</p>
+<p class="caption">I am a caption</p>
+<p class="pullquote">I am a pullquote</p>
+
+```
+
+Also
+* .text-muted
+* .text-warning
+* .text-success
+* .text-danger
+
+*/
+
+.small, .lego--heading {
+  line-height: 1.4; }
+
+.tiny {
+  line-height: 1.4; }
+
+
+
+.text-muted, .lego--heading {
+  color: #ccc; }
+
+.text-warning {
+  color: #c09853; }
+
+.text-success {
+  color: #468847; }
+
+.text-danger {
+  color: #b94a48; }
+
+hr {
+  border: none;
+  height: 1px; }
+
+/**
+
+### Text helpers
+
+```html
+<p class="uppercase">Uppercase</p>
+<p class="lowercase">Lowercase</p>
+<p class="text--overflow">These heading classes are helpful when you have a heading that is semantically correct but the default size is not what you are after.</p>
+
+```
+
+Also
+* .text-left
+* .text-right
+* .text-center
+* .text-nowrap
+
+*/
+.uppercase, .lego--heading {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.text-left, .grid > *, .grid__item {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text--overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%; }
+
+/**
+
+### Blockquotes
+
+```html
+<div class="blockquote">
+    <p class="lowercase">
+        I'm a quote
+    </p>
+    <cite class='text-right block-element mt-s'>- Fred</cite>
+</div>
+
+```
+
+*/
+.blockquote, blockquote {
+  text-indent: -0.6em; }
+  .blockquote p:before, blockquote p:before {
+    content: ""; }
+  .blockquote p:after, blockquote p:after {
+    content: ""; }
+  .blockquote p:first-of-type:before, blockquote p:first-of-type:before {
+    content: "\201C"; }
+  .blockquote p:last-of-type:after, blockquote p:last-of-type:after {
+    content: "\201D"; }
+
+/**
+
+## Visibility
+
+### Hidden
+
+Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.
+
+```html
+<div class='block-s block--color-2 hidden--q-small'>
+    hide this block on mobile
+</div>
+<div class='block-s block--color-1 hidden--q-medium'>
+    hide this block on skinny
+</div>
+<div class='block-s tp-block hidden--q-medium-down'>
+    hide this block skinny down
+</div>
+<div class='block-s block--color-3 hidden--q-medium-up'>
+    hide this block on a medium screen, large screen and xlarge screen
+</div>
+<div class='block-s block--color-2 hidden--q-large'>
+    hide this block on desktop
+</div>
+<div class='block-s ts-block hidden--q-large-up'>
+    hide this block desktop up
+</div>
+<div class='block-s tt-block hidden--q-xlarge'>
+    hide this block on wide
+</div>
+```
+
+### Visibile
+
+Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.
+
+```html
+<div class='block-s block--color-2 visible--q-small'>
+    show this block on small screen
+</div>
+<div class='block-s block--color-3 visible--q-medium'>
+    show this block on a medium screen
+</div>
+<div class='block-s block--color-3 visible--q-medium-down'>
+    Show this block on a medium screen and small screen
+</div>
+<div class='block-s block--color-2 visible--q-medium-up'>
+    Show this block on a medium screen, large screen and xlarge screen
+</div>
+<div class='block-s tt-block visible--q-large'>
+    Show this block on a large screen
+</div>
+<div class='block-s block--color-3 visible--q-large-up'>
+    Show this block on a large and xlarge screen
+</div>
+<div class='block-s block--color-1 visible--q-xlarge'>
+    show this block on a xlarge screen
+</div>
+```
+
+*/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute; }
+
+.hidden, .hide {
+  display: none; }
+
+@media only screen and (max-width: 47.99em) {
+  .visible--q-small {
+    display: block; }
+    .visible--q-small.inline {
+      display: inline; }
+  .visible--q-medium, .visible--q-large, .visible--q-xlarge {
+    display: none; }
+  .hidden--q-small {
+    display: none !important; } }
+
+@media only screen and (min-width: 48em) and (max-width: 63.99em) {
+  .visible--q-medium {
+    display: block; }
+    .visible--q-medium.inline {
+      display: inline; }
+  .visible--q-small, .visible--q-large, .visible--q-xlarge {
+    display: none; }
+  .hidden--q-medium {
+    display: none !important; } }
+
+@media only screen and (min-width: 64em) and (max-width: 74.99em) {
+  .visible--q-large {
+    display: block; }
+    .visible--q-large.inline {
+      display: inline; }
+  .visible--q-small, .visible--q-medium, .visible--q-xlarge {
+    display: none; }
+  .hidden--q-large {
+    display: none !important; } }
+
+@media only screen and (min-width: 75em) {
+  .visible--q-xlarge {
+    display: block; }
+    .visible--q-xlarge.inline {
+      display: inline; }
+  .visible--q-small, .visible--q-medium, .visible--q-large {
+    display: none; }
+  .hidden--q-xlarge {
+    display: none !important; } }
+
+@media only screen and (max-width: 47.99em) {
+  .visible--q-small-down {
+    display: block; }
+    .visible--q-small-down.inline {
+      display: inline; }
+  .visible--q-medium-up {
+    display: none; }
+  .hidden--q-small-down {
+    display: none !important; } }
+
+@media only screen and (max-width: 63.99em) {
+  .visible--q-medium-down {
+    display: block; }
+    .visible--q-medium-down.inline {
+      display: inline; }
+  .visible--q-large-up {
+    display: none; }
+  .hidden--q-medium-down {
+    display: none !important; } }
+
+@media only screen and (min-width: 48em) {
+  .visible--q-medium-up {
+    display: block; }
+    .visible--q-medium-up.inline {
+      display: inline; }
+  .visible--q-small-down {
+    display: none; }
+  .hidden--q-medium-up {
+    display: none !important; } }
+
+@media only screen and (max-width: 74.99em) {
+  .visible--q-large-down {
+    display: block; }
+    .visible--q-large-down.inline {
+      display: inline; }
+  .hidden--q-large-down {
+    display: none !important; } }
+
+@media only screen and (min-width: 64em) {
+  .visible--q-large-up {
+    display: block; }
+    .visible--q-large-up.inline {
+      display: inline; }
+  .visible--q-medium-down {
+    display: none; }
+  .hidden--q-large-up {
+    display: none !important; } }
+
+@media only screen and (min-width: 75em) {
+  .visible--q-large-down {
+    display: none; } }
+
+body {
+  font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
+
+/* custom font set up for this project as it needs to import too screen smart and non screen smart */
+
+
+
+
+p.intro {
+  line-height: 1.2; }
+
+.secondary-footer .small, .secondary-footer .lego--heading {
+  line-height: 1.3; }
+
+/*
+* Text heirarchy
+* --------------------------------------------
+*/
+.tiny + h3 {
+  margin-top: 12px; }
+
+@media only screen and (max-width: 29.99em) {
+  h1, .h1 {
+    font-size: 36px; }
+  p.intro {
+    font-family: 'SourceSansPro', 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.5; } }
+
+.bl--grey {
+  border-left: 1px solid #E6EBEB; }
+
+hr {
+  background-color: #E6EBEB;
+  height: 1px; }
+
+.gallery--item:hover {
+  cursor: pointer; }
+
+.gallery--item:hover {
+  background-color: #37B67F;
+  color: #fff; }
+
+.featured {
+  background-color: #37B67F;
+  color: #fff; }
+  .featured a {
+    color: #fff; }
+
+h1, h2, h3, h4, h5 {
+  color: #37B67F; }
+
+a {
+  color: #37B67F; }
+  a:hover {
+    color: #2b8f64; }
+
+
+
+hr {
+  margin: 0; }
+
+
+.sidebar h1 {
+  background-image: url("../images/lego.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat; }
+
+.sidebar h1 > a {
+  padding-top: 7em; }
+
+.page:before {
+  border-right: 1px solid #E6EBEB;
+  content: "";
+  display: block;
+  left: 0;
+  min-height: 100%;
+  position: absolute;
+  top: 0; }
+
+.valign-text-top {
+  vertical-align: text-top; }
+
+.sidebar .nav > li, .sidebar .nav > .pagination {
+  display: block; }
+
+.img--responsive {
+  vertical-align: top; }
+
+
+.lego--heading {
+  background-color: black; }

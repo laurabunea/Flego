@@ -1,0 +1,29 @@
+{
+  "name": "fred",
+  "version": "0.4.4",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-sass": "~0.8.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-prompt": "~0.1.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-csscomb": "~1.1.0"
+  },
+  "description": "Fred is a collection of common CSS patterns for websites.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/springload/Fred.scss"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/springload/Fred.scss/issues"
+  },
+  "homepage": "https://github.com/springload/Fred.scss"
+}

@@ -1,0 +1,52 @@
+/*
+
+## Headings
+
+```html
+<h1 class="heading heading--keyline mt-m">
+    Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h1>
+
+<h2 class="heading heading--keyline">
+    H2 Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h2>
+
+<h3 class="heading heading--keyline">
+    H3 Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h3>
+
+<h4 class="heading heading--keyline">
+    H4 Heading
+    <span class="heading__subheading tiny text-muted">
+        Sub heading
+    </span>
+</h4>
+```
+
+*/
+ 
+.heading {
+    > :first-child {
+        margin-top:0;
+    }
+}
+
+    .heading--keyline {
+        padding-bottom: $bs-xxs;
+        border-bottom-width:1px; 
+        border-bottom-style:solid;
+
+    }
+
+    .heading__subheading {
+        font-weight: normal;
+    }

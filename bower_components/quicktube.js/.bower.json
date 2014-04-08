@@ -1,0 +1,38 @@
+{
+  "name": "QuickTube.js",
+  "version": "0.1.6",
+  "description": "A lightweight way to interact with embedded youtube videos",
+  "main": [
+    "quicktube.js",
+    "quicktube.css"
+  ],
+  "keywords": [
+    "Youtube",
+    "player",
+    "API",
+    "video"
+  ],
+  "authors": [
+    "Josh Barr",
+    "Diogo Freire",
+    "Springload"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/springload/Quicktube.js.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.1.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.6",
+    "commit": "1ed671c0c6f2ccc56c87902b714e59261afa1e37"
+  },
+  "_source": "git://github.com/JoshBarr/Quicktube.js.git",
+  "_target": "*",
+  "_originalSource": "quicktube.js"
+}

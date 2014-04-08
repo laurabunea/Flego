@@ -1,0 +1,31 @@
+/**
+
+## Badges
+
+```html
+<a class="xm">Inbox
+    <span class="badge tiny">42</span>
+</a>
+```
+*/
+
+.badge {
+    @extend %inline-block; /* This extend is found in core */
+    @extend %align--baseline; /* This extend is found in core */
+    @extend %relative;/* This extend is found in core */
+    line-height: $base-line-height;
+    margin-left:0.3em;
+    min-width: .625em;
+    padding: .1875em .4375em;
+    // Quick fix for labels/badges in buttons
+    top: -1px;
+    text-align: center;
+    white-space: nowrap;
+    color: $badge-font-color;
+    background-color: $badge-bg-color;
+    border-radius: 100px;
+    // Empty badges collapse automatically (not available in IE8)
+    &:empty {
+        display: none;
+    }
+}
