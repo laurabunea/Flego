@@ -241,13 +241,12 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "panel", 1 => array("panel" => $_panel_, "blockSize" => "m")), "method"), "html", null, true);
         echo "
     
-
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
         Barchart
     </h3>
     ";
-        // line 270
+        // line 269
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["barchart"])) { $_barchart_ = $context["barchart"]; } else { $_barchart_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "barchart", 1 => array("barchart" => $_barchart_, "blockSize" => "m")), "method"), "html", null, true);
@@ -258,14 +257,14 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Forms
     </h3>
     ";
-        // line 276
+        // line 275
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["barchart"])) { $_barchart_ = $context["barchart"]; } else { $_barchart_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("barchart" => $_barchart_, "colSize" => "-2-4 col--q-small", "blockSize" => "m")), "method"), "html", null, true);
         echo "
     <hr />
     ";
-        // line 278
+        // line 277
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["formData"])) { $_formData_ = $context["formData"]; } else { $_formData_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("formData" => $_formData_, "colSize" => "", "blockSize" => "m")), "method"), "html", null, true);
@@ -285,6 +284,6 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
 
     public function getDebugInfo()
     {
-        return array (  269 => 278,  262 => 276,  251 => 270,  239 => 263,  227 => 256,  215 => 249,  206 => 242,  195 => 234,  188 => 232,  181 => 230,  168 => 222,  161 => 220,  154 => 218,  140 => 209,  133 => 207,  126 => 205,  115 => 199,  103 => 192,  93 => 187,  90 => 186,  88 => 175,  83 => 172,  81 => 150,  78 => 149,  76 => 133,  73 => 132,  71 => 120,  68 => 119,  66 => 112,  63 => 111,  61 => 99,  58 => 98,  56 => 79,  53 => 78,  50 => 63,  47 => 52,  44 => 43,  41 => 32,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  268 => 277,  261 => 275,  250 => 269,  239 => 263,  227 => 256,  215 => 249,  206 => 242,  195 => 234,  188 => 232,  181 => 230,  168 => 222,  161 => 220,  154 => 218,  140 => 209,  133 => 207,  126 => 205,  115 => 199,  103 => 192,  93 => 187,  90 => 186,  88 => 175,  83 => 172,  81 => 150,  78 => 149,  76 => 133,  73 => 132,  71 => 120,  68 => 119,  66 => 112,  63 => 111,  61 => 99,  58 => 98,  56 => 79,  53 => 78,  50 => 63,  47 => 52,  44 => 43,  41 => 32,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
     }
 }

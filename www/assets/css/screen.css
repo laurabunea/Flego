@@ -3775,11 +3775,11 @@ html, body {
   font-weight: 400;
   font-style: normal; }
 
-.font-primary--light, h1, .intro, .lego--heading {
+.font-primary--light, h1, .intro, .lego--heading, .text-input {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif;
   font-weight: 300;
   font-style: normal; }
-  .ie8 .font-primary--light, .ie8 h1, .ie8 .intro, .ie8 .lego--heading {
+  .ie8 .font-primary--light, .ie8 h1, .ie8 .intro, .ie8 .lego--heading, .ie8 .text-input {
     font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
 .font-primary--light-italic, .blockquote {
