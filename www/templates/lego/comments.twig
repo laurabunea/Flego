@@ -1,0 +1,23 @@
+
+<div class='grid'>
+    {% for key, value in data.commentThread %}
+        <div class='grid__item {{data.colSize}}'>
+            <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
+                <div class='arrow--left block-xs block--color radius'>
+                    <p>
+                        {{value.comment}}
+                    </p>
+                    <i class='arrow arrow-bottom '></i>
+                </div>
+                
+                    <p class='icon-text uppercase' href='#'>
+                        <i class='i circle i-gecko'></i>
+                      {{value.name}}
+                        
+                    </p>
+               
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+    {% endfor %}
+   
+</div><!-- ends -->
