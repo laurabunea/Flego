@@ -4,7 +4,21 @@
 
 
     <!--**************************** Dummy data ****************************-->
-
+    {% set barchart = [
+        {
+            'percentage':'6%', 
+            'desc':'of all coupons printed are ever redeemed' 
+        }, 
+        {
+            'percentage':'95%', 
+            'desc':'of the creatures on earth are smaller than a chicken egg' 
+        },
+        {
+            'percentage':'35%', 
+            'desc':'of people watching T.V. yell at it.' 
+        }
+        ]
+    %}
     {% set data = {
         'title':'title text', 
         'strapline':'strapline text', 
@@ -245,4 +259,9 @@
         Panels
     </h3>
     {{ macros.lego('panel', {'panel':panel,'blockSize': 'm'}) }}
+    <!--**************************** Showcases ****************************-->
+    <h3 class='lego--heading'>
+        Barchart
+    </h3>
+    {{ macros.lego('barchart', {'barchart':barchart,'blockSize': 'm'}) }}
 {% endblock %}

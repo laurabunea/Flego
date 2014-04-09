@@ -4265,6 +4265,14 @@ hr {
     color: #fff;
     border-color: #2b8f64; }
 
+/*barchart */
+.barchart {
+  background-color: #efefef;
+  height: 1em; }
+
+.meter {
+  background-color: #37B67F; }
+
 
 .sidebar h1 {
   background-image: url("../images/lego.png");
