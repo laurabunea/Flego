@@ -88,12 +88,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         $context["galleryShowcase"] = array("title" => "Hello there", "url" => "/link/click/me", "imageSource" => "assets/images/gallery-showcase.jpg", "imageCredit" => "Some photographer", "parentLink" => "/parent/link", "category" => "Television", "date" => "14 January 2014", "listingBlurb" => "Dont be a egg. After the fella is skived off, you add all the pretty suss cookie times to the foreshore and seabed issue youve got yourself a meal. Technology has allowed carked it housies to participate in the global conversation of hard case pieces of cheese on toast. The next Generation of nuclear-free manuses have already munted over at Rangitoto Island. Whats the hurry the Armed Offenders Squad? Theres plenty of jerseys in South Pacific..");
         // line 186
         echo "
-";
-        // line 187
-        if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
-        if (isset($context["navigation"])) { $_navigation_ = $context["navigation"]; } else { $_navigation_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "svg", 1 => $_navigation_), "method"), "html", null, true);
-        echo "
+
     <!--**************************** New block ****************************-->
     <h3 class='lego--heading'>
         header.twig
@@ -284,6 +279,6 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
 
     public function getDebugInfo()
     {
-        return array (  268 => 277,  261 => 275,  250 => 269,  239 => 263,  227 => 256,  215 => 249,  206 => 242,  195 => 234,  188 => 232,  181 => 230,  168 => 222,  161 => 220,  154 => 218,  140 => 209,  133 => 207,  126 => 205,  115 => 199,  103 => 192,  93 => 187,  90 => 186,  88 => 175,  83 => 172,  81 => 150,  78 => 149,  76 => 133,  73 => 132,  71 => 120,  68 => 119,  66 => 112,  63 => 111,  61 => 99,  58 => 98,  56 => 79,  53 => 78,  50 => 63,  47 => 52,  44 => 43,  41 => 32,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  263 => 277,  256 => 275,  245 => 269,  234 => 263,  222 => 256,  210 => 249,  201 => 242,  190 => 234,  183 => 232,  176 => 230,  163 => 222,  156 => 220,  149 => 218,  135 => 209,  128 => 207,  121 => 205,  110 => 199,  98 => 192,  90 => 186,  88 => 175,  83 => 172,  81 => 150,  78 => 149,  76 => 133,  73 => 132,  71 => 120,  68 => 119,  66 => 112,  63 => 111,  61 => 99,  58 => 98,  56 => 79,  53 => 78,  50 => 63,  47 => 52,  44 => 43,  41 => 32,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
     }
 }

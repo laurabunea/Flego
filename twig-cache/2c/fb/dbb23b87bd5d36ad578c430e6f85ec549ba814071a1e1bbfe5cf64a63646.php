@@ -77,7 +77,11 @@ class __TwigTemplate_2cfbdbb23b87bd5d36ad578c430e6f85ec549ba814071a1e1bbfe5cf64a
     </script>
     <!-- end:js-support -->
 </head>
-<body>
+<body class='";
+        // line 60
+        if (isset($context["siteClass"])) { $_siteClass_ = $context["siteClass"]; } else { $_siteClass_ = null; }
+        echo twig_escape_filter($this->env, $_siteClass_, "html", null, true);
+        echo "'>
 <div class='content'>
     
     ";
@@ -122,6 +126,6 @@ class __TwigTemplate_2cfbdbb23b87bd5d36ad578c430e6f85ec549ba814071a1e1bbfe5cf64a
 
     public function getDebugInfo()
     {
-        return array (  109 => 64,  106 => 63,  87 => 66,  85 => 63,  22 => 2,  20 => 1,  237 => 261,  226 => 255,  215 => 249,  206 => 242,  195 => 234,  188 => 232,  181 => 230,  168 => 222,  161 => 220,  154 => 218,  140 => 209,  133 => 207,  126 => 205,  115 => 199,  103 => 192,  93 => 187,  90 => 186,  88 => 175,  83 => 172,  81 => 150,  78 => 149,  76 => 133,  73 => 132,  71 => 120,  68 => 119,  66 => 112,  63 => 111,  61 => 99,  58 => 98,  56 => 79,  53 => 78,  50 => 63,  47 => 52,  44 => 43,  41 => 32,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  113 => 64,  110 => 63,  91 => 66,  89 => 63,  82 => 60,  22 => 2,  20 => 1,);
     }
 }
