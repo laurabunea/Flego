@@ -4321,7 +4321,7 @@ hr {
   box-sizing: border-box; }
 
 
-input {
+.text-input {
   background-color: #FFFFFF;
   background-image: none;
   border: 1px solid #CCCCCC;

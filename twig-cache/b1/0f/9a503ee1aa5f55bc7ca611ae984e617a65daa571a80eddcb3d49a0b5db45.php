@@ -267,8 +267,8 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
     ";
         // line 278
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
-        if (isset($context["barchart"])) { $_barchart_ = $context["barchart"]; } else { $_barchart_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("barchart" => $_barchart_, "colSize" => "", "blockSize" => "m")), "method"), "html", null, true);
+        if (isset($context["formData"])) { $_formData_ = $context["formData"]; } else { $_formData_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("formData" => $_formData_, "colSize" => "", "blockSize" => "m")), "method"), "html", null, true);
         echo "
 ";
     }
