@@ -16,12 +16,10 @@ class __TwigTemplate_70ed21fe3819cd35b9e58c91344dd396b83150f9193c427cbdfe718f1dd
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "
-<div class='grid'>
-    
+        echo "<div class='grid'>
     <div class='grid__item col-3-4 '>
         <div class='block-";
-        // line 5
+        // line 3
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
         echo " block--stacked ";
@@ -31,36 +29,36 @@ class __TwigTemplate_70ed21fe3819cd35b9e58c91344dd396b83150f9193c427cbdfe718f1dd
             <h1 class='font-primary--light'>
                 
                 ";
-        // line 8
+        // line 6
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         if ($this->getAttribute($_data_, "strapline")) {
-            // line 9
+            // line 7
             echo "                    ";
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "strapline"), "html", null, true);
             echo "
                 ";
         } else {
-            // line 11
+            // line 9
             echo "                    ";
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "title"), "html", null, true);
             echo "
                 ";
         }
-        // line 13
+        // line 11
         echo "            </h1>
         </div><!--block ends-->
     </div><!-- grid item ends-->
     
     ";
-        // line 17
+        // line 15
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         if ($this->getAttribute($_data_, "intro")) {
-            // line 18
+            // line 16
             echo "        <div class='grid__item col '>
             <div class='block-";
-            // line 19
+            // line 17
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
             echo " block--stacked pt-0  ";
@@ -69,7 +67,7 @@ class __TwigTemplate_70ed21fe3819cd35b9e58c91344dd396b83150f9193c427cbdfe718f1dd
             echo "'>
                 <p class='intro'>
                     ";
-            // line 21
+            // line 19
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "intro"), "html", null, true);
             echo "
@@ -78,7 +76,7 @@ class __TwigTemplate_70ed21fe3819cd35b9e58c91344dd396b83150f9193c427cbdfe718f1dd
         </div><!--grid item ends-->
     ";
         }
-        // line 26
+        // line 24
         echo "</div><!-- ends -->
 ";
     }
@@ -95,6 +93,6 @@ class __TwigTemplate_70ed21fe3819cd35b9e58c91344dd396b83150f9193c427cbdfe718f1dd
 
     public function getDebugInfo()
     {
-        return array (  82 => 26,  73 => 21,  64 => 19,  61 => 18,  58 => 17,  52 => 13,  45 => 11,  38 => 9,  35 => 8,  25 => 5,  1012 => 964,  1001 => 960,  993 => 959,  990 => 958,  985 => 957,  975 => 951,  24 => 4,  19 => 1,);
+        return array (  80 => 24,  71 => 19,  62 => 17,  59 => 16,  56 => 15,  50 => 11,  43 => 9,  36 => 7,  33 => 6,  23 => 3,  19 => 1,);
     }
 }

@@ -4275,3 +4275,7 @@ hr {
 
 .lego--heading {
   background-color: black; }
+
+.svg, svg {
+  left: 35%;
+  position: relative; }

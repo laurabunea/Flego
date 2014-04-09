@@ -80,7 +80,12 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         $context["galleryShowcase"] = array("title" => "Hello there", "url" => "/link/click/me", "imageSource" => "/assets/images/gallery-showcase.jpg", "imageCredit" => "Some photographer", "parentLink" => "/parent/link", "category" => "Television", "date" => "14 January 2014", "listingBlurb" => "Dont be a egg. After the fella is skived off, you add all the pretty suss cookie times to the foreshore and seabed issue youve got yourself a meal. Technology has allowed carked it housies to participate in the global conversation of hard case pieces of cheese on toast. The next Generation of nuclear-free manuses have already munted over at Rangitoto Island. Whats the hurry the Armed Offenders Squad? Theres plenty of jerseys in South Pacific..");
         // line 152
         echo "
-
+";
+        // line 153
+        if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
+        if (isset($context["navigation"])) { $_navigation_ = $context["navigation"]; } else { $_navigation_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "svg", 1 => $_navigation_), "method"), "html", null, true);
+        echo "
     <!--**************************** New block ****************************-->
     <h3 class='lego--heading'>
         header.twig
@@ -218,6 +223,6 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
 
     public function getDebugInfo()
     {
-        return array (  202 => 215,  193 => 208,  182 => 200,  175 => 198,  168 => 196,  155 => 188,  148 => 186,  141 => 184,  127 => 175,  120 => 173,  113 => 171,  102 => 165,  90 => 158,  82 => 152,  80 => 141,  75 => 138,  73 => 116,  70 => 115,  68 => 99,  65 => 98,  63 => 86,  60 => 85,  58 => 78,  55 => 77,  53 => 65,  50 => 64,  48 => 45,  45 => 44,  42 => 29,  39 => 18,  37 => 8,  31 => 4,  28 => 3,);
+        return array (  207 => 215,  198 => 208,  187 => 200,  180 => 198,  173 => 196,  160 => 188,  153 => 186,  146 => 184,  132 => 175,  125 => 173,  118 => 171,  107 => 165,  95 => 158,  85 => 153,  82 => 152,  80 => 141,  75 => 138,  73 => 116,  70 => 115,  68 => 99,  65 => 98,  63 => 86,  60 => 85,  58 => 78,  55 => 77,  53 => 65,  50 => 64,  48 => 45,  45 => 44,  42 => 29,  39 => 18,  37 => 8,  31 => 4,  28 => 3,);
     }
 }

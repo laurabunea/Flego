@@ -14,3 +14,9 @@
         @extend .font-primary--light;
         background-color:black;
     }
+
+.svg, svg {
+    left: 35%;
+    position: relative;
+
+}
