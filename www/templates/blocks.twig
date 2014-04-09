@@ -26,6 +26,17 @@
         }
     ]
     %}
+    {% set commentThread = [
+        {
+            'name':'Laura Bunea',
+            'comment':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.'
+        }, 
+        {
+            'name':'Mr Blob',
+            'comment':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.'
+        }
+    ]
+    %}
     {% set gallery3Items = [
         {
             'caption':'Item one',
@@ -213,4 +224,10 @@
     </h3>
 
     {{ macros.lego('gallery.showcase', { 'galleryShowcase':galleryShowcase, 'isStacked': '', 'blockSize': 'm'}) }}
+
+    <!--**************************** Showcases ****************************-->
+    <h3 class='lego--heading'>
+        Comment threads
+    </h3>
+    {{ macros.lego('comments', {'commentThread':commentThread, 'isStacked':'','blockSize': 'm','colSize': 'col-2-4 col--q-small'}) }}
 {% endblock %}

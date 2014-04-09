@@ -53,3 +53,9 @@ a {
 hr {
     margin:0;
 }
+
+.block--color {
+    background-color:$primary-color;
+    color:#fff;
+    border-color:$primary-color;
+}

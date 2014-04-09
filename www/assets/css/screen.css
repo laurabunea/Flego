@@ -4245,6 +4245,11 @@ a {
 hr {
   margin: 0; }
 
+.block--color {
+  background-color: #37B67F;
+  color: #fff;
+  border-color: #37B67F; }
+
 
 .sidebar h1 {
   background-image: url("../images/lego.png");
@@ -4279,3 +4284,10 @@ hr {
 .svg, svg {
   left: 35%;
   position: relative; }
+
+.i-gecko {
+  background-image: url('/assets/images/square-gecko.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 50px;
+  height: 50px; }
