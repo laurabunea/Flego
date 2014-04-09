@@ -4231,6 +4231,8 @@ hr {
   color: #fff; }
   .featured a {
     color: #fff; }
+  .featured h1, .featured h2, .featured h3, .featured h4, .featured h5 {
+    color: #fff; }
 
 h1, h2, h3, h4, h5 {
   color: #37B67F; }
@@ -4249,6 +4251,19 @@ hr {
   background-color: #37B67F;
   color: #fff;
   border-color: #37B67F; }
+
+.primary--border {
+  border: 1px solid #37B67F; }
+
+/*normally you would add a btn theme but becasue this is just a basic site i will just styel the btn class*/
+.btn {
+  background-color: #37B67F;
+  color: #fff;
+  border-color: #37B67F; }
+  .btn:hover {
+    background-color: #2b8f64;
+    color: #fff;
+    border-color: #2b8f64; }
 
 
 .sidebar h1 {
@@ -4291,3 +4306,8 @@ hr {
   background-size: 100%;
   width: 50px;
   height: 50px; }
+
+.border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }

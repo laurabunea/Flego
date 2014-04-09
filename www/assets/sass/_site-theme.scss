@@ -26,6 +26,13 @@ $primary-color:#37B67F;
     a {
         color:#fff;
     }
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5 {
+        color:#fff;
+    }
 }
 
 %primary-color {
@@ -58,4 +65,21 @@ hr {
     background-color:$primary-color;
     color:#fff;
     border-color:$primary-color;
+}
+
+.primary--border {
+    border:1px solid $primary-color;
+}
+
+/*normally you would add a btn theme but becasue this is just a basic site i will just styel the btn class*/
+.btn {
+    background-color:$primary-color;
+    color:#fff;
+    border-color:$primary-color;
+    
+    &:hover {
+        background-color:darken($primary-color, 10%);
+        color:#fff;
+        border-color:darken($primary-color, 10%);
+    }
 }

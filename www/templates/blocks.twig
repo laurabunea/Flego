@@ -26,6 +26,15 @@
         }
     ]
     %}
+    {% set panel = 
+        {
+            'title':'Get in touch',
+            'desc':'We would love to hear from you, you attractive person you.',
+            'btnLink':'helpme.co.nz',
+            'btnTitle':'Contact Us'
+        }
+    
+    %}
     {% set commentThread = [
         {
             'name':'Laura Bunea',
@@ -230,4 +239,10 @@
         Comment threads
     </h3>
     {{ macros.lego('comments', {'commentThread':commentThread, 'isStacked':'','blockSize': 'm','colSize': 'col-2-4 col--q-small'}) }}
+
+    <!--**************************** Showcases ****************************-->
+    <h3 class='lego--heading'>
+        Panels
+    </h3>
+    {{ macros.lego('panel', {'panel':panel,'blockSize': 'm'}) }}
 {% endblock %}
