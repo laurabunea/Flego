@@ -248,20 +248,32 @@
 
     {{ macros.lego('gallery.showcase', { 'galleryShowcase':galleryShowcase, 'isStacked': '', 'blockSize': 'm'}) }}
 
+
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
         Comment threads
     </h3>
     {{ macros.lego('comments', {'commentThread':commentThread, 'isStacked':'','blockSize': 'm','colSize': 'col-2-4 col--q-small'}) }}
 
+    
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
         Panels
     </h3>
     {{ macros.lego('panel', {'panel':panel,'blockSize': 'm'}) }}
+    
+
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
         Barchart
     </h3>
     {{ macros.lego('barchart', {'barchart':barchart,'blockSize': 'm'}) }}
+
+    <!--**************************** Showcases ****************************-->
+    <h3 class='lego--heading'>
+        Forms
+    </h3>
+    {{ macros.lego('form', {'barchart':barchart,'colSize': '-2-4 col--q-small','blockSize': 'm'}) }}
+    <hr />
+    {{ macros.lego('form', {'barchart':barchart,'colSize': '','blockSize': 'm'}) }}
 {% endblock %}
