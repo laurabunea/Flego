@@ -4273,6 +4273,12 @@ hr {
 .meter {
   background-color: #37B67F; }
 
+.i-menu {
+  background-image: url('/assets/images/menu.png');
+  height: 35px;
+  width: 50px;
+  background-repeat: no-repeat; }
+
 
 .sidebar h1 {
   background-image: url("../images/lego.png");
@@ -4300,6 +4306,7 @@ hr {
 .img--responsive {
   vertical-align: top; }
 
+/* add a hide block for desktop down */
 
 .lego--heading {
   background-color: black; }

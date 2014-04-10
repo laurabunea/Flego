@@ -113,13 +113,16 @@
 
     {% set navigation = [
         {
-            'title':'Home'
+            'title':'Home', 
+            'anchor': '/'
         }, 
         {
-            'title':'About'
+            'title':'About',
+            'anchor': '/about/'
         }, 
         {
-            'title':'Blog'
+            'title':'Blog',
+            'anchor': '/blog/'
         },
     ]
     %}
@@ -224,11 +227,11 @@
     <h3 class='lego--heading'>
         Content blocks
     </h3>
-    {{ macros.lego('content.block', {'content':content2Items, 'isStacked':'','blockSize': 'm','colSize': '-2-4','headingSize': '3'}) }}
+    {{ macros.lego('content.block', {'content':content2Items, 'isStacked':'','blockSize': 'm','colSize': '-2-4 col--q-small','headingSize': '3'}) }}
     <hr/>
-    {{ macros.lego('content.block', {'content':content3Items, 'isStacked':'','blockSize': 'm','colSize': '-1-3'}) }}
+    {{ macros.lego('content.block', {'content':content3Items, 'isStacked':'','blockSize': 'm','colSize': '-1-3 col--q-small'}) }}
     <hr/>
-    {{ macros.lego('content.block', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': '-1-4'}) }}
+    {{ macros.lego('content.block', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': '-1-4 col-2-4--q-medium col--q-small'}) }}
     <hr/>
     
 
