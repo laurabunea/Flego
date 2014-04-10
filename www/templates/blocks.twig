@@ -19,6 +19,7 @@
         }
         ]
     %}
+
     {% set contentBlock = {
         'title':'title text', 
         'strapline':'strapline text', 
@@ -29,6 +30,7 @@
         'imagecaption':'I am an image caption',
         'copy':'Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger.'} 
     %}
+
     {% set article = {
         'title':'Article title', 
         'date':'January 2013', 
@@ -38,6 +40,7 @@
         'desc':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.'
         } 
     %}
+
     {% set gallery2Items = [
         {
             'caption':'Item one',
@@ -49,6 +52,7 @@
         }
     ]
     %}
+
     {% set panel = 
         {
             'title':'Get in touch',
@@ -58,6 +62,7 @@
         }
     
     %}
+
     {% set commentThread = [
         {
             'name':'Laura Bunea',
@@ -69,6 +74,7 @@
         }
     ]
     %}
+
     {% set gallery3Items = [
         {
             'caption':'Item one',
@@ -194,6 +200,12 @@
     } %}
 
 
+
+
+
+
+
+
     <!--**************************** Header ****************************-->
     <h3 class='lego--heading'>
         header.twig
@@ -201,13 +213,12 @@
     {{ macros.lego('header', {'navigation': navigation, 'isStacked':'','blockSize': 'm'}) }}
 
 
-    <!--**************************** Content related ****************************-->
+    <!--**************************** Content.into ****************************-->
     <h3 class='lego--heading'>
         content.intro.twig
     </h3>
     {{ macros.lego('content.intro', { 'content': contentBlock, 'isStackedTop': '','colSizeHeading':'-3-4','isStackedBottom':'','blockSize': 'm'}) }}
 
-    
     
     <!--**************************** Content Blocks ****************************-->
     <h3 class='lego--heading'>
@@ -219,12 +230,16 @@
     <hr/>
     {{ macros.lego('content.block', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': '-1-4'}) }}
     <hr/>
+    
+
     <!--**************************** Article Blocks ****************************-->
     <h3 class='lego--heading'>
         article.list.twig
     </h3>
     {{ macros.lego('article.list', {'article': article,'colSize':'', 'isStacked':'', 'headingSize': 'h4', 'blockSize': 'm'}) }}
+    
 
+    <!--**************************** Media Blocks ****************************-->
     <h3 class='lego--heading'>
         content.media.twig
     </h3>
@@ -234,8 +249,8 @@
     <hr />
     {{ macros.lego('content.media', {'content': contentBlock ,'isStacked':'','blockSize': 'm','mediaLeft':'col-2-4','mediaRight':'col-2-4','blockSize': 'm'}) }}
 
+
     <!--**************************** Showcases ****************************-->
-    
     <h3 class='lego--heading'>
         gallery.showcase.twig
     </h3>
@@ -254,14 +269,6 @@
     <hr/>
     {{ macros.lego('gallery.list', {'gallery': gallery4Items, 'isStacked': '','blockSize': 'm','colSize': '-1-4'}) }}
     
-    
-    
-    <!--**************************** New block ****************************-->
-
-{#{{ macros.lego('content.split', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
-    #}
-
-    
 
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
@@ -276,11 +283,13 @@
     </h3>
     {{ macros.lego('panel', {'panel':panel,'blockSize': 'm'}) }}
     
+
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
         Barchart
     </h3>
     {{ macros.lego('barchart', {'barchart':barchart,'blockSize': 'm'}) }}
+
 
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
@@ -289,4 +298,10 @@
     {{ macros.lego('form', {'barchart':barchart,'colSize': '-2-4 col--q-small','blockSize': 'm'}) }}
     <hr />
     {{ macros.lego('form', {'formData':formData,'colSize': '','blockSize': 'm'}) }}
+
+
+    <!--**************************** New block ****************************-->
+
+{#{{ macros.lego('content.split', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
+    #}
 {% endblock %}

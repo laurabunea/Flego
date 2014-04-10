@@ -72,7 +72,7 @@ class __TwigTemplate_ac42ca38d03ea72678654233891bdc226841b68a02ce19ad94a439a3afb
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "galleryShowcase"), "date"), "html", null, true);
         echo "
                     </p>
-                    <h2 >
+                    <h2>
                         <a href='";
         // line 24
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
@@ -94,6 +94,7 @@ class __TwigTemplate_ac42ca38d03ea72678654233891bdc226841b68a02ce19ad94a439a3afb
                     </p>
                 </div><!--block ends-->
             </div><!--grid item ends-->
+
         </div><!--grid ends-->
     </div><!--grid container ends-->
 </div><!--featured ends-->";
@@ -111,6 +112,6 @@ class __TwigTemplate_ac42ca38d03ea72678654233891bdc226841b68a02ce19ad94a439a3afb
 
     public function getDebugInfo()
     {
-        return array (  91 => 29,  83 => 25,  78 => 24,  71 => 21,  64 => 18,  58 => 16,  52 => 14,  36 => 8,  31 => 7,  26 => 6,  19 => 1,);
+        return array (  78 => 24,  58 => 16,  52 => 14,  26 => 6,  51 => 11,  80 => 20,  67 => 14,  42 => 6,  34 => 5,  23 => 3,  83 => 25,  62 => 15,  39 => 6,  27 => 3,  22 => 2,  65 => 14,  54 => 10,  49 => 15,  46 => 8,  24 => 4,  19 => 1,  276 => 291,  269 => 289,  258 => 283,  247 => 277,  235 => 270,  226 => 263,  215 => 255,  208 => 253,  201 => 251,  188 => 243,  175 => 235,  168 => 233,  161 => 231,  151 => 226,  140 => 220,  133 => 218,  126 => 216,  113 => 208,  101 => 201,  93 => 195,  91 => 29,  86 => 181,  84 => 159,  81 => 158,  79 => 142,  76 => 141,  74 => 18,  71 => 21,  69 => 121,  66 => 120,  64 => 18,  61 => 13,  59 => 14,  56 => 12,  53 => 10,  50 => 61,  47 => 7,  44 => 41,  41 => 13,  38 => 22,  36 => 8,  31 => 7,  28 => 4,);
     }
 }
