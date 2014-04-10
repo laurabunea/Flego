@@ -65,20 +65,28 @@ class __TwigTemplate_0f78553629800a67b1313154b2161f980521a9a852f312b19b0cfe7d221
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "desc"), "html", null, true);
         echo "
             </p>
-            <p>
-                <a href='";
-        // line 20
+            ";
+        // line 19
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "linkAnchor"), "html", null, true);
-        echo "'>
-                    ";
-        // line 21
-        if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "link"), "html", null, true);
-        echo "
-                </a>
-            </p>
-        </div><!--block ends-->
+        if ($this->getAttribute($this->getAttribute($_data_, "article"), "link")) {
+            // line 20
+            echo "                <p>
+                    <a href='";
+            // line 21
+            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "linkAnchor"), "html", null, true);
+            echo "'>
+                        ";
+            // line 22
+            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "link"), "html", null, true);
+            echo "
+                    </a>
+                </p>
+            ";
+        }
+        // line 26
+        echo "        </div><!--block ends-->
     </div><!-- grid item ends-->
 </div><!-- grid ends -->";
     }
@@ -95,6 +103,6 @@ class __TwigTemplate_0f78553629800a67b1313154b2161f980521a9a852f312b19b0cfe7d221
 
     public function getDebugInfo()
     {
-        return array (  57 => 14,  52 => 13,  46 => 11,  37 => 6,  27 => 3,  22 => 2,  19 => 1,  276 => 291,  269 => 289,  258 => 283,  247 => 277,  235 => 270,  226 => 263,  215 => 255,  208 => 253,  201 => 251,  188 => 243,  175 => 235,  168 => 233,  161 => 231,  151 => 226,  140 => 220,  133 => 218,  126 => 216,  113 => 208,  101 => 201,  93 => 195,  91 => 184,  86 => 181,  84 => 159,  81 => 158,  79 => 142,  76 => 21,  74 => 129,  71 => 20,  69 => 121,  66 => 120,  64 => 17,  61 => 107,  59 => 88,  56 => 87,  53 => 72,  50 => 61,  47 => 52,  44 => 41,  41 => 32,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  89 => 26,  81 => 22,  76 => 21,  73 => 20,  70 => 19,  64 => 17,  57 => 14,  52 => 13,  46 => 11,  37 => 6,  27 => 3,  22 => 2,  19 => 1,);
     }
 }

@@ -16,11 +16,13 @@
             <p>
                 {{ data.article.desc }}
             </p>
-            <p>
-                <a href='{{ data.article.linkAnchor }}'>
-                    {{ data.article.link }}
-                </a>
-            </p>
+            {% if data.article.link %}
+                <p>
+                    <a href='{{ data.article.linkAnchor }}'>
+                        {{ data.article.link }}
+                    </a>
+                </p>
+            {% endif %}
         </div><!--block ends-->
     </div><!-- grid item ends-->
 </div><!-- grid ends -->

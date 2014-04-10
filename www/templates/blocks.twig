@@ -31,6 +31,7 @@
         'copy':'Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger.'} 
     %}
 
+
     {% set article = {
         'title':'Article title', 
         'date':'January 2013', 
@@ -59,6 +60,16 @@
             'desc':'We would love to hear from you, you attractive person you.',
             'btnLink':'helpme.co.nz',
             'btnTitle':'Contact Us'
+        }
+    
+    %}
+
+    {% set alertPanel = 
+        {
+            'title':'Warning',
+            'desc':'Do not touch that button',
+            'btnLink':'helpme.co.nz',
+            'btnTitle':'Click me, I am a button'
         }
     
     %}
@@ -286,6 +297,13 @@
     </h3>
     {{ macros.lego('panel', {'panel':panel,'blockSize': 'm'}) }}
     
+
+    <!--**************************** Showcases ****************************-->
+    <h3 class='lego--heading'>
+        Alert panel
+    </h3>
+    {{ macros.lego('panel.alert', {'panel':alertPanel,'blockSize': 'm','theme': ''}) }}
+
 
     <!--**************************** Showcases ****************************-->
     <h3 class='lego--heading'>
