@@ -28,14 +28,31 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
     public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "<div class='mt-xl '>
-";
-        // line 1484
-        echo "<h1 class='text-center  h0'>
+        echo "
+
+<div class='grid-container pt-xxxl' style='max-width:960px; margin-left:auto; margin-right:auto'>
     <a href='/blocks.php' class='clean-link'>
-        Flego</a>
-</h1>
+        <div class='grid grid--middle'>
+            <div class='grid__item ' style='width:30%'>
+                <img src='assets/images/fred-logo.png' alt='fred' class='img--responsive'/>
+            </div>
+            <div class='grid__item' style='width:20%'>
+                <p class='h0 text-center'>+</p> 
+            </div>
+            <div class='grid__item' style='width:30%'>
+                <img src='assets/images/lego.png' alt='fred' class='img--responsive' />
+            </div>
+            <div class='grid__item' style='width:20%'>
+                <p class='h0 text-center'>=</p>
+            </div>
+            <div class='grid__item col'>
+                <h1 class='text-center pt-m h0'>Flego</h1>
+            </div>
+        </div>
+    </a>
 </div>
+
+
 ";
     }
 
@@ -51,6 +68,6 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
 
     public function getDebugInfo()
     {
-        return array (  34 => 1484,  31 => 4,  28 => 3,);
+        return array (  31 => 4,  28 => 3,);
     }
 }
