@@ -1,0 +1,12 @@
+
+<div class='grid'>
+{% for key, value in data.content %}
+    <div class='grid__item col{{data.colSize}}'>
+        <div class='block-{{data.blockSize}} block--stacked bb-primary'>
+            <p>{{value.town}}</p>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+   

@@ -20,6 +20,28 @@
         ]
     %}
 
+    {% set places = [
+        {
+            'town':'Wellington' 
+        }, 
+        {
+            'town':'Christchurch'
+        },
+        {
+            'town':'Auckland'
+        },
+        {
+            'town':'Nelson'
+        },
+        {
+            'town':'Timaru'
+        },
+        {
+            'town':'Gore'
+        }
+        ]
+    %}
+
     {% set contentBlock = {
         'title':'title text', 
         'strapline':'strapline text', 
@@ -256,6 +278,7 @@
         article.list.twig
     </h3>
     {{ macros.lego('article.list', {'article': article,'colSize':'', 'isStacked':'', 'headingSize': 'h4', 'blockSize': 'm'}) }}
+
     
 
     <!--**************************** Media Blocks ****************************-->
@@ -324,10 +347,14 @@
     {{ macros.lego('form', {'barchart':barchart,'colSize': '-2-4 col--q-small','blockSize': 'm'}) }}
     <hr />
     {{ macros.lego('form', {'formData':formData,'colSize': '','blockSize': 'm'}) }}
-
+    
 
     <!--**************************** New block ****************************-->
-
+    <h3 class='lego--heading'>
+       content.list.twig
+    </h3>
+    {{ macros.lego('content.list', {'content': places,'colSize':'-2-4', 'isStacked':'', 'headingSize': 'h4', 'blockSize': 's'}) }}
+    
 {#{{ macros.lego('content.split', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
     #}
 {% endblock %}
