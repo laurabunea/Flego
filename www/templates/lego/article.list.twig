@@ -1,29 +1,26 @@
-
-<div class='grid '>
-    
-    <div class='grid__item col'>
+<div class='grid '>  
+    <div class='grid__item col{{data.colSize}}'>
         <div class='block-{{data.blockSize}} block--stacked {{ data.isStacked }}'>
             <span class="tiny uppercase text-nowrap inline-block">
                 <a href="anchor here" >
-                    Television
+                    {{data.article.category}}
                 </a>
                 ·
             </span>
             <span class="tiny uppercase text-nowrap"> 
-                2nd April 2014 
+                {{data.article.date }}
             </span>
-            <h3 class='{{ headingSize }} '>
-                {{ data.title }}
+            <h3 class='{{ headingSize }}'>
+                {{ data.article.title }}
             </h3>
             <p>
-                {{ data.copy }}
+                {{ data.article.desc }}
             </p>
             <p>
-                <a href='{{ data.link-href }}'>
-                    {{ data.link }}
+                <a href='{{ data.article.linkAnchor }}'>
+                    {{ data.article.link }}
                 </a>
             </p>
         </div><!--block ends-->
     </div><!-- grid item ends-->
-   
 </div><!-- ends -->
