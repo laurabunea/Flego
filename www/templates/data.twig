@@ -1,5 +1,4 @@
- <!--**************************** Dummy data ****************************-->
-    {% set barchart = [
+{% set barchart = [
         {
             'percentage':'6%', 
             'desc':'of all coupons printed are ever redeemed' 
@@ -14,7 +13,30 @@
         }
         ]
     %}
-    {% set data = {
+
+    {% set places = [
+        {
+            'town':'Wellington' 
+        }, 
+        {
+            'town':'Christchurch'
+        },
+        {
+            'town':'Auckland'
+        },
+        {
+            'town':'Nelson'
+        },
+        {
+            'town':'Timaru'
+        },
+        {
+            'town':'Gore'
+        }
+        ]
+    %}
+
+    {% set contentBlock = {
         'title':'title text', 
         'strapline':'strapline text', 
         'intro':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.', 
@@ -24,6 +46,18 @@
         'imagecaption':'I am an image caption',
         'copy':'Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger.'} 
     %}
+
+
+    {% set article = {
+        'title':'Article title', 
+        'date':'January 2013', 
+        'category':'Television', 
+        'link':'Read more', 
+        'linkAnchor':'/clickme', 
+        'desc':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.'
+        } 
+    %}
+
     {% set gallery2Items = [
         {
             'caption':'Item one',
@@ -35,6 +69,7 @@
         }
     ]
     %}
+
     {% set panel = 
         {
             'title':'Get in touch',
@@ -44,6 +79,17 @@
         }
     
     %}
+
+    {% set alertPanel = 
+        {
+            'title':'Warning',
+            'desc':'Do not touch that button',
+            'btnLink':'helpme.co.nz',
+            'btnTitle':'Click me, I am a button'
+        }
+    
+    %}
+
     {% set commentThread = [
         {
             'name':'Laura Bunea',
@@ -55,6 +101,7 @@
         }
     ]
     %}
+
     {% set gallery3Items = [
         {
             'caption':'Item one',
@@ -93,13 +140,16 @@
 
     {% set navigation = [
         {
-            'title':'Home'
+            'title':'Home', 
+            'anchor': '/'
         }, 
         {
-            'title':'About'
+            'title':'About',
+            'anchor': '/about/'
         }, 
         {
-            'title':'Blog'
+            'title':'Blog',
+            'anchor': '/blog/'
         },
     ]
     %}

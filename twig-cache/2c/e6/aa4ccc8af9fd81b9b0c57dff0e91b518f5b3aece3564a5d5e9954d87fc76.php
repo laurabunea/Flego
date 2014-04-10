@@ -34,7 +34,7 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
     <a href='/blocks.php' class='clean-link'>
         <div class='grid grid--middle'>
             <div class='grid__item ' style='width:30%'>
-                <div class='ml-m'>
+                <div class='ml-l'>
                     <img src='assets/images/fred-logo.png' alt='fred' class='img--responsive'/>
                 </div>
             </div>

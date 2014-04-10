@@ -2,8 +2,8 @@
 
 {% block content %}
 
-
-    <!--**************************** Dummy data ****************************-->
+    <!--**************************** Dummy data will need to put this some where else as its anoying 
+    ****************************-->
     {% set barchart = [
         {
             'percentage':'6%', 
@@ -50,7 +50,8 @@
         'imagetitle':'Image title',
         'imagesubtitle':'Image sub title or date',
         'imagecaption':'I am an image caption',
-        'copy':'Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger.'} 
+        'copy':'Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger.'
+        } 
     %}
 
 
@@ -165,7 +166,8 @@
         'image':'assets/images/gallery-showcase.jpg', 
         'imagetitle':'Image title',
         'imagesubtitle':'Image sub title or date',
-        'imagecaption':'I am an image caption'} 
+        'imagecaption':'I am an image caption'
+        } 
     %}
 
     {% set content2Items = [
@@ -237,133 +239,270 @@
 
 
 
-
-
-
-
-
-    <!--**************************** Header ****************************-->
+    {#******************************************************** 
+                            Header 
+    ********************************************************#}
     <h3 class='lego--heading'>
         header.twig
     </h3>
-    {{ macros.lego('header', {'navigation': navigation, 'isStacked':'','blockSize': 'm'}) }}
+    {{ macros.lego('header', {
+        'navigation': navigation, 
+        'isStacked':'',
+        'blockSize': 'm'
+    }) }}
 
 
-    <!--**************************** Content.into ****************************-->
-    <h3 class='lego--heading'>
-        content.intro.twig
-    </h3>
-    {{ macros.lego('content.intro', { 'content': contentBlock, 'isStackedTop': '','colSizeHeading':'-3-4','isStackedBottom':'','blockSize': 'm'}) }}
-    <hr />
+    {#******************************************************** 
+                        Titles 
+    ********************************************************#}
     <h3 class='lego--heading'>
         content.title.twig
     </h3>
-    {{ macros.lego('content.title', { 'content': contentBlock, 'isStackedTop': '','colSizeHeading':'-3-4','isStackedBottom':'','blockSize': 'm'}) }}
+    {{ macros.lego('content.title', { 
+        'content': contentBlock, 
+        'isStackedTop': '',
+        'colSizeHeading':'-3-4',
+        'isStackedBottom':'',
+        'blockSize': 'm'
+    }) }}
 
-    
-    <!--**************************** Content Blocks ****************************-->
+
+    {#******************************************************** 
+                       Content blocks 
+    ********************************************************#}
     <h3 class='lego--heading'>
-        Content blocks
+        content.intro.twig
     </h3>
-    {{ macros.lego('content.block', {'content':content2Items, 'isStacked':'','blockSize': 'm','colSize': '-2-4 col--q-small','headingSize': '3'}) }}
+    {{ macros.lego('content.intro', { 
+        'content': contentBlock, 
+        'isStackedTop': '',
+        'colSizeHeading':'-3-4',
+        'isStackedBottom':'',
+        'blockSize': 'm'
+    }) }}
+
+    <h3 class='lego--heading'>
+        content.block.twig
+    </h3>
+    {{ macros.lego('content.block', {
+        'content':content2Items, 
+        'isStacked':'',
+        'blockSize': 'm',
+        'colSize': '-2-4 col--q-small',
+        'headingSize': '3'
+    }) }}
     <hr/>
-    {{ macros.lego('content.block', {'content':content3Items, 'isStacked':'','blockSize': 'm','colSize': '-1-3 col--q-small'}) }}
+
+    {{ macros.lego('content.block', {
+        'content':content3Items, 
+        'isStacked':'',
+        'blockSize': 'm',
+        'colSize': '-1-3 col--q-small'
+    }) }}
     <hr/>
-    {{ macros.lego('content.block', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': '-1-4 col-2-4--q-medium col--q-small'}) }}
+
+    {{ macros.lego('content.block', {
+        'content':content4Items, 
+        'isStacked':'',
+        'blockSize': 'm',
+        'colSize': '-1-4 col-2-4--q-medium col--q-small'
+    }) }}
     <hr/>
     
-
-    <!--**************************** Article Blocks ****************************-->
-    <h3 class='lego--heading'>
-        article.list.twig
-    </h3>
-    {{ macros.lego('article.list', {'article': article,'colSize':'', 'isStacked':'', 'headingSize': 'h4', 'blockSize': 'm'}) }}
-
-    
-
-    <!--**************************** Media Blocks ****************************-->
-    <h3 class='lego--heading'>
-        content.media.twig
-    </h3>
-    {{ macros.lego('content.media', {'content': contentBlock , 'isStacked':'','blockSize': 'm','mediaLeft':'col-1-4','mediaRight':'col-3-4','blockSize': 'm'}) }}
-    <hr />
-    {{ macros.lego('content.media', {'content': contentBlock ,'isStacked':'','blockSize': 'm','mediaLeft':'col-1-3','mediaRight':'col-2-3','blockSize': 'm'}) }}
-    <hr />
-    {{ macros.lego('content.media', {'content': contentBlock ,'isStacked':'','blockSize': 'm','mediaLeft':'col-2-4 col--q-small','mediaRight':'col-2-4 col--q-small','blockSize': 'm'}) }}
-
-
-    <!--**************************** Showcases ****************************-->
-    <h3 class='lego--heading'>
-        gallery.showcase.twig
-    </h3>
-
-    {{ macros.lego('gallery.showcase', { 'galleryShowcase':galleryShowcase, 'isStacked': '', 'blockSize': 'm'}) }}
-
-    
-    <!--**************************** Gallery ****************************-->
-    <h3 class='lego--heading'>
-        gallery.list.twig
-    </h3>
-    <!-- I have passed in different nodes just to keep the site smaller ;) -->
-    {{ macros.lego('gallery.list', {'gallery': gallery2Items, 'isStacked': '','blockSize': 'm','colSize': '-2-4'}) }}
-    <hr/>
-    {{ macros.lego('gallery.list', {'gallery': gallery3Items, 'isStacked': '','blockSize': 'm','colSize': '-1-3'}) }}
-    <hr/>
-    {{ macros.lego('gallery.list', {'gallery': gallery4Items, 'isStacked': '','blockSize': 'm','colSize': '-1-4'}) }}
-    
-
-    <!--**************************** Showcases ****************************-->
-    <h3 class='lego--heading'>
-        Comment threads
-    </h3>
-    {{ macros.lego('comments', {'commentThread':commentThread, 'isStacked':'','blockSize': 'm','colSize': '-2-4 col--q-small'}) }}
-
-    
-    <!--**************************** Showcases ****************************-->
-    <h3 class='lego--heading'>
-        Panels
-    </h3>
-    {{ macros.lego('panel', {'panel':panel,'blockSize': 'm'}) }}
-    
-
-    <!--**************************** Showcases ****************************-->
-    <h3 class='lego--heading'>
-        Alert panel
-    </h3>
-    {{ macros.lego('panel.alert', {'panel':alertPanel,'blockSize': 'm','theme': ''}) }}
-
-
-    <!--**************************** Showcases ****************************-->
-    <h3 class='lego--heading'>
-        Barchart
-    </h3>
-
-
-    {{ macros.lego('barchart', {'barchart':barchart,'blockSize': 'm'}) }}
-
-
-    <!--**************************** Showcases ****************************-->
-    <h3 class='lego--heading'>
-        Forms
-    </h3>
-    {{ macros.lego('form', {'barchart':barchart,'colSize': '-2-4 col--q-small','blockSize': 'm'}) }}
-    <hr />
-    {{ macros.lego('form', {'formData':formData,'colSize': '','blockSize': 'm'}) }}
-    
-
-    <!--**************************** New block ****************************-->
+    {#******************************************************** 
+                       Content list
+    ********************************************************#}
     <h3 class='lego--heading'>
        content.list.twig
     </h3>
  
-    {{ macros.lego('content.list', {'content': places,'colSize':'-2-4 col--q-small', 'isStacked':'', 'headingSize': 'h4', 'blockSize': 's','themeAttr':'pb-0'}) }}
+    {{ macros.lego('content.list', {
+        'content': places,
+        'colSize':'-2-4 col--q-small', 
+        'isStacked':'', 
+        'headingSize': 'h4', 
+        'blockSize': 's',
+        'themeAttr':'pb-0'
+    }) }}
+    
+    <hr class='mt-m'/>
 
-    {{ macros.lego('content.list', {'content': places,'colSize':'-2-4', 'isStacked':'', 'headingSize': 'h4', 'blockSize': 's','themeAttr':'bb-primary'}) }}
+    {{ macros.lego('content.list', {
+        'content': places,
+        'colSize':'-2-4', 
+        'isStacked':'', 
+        'headingSize': 'h4', 
+        'blockSize': 's',
+        'themeAttr':'bb-primary'
+    }) }}
+    {#******************************************************** 
+                       Articles
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        article.list.twig
+    </h3>
+    {{ macros.lego('article.list', {
+        'article': article,
+        'colSize':'', 
+        'isStacked':'', 
+        'headingSize': 'h4', 
+        'blockSize': 'm'
+    }) }}
+
+
+    {#******************************************************** 
+                       Media blocks
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        content.media.twig
+    </h3>
+    {{ macros.lego('content.media', {
+        'content': contentBlock, 
+        'isStacked':'',
+        'blockSize': 'm',
+        'mediaLeft':'col-1-4',
+        'mediaRight':'col-3-4',
+        'blockSize': 'm'
+    }) }}
+    <hr />
+
+    {{ macros.lego('content.media', {
+        'content': contentBlock,
+        'isStacked':'',
+        'blockSize': 'm',
+        'mediaLeft':'col-1-3',
+        'mediaRight':'col-2-3',
+        'blockSize': 'm'
+    }) }}
+    <hr />
+
+    {{ macros.lego('content.media', {
+        'content': contentBlock,
+        'isStacked':'',
+        'blockSize': 'm',
+        'mediaLeft':'col-2-4 col--q-small',
+        'mediaRight':'col-2-4 col--q-small',
+        'blockSize': 'm'
+    }) }}
+
+
+    {#******************************************************** 
+                       Showcases
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        gallery.showcase.twig
+    </h3>
+    {{ macros.lego('gallery.showcase', { 
+        'galleryShowcase':galleryShowcase, 
+        'isStacked': '', 
+        'blockSize': 'm'
+    }) }}
+
+    
+    {#******************************************************** 
+                       Gallery
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        gallery.list.twig
+    </h3>
+    <!-- I have passed in different nodes just to keep the site smaller ;) -->
+    {{ macros.lego('gallery.list', {
+        'gallery': gallery2Items, 
+        'isStacked':'',
+        'blockSize':'m',
+        'colSize':'-2-4'}) 
+    }}
+    <hr/>
+
+    {{ macros.lego('gallery.list', {
+        'gallery': gallery3Items, 
+        'isStacked':'',
+        'blockSize':'m',
+        'colSize': '-1-3'
+    }) }}
+    <hr/>
+
+    {{ macros.lego('gallery.list', {
+        'gallery': gallery4Items, 
+        'isStacked':'',
+        'blockSize':'m',
+        'colSize': '-1-4'
+    }) }}
+    
+
+    {#******************************************************** 
+                       Comment threads
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        comments.twig
+    </h3>
+    {{ macros.lego('comments', {
+        'commentThread':commentThread, 
+        'isStacked':'',
+        'blockSize': 'm',
+        'colSize': '-2-4 col--q-small'
+    }) }}
+
+    
+    {#******************************************************** 
+                       Panels
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        Panel.twig
+    </h3>
+    {{ macros.lego('panel', {
+        'panel':panel,
+        'blockSize': 'm'
+    }) }}
+    
+
+    <h3 class='lego--heading'>
+        panel.alert.twig
+    </h3>
+    {{ macros.lego('panel.alert', {
+        'panel':alertPanel,
+        'blockSize': 'm',
+        'theme': ''
+    }) }}
+
+
+    {#******************************************************** 
+                       Bar Chart
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        Barchart.twig
+    </h3>
+    {{ macros.lego('barchart', {
+        'barchart':barchart,
+        'blockSize': 'm'
+    }) }}
+
+
+    {#******************************************************** 
+                       Forms
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        Forms
+    </h3>
+    {{ macros.lego('form', {
+        'barchart':barchart,
+        'colSize': '-2-4 col--q-small',
+        'blockSize': 'm'
+    }) }}
+    <hr />
+
+    {{ macros.lego('form', {
+        'formData':formData,
+        'colSize':'',
+        'blockSize':'m'
+    }) }}
+    
+
     
 
     <h3 class='lego--heading'>
        ...
     </h3>
-{#{{ macros.lego('content.split', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
+    {#{{ macros.lego('content.split', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
     #}
 {% endblock %}
