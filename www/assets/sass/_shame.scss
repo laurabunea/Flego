@@ -1,4 +1,4 @@
-
+/* Shame */
 .lego {
 
 }
@@ -15,18 +15,6 @@
         background-color:black;
     }
 
-.svg, svg {
-    left: 35%;
-    position: relative;
-
-}
-.i-gecko {
-    background-image:url('/assets/images/square-gecko.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width:50px; 
-    height:50px;
-}
 //change to use vendor mixin
 .border-box {
     -webkit-box-sizing: border-box;
@@ -66,4 +54,30 @@ label {
 
 .bb-primary {
     border-bottom:1px solid #ccc;
+}
+
+/*normally you would add a btn theme but becasue this is just a basic site i will just styel the btn class*/
+.btn {
+    background-color:$primary-color;
+    color:#fff;
+    border-color:$primary-color;
+    
+    &:hover {
+        background-color:darken($primary-color, 10%);
+        color:#fff;
+        border-color:darken($primary-color, 10%);
+    } 
+}
+
+/*barchart */
+.barchart {
+    background-color:#efefef;
+    height:1em;
+}   
+    .meter {
+        background-color:$primary-color;
+    }
+
+.white-bg {
+    background-color:#fff;
 }

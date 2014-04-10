@@ -1,6 +1,17 @@
-
+//maybe add to fred
 .sidebar .nav > li { 
     display:block;
+}
+.z-index--push {
+    z-index: -1;
+}
+
+.z-index--pull {
+    z-index: 1;
+}
+
+%on-hover{
+    cursor: pointer;
 }
 
 .img--responsive {

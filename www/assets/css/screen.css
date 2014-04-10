@@ -4183,6 +4183,22 @@ Try to use these on a limited basis and avoid creating entirely different versio
   .visible--q-large-down {
     display: none; } }
 
+.sidebar .nav > li, .sidebar .nav > .pagination {
+  display: block; }
+
+.z-index--push {
+  z-index: -1; }
+
+.z-index--pull {
+  z-index: 1; }
+
+.gallery--item:hover {
+  cursor: pointer; }
+
+.img--responsive {
+  vertical-align: top; }
+
+/* add a hide block for desktop down */
 body {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
@@ -4194,23 +4210,15 @@ body {
 p.intro {
   line-height: 1.2; }
 
-.secondary-footer .small, .secondary-footer .lego--heading {
-  line-height: 1.3; }
+h1, h2, h3, h4, h5 {
+  color: #37B67F; }
 
-/*
-* Text heirarchy
-* --------------------------------------------
-*/
-.tiny + h3 {
-  margin-top: 12px; }
+a {
+  color: #37B67F; }
+  a:hover {
+    color: #2b8f64; }
 
-@media only screen and (max-width: 29.99em) {
-  h1, .h1 {
-    font-size: 36px; }
-  p.intro {
-    font-family: 'SourceSansPro', 'Open Sans', sans-serif;
-    font-size: 1em;
-    line-height: 1.5; } }
+
 
 .bl--grey {
   border-left: 1px solid #E6EBEB; }
@@ -4218,9 +4226,6 @@ p.intro {
 hr {
   background-color: #E6EBEB;
   height: 1px; }
-
-.gallery--item:hover {
-  cursor: pointer; }
 
 .gallery--item:hover {
   background-color: #37B67F;
@@ -4234,16 +4239,6 @@ hr {
   .featured h1, .featured h2, .featured h3, .featured h4, .featured h5 {
     color: #fff; }
 
-h1, h2, h3, h4, h5 {
-  color: #37B67F; }
-
-a {
-  color: #37B67F; }
-  a:hover {
-    color: #2b8f64; }
-
-
-
 hr {
   margin: 0; }
 
@@ -4255,23 +4250,12 @@ hr {
 .primary--border {
   border: 1px solid #37B67F; }
 
-/*normally you would add a btn theme but becasue this is just a basic site i will just styel the btn class*/
-.btn {
-  background-color: #37B67F;
-  color: #fff;
-  border-color: #37B67F; }
-  .btn:hover {
-    background-color: #2b8f64;
-    color: #fff;
-    border-color: #2b8f64; }
-
-/*barchart */
-.barchart {
-  background-color: #efefef;
-  height: 1em; }
-
-.meter {
-  background-color: #37B67F; }
+.i-gecko {
+  background-image: url('/assets/images/square-gecko.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 50px;
+  height: 50px; }
 
 .i-menu {
   background-image: url('/assets/images/menu.png');
@@ -4279,54 +4263,10 @@ hr {
   width: 50px;
   background-repeat: no-repeat; }
 
-.white-bg {
-  background-color: #fff; }
-
-.z-index--push {
-  z-index: -1; }
-
-.z-index--pull {
-  z-index: 1; }
-
-
-.sidebar h1 {
-  background-image: url("../images/lego.png");
-  background-position: 50% 0;
-  background-repeat: no-repeat; }
-
-.sidebar h1 > a {
-  padding-top: 7em; }
-
-.page:before {
-  border-right: 1px solid #E6EBEB;
-  content: "";
-  display: block;
-  left: 0;
-  min-height: 100%;
-  position: absolute;
-  top: 0; }
-
-.sidebar .nav > li, .sidebar .nav > .pagination {
-  display: block; }
-
-.img--responsive {
-  vertical-align: top; }
-
-/* add a hide block for desktop down */
+/* Shame */
 
 .lego--heading {
   background-color: black; }
-
-.svg, svg {
-  left: 35%;
-  position: relative; }
-
-.i-gecko {
-  background-image: url('/assets/images/square-gecko.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 50px;
-  height: 50px; }
 
 .border-box, input {
   -webkit-box-sizing: border-box;
@@ -4357,3 +4297,24 @@ label {
 
 .bb-primary {
   border-bottom: 1px solid #ccc; }
+
+/*normally you would add a btn theme but becasue this is just a basic site i will just styel the btn class*/
+.btn {
+  background-color: #37B67F;
+  color: #fff;
+  border-color: #37B67F; }
+  .btn:hover {
+    background-color: #2b8f64;
+    color: #fff;
+    border-color: #2b8f64; }
+
+/*barchart */
+.barchart {
+  background-color: #efefef;
+  height: 1em; }
+
+.meter {
+  background-color: #37B67F; }
+
+.white-bg {
+  background-color: #fff; }

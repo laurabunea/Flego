@@ -217,7 +217,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         // line 292
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["contentBlock"])) { $_contentBlock_ = $context["contentBlock"]; } else { $_contentBlock_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.media", 1 => array("content" => $_contentBlock_, "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-2-4", "mediaRight" => "col-2-4", "blockSize" => "m")), "method"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.media", 1 => array("content" => $_contentBlock_, "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-2-4 col--q-small", "mediaRight" => "col-2-4 col--q-small", "blockSize" => "m")), "method"), "html", null, true);
         echo "
 
 
@@ -301,8 +301,10 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
     <h3 class='lego--heading'>
         Barchart
     </h3>
+
+
     ";
-        // line 340
+        // line 342
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["barchart"])) { $_barchart_ = $context["barchart"]; } else { $_barchart_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "barchart", 1 => array("barchart" => $_barchart_, "blockSize" => "m")), "method"), "html", null, true);
@@ -314,14 +316,14 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Forms
     </h3>
     ";
-        // line 347
+        // line 349
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["barchart"])) { $_barchart_ = $context["barchart"]; } else { $_barchart_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("barchart" => $_barchart_, "colSize" => "-2-4 col--q-small", "blockSize" => "m")), "method"), "html", null, true);
         echo "
     <hr />
     ";
-        // line 349
+        // line 351
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["formData"])) { $_formData_ = $context["formData"]; } else { $_formData_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("formData" => $_formData_, "colSize" => "", "blockSize" => "m")), "method"), "html", null, true);
@@ -332,13 +334,25 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
     <h3 class='lego--heading'>
        content.list.twig
     </h3>
+ 
     ";
-        // line 356
+        // line 359
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["places"])) { $_places_ = $context["places"]; } else { $_places_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.list", 1 => array("content" => $_places_, "colSize" => "-2-4", "isStacked" => "", "headingSize" => "h4", "blockSize" => "s")), "method"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.list", 1 => array("content" => $_places_, "colSize" => "-2-4 col--q-small", "isStacked" => "", "headingSize" => "h4", "blockSize" => "s", "themeAttr" => "pb-0")), "method"), "html", null, true);
+        echo "
+
+    ";
+        // line 361
+        if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
+        if (isset($context["places"])) { $_places_ = $context["places"]; } else { $_places_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.list", 1 => array("content" => $_places_, "colSize" => "-2-4", "isStacked" => "", "headingSize" => "h4", "blockSize" => "s", "themeAttr" => "bb-primary")), "method"), "html", null, true);
         echo "
     
+
+    <h3 class='lego--heading'>
+       ...
+    </h3>
 ";
     }
 
@@ -354,6 +368,6 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
 
     public function getDebugInfo()
     {
-        return array (  337 => 356,  325 => 349,  318 => 347,  306 => 340,  294 => 333,  282 => 326,  270 => 319,  258 => 312,  251 => 310,  244 => 308,  231 => 300,  218 => 292,  211 => 290,  204 => 288,  191 => 280,  178 => 272,  171 => 270,  164 => 268,  152 => 261,  142 => 256,  130 => 249,  116 => 237,  114 => 226,  109 => 223,  107 => 201,  104 => 200,  102 => 184,  99 => 183,  97 => 171,  94 => 170,  92 => 163,  89 => 162,  87 => 147,  84 => 146,  82 => 127,  79 => 126,  77 => 111,  74 => 110,  72 => 99,  69 => 98,  67 => 89,  64 => 88,  62 => 79,  59 => 78,  57 => 67,  54 => 66,  52 => 57,  48 => 55,  46 => 45,  43 => 44,  41 => 23,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  347 => 361,  340 => 359,  327 => 351,  320 => 349,  308 => 342,  294 => 333,  282 => 326,  270 => 319,  258 => 312,  251 => 310,  244 => 308,  231 => 300,  218 => 292,  211 => 290,  204 => 288,  191 => 280,  178 => 272,  171 => 270,  164 => 268,  152 => 261,  142 => 256,  130 => 249,  116 => 237,  114 => 226,  109 => 223,  107 => 201,  104 => 200,  102 => 184,  99 => 183,  97 => 171,  94 => 170,  92 => 163,  89 => 162,  87 => 147,  84 => 146,  82 => 127,  79 => 126,  77 => 111,  74 => 110,  72 => 99,  69 => 98,  67 => 89,  64 => 88,  62 => 79,  59 => 78,  57 => 67,  54 => 66,  52 => 57,  48 => 55,  46 => 45,  43 => 44,  41 => 23,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
     }
 }
