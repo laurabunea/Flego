@@ -103,5 +103,15 @@ hr {
 }
 
 
+.white-bg {
+    background-color:#fff;
+}
 
+.z-index--push {
+    z-index: -1;
+}
+
+.z-index--pull {
+    z-index: 1;
+}
 

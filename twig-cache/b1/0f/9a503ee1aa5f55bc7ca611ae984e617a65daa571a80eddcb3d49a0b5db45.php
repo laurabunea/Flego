@@ -138,6 +138,16 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         if (isset($context["contentBlock"])) { $_contentBlock_ = $context["contentBlock"]; } else { $_contentBlock_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.intro", 1 => array("content" => $_contentBlock_, "isStackedTop" => "", "colSizeHeading" => "-3-4", "isStackedBottom" => "", "blockSize" => "m")), "method"), "html", null, true);
         echo "
+    <hr />
+    <h3 class='lego--heading'>
+        content.title.twig
+    </h3>
+    ";
+        // line 239
+        if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
+        if (isset($context["contentBlock"])) { $_contentBlock_ = $context["contentBlock"]; } else { $_contentBlock_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.title", 1 => array("content" => $_contentBlock_, "isStackedTop" => "", "colSizeHeading" => "-3-4", "isStackedBottom" => "", "blockSize" => "m")), "method"), "html", null, true);
+        echo "
 
     
     <!--**************************** Content Blocks ****************************-->
@@ -145,21 +155,21 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Content blocks
     </h3>
     ";
-        // line 241
+        // line 246
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["content2Items"])) { $_content2Items_ = $context["content2Items"]; } else { $_content2Items_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.block", 1 => array("content" => $_content2Items_, "isStacked" => "", "blockSize" => "m", "colSize" => "-2-4 col--q-small", "headingSize" => "3")), "method"), "html", null, true);
         echo "
     <hr/>
     ";
-        // line 243
+        // line 248
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["content3Items"])) { $_content3Items_ = $context["content3Items"]; } else { $_content3Items_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.block", 1 => array("content" => $_content3Items_, "isStacked" => "", "blockSize" => "m", "colSize" => "-1-3 col--q-small")), "method"), "html", null, true);
         echo "
     <hr/>
     ";
-        // line 245
+        // line 250
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["content4Items"])) { $_content4Items_ = $context["content4Items"]; } else { $_content4Items_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.block", 1 => array("content" => $_content4Items_, "isStacked" => "", "blockSize" => "m", "colSize" => "-1-4 col-2-4--q-medium col--q-small")), "method"), "html", null, true);
@@ -172,7 +182,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         article.list.twig
     </h3>
     ";
-        // line 253
+        // line 258
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["article"])) { $_article_ = $context["article"]; } else { $_article_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "article.list", 1 => array("article" => $_article_, "colSize" => "", "isStacked" => "", "headingSize" => "h4", "blockSize" => "m")), "method"), "html", null, true);
@@ -184,21 +194,21 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         content.media.twig
     </h3>
     ";
-        // line 260
+        // line 265
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["contentBlock"])) { $_contentBlock_ = $context["contentBlock"]; } else { $_contentBlock_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.media", 1 => array("content" => $_contentBlock_, "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-1-4", "mediaRight" => "col-3-4", "blockSize" => "m")), "method"), "html", null, true);
         echo "
     <hr />
     ";
-        // line 262
+        // line 267
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["contentBlock"])) { $_contentBlock_ = $context["contentBlock"]; } else { $_contentBlock_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.media", 1 => array("content" => $_contentBlock_, "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-1-3", "mediaRight" => "col-2-3", "blockSize" => "m")), "method"), "html", null, true);
         echo "
     <hr />
     ";
-        // line 264
+        // line 269
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["contentBlock"])) { $_contentBlock_ = $context["contentBlock"]; } else { $_contentBlock_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.media", 1 => array("content" => $_contentBlock_, "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-2-4", "mediaRight" => "col-2-4", "blockSize" => "m")), "method"), "html", null, true);
@@ -211,7 +221,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
     </h3>
 
     ";
-        // line 272
+        // line 277
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["galleryShowcase"])) { $_galleryShowcase_ = $context["galleryShowcase"]; } else { $_galleryShowcase_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "gallery.showcase", 1 => array("galleryShowcase" => $_galleryShowcase_, "isStacked" => "", "blockSize" => "m")), "method"), "html", null, true);
@@ -224,21 +234,21 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
     </h3>
     <!-- I have passed in different nodes just to keep the site smaller ;) -->
     ";
-        // line 280
+        // line 285
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["gallery2Items"])) { $_gallery2Items_ = $context["gallery2Items"]; } else { $_gallery2Items_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "gallery.list", 1 => array("gallery" => $_gallery2Items_, "isStacked" => "", "blockSize" => "m", "colSize" => "-2-4")), "method"), "html", null, true);
         echo "
     <hr/>
     ";
-        // line 282
+        // line 287
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["gallery3Items"])) { $_gallery3Items_ = $context["gallery3Items"]; } else { $_gallery3Items_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "gallery.list", 1 => array("gallery" => $_gallery3Items_, "isStacked" => "", "blockSize" => "m", "colSize" => "-1-3")), "method"), "html", null, true);
         echo "
     <hr/>
     ";
-        // line 284
+        // line 289
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["gallery4Items"])) { $_gallery4Items_ = $context["gallery4Items"]; } else { $_gallery4Items_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "gallery.list", 1 => array("gallery" => $_gallery4Items_, "isStacked" => "", "blockSize" => "m", "colSize" => "-1-4")), "method"), "html", null, true);
@@ -250,7 +260,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Comment threads
     </h3>
     ";
-        // line 291
+        // line 296
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["commentThread"])) { $_commentThread_ = $context["commentThread"]; } else { $_commentThread_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "comments", 1 => array("commentThread" => $_commentThread_, "isStacked" => "", "blockSize" => "m", "colSize" => "-2-4 col--q-small")), "method"), "html", null, true);
@@ -262,7 +272,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Panels
     </h3>
     ";
-        // line 298
+        // line 303
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["panel"])) { $_panel_ = $context["panel"]; } else { $_panel_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "panel", 1 => array("panel" => $_panel_, "blockSize" => "m")), "method"), "html", null, true);
@@ -274,7 +284,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Alert panel
     </h3>
     ";
-        // line 305
+        // line 310
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["alertPanel"])) { $_alertPanel_ = $context["alertPanel"]; } else { $_alertPanel_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "panel.alert", 1 => array("panel" => $_alertPanel_, "blockSize" => "m", "theme" => "")), "method"), "html", null, true);
@@ -286,7 +296,7 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Barchart
     </h3>
     ";
-        // line 312
+        // line 317
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["barchart"])) { $_barchart_ = $context["barchart"]; } else { $_barchart_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "barchart", 1 => array("barchart" => $_barchart_, "blockSize" => "m")), "method"), "html", null, true);
@@ -298,14 +308,14 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
         Forms
     </h3>
     ";
-        // line 319
+        // line 324
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["barchart"])) { $_barchart_ = $context["barchart"]; } else { $_barchart_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("barchart" => $_barchart_, "colSize" => "-2-4 col--q-small", "blockSize" => "m")), "method"), "html", null, true);
         echo "
     <hr />
     ";
-        // line 321
+        // line 326
         if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
         if (isset($context["formData"])) { $_formData_ = $context["formData"]; } else { $_formData_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "form", 1 => array("formData" => $_formData_, "colSize" => "", "blockSize" => "m")), "method"), "html", null, true);
@@ -329,6 +339,6 @@ class __TwigTemplate_b10f9a503ee1aa5f55bc7ca611ae984e617a65daa571a80eddcb3d49a0b
 
     public function getDebugInfo()
     {
-        return array (  309 => 321,  302 => 319,  290 => 312,  278 => 305,  266 => 298,  254 => 291,  242 => 284,  235 => 282,  228 => 280,  215 => 272,  202 => 264,  195 => 262,  188 => 260,  176 => 253,  163 => 245,  156 => 243,  149 => 241,  137 => 234,  125 => 227,  111 => 215,  109 => 204,  104 => 201,  102 => 179,  99 => 178,  97 => 162,  94 => 161,  92 => 149,  89 => 148,  87 => 141,  84 => 140,  82 => 125,  79 => 124,  77 => 105,  74 => 104,  72 => 89,  69 => 88,  67 => 77,  64 => 76,  62 => 67,  59 => 66,  57 => 57,  54 => 56,  52 => 45,  49 => 44,  47 => 35,  43 => 33,  41 => 23,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  319 => 326,  312 => 324,  300 => 317,  288 => 310,  276 => 303,  264 => 296,  252 => 289,  245 => 287,  238 => 285,  225 => 277,  212 => 269,  205 => 267,  198 => 265,  186 => 258,  173 => 250,  166 => 248,  159 => 246,  147 => 239,  137 => 234,  125 => 227,  111 => 215,  109 => 204,  104 => 201,  102 => 179,  99 => 178,  97 => 162,  94 => 161,  92 => 149,  89 => 148,  87 => 141,  84 => 140,  82 => 125,  79 => 124,  77 => 105,  74 => 104,  72 => 89,  69 => 88,  67 => 77,  64 => 76,  62 => 67,  59 => 66,  57 => 57,  54 => 56,  52 => 45,  49 => 44,  47 => 35,  43 => 33,  41 => 23,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
     }
 }

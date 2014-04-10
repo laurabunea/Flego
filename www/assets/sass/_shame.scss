@@ -38,6 +38,10 @@ input {
     @extend .border-box;
 }
 
+.absolute--v-middle {
+    top:50%; 
+}
+
 .text-input {
     background-color: #FFFFFF;
     background-image: none;

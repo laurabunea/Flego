@@ -4279,6 +4279,15 @@ hr {
   width: 50px;
   background-repeat: no-repeat; }
 
+.white-bg {
+  background-color: #fff; }
+
+.z-index--push {
+  z-index: -1; }
+
+.z-index--pull {
+  z-index: 1; }
+
 
 .sidebar h1 {
   background-image: url("../images/lego.png");
@@ -4324,6 +4333,9 @@ hr {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+
+.absolute--v-middle {
+  top: 50%; }
 
 .text-input {
   background-color: #FFFFFF;
