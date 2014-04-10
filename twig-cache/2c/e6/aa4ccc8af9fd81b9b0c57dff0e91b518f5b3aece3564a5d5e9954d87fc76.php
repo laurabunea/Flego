@@ -29,12 +29,14 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
     {
         // line 4
         echo "
-
+<!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
 <div class='grid-container pt-xxxl' style='max-width:960px; margin-left:auto; margin-right:auto'>
     <a href='/blocks.php' class='clean-link'>
         <div class='grid grid--middle'>
             <div class='grid__item ' style='width:30%'>
-                <img src='assets/images/fred-logo.png' alt='fred' class='img--responsive'/>
+                <div class='ml-m'>
+                    <img src='assets/images/fred-logo.png' alt='fred' class='img--responsive'/>
+                </div>
             </div>
             <div class='grid__item' style='width:20%'>
                 <p class='h0 text-center'>+</p> 
@@ -46,7 +48,7 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
                 <p class='h0 text-center'>=</p>
             </div>
             <div class='grid__item col'>
-                <h1 class='text-center pt-m h0'>Flego</h1>
+                <h1 class='text-center pt-s h0'>Flego</h1>
             </div>
         </div>
     </a>
