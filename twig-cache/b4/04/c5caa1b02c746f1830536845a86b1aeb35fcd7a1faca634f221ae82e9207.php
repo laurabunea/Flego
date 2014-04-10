@@ -35,11 +35,11 @@ class __TwigTemplate_b404c5caa1b02c746f1830536845a86b1aeb35fcd7a1faca634f221ae82
             ";
         // line 6
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-        if ($this->getAttribute($_data_, "image")) {
+        if ($this->getAttribute($this->getAttribute($_data_, "content"), "image")) {
             // line 7
             echo "                <img src='";
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_data_, "image"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "content"), "image"), "html", null, true);
             echo "' class='img--responsive valign-text-top' alt=''>
             ";
         }
@@ -65,7 +65,7 @@ class __TwigTemplate_b404c5caa1b02c746f1830536845a86b1aeb35fcd7a1faca634f221ae82
                 ";
         // line 16
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_data_, "copy"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "content"), "copy"), "html", null, true);
         echo "
             </p>
         </div><!--block ends-->
@@ -87,6 +87,6 @@ class __TwigTemplate_b404c5caa1b02c746f1830536845a86b1aeb35fcd7a1faca634f221ae82
 
     public function getDebugInfo()
     {
-        return array (  67 => 16,  58 => 14,  53 => 13,  47 => 9,  40 => 7,  37 => 6,  29 => 5,  24 => 4,  19 => 1,);
+        return array (  67 => 16,  58 => 14,  40 => 7,  37 => 6,  29 => 5,  24 => 4,  19 => 1,  276 => 291,  269 => 289,  258 => 283,  247 => 277,  235 => 270,  226 => 263,  215 => 255,  208 => 253,  201 => 251,  188 => 243,  175 => 235,  168 => 233,  161 => 231,  151 => 226,  140 => 220,  133 => 218,  126 => 216,  113 => 208,  101 => 201,  93 => 195,  91 => 184,  86 => 181,  84 => 159,  81 => 158,  79 => 142,  76 => 141,  74 => 129,  71 => 128,  69 => 121,  66 => 120,  64 => 108,  61 => 107,  59 => 88,  56 => 87,  53 => 13,  50 => 61,  47 => 9,  44 => 41,  41 => 32,  38 => 22,  36 => 7,  31 => 4,  28 => 3,);
     }
 }

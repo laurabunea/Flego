@@ -19,7 +19,7 @@
         }
         ]
     %}
-    {% set data = {
+    {% set contentBlock = {
         'title':'title text', 
         'strapline':'strapline text', 
         'intro':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.', 
@@ -205,7 +205,7 @@
     <h3 class='lego--heading'>
         content.intro.twig
     </h3>
-    {{ macros.lego('content.intro', data | merge({'isStackedTop': '','isStackedBottom':'','blockSize': 'm'})) }}
+    {{ macros.lego('content.intro', { 'content': contentBlock, 'isStackedTop': '','colSizeHeading':'-3-4','isStackedBottom':'','blockSize': 'm'}) }}
 
     
     
@@ -213,11 +213,11 @@
     <h3 class='lego--heading'>
         Content blocks
     </h3>
-    {{ macros.lego('content.block', {'content':content2Items, 'isStacked':'','blockSize': 'm','colSize': 'col-2-4','headingSize': '3'}) }}
+    {{ macros.lego('content.block', {'content':content2Items, 'isStacked':'','blockSize': 'm','colSize': '-2-4','headingSize': '3'}) }}
     <hr/>
-    {{ macros.lego('content.block', {'content':content3Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-3'}) }}
+    {{ macros.lego('content.block', {'content':content3Items, 'isStacked':'','blockSize': 'm','colSize': '-1-3'}) }}
     <hr/>
-    {{ macros.lego('content.block', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
+    {{ macros.lego('content.block', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': '-1-4'}) }}
     <hr/>
     <!--**************************** Article Blocks ****************************-->
     <h3 class='lego--heading'>
@@ -228,11 +228,11 @@
     <h3 class='lego--heading'>
         content.media.twig
     </h3>
-    {{ macros.lego('content.media', data | merge({'isStacked':'','blockSize': 'm','mediaLeft':'col-1-4','mediaRight':'col-3-4','blockSize': 'm'})) }}
+    {{ macros.lego('content.media', {'content': contentBlock , 'isStacked':'','blockSize': 'm','mediaLeft':'col-1-4','mediaRight':'col-3-4','blockSize': 'm'}) }}
     <hr />
-    {{ macros.lego('content.media', data | merge({'isStacked':'','blockSize': 'm','mediaLeft':'col-1-3','mediaRight':'col-2-3','blockSize': 'm'})) }}
+    {{ macros.lego('content.media', {'content': contentBlock ,'isStacked':'','blockSize': 'm','mediaLeft':'col-1-3','mediaRight':'col-2-3','blockSize': 'm'}) }}
     <hr />
-    {{ macros.lego('content.media', data | merge({'isStacked':'','blockSize': 'm','mediaLeft':'col-2-4','mediaRight':'col-2-4','blockSize': 'm'})) }}
+    {{ macros.lego('content.media', {'content': contentBlock ,'isStacked':'','blockSize': 'm','mediaLeft':'col-2-4','mediaRight':'col-2-4','blockSize': 'm'}) }}
 
     <!--**************************** Showcases ****************************-->
     
@@ -267,7 +267,7 @@
     <h3 class='lego--heading'>
         Comment threads
     </h3>
-    {{ macros.lego('comments', {'commentThread':commentThread, 'isStacked':'','blockSize': 'm','colSize': 'col-2-4 col--q-small'}) }}
+    {{ macros.lego('comments', {'commentThread':commentThread, 'isStacked':'','blockSize': 'm','colSize': '-2-4 col--q-small'}) }}
 
     
     <!--**************************** Showcases ****************************-->

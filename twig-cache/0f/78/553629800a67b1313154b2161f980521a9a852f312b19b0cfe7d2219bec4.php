@@ -80,7 +80,7 @@ class __TwigTemplate_0f78553629800a67b1313154b2161f980521a9a852f312b19b0cfe7d221
             </p>
         </div><!--block ends-->
     </div><!-- grid item ends-->
-</div><!-- ends -->";
+</div><!-- grid ends -->";
     }
 
     public function getTemplateName()

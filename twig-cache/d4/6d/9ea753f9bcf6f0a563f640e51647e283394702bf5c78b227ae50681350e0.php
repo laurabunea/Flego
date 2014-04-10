@@ -17,16 +17,17 @@ class __TwigTemplate_d46d9ea753f9bcf6f0a563f640e51647e283394702bf5c78b227ae50681
     {
         // line 1
         echo "<div class='grid grid--middle'>
+    <!--loop through percentages -->
     ";
-        // line 2
+        // line 3
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($_data_, "barchart"));
         foreach ($context['_seq'] as $context["key"] => $context["value"]) {
-            // line 3
+            // line 4
             echo "        <div class='grid__item col-2-10 col--q-small'>
             <div class='block-";
-            // line 4
+            // line 5
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
             echo " block--stacked ";
@@ -34,7 +35,7 @@ class __TwigTemplate_d46d9ea753f9bcf6f0a563f640e51647e283394702bf5c78b227ae50681
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "isStacked"), "html", null, true);
             echo "'>
                <p class='font-primary--light h1'>";
-            // line 5
+            // line 6
             if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_value_, "percentage"), "html", null, true);
             echo "</p>
@@ -43,7 +44,7 @@ class __TwigTemplate_d46d9ea753f9bcf6f0a563f640e51647e283394702bf5c78b227ae50681
         
         <div class='grid__item col-8-10 col--q-small'>
             <div class='block-";
-            // line 10
+            // line 11
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
             echo " block--stacked ";
@@ -52,14 +53,14 @@ class __TwigTemplate_d46d9ea753f9bcf6f0a563f640e51647e283394702bf5c78b227ae50681
             echo " pt-0--q-small'>
                 <p>
                     ";
-            // line 12
+            // line 13
             if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_value_, "desc"), "html", null, true);
             echo "
                 </p>
                 <div class='barchart col '>
                     <span class=\"meter block-element\" style=\"height:100%;width: ";
-            // line 15
+            // line 16
             if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_value_, "percentage"), "html", null, true);
             echo "\"></span>
@@ -71,7 +72,7 @@ class __TwigTemplate_d46d9ea753f9bcf6f0a563f640e51647e283394702bf5c78b227ae50681
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 20
+        // line 21
         echo "</div><!-- ends -->";
     }
 
@@ -87,6 +88,6 @@ class __TwigTemplate_d46d9ea753f9bcf6f0a563f640e51647e283394702bf5c78b227ae50681
 
     public function getDebugInfo()
     {
-        return array (  75 => 20,  63 => 15,  56 => 12,  47 => 10,  38 => 5,  30 => 4,  27 => 3,  22 => 2,  19 => 1,);
+        return array (  48 => 11,  39 => 6,  67 => 20,  55 => 15,  34 => 5,  23 => 3,  57 => 13,  52 => 13,  46 => 11,  37 => 6,  27 => 3,  22 => 2,  19 => 1,  276 => 291,  269 => 289,  258 => 283,  247 => 277,  235 => 270,  226 => 263,  215 => 255,  208 => 253,  201 => 251,  188 => 243,  175 => 235,  168 => 233,  161 => 231,  151 => 226,  140 => 220,  133 => 218,  126 => 216,  113 => 208,  101 => 201,  93 => 195,  91 => 184,  86 => 181,  84 => 159,  81 => 158,  79 => 142,  76 => 21,  74 => 129,  71 => 20,  69 => 121,  66 => 120,  64 => 16,  61 => 107,  59 => 88,  56 => 87,  53 => 72,  50 => 61,  47 => 52,  44 => 8,  41 => 32,  38 => 22,  36 => 7,  31 => 5,  28 => 4,);
     }
 }

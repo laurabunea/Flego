@@ -1,19 +1,17 @@
-
 <div class='grid'>
     
     <div class='grid__item {{data.mediaLeft}}'>
         <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
-            {% if data.image %}
-                <img src='{{data.image}}' class='img--responsive valign-text-top' alt=''>
+            {% if data.content.image %}
+                <img src='{{data.content.image}}' class='img--responsive valign-text-top' alt=''>
             {% endif %}
         </div><!--block ends-->
     </div><!-- grid item ends-->
     
-    
     <div class='grid__item {{data.mediaRight}}'>
         <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
             <p>
-                {{data.copy}}
+                {{data.content.copy}}
             </p>
         </div><!--block ends-->
     </div><!--grid item ends-->

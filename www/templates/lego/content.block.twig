@@ -1,13 +1,11 @@
-
 <div class='grid '>
+    <!--loop through content blocks-->
     {% for key, value in data.content %}
-        <div class='grid__item {{data.colSize}}'>
+        <div class='grid__item col{{data.colSize}}'>
             <div class='block-{{data.blockSize}} block--stacked {{ data.isStacked }}'>
-
                 <h2 class='{{data.headingSize}}'>
                     {{ value.heading }}
                 </h2>
-                
                 <p>
                     {{ value.copy }}
                 </p>
