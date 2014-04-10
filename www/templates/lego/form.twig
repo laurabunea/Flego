@@ -1,64 +1,58 @@
+<div class='mb-m'>
+    <form class="grid">
+        
+        <div class="grid__item col{{data.colSize}} ">
+            <div class="block-m block--stacked pb-0">
+                <div class='grid'>
+                    <div class='grid__item col'>
+                        <label for="exampleInputEmail1" >Email address</label>
+                    </div>
+                    <div class='grid__item col'>
+                        <input type="email" class="col text-input" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                </div>
+            </div>
+        </div><!--grid item ends-->
 
-{#<div class='grid '>
-    
-    <div class='grid__item col'>#}
-        {#<div class='block-{{data.blockSize}} block--stacked {{ data.isStacked }}'>#}
-        <div class='mb-m'>
-            <form class="grid">
-                
-                <div class="grid__item col{{data.colSize}} ">
-                    <div class="block-m block--stacked pb-0">
-                        <div class='grid'>
-                            <div class='grid__item col'>
-                                <label for="exampleInputEmail1" >Email address</label>
-                            </div>
-                            <div class='grid__item col'>
-                                <input type="email" class="col text-input" id="exampleInputEmail1" placeholder="Enter email">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid__item col{{data.colSize}}">
-                    <div class="block-m block--stacked pb-0">
-                        <div class='grid'>
+        <div class="grid__item col{{data.colSize}}">
+            <div class="block-m block--stacked pb-0">
+                <div class='grid'>
 
-                            <div class='grid__item col'>
-                                <label for="exampleInputPassword1">Password</label>
-                            </div>
-                            <div class='grid__item col'>
-                                
-                                <input type="password" class="col text-input" id="exampleInputPassword1" placeholder="Password">
-                            </div>
+                    <div class='grid__item col'>
+                        <label for="exampleInputPassword1">Password</label>
+                    </div>
+                    <div class='grid__item col'>
+                        
+                        <input type="password" class="col text-input" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+        </div><!--grid item ends-->
+        
+        <div class="grid__item col{{data.colSize}}">
+            <div class='block-m block--stacked pb-0'>
+                <div class='grid'>
+                    <div class='grid__item col'>
+                        
+                        <div class="checkbox grid__item">
+                            <label>
+                            <input type="checkbox"> Check me out
+                            </label>
                         </div>
                     </div>
                 </div>
-                
-                <div class="grid__item col{{data.colSize}}">
-                    <div class='block-m block--stacked pb-0'>
-                        <div class='grid'>
-                            <div class='grid__item col'>
-                                
-                                <div class="checkbox grid__item">
-                                    <label>
-                                    <input type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid__item col{{data.colSize}}">
-                    <div class='block-m block--stacked pb-0'>
-                        <div class='grid'>
-                            <div class='grid__item col'>
-                                <button type="submit" class="btn btn-default">Submit</button>        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        {#</div><!--block ends-->#}
-    {#</div><!-- grid item ends-->
+            </div>
+        </div><!--grid item ends-->
 
-</div><!-- ends -->#}
+        <div class="grid__item col{{data.colSize}}">
+            <div class='block-m block--stacked pb-0'>
+                <div class='grid'>
+                    <div class='grid__item col'>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--grid item ends-->
+
+    </form>
+</div>
