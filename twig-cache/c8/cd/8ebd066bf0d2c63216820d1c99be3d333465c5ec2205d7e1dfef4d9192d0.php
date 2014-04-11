@@ -17,28 +17,29 @@ class __TwigTemplate_c8cd8ebd066bf0d2c63216820d1c99be3d333465c5ec2205d7e1dfef4d9
     {
         // line 1
         echo "<div class='grid gallery'>
+    
     <!-- loop over gallery items -->  
     ";
-        // line 3
+        // line 4
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($_data_, "gallery"));
         foreach ($context['_seq'] as $context["key"] => $context["value"]) {
-            // line 4
-            echo "        <div class='grid__item col";
+            // line 5
+            echo "    <div class='grid__item col";
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "colSize"), "html", null, true);
             echo " gallery--item'>
-            <div class='block-";
-            // line 5
+        <div class='block-";
+            // line 6
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
             echo " block--stacked ";
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_data_, "isStacked"), "html", null, true);
             echo "'>         
-                <img src='";
-            // line 6
+            <img src='";
+            // line 7
             if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_value_, "image"), "html", null, true);
             echo "' class='img--responsive' alt='";
@@ -48,15 +49,16 @@ class __TwigTemplate_c8cd8ebd066bf0d2c63216820d1c99be3d333465c5ec2205d7e1dfef4d9
             if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($_value_, "caption"), "html", null, true);
             echo "'> 
-            </div><!--block ends-->
-        </div><!--grid item ends-->
+        </div><!--block ends-->
+    </div><!--grid item ends-->
    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 10
-        echo "</div><!-- ends -->
+        // line 11
+        echo "   
+</div><!-- ends -->
 ";
     }
 
@@ -72,6 +74,6 @@ class __TwigTemplate_c8cd8ebd066bf0d2c63216820d1c99be3d333465c5ec2205d7e1dfef4d9
 
     public function getDebugInfo()
     {
-        return array (  78 => 24,  58 => 16,  52 => 14,  26 => 6,  51 => 11,  80 => 20,  67 => 14,  42 => 6,  34 => 5,  23 => 3,  83 => 25,  62 => 15,  39 => 6,  27 => 3,  22 => 2,  65 => 14,  54 => 10,  49 => 15,  46 => 8,  24 => 4,  19 => 1,  276 => 291,  269 => 289,  258 => 283,  247 => 277,  235 => 270,  226 => 263,  215 => 255,  208 => 253,  201 => 251,  188 => 243,  175 => 235,  168 => 233,  161 => 231,  151 => 226,  140 => 220,  133 => 218,  126 => 216,  113 => 208,  101 => 201,  93 => 195,  91 => 29,  86 => 181,  84 => 159,  81 => 158,  79 => 142,  76 => 141,  74 => 18,  71 => 21,  69 => 121,  66 => 120,  64 => 18,  61 => 13,  59 => 10,  56 => 12,  53 => 10,  50 => 61,  47 => 7,  44 => 41,  41 => 13,  38 => 22,  36 => 8,  31 => 7,  28 => 4,);
+        return array (  29 => 5,  82 => 23,  77 => 22,  74 => 21,  71 => 20,  38 => 7,  43 => 7,  35 => 6,  69 => 15,  56 => 11,  36 => 6,  84 => 24,  66 => 17,  54 => 11,  40 => 7,  23 => 3,  57 => 16,  46 => 14,  41 => 13,  24 => 4,  19 => 1,  381 => 499,  377 => 495,  372 => 492,  368 => 488,  363 => 485,  358 => 479,  354 => 476,  349 => 473,  344 => 467,  340 => 463,  332 => 457,  328 => 454,  323 => 451,  318 => 445,  314 => 440,  309 => 437,  304 => 431,  300 => 426,  295 => 423,  291 => 418,  286 => 415,  282 => 410,  276 => 406,  271 => 400,  267 => 396,  262 => 393,  257 => 387,  253 => 380,  248 => 377,  244 => 370,  239 => 367,  235 => 360,  230 => 357,  225 => 351,  221 => 345,  216 => 342,  213 => 338,  209 => 331,  203 => 327,  199 => 320,  193 => 316,  188 => 310,  184 => 305,  179 => 302,  175 => 297,  170 => 294,  166 => 288,  159 => 283,  155 => 277,  150 => 274,  145 => 268,  141 => 262,  136 => 259,  131 => 253,  127 => 249,  122 => 246,  117 => 240,  115 => 229,  110 => 226,  108 => 204,  105 => 203,  103 => 187,  100 => 186,  98 => 174,  95 => 173,  93 => 165,  90 => 27,  88 => 149,  85 => 148,  83 => 22,  80 => 128,  78 => 113,  75 => 19,  73 => 101,  70 => 100,  68 => 20,  65 => 18,  63 => 14,  60 => 11,  58 => 15,  55 => 12,  53 => 14,  49 => 8,  47 => 12,  44 => 7,  42 => 24,  39 => 23,  37 => 6,  31 => 5,  28 => 4,);
     }
 }

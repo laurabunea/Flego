@@ -59,9 +59,16 @@ class __TwigTemplate_b404c5caa1b02c746f1830536845a86b1aeb35fcd7a1faca634f221ae82
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_data_, "isStacked"), "html", null, true);
         echo "'>
-            <p>
+            <h2>
                 ";
         // line 14
+        if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "content"), "title"), "html", null, true);
+        echo "
+            </h2>
+            <p>
+                ";
+        // line 17
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "content"), "copy"), "html", null, true);
         echo "
@@ -85,6 +92,6 @@ class __TwigTemplate_b404c5caa1b02c746f1830536845a86b1aeb35fcd7a1faca634f221ae82
 
     public function getDebugInfo()
     {
-        return array (  65 => 14,  56 => 12,  51 => 11,  46 => 8,  39 => 6,  36 => 5,  28 => 4,  23 => 3,  19 => 1,);
+        return array (  72 => 17,  65 => 14,  56 => 12,  51 => 11,  46 => 8,  39 => 6,  36 => 5,  28 => 4,  23 => 3,  19 => 1,);
     }
 }

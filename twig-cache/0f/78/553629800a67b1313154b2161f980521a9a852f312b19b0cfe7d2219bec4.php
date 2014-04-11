@@ -16,14 +16,15 @@ class __TwigTemplate_0f78553629800a67b1313154b2161f980521a9a852f312b19b0cfe7d221
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class='grid '>  
+        echo "<div class='grid'>  
+    
     <div class='grid__item col";
-        // line 2
+        // line 3
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_data_, "colSize"), "html", null, true);
         echo "'>
         <div class='block-";
-        // line 3
+        // line 4
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
         echo " block--stacked ";
@@ -33,51 +34,51 @@ class __TwigTemplate_0f78553629800a67b1313154b2161f980521a9a852f312b19b0cfe7d221
             <span class=\"tiny uppercase text-nowrap inline-block\">
                 <a href=\"anchor here\" >
                     ";
-        // line 6
+        // line 7
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "category"), "html", null, true);
         echo "
                 </a>
                 ·
             </span>
-            <span class=\"tiny uppercase text-nowrap\"> 
+            <span class='tiny uppercase text-nowrap'> 
                 ";
-        // line 11
+        // line 12
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "date"), "html", null, true);
         echo "
             </span>
             <h3 class='";
-        // line 13
+        // line 14
         if (isset($context["headingSize"])) { $_headingSize_ = $context["headingSize"]; } else { $_headingSize_ = null; }
         echo twig_escape_filter($this->env, $_headingSize_, "html", null, true);
         echo "'>
                 ";
-        // line 14
+        // line 15
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "title"), "html", null, true);
         echo "
             </h3>
             <p>
                 ";
-        // line 17
+        // line 18
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "desc"), "html", null, true);
         echo "
             </p>
             ";
-        // line 19
+        // line 20
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
         if ($this->getAttribute($this->getAttribute($_data_, "article"), "link")) {
-            // line 20
+            // line 21
             echo "                <p>
                     <a href='";
-            // line 21
+            // line 22
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "linkAnchor"), "html", null, true);
             echo "'>
                         ";
-            // line 22
+            // line 23
             if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_data_, "article"), "link"), "html", null, true);
             echo "
@@ -85,9 +86,10 @@ class __TwigTemplate_0f78553629800a67b1313154b2161f980521a9a852f312b19b0cfe7d221
                 </p>
             ";
         }
-        // line 26
+        // line 27
         echo "        </div><!--block ends-->
     </div><!-- grid item ends-->
+    
 </div><!-- grid ends -->";
     }
 
@@ -103,6 +105,6 @@ class __TwigTemplate_0f78553629800a67b1313154b2161f980521a9a852f312b19b0cfe7d221
 
     public function getDebugInfo()
     {
-        return array (  89 => 26,  81 => 22,  76 => 21,  73 => 20,  70 => 19,  64 => 17,  57 => 14,  52 => 13,  46 => 11,  37 => 6,  27 => 3,  22 => 2,  19 => 1,);
+        return array (  82 => 23,  77 => 22,  74 => 21,  71 => 20,  38 => 7,  43 => 7,  35 => 6,  69 => 15,  56 => 11,  36 => 6,  84 => 24,  66 => 17,  54 => 11,  40 => 7,  23 => 3,  57 => 16,  46 => 14,  41 => 13,  24 => 4,  19 => 1,  381 => 499,  377 => 495,  372 => 492,  368 => 488,  363 => 485,  358 => 479,  354 => 476,  349 => 473,  344 => 467,  340 => 463,  332 => 457,  328 => 454,  323 => 451,  318 => 445,  314 => 440,  309 => 437,  304 => 431,  300 => 426,  295 => 423,  291 => 418,  286 => 415,  282 => 410,  276 => 406,  271 => 400,  267 => 396,  262 => 393,  257 => 387,  253 => 380,  248 => 377,  244 => 370,  239 => 367,  235 => 360,  230 => 357,  225 => 351,  221 => 345,  216 => 342,  213 => 338,  209 => 331,  203 => 327,  199 => 320,  193 => 316,  188 => 310,  184 => 305,  179 => 302,  175 => 297,  170 => 294,  166 => 288,  159 => 283,  155 => 277,  150 => 274,  145 => 268,  141 => 262,  136 => 259,  131 => 253,  127 => 249,  122 => 246,  117 => 240,  115 => 229,  110 => 226,  108 => 204,  105 => 203,  103 => 187,  100 => 186,  98 => 174,  95 => 173,  93 => 165,  90 => 27,  88 => 149,  85 => 148,  83 => 22,  80 => 128,  78 => 113,  75 => 19,  73 => 101,  70 => 100,  68 => 20,  65 => 18,  63 => 14,  60 => 15,  58 => 15,  55 => 12,  53 => 14,  49 => 8,  47 => 12,  44 => 7,  42 => 24,  39 => 23,  37 => 6,  31 => 5,  28 => 4,);
     }
 }
