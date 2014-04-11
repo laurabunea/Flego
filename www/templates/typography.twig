@@ -2,16 +2,13 @@
 
 {% block content %}
 
-    {% set contentBlock = {
-        'title':'Typography style guide'
-        
-        } 
-    %}
-    {{ macros.lego('content.title', { 
-        'content': contentBlock
-        
-    }) }}
-    <div class='block-l pt-0'>
+    <h3 class='lego--heading'>
+        Typography helper
+    </h3>
+    <div class='block-l'>
+        <h1 class='h0'>
+            h0.Heading Size
+        </h1>
         <h1>
             h1.Heading Size
         </h1>

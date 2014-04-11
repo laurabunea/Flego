@@ -243,6 +243,9 @@
     {#******************************************************** 
                             Header 
     ********************************************************#}
+    
+    {% include "theme-helper.twig" %}
+    {% include "typography.twig" %}
     <h3 class='lego--heading'>
         header.twig
     </h3>
@@ -504,11 +507,7 @@
         'blockSize':'m'
     }) }}
 
-    
 
-    <h3 class='lego--heading'>
-       ...
-    </h3>
     {#{{ macros.lego('content.split', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
     #}
 {% endblock %}

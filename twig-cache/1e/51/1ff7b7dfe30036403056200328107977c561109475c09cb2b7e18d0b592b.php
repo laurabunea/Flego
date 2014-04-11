@@ -29,17 +29,13 @@ class __TwigTemplate_1e511ff7b7dfe30036403056200328107977c561109475c09cb2b7e18d0
     {
         // line 4
         echo "
-    ";
-        // line 5
-        $context["contentBlock"] = array("title" => "Typography style guide");
-        // line 10
-        echo "    ";
-        if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
-        if (isset($context["contentBlock"])) { $_contentBlock_ = $context["contentBlock"]; } else { $_contentBlock_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_macros_, "lego", array(0 => "content.title", 1 => array("content" => $_contentBlock_)), "method"), "html", null, true);
-        // line 13
-        echo "
-    <div class='block-l pt-0'>
+    <h3 class='lego--heading'>
+        Typography helper
+    </h3>
+    <div class='block-l'>
+        <h1 class='h0'>
+            h0.Heading Size
+        </h1>
         <h1>
             h1.Heading Size
         </h1>
@@ -152,6 +148,6 @@ class __TwigTemplate_1e511ff7b7dfe30036403056200328107977c561109475c09cb2b7e18d0
 
     public function getDebugInfo()
     {
-        return array (  41 => 13,  36 => 10,  34 => 5,  31 => 4,  28 => 3,);
+        return array (  397 => 508,  393 => 504,  389 => 502,  385 => 498,  380 => 495,  376 => 491,  371 => 488,  366 => 482,  362 => 479,  357 => 476,  352 => 470,  348 => 466,  340 => 460,  336 => 457,  331 => 454,  326 => 448,  322 => 443,  317 => 440,  312 => 434,  308 => 429,  303 => 426,  299 => 421,  294 => 418,  290 => 413,  284 => 409,  279 => 403,  275 => 399,  270 => 396,  265 => 390,  261 => 383,  256 => 380,  252 => 373,  247 => 370,  243 => 363,  238 => 360,  233 => 354,  229 => 348,  224 => 345,  221 => 341,  217 => 334,  211 => 330,  207 => 323,  201 => 319,  196 => 313,  192 => 308,  187 => 305,  183 => 300,  178 => 297,  174 => 291,  167 => 286,  163 => 280,  158 => 277,  153 => 271,  149 => 265,  144 => 262,  139 => 256,  135 => 252,  130 => 249,  127 => 248,  125 => 247,  122 => 246,  117 => 240,  115 => 229,  110 => 226,  108 => 204,  105 => 203,  103 => 187,  100 => 186,  98 => 174,  95 => 173,  93 => 165,  90 => 164,  88 => 149,  85 => 148,  83 => 129,  80 => 128,  78 => 113,  75 => 112,  73 => 101,  70 => 100,  68 => 91,  65 => 90,  63 => 81,  60 => 80,  58 => 69,  55 => 68,  53 => 59,  49 => 57,  47 => 46,  44 => 45,  42 => 24,  39 => 23,  37 => 8,  31 => 4,  28 => 3,);
     }
 }

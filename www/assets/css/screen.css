@@ -334,6 +334,9 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
+.block--primary, .block--secondary, .block--tertiary, .block--featured {
+  border-width: 1px;
+  border-style: solid; }
 
 /**
 ### Clearfixing
@@ -4210,13 +4213,7 @@ body {
 p.intro {
   line-height: 1.2; }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #37B67F; }
 
-a {
-  color: #37B67F; }
-  a:hover {
-    color: #2b8f64; }
 
 
 
@@ -4249,6 +4246,26 @@ hr {
 
 .primary--border {
   border: 1px solid #37B67F; }
+
+.block--primary {
+  background-color: #fff;
+  color: #2F72BA;
+  border-color: #c4c4c4; }
+
+.block--secondary {
+  background-color: #E2534A;
+  color: #fff;
+  border-color: #E2534A; }
+
+.block--tertiary {
+  background-color: #E78547;
+  color: #fff;
+  border-color: #E78547; }
+
+.block--featured {
+  background-color: #595959;
+  color: #fff;
+  border-color: #595959; }
 
 .i-gecko {
   background-image: url('/assets/images/square-gecko.png');

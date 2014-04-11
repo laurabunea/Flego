@@ -17,11 +17,11 @@ h3,
 h4, 
 h5, 
 h6 {
-    @extend %primary-color
+   // @extend %primary-color
 }
 
 a {
-    @extend %primary-link;
+   // @extend %primary-link;
 }
 .bl--grey {
     border-left:1px solid #E6EBEB;
@@ -67,4 +67,46 @@ hr {
     border:1px solid $primary-color;
 }
 
+//primary 
+$primary-bg-color:              #fff;//#f7f7f7
+$primary-txt-color:             $base-link-color; 
+$primary-border-color:          #c4c4c4;
 
+//secondary 
+$secondary-bg-color:            #E2534A;//#fff
+$secondary-txt-color:           #fff ; //$base-font-color
+$secondary-border-color:        #E2534A;//#ccc
+
+//tertiary 
+$tertiary-bg-color:            #E78547;//#fff
+$tertiary-txt-color:           #fff ; //$base-font-color
+$tertiary-border-color:        #E78547;//#ccc
+
+//featured 
+$featured-bg-color:            #595959;//#fff
+$featured-txt-color:           #fff ; //$base-font-color
+$featured-border-color:        #595959;//#ccc
+
+
+//used in funding search
+
+
+.block--primary {
+    @extend %border;
+    @include theme-block( $primary-bg-color, $primary-txt-color, $primary-border-color );
+}
+
+.block--secondary {
+    @extend %border;
+    @include theme-block( $secondary-bg-color, $secondary-txt-color, $secondary-border-color );
+}
+
+.block--tertiary {
+    @extend %border;
+    @include theme-block( $tertiary-bg-color, $tertiary-txt-color, $tertiary-border-color );  
+}
+
+.block--featured {
+    @extend %border;
+    @include theme-block( $featured-bg-color, $featured-txt-color, $featured-border-color );
+}
