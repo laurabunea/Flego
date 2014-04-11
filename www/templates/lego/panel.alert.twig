@@ -1,8 +1,10 @@
 <div class='grid '>  
+    
     <div class='grid__item col'>
         <div class='block-{{data.blockSize}} primary--border mt-m ml-m mr-m mb-m radius '>
             <div class='grid relative'>
-                <span class="close absolute--top-right text-top"></span>
+                <span class='close absolute--top-right text-top'></span>
+                
                 <div class='grid__item col'>
                     <div class='mr-m'>
                         {% if data.panel.title %}
@@ -20,10 +22,11 @@
                                 {{ data.panel.btnTitle }}
                             </a>
                         {% endif %}
-                    
                     </div>
                 </div><!--grid item ends-->
+
             </div>
         </div><!--block ends-->
     </div><!-- grid item ends-->
+    
 </div><!-- grid ends -->
