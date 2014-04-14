@@ -43,7 +43,7 @@
         ]
     %}
 
-    {% set contentBlock = {
+    {#{% set contentBlock = {
         'title':'title text', 
         'strapline':'strapline text', 
         'intro':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.', 
@@ -53,7 +53,28 @@
         'imagecaption':'I am an image caption',
         'copy':'Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger.'
         } 
+    %}#}
+
+    {% set contentBlock = [{
+        'type':'h2',
+        'data':'i am a heading'
+
+    }, {
+        'type':'intro',
+        'data':["I am a para", "I am a second para"]
+    }]
     %}
+
+    {# 'title':'title text', 
+        'strapline':'strapline text', 
+        'intro':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.', 
+        'image':'assets/images/gallery-showcase.jpg', 
+        'imagetitle':'Image title',
+        'imagesubtitle':'Image sub title or date',
+        'imagecaption':'I am an image caption',
+        'copy':'Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger.'
+        } ]
+#}
 
 
     {% set article = {
@@ -275,17 +296,38 @@
                        Content blocks 
     ********************************************************#}
     <h3 class='lego--heading'>
-        content.intro.twig
+         test 
     </h3>
-    {{ macros.lego('content.intro', { 
+    {{ macros.lego('content.block', { 
         'content': contentBlock, 
+        'sidebar': [
+            {
+                type: "image",
+                src: "/some/image.png"
+            },
+            {
+                type: "image",
+                src: "/some/image.png"
+            },
+            {
+                type: "button",
+                href: "mcdonalds.co.nz/",
+                label: "Tasty food for you"
+            },
+            "Some random paragraph",
+            "Default is just a paragraph!",
+            {
+                type: "raw",
+                data: "<h4>Some literal html goes here</h4>"
+            }
+        ], 
         'isStackedTop': '',
         'colSizeHeading':'-3-4',
         'isStackedBottom':'',
         'blockSize': 'm'
     }) }}
 
-    <h3 class='lego--heading'>
+    {#<h3 class='lego--heading'>
         content.block.twig
     </h3>
     {{ macros.lego('content.block', {
@@ -311,7 +353,7 @@
         'blockSize': 'm',
         'colSize': '-1-4 col-2-4--q-medium col--q-small'
     }) }}
-    <hr/>
+    <hr/>#}
     
     {#******************************************************** 
                        Content list

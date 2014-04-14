@@ -16,71 +16,44 @@ class __TwigTemplate_a1a63a40809b561f5a68bd2dd31a9b5aff2cca255394b2f14eef4cff6a8
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class='grid '>
-    <!--loop through content blocks-->
-    ";
-        // line 3
+        $context["macros"] = $this->env->loadTemplate("macros.twig");
+        // line 2
+        echo "
+<div class='grid'>
+
+    <div class='grid__item col";
+        // line 5
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute($_data_, "content"));
-        foreach ($context['_seq'] as $context["key"] => $context["value"]) {
-            // line 4
-            echo "        
-        <div class='grid__item col";
-            // line 5
-            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_data_, "colSize"), "html", null, true);
-            echo "'>
-            <div class='block-";
-            // line 6
-            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
-            echo " block--stacked ";
-            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_data_, "isStacked"), "html", null, true);
-            echo "'>
-                <h2 class='";
-            // line 7
-            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_data_, "headingSize"), "html", null, true);
-            echo "'>
-                    ";
-            // line 8
-            if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_value_, "heading"), "html", null, true);
-            echo "
-                </h2>
-                <p>
-                    ";
-            // line 11
-            if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_value_, "copy"), "html", null, true);
-            echo "
-                </p>
-                <p>
-                    <a href='";
-            // line 14
-            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-            if (isset($context["href"])) { $_href_ = $context["href"]; } else { $_href_ = null; }
-            echo twig_escape_filter($this->env, ($this->getAttribute($_data_, "link") - $_href_), "html", null, true);
-            echo "'>
-                        ";
-            // line 15
-            if (isset($context["value"])) { $_value_ = $context["value"]; } else { $_value_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_value_, "link"), "html", null, true);
-            echo "
-                    </a>
-                </p>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-        
-   ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 22
-        echo "</div><!-- ends -->
+        echo twig_escape_filter($this->env, $this->getAttribute($_data_, "colSize"), "html", null, true);
+        echo "'>
+        <div class='block-";
+        // line 6
+        if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_data_, "blockSize"), "html", null, true);
+        echo " block--stacked ";
+        if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_data_, "isStacked"), "html", null, true);
+        echo "'>
+  
+            ";
+        // line 8
+        if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
+        if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+        echo $_macros_->getblocks($this->getAttribute($_data_, "content"));
+        echo "
+            
+        </div><!--block ends-->
+        <div class='sidebar'>
+            ";
+        // line 12
+        if (isset($context["macros"])) { $_macros_ = $context["macros"]; } else { $_macros_ = null; }
+        if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+        echo $_macros_->getblocks($this->getAttribute($_data_, "sidebar"));
+        echo "
+        </div>
+    </div><!-- grid item ends-->
+
+</div><!-- ends -->
 ";
     }
 
@@ -96,6 +69,6 @@ class __TwigTemplate_a1a63a40809b561f5a68bd2dd31a9b5aff2cca255394b2f14eef4cff6a8
 
     public function getDebugInfo()
     {
-        return array (  69 => 15,  56 => 11,  36 => 6,  84 => 24,  66 => 17,  54 => 11,  40 => 7,  23 => 3,  57 => 16,  46 => 14,  41 => 13,  24 => 4,  19 => 1,  381 => 499,  377 => 495,  372 => 492,  368 => 488,  363 => 485,  358 => 479,  354 => 476,  349 => 473,  344 => 467,  340 => 463,  332 => 457,  328 => 454,  323 => 451,  318 => 445,  314 => 440,  309 => 437,  304 => 431,  300 => 426,  295 => 423,  291 => 418,  286 => 415,  282 => 410,  276 => 406,  271 => 400,  267 => 396,  262 => 393,  257 => 387,  253 => 380,  248 => 377,  244 => 370,  239 => 367,  235 => 360,  230 => 357,  225 => 351,  221 => 345,  216 => 342,  213 => 338,  209 => 331,  203 => 327,  199 => 320,  193 => 316,  188 => 310,  184 => 305,  179 => 302,  175 => 297,  170 => 294,  166 => 288,  159 => 283,  155 => 277,  150 => 274,  145 => 268,  141 => 262,  136 => 259,  131 => 253,  127 => 249,  122 => 246,  117 => 240,  115 => 229,  110 => 226,  108 => 204,  105 => 203,  103 => 187,  100 => 186,  98 => 174,  95 => 173,  93 => 165,  90 => 164,  88 => 149,  85 => 148,  83 => 22,  80 => 128,  78 => 113,  75 => 19,  73 => 101,  70 => 100,  68 => 20,  65 => 90,  63 => 14,  60 => 15,  58 => 69,  55 => 68,  53 => 59,  49 => 8,  47 => 9,  44 => 7,  42 => 24,  39 => 23,  37 => 6,  31 => 5,  28 => 4,);
+        return array (  49 => 12,  40 => 8,  26 => 5,  21 => 2,  19 => 1,  376 => 530,  372 => 526,  368 => 524,  364 => 520,  359 => 517,  355 => 513,  350 => 510,  345 => 504,  341 => 501,  336 => 498,  331 => 492,  327 => 488,  319 => 482,  315 => 479,  310 => 476,  305 => 470,  301 => 465,  296 => 462,  291 => 456,  287 => 451,  282 => 448,  278 => 443,  273 => 440,  269 => 435,  263 => 431,  258 => 425,  254 => 421,  249 => 418,  244 => 412,  240 => 405,  235 => 402,  231 => 395,  226 => 392,  222 => 385,  217 => 382,  212 => 376,  208 => 370,  203 => 367,  200 => 363,  196 => 356,  190 => 352,  186 => 345,  180 => 341,  177 => 337,  173 => 308,  169 => 301,  164 => 298,  159 => 292,  155 => 286,  150 => 283,  145 => 277,  141 => 273,  136 => 270,  133 => 269,  131 => 268,  128 => 267,  123 => 261,  121 => 250,  116 => 247,  114 => 225,  111 => 224,  109 => 208,  106 => 207,  104 => 195,  101 => 194,  99 => 186,  96 => 185,  94 => 170,  91 => 169,  89 => 150,  86 => 149,  84 => 134,  81 => 133,  79 => 122,  76 => 121,  74 => 112,  71 => 111,  69 => 102,  66 => 101,  64 => 90,  61 => 89,  59 => 80,  55 => 78,  52 => 67,  50 => 58,  47 => 57,  44 => 45,  42 => 24,  39 => 23,  37 => 8,  31 => 6,  28 => 3,);
     }
 }
