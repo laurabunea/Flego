@@ -65,6 +65,29 @@
     }]
     %}
 
+
+    {% set storyBlock = [{
+        'type':'h1',
+        'data':'i am a heading'
+
+    }, {
+        'type':'intro',
+        'data':["I am a para", "I am a second para"]
+    }, {
+        'type':'link',
+        'data':[{
+            'label':'Click me', 
+            'anchor':'/clickme/'
+        }]
+    }, {
+        'type':'button',
+        'data':[{
+            'label':'Click me', 
+            'anchor':'/clickme/'
+        }]
+    }]
+    %}
+
     {# 'title':'title text', 
         'strapline':'strapline text', 
         'intro':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.', 
@@ -326,7 +349,15 @@
         'isStackedBottom':'',
         'blockSize': 'm'
     }) }}
-
+    
+<hr />
+    {{ macros.lego('content.block', { 
+        'content': storyBlock, 
+        'isStackedTop': '',
+        'colSizeHeading':'-3-4',
+        'isStackedBottom':'',
+        'blockSize': 'm'
+    }) }}
     {#<h3 class='lego--heading'>
         content.block.twig
     </h3>

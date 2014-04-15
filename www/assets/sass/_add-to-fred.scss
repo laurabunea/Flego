@@ -19,6 +19,60 @@
     vertical-align: top;
 }
 
+%center-element {
+    margin-left:auto; 
+    margin-right:auto;
+}
 
+.grid-container {
+    @extend %center-element;
+    max-width:960px;
+}
 
 /* add a hide block for desktop down */
+
+.tl--radius-s {
+  @include vendor(border-top-left-radius, 4px);
+}
+// top right
+.tr--radius-s {
+  @include vendor(border-top-right-radius, 4px);
+}
+// bottom right
+.br--radius-s {
+  @include vendor(border-bottom-right-radius, 4px);
+}
+// bottom left
+.bl--radius-s {
+  @include vendor(border-bottom-left-radius, 4px);
+}
+// left side
+.ls--radius-s {
+  @extend .tl--radius-s;
+  @extend .bl--radius-s;
+}
+// right side
+.rs--radius-s {
+  @extend .tr--radius-s;
+  @extend .br--radius-s;
+}
+// top 
+.top--radius-s {
+  @extend .tr--radius-s;
+  @extend .tl--radius-s;
+}
+// bottom 
+.bottom--radius-s {
+  @extend .br--radius-s;
+  @extend .bl--radius-s;
+}
+// left side no radius 
+.ls-radius--0 {
+  @include vendor(border-top-left-radius, 0px!important);
+  @include vendor(border-bottom-left-radius, 0px!important);
+}
+// right side no radius 
+.rs-radius--0 {
+  @include vendor(border-top-right-radius, 0px!important);
+  @include vendor(border-bottom-right-radius, 0px!important);
+}

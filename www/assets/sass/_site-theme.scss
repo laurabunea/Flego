@@ -73,14 +73,20 @@ $primary-txt-color:             $base-link-color;
 $primary-border-color:          #c4c4c4;
 
 //secondary 
-$secondary-bg-color:            #E2534A;//#fff
+$secondary-bg-color:            #293F54;//#fff
 $secondary-txt-color:           #fff ; //$base-font-color
-$secondary-border-color:        #E2534A;//#ccc
+$secondary-border-color:        #293F54;//#ccc
 
 //tertiary 
-$tertiary-bg-color:            #E78547;//#fff
-$tertiary-txt-color:           #fff ; //$base-font-color
-$tertiary-border-color:        #E78547;//#ccc
+$tertiary-bg-color:            #EDEDED;//#fff
+$tertiary-txt-color:           #000 ; //$base-font-color
+$tertiary-border-color:        #EDEDED;//#ccc
+
+
+//white 
+$white-bg-color:            #fff;//#fff
+$white-txt-color:           #000 ; //$base-font-color
+$white-border-color:        #fff;//#ccc
 
 //featured 
 $featured-bg-color:            #595959;//#fff
@@ -104,6 +110,11 @@ $featured-border-color:        #595959;//#ccc
 .block--tertiary {
     @extend %border;
     @include theme-block( $tertiary-bg-color, $tertiary-txt-color, $tertiary-border-color );  
+}
+
+.block--white {
+    @extend %border;
+    @include theme-block( $white-bg-color, $white-txt-color, $white-border-color );  
 }
 
 .block--featured {
