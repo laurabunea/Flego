@@ -61,11 +61,53 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
         
         <div class='grid'>
             <div class='grid__item col'>
-                <h2 class='text-center font-primary--light'>
+                <h2 class='text-center font-primary--light mb-m pt-m'>
                     Colors
                 </h2>
             </div>
         </div>
+        <div class='grid'>
+            <div class='grid__item col-1-4'>
+                <div class='ml-xxs mr-xxs radius'>
+                    <div class='block--primary top--radius-s'>
+                        <h4 class='font-primary--light pt-m pb-m text-center h2'>Aa</h4>
+                    </div>
+                    <div class='block--white bottom--radius-s'>
+                        <p class='small uppercase text-center pt-m pb-m'>block--primary</p>
+                    </div>
+                </div>
+            </div>
+            <div class='grid__item col-1-4'>
+                <div class='ml-xxs mr-xxs '>
+                    <div class='block--secondary top--radius-s'>
+                        <h4 class='font-primary--italic pt-m pb-m text-center h2'>Aa</h4>
+                    </div>
+                    <div class='block--white bottom--radius-s'>
+                        <p class='small uppercase text-center pt-m pb-m'>block--secondary</p>
+                    </div>
+                </div>
+            </div>
+            <div class='grid__item col-1-4'>
+                <div class='ml-xxs mr-xxs '>
+                    <div class='block--tertiary top--radius-s'>
+                        <h4 class='pt-m pb-m text-center h2'>Aa</h4>
+                    </div>
+                    <div class='block--white bottom--radius-s'>
+                        <p class='small uppercase text-center pt-m pb-m'>block--tertiary</p>
+                    </div>
+                </div>
+            </div>
+            <div class='grid__item col-1-4'>
+                <div class='ml-xxs mr-xxs radius'>
+                    <div class='block--featured top--radius-s'>
+                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>Aa</h4>
+                    </div>
+                    <div class='block--white bottom--radius-s' >
+                        <p class='small uppercase text-center pt-m pb-m'>block--featured</p>
+                    </div>
+                </div>
+            </div><!--grid item ends-->
+        </div><!--grid  ends-->
       
     </div>
 </div>
@@ -197,9 +239,9 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
                 <p class='uppercase small mb-s ml-m mr-m'>Text heirarchy</p>
                 <div class='block--white block--stacked block-m radius'>
                     ";
-        // line 172
+        // line 214
         $this->env->loadTemplate("typography.twig")->display($context);
-        // line 173
+        // line 215
         echo "                </div>
             </div>
         </div><!--grid  ends-->
@@ -235,6 +277,6 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
 
     public function getDebugInfo()
     {
-        return array (  203 => 173,  201 => 172,  31 => 4,  28 => 3,);
+        return array (  245 => 215,  243 => 214,  31 => 4,  28 => 3,);
     }
 }
