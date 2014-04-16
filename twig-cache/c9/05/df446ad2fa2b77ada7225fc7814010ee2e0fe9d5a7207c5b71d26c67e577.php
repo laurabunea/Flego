@@ -18,37 +18,83 @@ class __TwigTemplate_c905df446ad2fa2b77ada7225fc7814010ee2e0fe9d5a7207c5b71d26c6
         // line 1
         echo "<div class='block--tertiary'>
     <div class='grid-container pt-xxl pb-xxl' > 
-        <div class='grid'>
-           <div class='grid__item col'>
-                <h2 class='text-center font-primary--light'>What is Flego?</h2>
-              
+        <div class='grid grid--middle'>
+           <div class='grid__item col-2-3'>
+                <div class='block-m block--stacked'>
+                    <h2 class='font-primary--light'>
+                        Fred's closet
+                    </h2>
+                    <p class='intro'> 
 
-                    <div class=''>
-                        <div class=''>
-                            <h3 class='font-primary--light text-center'>
-                                Colours:
-                            </h3>
-                            <p class='intro text-center'>
-                                A place to document the main colors used on your project's site.
-                            </p>
-                            <h3 class='font-primary--light text-center'>
-                                Typography:
-                            </h3>
-                            <p class='intro text-center'>
-                                A place to document the font-stacks used on your project's site.
-                            </p>
-                            <h3 class='font-primary--light text-center'>
-                                Components, Flego blocks
-                            </h3>
-                            <p class='intro text-center'>
-                                 A place for common HTML elements.
-                            </p>
-                        </div>
-                        <img class='' />
-                    </div>
+                        Fred has so many skeletons in his closet that he can’t keep track of them all! Just like Fred, websites also have a lot of skeletons but have no closet to store them in.
+
+                        Fred’s Closet is the perfect hideaway to keep all those little secrets.
+                    </p>
+                    
+                    <p class='intro'>The benefits of this are:</p>
+                    <ul class='list-styled intro' >
+                        <li>
+                            Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
+                        </li>
+                        <li>
+                            Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code. ";
+        // line 23
+        echo "
+                        </li>
+                        <li>
+                            Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.
+                        </li>
+                        <li>
+                            It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns.
+
+                        </li>
+                    </ul>
+                    
+                </div>
+";
+        // line 41
+        echo "                
               
           
+            </div>
+            <div class='grid__item col-1-3'>
+                <img src='assets/images/freds-closet.png' alt='fred' class='center-element' />
             </div> 
+            <div class='grid__item col'>
+                <hr />
+            </div>
+            <div class='grid__item col-1-3'>
+                <img src='assets/images/closet.png' alt='fred' class='center-element' />
+            </div>
+            <div class='grid__item col-2-3'>
+
+                <div class='block--stacked block-m '>
+                    <h3 class='font-primary--light'>
+                        How it works
+                    </h3>
+                    <p class='intro'>
+                        So that Fred's closest doesn't get messy. Fred has kindly seperated his closest into a few different sections. These are as follows:
+                    </p>
+                    <p class='font-primary--bold'>
+                        Colours:
+                    </p>
+                    <p class=' '>
+                        A place to document the main colors used on your project's site.
+                    </p>
+                    <p class='font-primary--bold'>
+                        Typography:
+                    </p>
+                    <p class=' '>
+                        A place to document the font-stacks used on your project's site as well as test the heirarchy
+                    </p>
+                    <p class='font-primary--bold'>
+                        Flego blocks
+                    </p>
+                    <p class=' '>
+                         A place for common HTML elements.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -255,9 +301,9 @@ class __TwigTemplate_c905df446ad2fa2b77ada7225fc7814010ee2e0fe9d5a7207c5b71d26c6
                 <p class='uppercase small mb-s ml-m mr-m'>Text heirarchy</p>
                 <div class='block--white block--stacked block-m radius'>
                     ";
-        // line 239
+        // line 288
         $this->env->loadTemplate("typography.twig")->display($context);
-        // line 240
+        // line 289
         echo "                </div>
             </div>
         </div><!--grid  ends-->
@@ -291,6 +337,6 @@ class __TwigTemplate_c905df446ad2fa2b77ada7225fc7814010ee2e0fe9d5a7207c5b71d26c6
 
     public function getDebugInfo()
     {
-        return array (  261 => 240,  259 => 239,  19 => 1,);
+        return array (  307 => 289,  305 => 288,  56 => 41,  42 => 23,  19 => 1,);
     }
 }
