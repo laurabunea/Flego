@@ -10,6 +10,7 @@ class __TwigTemplate_c33282184629ade12327c849c47139b48002ba23b82fd53ef1571ccf793
         $this->parent = false;
 
         $this->blocks = array(
+            'navigation' => array($this, 'block_navigation'),
             'content' => array($this, 'block_content'),
         );
     }
@@ -81,62 +82,16 @@ class __TwigTemplate_c33282184629ade12327c849c47139b48002ba23b82fd53ef1571ccf793
         // line 60
         echo twig_escape_filter($this->env, (isset($context["siteClass"]) ? $context["siteClass"] : null), "html", null, true);
         echo "'>
-<div class='grid-container block--white'>
-    <div class='grid'>
-    
-        <div class='grid__item col'>
-          <div class='pl-m left pt-xxs pb-xxs '>
-            <h1>
-              <span class='visually-hidden'>
-                <a href='/' class='clean-link'>Home</a>
-              </span>
-                <a href='/'><img class='' src='assets/images/logo.png' alt='Fred'/></a>
-            </h1>
-          </div>
-          <ul class='nav right clean-link-list'>
-     
-            <li class='hidden--q-small'>
-               <a href='http://springload.github.io/Fred.scss/#meet-fred-the-friendly-front-end-framework' class='block-m block--stacked inline-block ";
-        // line 76
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "isStacked"), "html", null, true);
-        echo "'>
-                   Fred
-               </a> 
-            </li>  
-            <li class='hidden--q-small'>
-               <a href='/flego.php' class='block-m block--stacked inline-block ";
-        // line 81
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "isStacked"), "html", null, true);
-        echo "'>
-                   Flego
-               </a> 
-            </li>
-            <li class='hidden--q-small'>
-               <a href='/freds-closet.php' class='block-m block--stacked inline-block ";
-        // line 86
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "isStacked"), "html", null, true);
-        echo "'>
-                   Fred's closet
-               </a> 
-            </li> 
-      
-            <li class='visible--q-small hidden--q-large hidden--q-medium hidden--q-large hidden--q-xlarge'>
-              <a href='#anchor' class='block-m block--stacked inline-block'>
-                <i class='i i-menu inline-block'></i>
-              </a>
-            </li>
-          </ul>
-          
-        </div><!-- grid item ends-->
-
-    </div><!-- ends -->
-</div>
-<div class='content'>
+";
+        // line 61
+        $this->displayBlock('navigation', $context, $blocks);
+        // line 104
+        echo "<div class='content'>
     
     ";
-        // line 104
+        // line 106
         $this->displayBlock('content', $context, $blocks);
-        // line 107
+        // line 109
         echo "       
 </div><!--content ends-->
 <div class='block--secondary'>
@@ -162,10 +117,67 @@ class __TwigTemplate_c33282184629ade12327c849c47139b48002ba23b82fd53ef1571ccf793
 </html>";
     }
 
-    // line 104
+    // line 61
+    public function block_navigation($context, array $blocks = array())
+    {
+        // line 62
+        echo "<div class='grid-container block--white'>
+    <div class='grid'>
+    
+        <div class='grid__item col'>
+          <div class='pl-m left pt-xxs pb-xxs '>
+            <h1>
+              <span class='visually-hidden'>
+                <a href='/' class='clean-link'>Home</a>
+              </span>
+                <a href='/'><img class='' src='assets/images/logo.png' alt='Fred'/></a>
+            </h1>
+          </div>
+          <ul class='nav right clean-link-list'>
+     
+            <li class='hidden--q-small'>
+               <a href='http://springload.github.io/Fred.scss/#meet-fred-the-friendly-front-end-framework' class='block-m block--stacked inline-block ";
+        // line 77
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "isStacked"), "html", null, true);
+        echo "'>
+                   Fred
+               </a> 
+            </li>  
+            <li class='hidden--q-small'>
+               <a href='/flego.php' class='block-m block--stacked inline-block ";
+        // line 82
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "isStacked"), "html", null, true);
+        echo "'>
+                   Flego
+               </a> 
+            </li>
+            <li class='hidden--q-small'>
+               <a href='/freds-closet.php' class='block-m block--stacked inline-block ";
+        // line 87
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "isStacked"), "html", null, true);
+        echo "'>
+                   Fred's closet
+               </a> 
+            </li> 
+      
+            <li class='visible--q-small hidden--q-large hidden--q-medium hidden--q-large hidden--q-xlarge'>
+              <a href='#anchor' class='block-m block--stacked inline-block'>
+                <i class='i i-menu inline-block'></i>
+              </a>
+            </li>
+          </ul>
+          
+        </div><!-- grid item ends-->
+
+    </div><!-- ends -->
+</div>
+";
+    }
+
+    // line 106
     public function block_content($context, array $blocks = array())
     {
-        // line 105
+        // line 107
         echo "        
     ";
     }
@@ -182,6 +194,6 @@ class __TwigTemplate_c33282184629ade12327c849c47139b48002ba23b82fd53ef1571ccf793
 
     public function getDebugInfo()
     {
-        return array (  169 => 105,  166 => 104,  140 => 107,  138 => 104,  117 => 86,  109 => 81,  101 => 76,  82 => 60,  22 => 2,  20 => 1,);
+        return array (  181 => 107,  178 => 106,  157 => 87,  149 => 82,  141 => 77,  124 => 62,  121 => 61,  95 => 109,  93 => 106,  89 => 104,  87 => 61,  83 => 60,  23 => 2,  21 => 1,);
     }
 }

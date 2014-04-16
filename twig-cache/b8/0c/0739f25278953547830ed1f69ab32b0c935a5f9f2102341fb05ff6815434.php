@@ -29,11 +29,11 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
     {
         // line 4
         echo "<div class='block--tertiary'>
-    <div class='grid-container pt-xxl pb-xxl' > 
+    <div class='grid-container pt-xl pb-xxl' > 
         <div class='grid grid--middle'>
            <div class='grid__item col-2-3 col--q-small'>
                 <div class='block-m block--stacked'>
-                    <h2 class='font-primary--light'>
+                    <h2 class='font-primary--light h1'>
                         Fred's closet
                     </h2>
                     <p class='intro'> 
@@ -75,10 +75,10 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
             <div class='grid__item col'>
                 <hr />
             </div>
-            <div class='grid__item col-1-3'>
-                <img src='assets/images/closet.png' alt='fred' class='center-element' />
+            <div class='grid__item col-1-3 col--q-small'>
+                <img src='assets/images/closet.png' alt='fred' class='img--responsive ' />
             </div>
-            <div class='grid__item col-2-3'>
+            <div class='grid__item col-2-3 col--q-small'>
 
                 <div class='block--stacked block-m '>
                     <h3 class='font-primary--light'>

@@ -10,6 +10,7 @@ class __TwigTemplate_32e40647b38b6007d5a79273cb6dc3201f2b6d26f2b25066215c0d756da
         $this->parent = $this->env->loadTemplate("template.twig");
 
         $this->blocks = array(
+            'navigation' => array($this, 'block_navigation'),
             'content' => array($this, 'block_content'),
         );
     }
@@ -25,9 +26,14 @@ class __TwigTemplate_32e40647b38b6007d5a79273cb6dc3201f2b6d26f2b25066215c0d756da
     }
 
     // line 3
+    public function block_navigation($context, array $blocks = array())
+    {
+    }
+
+    // line 5
     public function block_content($context, array $blocks = array())
     {
-        // line 4
+        // line 6
         echo "
     <h1 class='h0'>
         h0.Heading Size
@@ -144,6 +150,6 @@ class __TwigTemplate_32e40647b38b6007d5a79273cb6dc3201f2b6d26f2b25066215c0d756da
 
     public function getDebugInfo()
     {
-        return array (  31 => 4,  28 => 3,  307 => 289,  305 => 288,  56 => 41,  42 => 23,  19 => 1,);
+        return array (  37 => 6,  34 => 5,  29 => 3,  181 => 107,  178 => 106,  157 => 87,  149 => 82,  141 => 77,  124 => 62,  121 => 61,  95 => 109,  93 => 106,  89 => 104,  87 => 61,  83 => 60,  23 => 2,  21 => 1,);
     }
 }
