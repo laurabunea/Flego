@@ -58,6 +58,47 @@
     <!-- end:js-support -->
 </head>
 <body class='{{siteClass}}'>
+<div class='grid-container'>
+    <div class='grid'>
+    
+        <div class='grid__item col'>
+          <div class='block-m block--stacked left'>
+            <h1>
+              <span class='visually-hidden'>
+                <a href='/' class='clean-link'>Home</a>
+              </span>
+              <img class='' src='' alt='Home'/>
+            </h1>
+          </div>
+          <ul class='nav right clean-link-list'>
+     
+            <li class='hidden--q-small'>
+               <a href='#' class='block-m block--stacked inline-block {{data.isStacked}}'>
+                   Fred
+               </a> 
+            </li>  
+            <li class='hidden--q-small'>
+               <a href='/flego.php' class='block-m block--stacked inline-block {{data.isStacked}}'>
+                   Flego
+               </a> 
+            </li>
+            <li class='hidden--q-small'>
+               <a href='/freds-closet.php' class='block-m block--stacked inline-block {{data.isStacked}}'>
+                   Fred's closet
+               </a> 
+            </li> 
+      
+            <li class='visible--q-small hidden--q-large hidden--q-medium hidden--q-large hidden--q-xlarge'>
+              <a href='#anchor' class='block-m block--stacked inline-block'>
+                <i class='i i-menu inline-block'></i>
+              </a>
+            </li>
+          </ul>
+          
+        </div><!-- grid item ends-->
+
+    </div><!-- ends -->
+</div>
 <div class='content'>
     
     {% block content %}
@@ -65,8 +106,15 @@
     {% endblock %}
        
 </div><!--content ends-->
-
-
+<div class='block--secondary'>
+    <div class='grid-container'>
+        <div class='grid'>
+            <div class='grid__item col'>
+                <p class='block-m '>© Laura is awesome 2014</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- scripts -->
 <script src="assets/js/site.js"></script>
