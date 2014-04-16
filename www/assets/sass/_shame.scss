@@ -12,7 +12,7 @@
         @extend .text-muted;
         @extend .uppercase;
         @extend .font-primary--light;
-        background-color:black;
+        @extend .block--tertiary;
     }
 
 //change to use vendor mixin

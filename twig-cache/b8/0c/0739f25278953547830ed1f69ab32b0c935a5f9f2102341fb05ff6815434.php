@@ -31,7 +31,7 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
         echo "<div class='block--tertiary'>
     <div class='grid-container pt-xxl pb-xxl' > 
         <div class='grid grid--middle'>
-           <div class='grid__item col-2-3'>
+           <div class='grid__item col-2-3 col--q-small'>
                 <div class='block-m block--stacked'>
                     <h2 class='font-primary--light'>
                         Fred's closet
@@ -69,8 +69,8 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
               
           
             </div>
-            <div class='grid__item col-1-3'>
-                <img src='assets/images/freds-closet.png' alt='fred' class='center-element' />
+            <div class='grid__item col-1-3 col--q-small'>
+                <img src='assets/images/freds-closet.png' alt='fred' class='img--responsive center-element' />
             </div> 
             <div class='grid__item col'>
                 <hr />
@@ -323,7 +323,7 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
     </div>
 </div>
 <div style='' class='block--secondary'>
-    <div class='grid-container pt-xxxl pb-xxxl' >
+    <div class='grid-container pt-xxl pb-xxl' >
         
         <div class='grid'>
             <div class='grid__item col'>

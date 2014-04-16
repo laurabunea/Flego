@@ -131,167 +131,184 @@ class __TwigTemplate_d708a88797da0f847c6a83965cf5a55eaf49840a48492020593bfcae116
 
     ";
         // line 290
-        echo "    
+        echo "
+<div class='block--featured'>
+    <div class='grid-container pt-xl pb-xl' > 
+        <div class='grid'>
+            <div class='grid__item col-1-4'>
+                <img src='assets/images/flego.png' alt='fred' class='img--responsive'/>
+            </div>
+           <div class='grid__item col-3-4'>
+                <div class='block-m block--stacked'>
+                     
+                    <h2 class='font-primary--light'>
+                        Flego, the cool kids lego
+                    </h2>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
     
     <h3 class='lego--heading'>
         header.twig
     </h3>
     ";
-        // line 295
+        // line 312
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "header", 1 => array("navigation" => (isset($context["navigation"]) ? $context["navigation"] : null), "isStacked" => "", "blockSize" => "m")), "method"), "html", null, true);
-        // line 299
+        // line 316
         echo "
 
 
     ";
-        // line 305
+        // line 322
         echo "    <h3 class='lego--heading'>
         content.title.twig
     </h3>
     ";
-        // line 308
+        // line 325
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.title", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "isStackedTop" => "", "colSizeHeading" => "-3-4", "isStackedBottom" => "", "blockSize" => "m")), "method"), "html", null, true);
-        // line 314
+        // line 331
         echo "
 
 
     ";
-        // line 320
+        // line 337
         echo "    <h3 class='lego--heading'>
          test 
     </h3>
     ";
-        // line 323
+        // line 340
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.block", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "sidebar" => array(0 => array("type" => "image", "src" => "/some/image.png"), 1 => array("type" => "image", "src" => "/some/image.png"), 2 => array("type" => "button", "href" => "mcdonalds.co.nz/", "label" => "Tasty food for you"), 3 => "Some random paragraph", 4 => "Default is just a paragraph!", 5 => array("type" => "raw", "data" => "<h4>Some literal html goes here</h4>")), "isStackedTop" => "", "colSizeHeading" => "-3-4", "isStackedBottom" => "", "blockSize" => "m")), "method"), "html", null, true);
-        // line 350
+        // line 367
         echo "
 
 <hr />
     ";
-        // line 353
+        // line 370
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.block", 1 => array("content" => (isset($context["storyBlock"]) ? $context["storyBlock"] : null), "isStackedTop" => "", "colSizeHeading" => "-3-4", "isStackedBottom" => "", "blockSize" => "m")), "method"), "html", null, true);
-        // line 359
+        // line 376
         echo "
     ";
-        // line 387
+        // line 404
         echo "    
     ";
-        // line 391
+        // line 408
         echo "    <h3 class='lego--heading'>
        content.list.twig
     </h3>
  
     ";
-        // line 395
+        // line 412
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.list", 1 => array("content" => (isset($context["places"]) ? $context["places"] : null), "colSize" => "-2-4 col--q-small", "isStacked" => "", "headingSize" => "h4", "blockSize" => "s", "themeAttr" => "pb-0")), "method"), "html", null, true);
-        // line 402
+        // line 419
         echo "
     
     <hr class='mt-m'/>
 
     ";
-        // line 406
+        // line 423
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.list", 1 => array("content" => (isset($context["places"]) ? $context["places"] : null), "colSize" => "-2-4", "isStacked" => "", "headingSize" => "h4", "blockSize" => "s", "themeAttr" => "bb-primary")), "method"), "html", null, true);
-        // line 413
+        // line 430
         echo "
     ";
-        // line 417
+        // line 434
         echo "    <h3 class='lego--heading'>
         article.list.twig
     </h3>
     ";
-        // line 420
+        // line 437
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "article.list", 1 => array("article" => (isset($context["article"]) ? $context["article"] : null), "colSize" => "", "isStacked" => "", "headingSize" => "h4", "blockSize" => "m")), "method"), "html", null, true);
-        // line 426
+        // line 443
         echo "
 
 
     ";
-        // line 432
+        // line 449
         echo "    <h3 class='lego--heading'>
         content.media.twig
     </h3>
     ";
-        // line 435
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.media", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-1-4", "mediaRight" => "col-3-4", "blockSize" => "m")), "method"), "html", null, true);
-        // line 442
-        echo "
-    <hr />
-
-    ";
-        // line 445
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.media", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-1-3", "mediaRight" => "col-2-3", "blockSize" => "m")), "method"), "html", null, true);
         // line 452
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.media", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-1-4", "mediaRight" => "col-3-4", "blockSize" => "m")), "method"), "html", null, true);
+        // line 459
         echo "
     <hr />
 
     ";
-        // line 455
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.media", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-2-4 col--q-small", "mediaRight" => "col-2-4 col--q-small", "blockSize" => "m")), "method"), "html", null, true);
         // line 462
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.media", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-1-3", "mediaRight" => "col-2-3", "blockSize" => "m")), "method"), "html", null, true);
+        // line 469
+        echo "
+    <hr />
+
+    ";
+        // line 472
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "content.media", 1 => array("content" => (isset($context["contentBlock"]) ? $context["contentBlock"] : null), "isStacked" => "", "blockSize" => "m", "mediaLeft" => "col-2-4 col--q-small", "mediaRight" => "col-2-4 col--q-small", "blockSize" => "m")), "method"), "html", null, true);
+        // line 479
         echo "
 
 
     ";
-        // line 468
+        // line 485
         echo "    <h3 class='lego--heading'>
         gallery.showcase.twig
     </h3>
     ";
-        // line 471
+        // line 488
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "gallery.showcase", 1 => array("galleryShowcase" => (isset($context["galleryShowcase"]) ? $context["galleryShowcase"] : null), "isStacked" => "", "blockSize" => "m")), "method"), "html", null, true);
-        // line 475
+        // line 492
         echo "
 
     
     ";
-        // line 481
+        // line 498
         echo "    <h3 class='lego--heading'>
         gallery.list.twig
     </h3>
     <!-- I have passed in different nodes just to keep the site smaller ;) -->
     ";
-        // line 485
+        // line 502
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "gallery.list", 1 => array("gallery" => (isset($context["gallery2Items"]) ? $context["gallery2Items"] : null), "isStacked" => "", "blockSize" => "m", "colSize" => "-2-4")), "method"), "html", null, true);
-        // line 490
+        // line 507
         echo "
     <hr/>
 
     ";
-        // line 493
+        // line 510
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "gallery.list", 1 => array("gallery" => (isset($context["gallery3Items"]) ? $context["gallery3Items"] : null), "isStacked" => "", "blockSize" => "m", "colSize" => "-1-3")), "method"), "html", null, true);
-        // line 498
+        // line 515
         echo "
     <hr/>
 
     ";
-        // line 501
+        // line 518
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "gallery.list", 1 => array("gallery" => (isset($context["gallery4Items"]) ? $context["gallery4Items"] : null), "isStacked" => "", "blockSize" => "m", "colSize" => "-1-4")), "method"), "html", null, true);
-        // line 506
+        // line 523
         echo "
     
 
     ";
-        // line 512
+        // line 529
         echo "    <h3 class='lego--heading'>
         comments.twig
     </h3>
     ";
-        // line 515
+        // line 532
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "comments", 1 => array("commentThread" => (isset($context["commentThread"]) ? $context["commentThread"] : null), "isStacked" => "", "blockSize" => "m", "colSize" => "-2-4 col--q-small")), "method"), "html", null, true);
-        // line 520
+        // line 537
         echo "
 
     
     ";
-        // line 526
+        // line 543
         echo "    <h3 class='lego--heading'>
         Panel.twig
     </h3>
     ";
-        // line 529
+        // line 546
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "panel", 1 => array("panel" => (isset($context["panel"]) ? $context["panel"] : null), "blockSize" => "m")), "method"), "html", null, true);
-        // line 532
+        // line 549
         echo "
     
 
@@ -299,46 +316,46 @@ class __TwigTemplate_d708a88797da0f847c6a83965cf5a55eaf49840a48492020593bfcae116
         panel.alert.twig
     </h3>
     ";
-        // line 538
+        // line 555
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "panel.alert", 1 => array("panel" => (isset($context["alertPanel"]) ? $context["alertPanel"] : null), "blockSize" => "m", "theme" => "")), "method"), "html", null, true);
-        // line 542
+        // line 559
         echo "
 
 
     ";
-        // line 548
+        // line 565
         echo "    <h3 class='lego--heading'>
         Barchart.twig
     </h3>
     ";
-        // line 551
+        // line 568
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "barchart", 1 => array("barchart" => (isset($context["barchart"]) ? $context["barchart"] : null), "blockSize" => "m")), "method"), "html", null, true);
-        // line 554
+        // line 571
         echo "
 
 
     ";
-        // line 560
+        // line 577
         echo "    <h3 class='lego--heading'>
         Forms
     </h3>
     ";
-        // line 563
+        // line 580
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "form", 1 => array("barchart" => (isset($context["barchart"]) ? $context["barchart"] : null), "colSize" => "-2-4 col--q-small", "blockSize" => "m")), "method"), "html", null, true);
-        // line 567
+        // line 584
         echo "
     <hr />
 
     ";
-        // line 570
+        // line 587
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "form", 1 => array("formData" => (isset($context["formData"]) ? $context["formData"] : null), "colSize" => "", "blockSize" => "m")), "method"), "html", null, true);
-        // line 574
+        // line 591
         echo "
     
     ";
-        // line 576
+        // line 593
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["macros"]) ? $context["macros"] : null), "lego", array(0 => "definition.table", 1 => array("formData" => (isset($context["formData"]) ? $context["formData"] : null), "colSize" => "", "blockSize" => "m")), "method"), "html", null, true);
-        // line 580
+        // line 597
         echo "
 
 
@@ -357,6 +374,6 @@ class __TwigTemplate_d708a88797da0f847c6a83965cf5a55eaf49840a48492020593bfcae116
 
     public function getDebugInfo()
     {
-        return array (  342 => 580,  340 => 576,  336 => 574,  334 => 570,  329 => 567,  327 => 563,  322 => 560,  317 => 554,  315 => 551,  310 => 548,  305 => 542,  303 => 538,  295 => 532,  293 => 529,  288 => 526,  283 => 520,  281 => 515,  276 => 512,  271 => 506,  269 => 501,  264 => 498,  262 => 493,  257 => 490,  255 => 485,  249 => 481,  244 => 475,  242 => 471,  237 => 468,  232 => 462,  230 => 455,  225 => 452,  223 => 445,  218 => 442,  216 => 435,  211 => 432,  206 => 426,  204 => 420,  199 => 417,  196 => 413,  194 => 406,  188 => 402,  186 => 395,  180 => 391,  177 => 387,  174 => 359,  172 => 353,  167 => 350,  165 => 323,  160 => 320,  155 => 314,  153 => 308,  148 => 305,  143 => 299,  141 => 295,  134 => 290,  129 => 284,  127 => 273,  122 => 270,  120 => 248,  117 => 247,  115 => 231,  112 => 230,  110 => 218,  107 => 217,  105 => 209,  102 => 208,  100 => 193,  97 => 192,  95 => 173,  92 => 172,  90 => 157,  87 => 156,  85 => 145,  82 => 144,  80 => 135,  77 => 134,  75 => 125,  72 => 124,  70 => 113,  67 => 112,  65 => 103,  61 => 101,  58 => 90,  56 => 69,  52 => 67,  50 => 58,  47 => 57,  44 => 45,  42 => 24,  39 => 23,  37 => 8,  31 => 4,  28 => 3,);
+        return array (  359 => 597,  357 => 593,  353 => 591,  351 => 587,  346 => 584,  344 => 580,  339 => 577,  334 => 571,  332 => 568,  327 => 565,  322 => 559,  320 => 555,  312 => 549,  310 => 546,  305 => 543,  300 => 537,  298 => 532,  293 => 529,  288 => 523,  286 => 518,  281 => 515,  279 => 510,  274 => 507,  272 => 502,  266 => 498,  261 => 492,  259 => 488,  254 => 485,  249 => 479,  247 => 472,  242 => 469,  240 => 462,  235 => 459,  233 => 452,  228 => 449,  223 => 443,  221 => 437,  216 => 434,  213 => 430,  211 => 423,  205 => 419,  203 => 412,  197 => 408,  194 => 404,  191 => 376,  189 => 370,  184 => 367,  182 => 340,  177 => 337,  172 => 331,  170 => 325,  165 => 322,  160 => 316,  158 => 312,  134 => 290,  129 => 284,  127 => 273,  122 => 270,  120 => 248,  117 => 247,  115 => 231,  112 => 230,  110 => 218,  107 => 217,  105 => 209,  102 => 208,  100 => 193,  97 => 192,  95 => 173,  92 => 172,  90 => 157,  87 => 156,  85 => 145,  82 => 144,  80 => 135,  77 => 134,  75 => 125,  72 => 124,  70 => 113,  67 => 112,  65 => 103,  61 => 101,  58 => 90,  56 => 69,  52 => 67,  50 => 58,  47 => 57,  44 => 45,  42 => 24,  39 => 23,  37 => 8,  31 => 4,  28 => 3,);
     }
 }

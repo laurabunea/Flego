@@ -81,16 +81,16 @@ class __TwigTemplate_c33282184629ade12327c849c47139b48002ba23b82fd53ef1571ccf793
         // line 60
         echo twig_escape_filter($this->env, (isset($context["siteClass"]) ? $context["siteClass"] : null), "html", null, true);
         echo "'>
-<div class='grid-container'>
+<div class='grid-container block--white'>
     <div class='grid'>
     
         <div class='grid__item col'>
-          <div class='block-m block--stacked left'>
+          <div class='pl-m left pt-xxs pb-xxs '>
             <h1>
               <span class='visually-hidden'>
                 <a href='/' class='clean-link'>Home</a>
               </span>
-                <a href='/'><img class='' src='' alt='Home'/></a>
+                <a href='/'><img class='' src='assets/images/logo.png' alt='Fred'/></a>
             </h1>
           </div>
           <ul class='nav right clean-link-list'>

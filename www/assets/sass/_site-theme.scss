@@ -116,7 +116,9 @@ $featured-border-color:        #595959;//#ccc
 
 .block--white {
     @extend %border;
-    @include theme-block( $white-bg-color, $white-txt-color, $white-border-color );  
+    @include theme-block( $white-bg-color, $white-txt-color, $white-border-color );  a {
+        color:#293F54;
+    }
 }
 
 //.block--featured {
