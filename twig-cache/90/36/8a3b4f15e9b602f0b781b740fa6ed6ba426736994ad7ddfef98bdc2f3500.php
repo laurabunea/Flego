@@ -1,7 +1,34 @@
-{% extends "template.twig" %}
+<?php
 
-{% block content %}
-<div class='block--secondary'>
+/* homepage.twig */
+class __TwigTemplate_90368a3b4f15e9b602f0b781b740fa6ed6ba426736994ad7ddfef98bdc2f3500 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = $this->env->loadTemplate("template.twig");
+
+        $this->blocks = array(
+            'content' => array($this, 'block_content'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "template.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_content($context, array $blocks = array())
+    {
+        // line 4
+        echo "<div class='block--secondary'>
     <div class='grid-container pt-xl pb-xl' > 
         <div class='grid'>
            <div class='grid__item col'>
@@ -118,35 +145,29 @@ Increase efficiency when editing a website
 </div>
 
 <!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
-{#<div class='block--featured'>
-    <div class='grid-container pt-xxxl pb-xxl'>
-        <a href='/blocks.php' class='clean-link'>
-            <div class='grid grid--middle'>
-                <div class='grid__item ' style='width:30%'>
-                    <div class='ml-l'>
-                        <img src='assets/images/fred-logo.png' alt='fred' class='img--responsive'/>
-                    </div>
-                </div>
-                <div class='grid__item' style='width:20%'>
-                    <p class='h0 text-center'>+</p> 
-                </div>
-                <div class='grid__item' style='width:30%'>
-                    <img src='assets/images/lego.png' alt='fred' class='img--responsive'/>
-                </div>
-                <div class='grid__item' style='width:20%'>
-                    <p class='h0 text-center'>=</p>
-                </div>
-                <div class='grid__item col'>
-                    <h1 class='text-center pt-s h0'>Flego</h1>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>#}
+";
+        // line 146
+        echo "
 
 
 
 
 
+";
+    }
 
-{% endblock %}
+    public function getTemplateName()
+    {
+        return "homepage.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  150 => 146,  31 => 4,  28 => 3,);
+    }
+}

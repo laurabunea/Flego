@@ -1,7 +1,34 @@
-{% extends "template.twig" %}
+<?php
 
-{% block content %}
-<div class='block--tertiary'>
+/* freds-closet.twig */
+class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff6815434 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = $this->env->loadTemplate("template.twig");
+
+        $this->blocks = array(
+            'content' => array($this, 'block_content'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "template.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_content($context, array $blocks = array())
+    {
+        // line 4
+        echo "<div class='block--tertiary'>
     <div class='grid-container pt-xxl pb-xxl' > 
         <div class='grid grid--middle'>
            <div class='grid__item col-2-3'>
@@ -22,8 +49,9 @@
                             Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
                         </li>
                         <li>
-                            Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code. {#make sense of this#}
-
+                            Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code. ";
+        // line 26
+        echo "
                         </li>
                         <li>
                             Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.
@@ -35,13 +63,9 @@
                     </ul>
                     
                 </div>
-{#<p>
-                    These style guides and pattern libraries aren’t being published in an attempt to provide ready-made solutions—every project should have its own distinct pattern library. Instead, these pattern libraries are being published in a spirit of openness and sharing …a way of saying “Hey, this is what worked for us in these particular circumstances.”
-                </p>
-                <p>
-                    Every project is a learning experience and each front-end style guide gives us ideas about how to do the next one better.
-                </p>#}
-                
+";
+        // line 44
+        echo "                
               
           
             </div>
@@ -288,8 +312,11 @@
                 <hr class='mt-m mb-m'/>
                 <p class='uppercase small mb-s ml-m mr-m'>Text heirarchy</p>
                 <div class='block--white block--stacked block-m radius'>
-                    {% include "typography.twig" %}
-                </div>
+                    ";
+        // line 291
+        $this->env->loadTemplate("typography.twig")->display($context);
+        // line 292
+        echo "                </div>
             </div>
         </div><!--grid  ends-->
         
@@ -308,4 +335,21 @@
       
     </div>
 </div>
-{% endblock %}
+";
+    }
+
+    public function getTemplateName()
+    {
+        return "freds-closet.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  319 => 292,  317 => 291,  68 => 44,  54 => 26,  31 => 4,  28 => 3,);
+    }
+}
