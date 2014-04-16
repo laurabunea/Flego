@@ -54,7 +54,7 @@ hr {
     }
     .btn {
         background-color:#293F54;
-        color:#fff;
+        color:$primary-color;
     }
 }
 
@@ -122,6 +122,9 @@ $featured-border-color:        #595959;//#ccc
     @extend %border;
     @include theme-block( $white-bg-color, $white-txt-color, $white-border-color );  a {
         color:#293F54;
+    }
+    .btn {
+        color:#fff;
     }
 }
 

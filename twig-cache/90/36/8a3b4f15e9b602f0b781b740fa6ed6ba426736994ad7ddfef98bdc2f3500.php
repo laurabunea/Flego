@@ -64,7 +64,7 @@ class __TwigTemplate_90368a3b4f15e9b602f0b781b740fa6ed6ba426736994ad7ddfef98bdc2
                     <p>
                         You include '_fred.scss' in your project, and customise its behavior in '_fred-theme.scss'. When there's an update to Fred, you can update it with a 'bower update' and get all the new Fred goodness in your project right away, without losing your settings. 
                     </p>
-                    <p class='mt-s'>
+                    <p class='mt-m'>
                         <a href='http://springload.github.io/Fred.scss/#meet-fred-the-friendly-front-end-framework' class='btn'>
                             Read more about Fred.scss
                         </a>
@@ -92,7 +92,7 @@ class __TwigTemplate_90368a3b4f15e9b602f0b781b740fa6ed6ba426736994ad7ddfef98bdc2
                     </p>
                     <p>
                         It encouraged a much more modular approach to development, the idea being that any pattern could be used anywhere on a template.
-                    <p class='mt-s'>
+                    <p class='mt-m'>
                         <a href='flego.php' class='btn'>
                             Read more about Flego
                         </a>
@@ -128,7 +128,7 @@ class __TwigTemplate_90368a3b4f15e9b602f0b781b740fa6ed6ba426736994ad7ddfef98bdc2
                         A place to store a sites dirty little secrets
                     </p>
                    
-                    <p class='mt-s'>
+                    <p class='mt-m'>
                         <a href='/freds-closet.php' class='btn'>
                             Read more about Fred's closet
                         </a>

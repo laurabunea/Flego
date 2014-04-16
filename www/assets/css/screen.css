@@ -4298,9 +4298,9 @@ hr {
     color: #fff; }
   .block--featured h1, .block--featured h2, .block--featured h3, .block--featured h4, .block--featured h5 {
     color: #fff; }
-  .block--featured a.btn {
+  .block--featured .btn {
     background-color: #293F54;
-    color: #fff; }
+    color: #37B67F; }
 
 hr {
   margin: 0; }
@@ -4334,6 +4334,8 @@ hr {
   border-color: #fff; }
   .block--white a {
     color: #293F54; }
+  .block--white .btn {
+    color: #fff; }
 
 .i-gecko {
   background-image: url('/assets/images/square-gecko.png');
