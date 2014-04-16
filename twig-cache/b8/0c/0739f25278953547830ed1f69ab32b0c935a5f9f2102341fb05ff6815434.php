@@ -57,7 +57,7 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
                 </div>
                 <div class='grid__item col-3-4 '>
                     <div class='block--stacked block-m'>
-                        <h3 class='intro'>Why use Fred's closet?</h3>
+                        <h3 class='font-primary--light'>Why use Fred's closet?</h3>
                             <ul class='list-styled intro' >
                                 <li>
                                     Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
