@@ -334,7 +334,7 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
-.block--primary, .block--secondary, .block--tertiary, .block--white, .block--featured {
+.block--primary, .block--secondary, .block--tertiary, .block--white {
   border-width: 1px;
   border-style: solid; }
 
@@ -4291,12 +4291,12 @@ hr {
   background-color: #37B67F;
   color: #fff; }
 
-.featured {
+.block--featured {
   background-color: #37B67F;
   color: #fff; }
-  .featured a {
+  .block--featured a {
     color: #fff; }
-  .featured h1, .featured h2, .featured h3, .featured h4, .featured h5 {
+  .block--featured h1, .block--featured h2, .block--featured h3, .block--featured h4, .block--featured h5 {
     color: #fff; }
 
 hr {
@@ -4329,11 +4329,6 @@ hr {
   background-color: #fff;
   color: #000;
   border-color: #fff; }
-
-.block--featured {
-  background-color: #595959;
-  color: #fff;
-  border-color: #595959; }
 
 .i-gecko {
   background-image: url('/assets/images/square-gecko.png');

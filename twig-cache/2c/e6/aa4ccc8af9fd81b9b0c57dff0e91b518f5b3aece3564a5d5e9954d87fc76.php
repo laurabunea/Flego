@@ -28,239 +28,124 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
     public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "
-<!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
-<div class='featured'>
-    <div class='grid-container pt-xxxl pb-xxl'>
-        <a href='/blocks.php' class='clean-link'>
-            <div class='grid grid--middle'>
-                <div class='grid__item ' style='width:30%'>
-                    <div class='ml-l'>
-                        <img src='assets/images/fred-logo.png' alt='fred' class='img--responsive'/>
-                    </div>
-                </div>
-                <div class='grid__item' style='width:20%'>
-                    <p class='h0 text-center'>+</p> 
-                </div>
-                <div class='grid__item' style='width:30%'>
-                    <img src='assets/images/lego.png' alt='fred' class='img--responsive'/>
-                </div>
-                <div class='grid__item' style='width:20%'>
-                    <p class='h0 text-center'>=</p>
-                </div>
-                <div class='grid__item col'>
-                    <h1 class='text-center pt-s h0'>Flego</h1>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-<!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
-<div style='' class='block--secondary'>
-    <div class='grid-container pt-xxxl pb-xxxl' style='max-width:960px; margin-left:auto; margin-right:auto'>
-        
+        echo "<div class='block--tertiary'>
+    <div class='grid-container pt-xxl pb-xxl' > 
         <div class='grid'>
-            <div class='grid__item col'>
-                <h2 class='text-center font-primary--light mb-m pt-m'>
-                    Colors
-                </h2>
-            </div>
-        </div>
-        <div class='grid'>
-            <div class='grid__item col-1-4'>
-                <div class='ml-xxs mr-xxs radius'>
-                    <div class='block--primary top--radius-s'>
-                        <h4 class='font-primary--light pt-m pb-m text-center h2'>Aa</h4>
-                    </div>
-                    <div class='block--white bottom--radius-s'>
-                        <p class='small uppercase text-center pt-m pb-m'>block--primary</p>
-                    </div>
-                </div>
-            </div>
-            <div class='grid__item col-1-4'>
-                <div class='ml-xxs mr-xxs '>
-                    <div class='block--secondary top--radius-s'>
-                        <h4 class='font-primary--italic pt-m pb-m text-center h2'>Aa</h4>
-                    </div>
-                    <div class='block--white bottom--radius-s'>
-                        <p class='small uppercase text-center pt-m pb-m'>block--secondary</p>
-                    </div>
-                </div>
-            </div>
-            <div class='grid__item col-1-4'>
-                <div class='ml-xxs mr-xxs '>
-                    <div class='block--tertiary top--radius-s'>
-                        <h4 class='pt-m pb-m text-center h2'>Aa</h4>
-                    </div>
-                    <div class='block--white bottom--radius-s'>
-                        <p class='small uppercase text-center pt-m pb-m'>block--tertiary</p>
-                    </div>
-                </div>
-            </div>
-            <div class='grid__item col-1-4'>
-                <div class='ml-xxs mr-xxs radius'>
-                    <div class='block--featured top--radius-s'>
-                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>Aa</h4>
-                    </div>
-                    <div class='block--white bottom--radius-s' >
-                        <p class='small uppercase text-center pt-m pb-m'>block--featured</p>
-                    </div>
-                </div>
-            </div><!--grid item ends-->
-        </div><!--grid  ends-->
-      
-    </div>
-</div>
-<div class='block--tertiary'>
-    <div class='grid-container pt-xxl pb-xxl' >
-        
-        <div class='grid'>
-            <div class='grid__item col'>
-                <h2 class='text-center font-primary--light pb-m pt-s'>
-                    Typography
-                </h2>
-            </div>
-            <div class='grid__item col-2-4'>
-                <div class='block-m block--stacked'>
-                     <p class='small uppercase'>Font primary:</p>
-                    <h3>
-                        SourceSansPro
-                    </h3>
-                    <p>
-                        Awww Wicked! Howsit goin, this carked it misses is as kiwi as as a cool scarfie. Mean while, in South Pacific, the Armed Offenders Squad and Rhys Darby were up to no good with a bunch of paru chocolate fishs.
-                    </p>
-                </div>
-            </div>
-            <div class='grid__item col-2-4'>
-                <div class='grid'>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--light pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Light</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--italic pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Italic</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Regular</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--bold pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s' >
-                                <p class='small uppercase text-center pt-m pb-m'>Bold</p>
-                            </div>
-                        </div>
-                    </div><!--grid item ends-->
-                </div><!--grid  ends-->
-            </div><!--grid item ends-->
-
-            <div class='grid__item col'>
-                <hr class='mt-m mb-m'/>
-            </div>
-            <div class='grid__item col-2-4'>
-                <div class='block-m block--stacked'>
-                    <p class='small uppercase'>Font secondary:</p>
-                    <h3>
-                       SourceSansPro
-                    </h3>
-                    <p>
-                        The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. 
-                    </p>
-                </div>
-            </div>
-            <div class='grid__item col-2-4 '>
-                <div class='grid'>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--light pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Light</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--italic pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Italic</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Regular</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--bold pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='block--secondary bottom--radius-s' >
-                                <p class='small uppercase text-center pt-m pb-m'>Bold</p>
-                            </div>
-                        </div>
-                    </div><!--grid item ends-->
-                </div><!--grid  ends-->
-            </div><!--grid item ends-->
-            <div class='grid__item col'>
-                <hr class='mt-m mb-m'/>
-                <p class='uppercase small mb-s ml-m mr-m'>Text heirarchy</p>
-                <div class='block--white block--stacked block-m radius'>
-                    ";
-        // line 214
-        $this->env->loadTemplate("typography.twig")->display($context);
-        // line 215
-        echo "                </div>
-            </div>
-        </div><!--grid  ends-->
-        
-    </div>
-</div>
-<div style='' class='block--secondary'>
-    <div class='grid-container pt-xxxl pb-xxxl' >
-        
-        <div class='grid'>
-            <div class='grid__item col'>
+           <div class='grid__item col'>
                 <h2 class='text-center font-primary--light'>
-                    Components
+                    Intro
                 </h2>
-            </div>
+            </div> 
         </div>
-      
     </div>
 </div>
+<div class='block--white'>
+    <div class='grid-container pt-xxl pb-xxl' > 
+        <div class='grid grid--middle'>
+           <div class='grid__item col-1-3 col--q-small'> 
+                <div class='block--stacked block-m'>
+                    <img src='assets/images/fred-scss.jpg' alt='fred' class='img--responsive'/>
+                </div>
+            </div>
+            <div class='grid__item col-2-3 col--q-small'>
+                <div class='block--stacked block-m'>   
+
+                    <h2 class='font-primary--light'>
+                        Fred, the friendly front-end framework
+                    </h2>
+                    <p class='intro'>
+                        Fred helps jump-start your front-end projects. He's a super flexible little guy with a nice grunt-powered CLI.
+                    </p>
+                    <p>
+                        Fred aims to solve a classic front-end problem: sharing and re-using common components between projects, while allowing each project to retain custom variables and configuration.
+                    </p>
+                    <p>
+                        You include '_fred.scss' in your project, and customise its behavior in '_fred-theme.scss'. When there's an update to Fred, you can update it with a 'bower update' and get all the new Fred goodness in your project right away, without losing your settings. 
+                    </p>
+                    <p>
+                        <a href='http://springload.github.io/Fred.scss/#meet-fred-the-friendly-front-end-framework' class='btn'>
+                            Read more about Fred.scss
+                        </a>
+                    </p>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div class='block--featured'>
+    <div class='grid-container pt-xxl pb-xxl'>
+        <div class='grid grid--middle'>
+            <div class='grid__item col-2-3 col--q-small'>
+                <div class='block--stacked block-m'>   
+
+                    <h2 class='font-primary--light'>
+                        Flego, the cool kids Lego
+                    </h2>
+                    <p class='intro'>
+                        Flego is built of Fred.... add intro here
+                    </p>
+                    <p>
+                        Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. 
+                    </p>
+                    <p>
+                        The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later.
+                    </p>
+                    <p>
+                        <a href='flego.php' class='btn'>
+                            Read more about Flego
+                        </a>
+                    </p>
+                </div>
+            </div><!--grid item ends-->
+    
+            <div class='grid__item col-1-3 col--q-small'> 
+                <div class='block--stacked block-m'>
+                    <img src='assets/images/flego.png' alt='fred' class='img--responsive'/>
+                    
+                </div>
+            </div><!--grid item ends-->
+        </div>
+    </div>
+</div>
+
+<div class='block--white'>
+    <div class='grid-container pt-xxl pb-xxl' > 
+        <div class='grid grid--middle'>
+           <div class='grid__item col-1-3 col--q-small'> 
+                <div class='block--stacked block-m'>
+                    <img src='assets/images/freds-closet.png' alt='fred' class='img--responsive'/>
+                </div>
+            </div>
+            <div class='grid__item col-2-3 col--q-small'>
+                <div class='block--stacked block-m'>   
+
+                    <h2 class='font-primary--light'>
+                        Fred's Closet
+                    </h2>
+                    <p class='intro'>
+                        A place to store a sites dirty little secrets
+                    </p>
+                   
+                    <p>
+                        <a href='/freds-closet.php' class='btn'>
+                            Read more about Fred's closet
+                        </a>
+                    </p>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
+";
+        // line 140
+        echo "
+
+
+
+
 
 ";
     }
@@ -277,6 +162,6 @@ class __TwigTemplate_2ce6aa4ccc8af9fd81b9b0c57dff0e91b518f5b3aece3564a5d5e9954d8
 
     public function getDebugInfo()
     {
-        return array (  245 => 215,  243 => 214,  31 => 4,  28 => 3,);
+        return array (  144 => 140,  31 => 4,  28 => 3,);
     }
 }
