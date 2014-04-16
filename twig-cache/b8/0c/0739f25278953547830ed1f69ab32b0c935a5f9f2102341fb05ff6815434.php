@@ -29,9 +29,9 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
     {
         // line 4
         echo "<div class='block--tertiary'>
-    <div class='grid-container pt-xl pb-xxl' > 
+    <div class='grid-container pt-xl pb-xl' > 
         <div class='grid grid--middle'>
-           <div class='grid__item col-2-3 col--q-small'>
+           <div class='grid__item col-3-4 col--q-small'>
                 <div class='block-m block--stacked'>
                     <h2 class='font-primary--light h1'>
                         Fred's closet
@@ -41,70 +41,84 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
                         Fred has so many skeletons in his closet that he can’t keep track of them all! Just like Fred, websites also have a lot of skeletons but have no closet to store them in.
 
                         Fred’s Closet is the perfect hideaway to keep all those little secrets.
-                    </p>
-                    
-                    <p class='intro'>The benefits of this are:</p>
-                    <ul class='list-styled intro' >
-                        <li>
-                            Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
-                        </li>
-                        <li>
-                            Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code. ";
-        // line 26
-        echo "
-                        </li>
-                        <li>
-                            Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.
-                        </li>
-                        <li>
-                            It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns.
-
-                        </li>
-                    </ul>
-                    
-                </div>
-";
-        // line 44
-        echo "                
-              
-          
+                    </p> 
+                </div>       
             </div>
-            <div class='grid__item col-1-3 col--q-small'>
+            <div class='grid__item col-1-4 col--q-small'>
                 <img src='assets/images/freds-closet.png' alt='fred' class='img--responsive center-element' />
-            </div> 
-            <div class='grid__item col'>
-                <hr />
             </div>
-            <div class='grid__item col-1-3 col--q-small'>
-                <img src='assets/images/closet.png' alt='fred' class='img--responsive ' />
-            </div>
-            <div class='grid__item col-2-3 col--q-small'>
+        </div>
+    </div>
+    <div class='block--white'>
+        <div class='grid-container pt-xl pb-xl'>
+            <div class='grid grid--middle'>
+                <div class='grid__item col-1-4'>
+                    image here
+                </div>
+                <div class='grid__item col-3-4 '>
+                    <div class='block--stacked block-m'>
+                        <h3 class='intro'>Why use Fred's closet?</h3>
+                            <ul class='list-styled intro' >
+                                <li>
+                                    Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
+                                </li>
+                                <li>
+                                    Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code. ";
+        // line 40
+        echo "
+                                </li>
+                                <li>
+                                    Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.
+                                </li>
+                                <li>
+                                    It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns.
 
-                <div class='block--stacked block-m '>
-                    <h3 class='font-primary--light'>
-                        How it works
-                    </h3>
-                    <p class='intro'>
-                        So that Fred's closest doesn't get messy. Fred has kindly seperated his closest into a few different sections. These are as follows:
-                    </p>
-                    <p class='font-primary--bold'>
-                        Colours:
-                    </p>
-                    <p class=' '>
-                        A place to document the main colors used on your project's site.
-                    </p>
-                    <p class='font-primary--bold'>
-                        Typography:
-                    </p>
-                    <p class=' '>
-                        A place to document the font-stacks used on your project's site as well as test the heirarchy
-                    </p>
-                    <p class='font-primary--bold'>
-                        Flego blocks
-                    </p>
-                    <p class=' '>
-                         A place for common HTML elements.
-                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                  
+    ";
+        // line 59
+        echo "                    
+                  
+                </div>
+
+                <div class='grid__item col'>
+                    <hr class='mt-xl mb-xl'/>
+                </div>
+               
+                <div class='grid__item col-3-4 col--q-small'>
+
+                    <div class='block--stacked block-m '>
+                        <h3 class='font-primary--light'>
+                            How it works ?
+                        </h3>
+                        <p class='intro'>
+                            So that Fred's closest doesn't get messy. Fred has kindly seperated his closest into a few different sections. These are as follows:
+                        </p>
+                        <p class='font-primary--bold'>
+                            Colours:
+                        </p>
+                        <p class=' '>
+                            A place to document the main colors used on your project's site.
+                        </p>
+                        <p class='font-primary--bold'>
+                            Typography:
+                        </p>
+                        <p class=' '>
+                            A place to document the font-stacks used on your project's site as well as test the heirarchy
+                        </p>
+                        <p class='font-primary--bold'>
+                            Flego blocks
+                        </p>
+                        <p class=' '>
+                             A place for common HTML elements.
+                        </p>
+                    </div>
+                </div>
+                 <div class='grid__item col-1-4 col--q-small'>
+                    <img src='assets/images/' alt='image here' class='img--responsive ' />
                 </div>
             </div>
         </div>
@@ -313,9 +327,9 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
                 <p class='uppercase small mb-s ml-m mr-m'>Text heirarchy</p>
                 <div class='block--white block--stacked block-m radius'>
                     ";
-        // line 291
+        // line 305
         $this->env->loadTemplate("typography.twig")->display($context);
-        // line 292
+        // line 306
         echo "                </div>
             </div>
         </div><!--grid  ends-->
@@ -350,6 +364,6 @@ class __TwigTemplate_b80c0739f25278953547830ed1f69ab32b0c935a5f9f2102341fb05ff68
 
     public function getDebugInfo()
     {
-        return array (  319 => 292,  317 => 291,  68 => 44,  54 => 26,  31 => 4,  28 => 3,);
+        return array (  333 => 306,  331 => 305,  83 => 59,  68 => 40,  31 => 4,  28 => 3,);
     }
 }

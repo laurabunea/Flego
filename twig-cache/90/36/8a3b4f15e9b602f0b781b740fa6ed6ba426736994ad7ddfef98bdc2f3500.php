@@ -34,7 +34,7 @@ class __TwigTemplate_90368a3b4f15e9b602f0b781b740fa6ed6ba426736994ad7ddfef98bdc2
            <div class='grid__item col'>
                 <div class='block-m block--stacked'>
                     <h2 class='text-center font-primary--light'>
-                        Why make life harder when Fred can help :)
+                        Why make life harder when Fred can help out :)
                     </h2>
                 </div>
             </div> 
