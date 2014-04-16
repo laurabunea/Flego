@@ -4298,6 +4298,9 @@ hr {
     color: #fff; }
   .block--featured h1, .block--featured h2, .block--featured h3, .block--featured h4, .block--featured h5 {
     color: #fff; }
+  .block--featured a.btn {
+    background-color: #293F54;
+    color: #fff; }
 
 hr {
   margin: 0; }
