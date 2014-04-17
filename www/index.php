@@ -3,6 +3,13 @@ include_once __DIR__ . "/../init.php";
 
 $vars = array();
 
+$vars['fredsintro'] = array(
+    array(
+        "type" => "h1",
+        "data" => "Why make life harder when Fred can help out :) "
+    )
+);
+
 $vars['fredcontent'] = array(
     array(
         "type" => "h1",

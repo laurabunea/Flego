@@ -334,9 +334,6 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
-.block--primary, .block--secondary, .block--tertiary, .lego--heading, .block--white {
-  border-width: 1px;
-  border-style: solid; }
 
 /**
 ### Clearfixing
@@ -4312,30 +4309,6 @@ hr {
 
 .primary--border {
   border: 1px solid #37B67F; }
-
-.block--primary {
-  background-color: #fff;
-  color: #2F72BA;
-  border-color: #c4c4c4; }
-
-.block--secondary {
-  background-color: #293F54;
-  color: #fff;
-  border-color: #293F54; }
-
-.block--tertiary, .lego--heading {
-  background-color: #EDEDED;
-  color: #000;
-  border-color: #EDEDED; }
-
-.block--white {
-  background-color: #fff;
-  color: #000;
-  border-color: #fff; }
-  .block--white a {
-    color: #293F54; }
-  .block--white .btn {
-    color: #fff; }
 
 .i-gecko {
   background-image: url('/assets/images/square-gecko.png');

@@ -73,65 +73,6 @@ hr {
     border:1px solid $primary-color;
 }
 
-//primary 
-$primary-bg-color:              #fff;//#f7f7f7
-$primary-txt-color:             $base-link-color; 
-$primary-border-color:          #c4c4c4;
-
-//secondary 
-$secondary-bg-color:            #293F54;//#fff
-$secondary-txt-color:           #fff ; //$base-font-color
-$secondary-border-color:        #293F54;//#ccc
-
-//tertiary 
-$tertiary-bg-color:            #EDEDED;//#fff
-$tertiary-txt-color:           #000 ; //$base-font-color
-$tertiary-border-color:        #EDEDED;//#ccc
-
-
-//white 
-$white-bg-color:            #fff;//#fff
-$white-txt-color:           #000 ; //$base-font-color
-$white-border-color:        #fff;//#ccc
-
-//featured 
-$featured-bg-color:            #595959;//#fff
-$featured-txt-color:           #fff ; //$base-font-color
-$featured-border-color:        #595959;//#ccc
-
-
-//used in funding search
-
-
-.block--primary {
-    @extend %border;
-    @include theme-block( $primary-bg-color, $primary-txt-color, $primary-border-color );
-}
-
-.block--secondary {
-    @extend %border;
-    @include theme-block( $secondary-bg-color, $secondary-txt-color, $secondary-border-color );
-}
-
-.block--tertiary {
-    @extend %border;
-    @include theme-block( $tertiary-bg-color, $tertiary-txt-color, $tertiary-border-color );  
-}
-
-.block--white {
-    @extend %border;
-    @include theme-block( $white-bg-color, $white-txt-color, $white-border-color );  a {
-        color:#293F54;
-    }
-    .btn {
-        color:#fff;
-    }
-}
-
-//.block--featured {
-//    @extend %border;
- //   @include theme-block( $featured-bg-color, $featured-txt-color, $featured-border-color );
-//}
 
 
 
@@ -143,35 +84,40 @@ $featured-border-color:        #595959;//#ccc
 
 
 
-$primary-theme-color:             $;
-$primary-text-color:              $;
-$primary-link-color:              $;
-$primary-button-color:            $;
-$primary-button-text-color:       $;
+$primary-bg-color:                #fff;
+$primary-border-color:            #c4c4c4;
+$primary-text-color:              $base-link-color;
+$primary-link-color:              blue;
+$primary-button-color:            #293F54;
+$primary-button-text-color:       #fff;
 
-$secondary-theme-color:             $;
-$secondary-text-color:              $;
-$secondary-link-color:              $;
-$secondary-button-color:            $;
-$secondary-button-text-color:       $;
+$secondary-bg-color:              #293F54;
+$secondary-border-color:          #293F54;
+$secondary-text-color:            #fff;
+$secondary-link-color:            #fff;
+$secondary-button-color:          #fff;
+$secondary-button-text-color:     #293F54;
 
-$tertiary-theme-color:             $;
-$tertiary-text-color:              $;
-$tertiary-link-color:              $;
-$tertiary-button-color:            $;
-$tertiary-button-text-color:       $;
+$tertiary-bg-color:               #EDEDED;
+$tertiary-border-color:           #EDEDED;
+$tertiary-text-color:             #000;
+$tertiary-link-color:             #000;
+$tertiary-button-color:           #293F54;
+$tertiary-button-text-color:      #000;
 
-$featured-theme-color:             $;
-$featured-text-color:              $;
-$featured-link-color:              $;
-$featured-button-color:            $;
-$featured-button-text-color:       $;
+$featured-bg-color:               #37B67F;
+$featured-border-color:           #37B67F;
+$featured-text-color:             #fff;
+$featured-link-color:             #fff;
+$featured-button-color:           #fff;
+$featured-button-text-color:      #37B67F;
 
-$white-theme-color:             $;
-$white-text-color:              $;
-$white-link-color:              $;
-$white-button-color:            $;
-$white-button-text-color:       $;
+$white-bg-color:                  #fff;
+$white-border-color:              #fff;
+$white-text-color:                #000;
+$white-link-color:                #000;
+$white-button-color:              #37B67F;
+$white-button-text-color:         #000;
 
 //array of theme variables - the children of the array always need to be in the same order!
 $theme-names: 
@@ -181,119 +127,74 @@ $theme-names:
   featured,
   white;
 
-$primary-theme-color:
-  $television-primary-theme-color,
-  $tv-primary-theme-color, 
-  $music-primary-theme-color,
-  $radio-primary-theme-color,
-  $digital-primary-theme-color,
-  $featured-primary-theme-color;
+$bg-color:
+  $primary-bg-color,
+  $secondary-bg-color,
+  $tertiary-bg-color,
+  $featured-bg-color,
+  $white-bg-color;
 
-$category-text-color: 
-  $television-category-text-color,
-  $tv-category-text-color, 
-  $music-category-text-color,
-  $radio-category-text-color,
-  $digital-category-text-color,
-  $featured-category-text-color;
+$border-color: 
+  $primary-border-color,
+  $secondary-border-color,
+  $tertiary-border-color,
+  $featured-border-color,
+  $white-border-color;
 
-$featured-text-color:
-  $television-featured-text-color, 
-  $tv-featured-text-color, 
-  $music-featured-text-color,
-  $radio-featured-text-color,
-  $digital-featured-text-color,
-  $featured-featured-text-color;
+$text-color: 
+  $primary-text-color,
+  $secondary-text-color,
+  $tertiary-text-color,
+  $featured-text-color,
+  $white-text-color;
 
-$featured-link-color:
-  $television-featured-link-color,  
-  $tv-featured-link-color, 
-  $music-featured-link-color,
-  $radio-featured-link-color,
-  $digital-featured-link-color,
-  $featured-featured-link-color;
+$link-color: 
+  $primary-link-color,
+  $secondary-link-color,
+  $tertiary-link-color,
+  $featured-link-color,
+  $white-link-color;
 
-$gradient-start: 
-  $television-gradient-start,
-  $tv-gradient-start, 
-  $music-gradient-start,
-  $radio-gradient-start, 
-  $digital-gradient-start,
-  $featured-gradient-start;
+$button-color: 
+  $primary-button-color,
+  $secondary-button-color,
+  $tertiary-button-color,
+  $featured-button-color,
+  $white-button-color;
 
-$gradient-end: 
-  $television-gradient-end,
-  $tv-gradient-end, 
-  $music-gradient-end,
-  $radio-gradient-end, 
-  $digital-gradient-end,
-  $featured-gradient-end;
-
+$button-text-color: 
+  $primary-button-text-color,
+  $secondary-button-text-color,
+  $tertiary-button-text-color,
+  $featured-button-text-color,
+  $white-button-text-color;
 
 // Create a theme for each category
 @for $i from 1 through length($theme-names) {
     
-  .#{nth($theme-names, $i)}-block {
-      
-    color: nth($category-text-color, $i);
-      
-    h1,
-    .primary-theme, 
-    a  {
-      color:nth($primary-theme-color, $i);
+  .#{nth($theme-names, $i)}--block {
+    
+    @extend %border;  
+    color: nth($text-color, $i);
+    background-color: nth($bg-color, $i); 
+    
+    a {
+      color: nth($link-color, $i);
     }
     
-    .pointerEvents & a:hover {
-      border-bottom-color:nth($primary-theme-color, $i);
-      color:darken(nth($primary-theme-color, $i), 5%);
-    }
-
-    a.blank-theme {
-      color:$base-link-color;
-    }
-
-    .featured {
-      h1, 
-      h2,
-      p {
-        color:nth($featured-text-color, $i);
-      }
-      a {
-        color:nth($featured-link-color, $i);
-        &:hover {
-          border-bottom-color:nth($featured-link-color, $i);
-          color:nth($featured-link-color, $i);
-        }
-      }
+    //.pointerEvents & a:hover {
+    //  border-bottom-color:nth($link-color, $i);
+    //  color:darken(nth($link-color, $i), 5%);
+    //}
     
-    }
-    .tp-btn {
-      color:#fff;
-      background-color:nth($primary-theme-color, $i);
-      border-color:nth($primary-theme-color, $i);
+    .btn {
+      color: nth($button-text-color, $i);
+      background-color:nth($button-color, $i);
 
       &:hover {
-        background-color:darken(nth($primary-theme-color, $i), 5%);
-        border-color:darken(nth($primary-theme-color, $i), 5%);
-        margin-bottom:0;
-        color:#fff!important;
+        background-color:darken(nth($button-color, $i), 5%);
+        border-color:darken(nth($button-color, $i), 5%);
       }
-    }
-    
-    //dirty hack my bad will change
-    .pointerEvents & .primary-link-color {
-      color:$base-link-color;
-      &:hover {
-        border-bottom-color: $base-link-color;
-        color:darken($base-link-color, 5%);
-      }
-    }
-
-    .featured, 
-    hr {
-      background:nth($gradient-start, $i);
-      @include linear-gradient('to right', nth($gradient-start, $i), nth($gradient-end, $i));
-      
     }
 
   }
