@@ -1,8 +1,12 @@
+{% import "macros.twig" as macros %}
 <div class='grid'>  
     
     <div class='grid__item col{{data.colSize}}'>
         <div class='block-{{data.blockSize}} block--stacked {{ data.isStacked }}'>
-            <span class="tiny uppercase text-nowrap inline-block">
+           
+            {{ macros.blocks(data.article) }}
+            
+            {#<span class="tiny uppercase text-nowrap inline-block">
                 <a href="anchor here" >
                     {{data.article.category}}
                 </a>
@@ -15,15 +19,15 @@
                 {{ data.article.title }}
             </h3>
             <p>
-                {{ data.article.desc }}
+                {{ data.article }}
             </p>
-            {% if data.article.link %}
+            {% if data.article.label %}
                 <p>
-                    <a href='{{ data.article.linkAnchor }}'>
-                        {{ data.article.link }}
+                    <a href='{{ data.article.href }}'>
+                        {{ data.article.label }}
                     </a>
                 </p>
-            {% endif %}
+            {% endif %}#}
         </div><!--block ends-->
     </div><!-- grid item ends-->
     

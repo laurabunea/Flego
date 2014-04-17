@@ -3,25 +3,29 @@ include_once __DIR__ . "/../init.php";
 
 $vars = array();
 
-
-$vars['contentBlock'] = array(
+$vars['article'] = array(
     array(
         "type" => "h1",
-        "data" => "I'm a heading!"
+        "data" => "Article title"
     ),
     array(
-        "type" => "h2",
-        "data" => "I'm a heading 2!"
-    ),
+        "type" => "link",
+        "label" => "Read more",
+        "href" => "/clickme"
+    )
+);
+
+
+echo $twig->render('flego.twig', array('data' => $vars));
+/*,
     array(
         "type" => "media",
         "data" => array(
-            "I'm a heading!"
             "I'm a heading!",
             "I'm a heading!",
-        )
-    ),
-)
-
-
-echo $twig->render('flego.twig', array('data'=>$vars));
+            "I'm a heading!",
+        ),
+    array(
+        "data" => "A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know"
+    )
+    )*/

@@ -2,7 +2,7 @@
 
 {% block content %}
     
-    {{data.contentBlock}}
+    
 
     <!--**************************** 
     Dummy data will need to put this some where else as its anoying 
@@ -80,10 +80,8 @@
         'href':'/clickme'
     }, {
         'type':'button',
-        'data':[{
-            'label':'Click me', 
-            'anchor':'/clickme/'
-        }]
+        'label':'I am a button',
+        'href':'/clickme'
     }]
     %}
 
@@ -99,15 +97,15 @@
 #}
 
 
-    {% set article = {
-        'title':'Article title', 
+    {#{% set article = {
+    
         'date':'January 2013', 
         'category':'Television', 
-        'link':'Read more', 
-        'linkAnchor':'/clickme', 
-        'desc':'A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know.'
+
+        
         } 
-    %}
+    %}#}
+    
 
     {% set gallery2Items = [
         {
@@ -433,8 +431,9 @@
     <h3 class='lego--heading'>
         article.list.twig
     </h3>
+    
     {{ macros.lego('article.list', {
-        'article': article,
+        'article': data.article,
         'colSize':'', 
         'isStacked':'', 
         'headingSize': 'h4', 
