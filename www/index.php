@@ -36,4 +36,64 @@ $vars['fredimage'] = array(
               
 );
 
+$vars['flegocontent'] = array(
+    array(
+        "type" => "h1",
+        "data" => "Flego, the cool kids Lego "
+    ),
+    array(
+        "type" => "intro",
+        "data" => "Flego is built of Fred...."
+    ),
+    array(
+        "type" => "content",
+        "data" => array(
+            "The primary benefit of using design patterns is that we are not constantly re-inventing the wheel when coming up with the general functionality of a site. ",
+            "It encouraged a much more modular approach to development, the idea being that any pattern could be used anywhere on a template. "
+            )
+    ),
+    array(
+        "type" => "button",
+        "label" => "Read more about Flego",
+        "href" => "flego.php",
+    )
+);
+
+$vars['flegoimage'] = array(
+    array(
+        "type" => "image-responsive",
+        "alt" => "alt text",
+        "title" => "image title",
+        "src" => "assets/images/flego.png"
+    )
+              
+);
+
+$vars['fredsclosetcontent'] = array(
+    array(
+        "type" => "h1",
+        "data" => "Fred's Closet "
+    ),
+    array(
+        "type" => "intro",
+        "data" => "A place to store a sites dirty little secrets "
+    ),
+   
+    array(
+        "type" => "button",
+        "label" => "Read more about Fred's closet",
+        "href" => "/freds-closet.php",
+    )
+);
+
+$vars['fredsclosetimage'] = array(
+    array(
+        "type" => "image-responsive",
+        "alt" => "alt text",
+        "title" => "image title",
+        "src" => "assets/images/freds-closet.png"
+    )
+              
+);
+
 echo $twig->render('homepage.twig', array('siteClass' => '','data' => $vars));
