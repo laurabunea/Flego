@@ -1,6 +1,8 @@
 {% extends "template.twig" %}
 
 {% block content %}
+    
+    {{data.contentBlock}}
 
     <!--**************************** 
     Dummy data will need to put this some where else as its anoying 
@@ -69,16 +71,13 @@
     {% set storyBlock = [{
         'type':'h1',
         'data':'i am a heading'
-
     }, {
         'type':'intro',
         'data':["I am a para", "I am a second para"]
     }, {
         'type':'link',
-        'data':[{
-            'label':'Click me', 
-            'anchor':'/clickme/'
-        }]
+        'label':'im a label',
+        'href':'/clickme'
     }, {
         'type':'button',
         'data':[{

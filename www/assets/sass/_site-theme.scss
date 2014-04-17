@@ -132,3 +132,169 @@ $featured-border-color:        #595959;//#ccc
 //    @extend %border;
  //   @include theme-block( $featured-bg-color, $featured-txt-color, $featured-border-color );
 //}
+
+
+
+// Theme blocks
+// ----------------------------------------------------------------------------
+
+//there are two tv themes they print out the same colours but need 
+//to have different names potentially should have extended one ... :(
+
+
+
+$primary-theme-color:             $;
+$primary-text-color:              $;
+$primary-link-color:              $;
+$primary-button-color:            $;
+$primary-button-text-color:       $;
+
+$secondary-theme-color:             $;
+$secondary-text-color:              $;
+$secondary-link-color:              $;
+$secondary-button-color:            $;
+$secondary-button-text-color:       $;
+
+$tertiary-theme-color:             $;
+$tertiary-text-color:              $;
+$tertiary-link-color:              $;
+$tertiary-button-color:            $;
+$tertiary-button-text-color:       $;
+
+$featured-theme-color:             $;
+$featured-text-color:              $;
+$featured-link-color:              $;
+$featured-button-color:            $;
+$featured-button-text-color:       $;
+
+$white-theme-color:             $;
+$white-text-color:              $;
+$white-link-color:              $;
+$white-button-color:            $;
+$white-button-text-color:       $;
+
+//array of theme variables - the children of the array always need to be in the same order!
+$theme-names: 
+  primary,
+  secondary,
+  tertiary,
+  featured,
+  white;
+
+$primary-theme-color:
+  $television-primary-theme-color,
+  $tv-primary-theme-color, 
+  $music-primary-theme-color,
+  $radio-primary-theme-color,
+  $digital-primary-theme-color,
+  $featured-primary-theme-color;
+
+$category-text-color: 
+  $television-category-text-color,
+  $tv-category-text-color, 
+  $music-category-text-color,
+  $radio-category-text-color,
+  $digital-category-text-color,
+  $featured-category-text-color;
+
+$featured-text-color:
+  $television-featured-text-color, 
+  $tv-featured-text-color, 
+  $music-featured-text-color,
+  $radio-featured-text-color,
+  $digital-featured-text-color,
+  $featured-featured-text-color;
+
+$featured-link-color:
+  $television-featured-link-color,  
+  $tv-featured-link-color, 
+  $music-featured-link-color,
+  $radio-featured-link-color,
+  $digital-featured-link-color,
+  $featured-featured-link-color;
+
+$gradient-start: 
+  $television-gradient-start,
+  $tv-gradient-start, 
+  $music-gradient-start,
+  $radio-gradient-start, 
+  $digital-gradient-start,
+  $featured-gradient-start;
+
+$gradient-end: 
+  $television-gradient-end,
+  $tv-gradient-end, 
+  $music-gradient-end,
+  $radio-gradient-end, 
+  $digital-gradient-end,
+  $featured-gradient-end;
+
+
+// Create a theme for each category
+@for $i from 1 through length($theme-names) {
+    
+  .#{nth($theme-names, $i)}-block {
+      
+    color: nth($category-text-color, $i);
+      
+    h1,
+    .primary-theme, 
+    a  {
+      color:nth($primary-theme-color, $i);
+    }
+    
+    .pointerEvents & a:hover {
+      border-bottom-color:nth($primary-theme-color, $i);
+      color:darken(nth($primary-theme-color, $i), 5%);
+    }
+
+    a.blank-theme {
+      color:$base-link-color;
+    }
+
+    .featured {
+      h1, 
+      h2,
+      p {
+        color:nth($featured-text-color, $i);
+      }
+      a {
+        color:nth($featured-link-color, $i);
+        &:hover {
+          border-bottom-color:nth($featured-link-color, $i);
+          color:nth($featured-link-color, $i);
+        }
+      }
+    
+    }
+    .tp-btn {
+      color:#fff;
+      background-color:nth($primary-theme-color, $i);
+      border-color:nth($primary-theme-color, $i);
+
+      &:hover {
+        background-color:darken(nth($primary-theme-color, $i), 5%);
+        border-color:darken(nth($primary-theme-color, $i), 5%);
+        margin-bottom:0;
+        color:#fff!important;
+      }
+    }
+    
+    //dirty hack my bad will change
+    .pointerEvents & .primary-link-color {
+      color:$base-link-color;
+      &:hover {
+        border-bottom-color: $base-link-color;
+        color:darken($base-link-color, 5%);
+      }
+    }
+
+    .featured, 
+    hr {
+      background:nth($gradient-start, $i);
+      @include linear-gradient('to right', nth($gradient-start, $i), nth($gradient-end, $i));
+      
+    }
+
+  }
+}
