@@ -336,31 +336,10 @@
                        Content blocks 
     ********************************************************#}
     <h3 class='lego--heading'>
-         test 
+         content.block.twig 
     </h3>
     {{ macros.lego('content.block', { 
-        'content': contentBlock, 
-        'sidebar': [
-            {
-                type: "image",
-                src: "/some/image.png"
-            },
-            {
-                type: "image",
-                src: "/some/image.png"
-            },
-            {
-                type: "button",
-                href: "mcdonalds.co.nz/",
-                label: "Tasty food for you"
-            },
-            "Some random paragraph",
-            "Default is just a paragraph!",
-            {
-                type: "raw",
-                data: "<h4>Some literal html goes here</h4>"
-            }
-        ], 
+        'content': data.contentblock, 
         'isStackedTop': '',
         'colSizeHeading':'-3-4',
         'isStackedBottom':'',
