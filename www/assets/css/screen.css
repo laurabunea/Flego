@@ -334,7 +334,7 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
-.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary {
+.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary, .theme--success, .theme--warning, .theme--error {
   border-width: 1px;
   border-style: solid; }
 
@@ -4378,6 +4378,51 @@ hr {
     .theme--quaternary .btn:hover {
       background-color: #213243;
       border-color: #213243; }
+
+.theme--success {
+  color: #fff;
+  background-color: #4ab471;
+  border-color: #4ab471; }
+  .theme--success a {
+    color: #fff; }
+    .theme--success a:hover {
+      color: #e6e6e6; }
+  .theme--success .btn {
+    color: #4ab471;
+    background-color: #fff; }
+    .theme--success .btn:hover {
+      background-color: #f2f2f2;
+      border-color: #f2f2f2; }
+
+.theme--warning {
+  color: #fff;
+  background-color: #f3ae4e;
+  border-color: #f3ae4e; }
+  .theme--warning a {
+    color: #fff; }
+    .theme--warning a:hover {
+      color: #e6e6e6; }
+  .theme--warning .btn {
+    color: #f3ae4e;
+    background-color: #fff; }
+    .theme--warning .btn:hover {
+      background-color: #f2f2f2;
+      border-color: #f2f2f2; }
+
+.theme--error {
+  color: #fff;
+  background-color: #D96383;
+  border-color: #D96383; }
+  .theme--error a {
+    color: #fff; }
+    .theme--error a:hover {
+      color: #e6e6e6; }
+  .theme--error .btn {
+    color: #D96383;
+    background-color: #FFF; }
+    .theme--error .btn:hover {
+      background-color: #f2f2f2;
+      border-color: #f2f2f2; }
 
 .i-gecko {
   background-image: url('/assets/images/square-gecko.png');

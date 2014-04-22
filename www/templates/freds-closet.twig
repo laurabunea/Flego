@@ -85,14 +85,15 @@
 
 <!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
 <div class='theme--tertiary'>
-    <div class='grid-container pt-xxl pb-xxl' style='max-width:960px; margin-left:auto; margin-right:auto'>
+    <div class='grid-container--tb-xl' style='max-width:960px; margin-left:auto; margin-right:auto'>
         
         <div class='grid'>
             <div class='grid__item col'>
-                <h2 class='text-center font-primary--light mb-m pt-m'>
-                    Theme Colors
-                </h2>
-                
+                <div class='block-m block--stacked'>
+                    <h2 class='text-center font-primary--light'>
+                        Theme Colors
+                    </h2>
+                </div>
             </div>
         </div>
         <div class='grid'>
@@ -153,19 +154,65 @@
                     </div>
                 </div>
             </div><!--grid item ends-->
+            <div class='grid__item col-1-4 col-2-4--q-small '>
+                <div class='ml-xxs mr-xxs radius'>
+                    <div class='theme--success top--radius-s'>
+                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>
+                            A<a href=''>a</a>
+                        </h4>
+                    </div>
+                    <div class='theme--primary bottom--radius-s mb-s' >
+                        <p class='small uppercase text-center pt-m pb-m'>
+                            theme--success
+                        </p>
+                    </div>
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col-1-4 col-2-4--q-small '>
+                <div class='ml-xxs mr-xxs radius'>
+                    <div class='theme--warning top--radius-s'>
+                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>
+                            A<a href=''>a</a>
+                        </h4>
+                    </div>
+                    <div class='theme--primary bottom--radius-s mb-s' >
+                        <p class='small uppercase text-center pt-m pb-m'>
+                            theme--warning
+                        </p>
+                    </div>
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col-1-4 col-2-4--q-small '>
+                <div class='ml-xxs mr-xxs radius'>
+                    <div class='theme--error top--radius-s'>
+                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>
+                            A<a href=''>a</a>
+                        </h4>
+                    </div>
+                    <div class='theme--primary bottom--radius-s mb-s' >
+                        <p class='small uppercase text-center pt-m pb-m'>
+                            theme--error
+                        </p>
+                    </div>
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col-1-4 col-2-4--q-small '>
+                
+            </div><!--grid item ends-->
         </div><!--grid  ends-->
-      
     </div>
 </div>
+
 <div class='theme--secondary'>
-    <div class='grid-container pt-xxl pb-xxl' >
+    <div class='grid-container--tb-xl' >
         
         <div class='grid'>
             <div class='grid__item col'>
-                <h2 class='text-center font-primary--light pb-m pt-s'>
-                    Typography
-                </h2>
-     
+                <div class='block-m block--stacked'>
+                    <h2 class='text-center font-primary--light'>
+                        Typography
+                    </h2>
+                </div>
             </div>
             <div class='grid__item col-2-4 col--q-small'>
                 <div class='block-m block--stacked'>
@@ -281,19 +328,27 @@
                     </div><!--grid item ends-->
                 </div><!--grid  ends-->
             </div><!--grid item ends-->
-            <div class='grid__item col'>
-                <hr class='mt-m mb-m'/>
-                <p class='uppercase small mb-s ml-m mr-m'>Text heirarchy</p>
-                <div class='theme--primary block--stacked block-m radius'>
-                    {% include "typography.twig" %}
+        </div>
+    </div>
+    <div class='theme--tertiary'>
+        <div class='grid-container--tb-xl'>
+            <div class='grid'>
+                <div class='grid__item col'>
+                    <div class='block-m block--stacked'>
+                        <h2 class='text-center font-primary--light'>
+                            Text Heirarchy
+                        </h2>
+                    </div>
+                    <div class='theme--primary block--stacked block-m radius'>
+                        {% include "typography.twig" %}
+                    </div>
                 </div>
-            </div>
-        </div><!--grid  ends-->
-        
+            </div><!--grid  ends-->
+        </div>
     </div>
 </div>
 <div style='' class='block--secondary'>
-    <div class='grid-container pt-xxl pb-xxl' >
+    <div class='grid-container--tb-xl' >
         
         <div class='grid'>
             <div class='grid__item col'>

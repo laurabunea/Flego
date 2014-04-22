@@ -58,48 +58,49 @@
     <!-- end:js-support -->
 </head>
 <body class='{{siteClass}}'>
-{% block navigation %}
-<div class='grid-container block--white'>
-    <div class='grid'>
-    
-        <div class='grid__item col'>
-          <div class='pl-m left pt-xxs pb-xxs '>
-            <h1>
-              <span class='visually-hidden'>
-                <a href='/' class='clean-link'>Home</a>
-              </span>
-                <a href='/'><img class='' src='assets/images/logo.png' alt='Fred'/></a>
-            </h1>
-          </div>
-          <ul class='nav right clean-link-list'>
-     
-            <li class='hidden--q-small'>
-               <a href='http://springload.github.io/Fred.scss/#meet-fred-the-friendly-front-end-framework' class='block-m block--stacked inline-block {{data.isStacked}}'>
-                   Fred
-               </a> 
-            </li>  
-            <li class='hidden--q-small'>
-               <a href='/flego.php' class='block-m block--stacked inline-block {{data.isStacked}}'>
-                   Flego
-               </a> 
-            </li>
-            <li class='hidden--q-small'>
-               <a href='/freds-closet.php' class='block-m block--stacked inline-block {{data.isStacked}}'>
-                   Fred's closet
-               </a> 
-            </li> 
-      
-            <li class='visible--q-small hidden--q-large hidden--q-medium hidden--q-large hidden--q-xlarge'>
-              <a href='#anchor' class='block-m block--stacked inline-block'>
-                <i class='i i-menu inline-block'></i>
-              </a>
-            </li>
-          </ul>
-          
-        </div><!-- grid item ends-->
 
-    </div><!-- ends -->
-</div>
+{% block navigation %}
+  <div class='grid-container block--white'>
+      <div class='grid'>
+      
+          <div class='grid__item col'>
+            <div class='pl-m left pt-xxs pb-xxs '>
+              <h1>
+                <span class='visually-hidden'>
+                  <a href='/' class='clean-link'>Home</a>
+                </span>
+                  <a href='/'><img class='' src='assets/images/logo.png' alt='Fred'/></a>
+              </h1>
+            </div>
+            <ul class='nav right clean-link-list'>
+       
+              <li class='hidden--q-small'>
+                 <a href='http://springload.github.io/Fred.scss/#meet-fred-the-friendly-front-end-framework' class='block-m block--stacked inline-block {{data.isStacked}}'>
+                     Fred
+                 </a> 
+              </li>  
+              <li class='hidden--q-small'>
+                 <a href='/flego.php' class='block-m block--stacked inline-block {{data.isStacked}}'>
+                     Flego
+                 </a> 
+              </li>
+              <li class='hidden--q-small'>
+                 <a href='/freds-closet.php' class='block-m block--stacked inline-block {{data.isStacked}}'>
+                     Fred's closet
+                 </a> 
+              </li> 
+        
+              <li class='visible--q-small hidden--q-large hidden--q-medium hidden--q-large hidden--q-xlarge'>
+                <a href='#anchor' class='block-m block--stacked inline-block'>
+                  <i class='i i-menu inline-block'></i>
+                </a>
+              </li>
+            </ul>
+            
+          </div><!-- grid item ends-->
+
+      </div><!-- ends -->
+  </div>
 {% endblock %}
 <div class='content'>
     
@@ -108,15 +109,17 @@
     {% endblock %}
        
 </div><!--content ends-->
-<div class='theme--tertiary'>
-    <div class='grid-container'>
-        <div class='grid'>
-            <div class='grid__item col'>
-                <p class='block-m '>© Laura is awesome 2014</p>
-            </div>
-        </div>
-    </div>
-</div>
+{% block sitefooter %}
+  <div class='theme--tertiary'>
+      <div class='grid-container'>
+          <div class='grid'>
+              <div class='grid__item col'>
+                  <p class='block-m '>© Laura is awesome 2014</p>
+              </div>
+          </div>
+      </div>
+  </div>
+{% endblock %}
 
 <!-- scripts -->
 <script src="assets/js/site.js"></script>

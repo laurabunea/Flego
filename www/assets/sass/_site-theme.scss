@@ -81,64 +81,91 @@ $quaternary-link-color:            #fff;
 $quaternary-button-color:          #293F54;
 $quaternary-button-text-color:     #37B67F;
 
+$success-bg-color:              #4ab471;
+$success-border-color:          #4ab471;
+$success-text-color:            #fff;
+$success-link-color:            #fff;
+$success-button-color:          #fff;
+$success-button-text-color:     #4ab471;
 
+$warning-bg-color:              #f3ae4e;
+$warning-border-color:          #f3ae4e;
+$warning-text-color:            #fff;
+$warning-link-color:            #fff;
+$warning-button-color:          #fff;
+$warning-button-text-color:     #f3ae4e;
 
-//$featured-bg-color:               #37B67F;
-//$featured-border-color:           #37B67F;
-//$featured-text-color:             #fff;
-//$featured-link-color:             #fff;
-//$featured-button-color:           #fff;
-//$featured-button-text-color:      #37B67F;
+$error-bg-color:              #D96383;
+$error-border-color:          #D96383;
+$error-text-color:            #fff;
+$error-link-color:            #fff;
+$error-button-color:          #FFF;
+$error-button-text-color:     #D96383;
 
-//$white-bg-color:                  #fff;
-//$white-border-color:              #fff;
-//$white-text-color:                #000;
-//$white-link-color:                #000;
-//$white-button-color:              #37B67F;
-//$white-button-text-color:         #000;
 
 //array of theme variables - the children of the array always need to be in the same order!
 $theme-names: 
   primary,
   secondary,
   tertiary,
-  quaternary;
+  quaternary,
+  success,
+  warning,
+  error;
 
 $bg-color:
   $primary-bg-color,
   $secondary-bg-color,
   $tertiary-bg-color,
-  $quaternary-bg-color;
+  $quaternary-bg-color,
+  $success-bg-color,
+  $warning-bg-color,
+  $error-bg-color;
 
 $border-color: 
   $primary-border-color,
   $secondary-border-color,
   $tertiary-border-color,
-  $quaternary-border-color;
+  $quaternary-border-color,
+  $success-border-color,
+  $warning-border-color,
+  $error-border-color;
 
 $text-color: 
   $primary-text-color,
   $secondary-text-color,
   $tertiary-text-color,
-  $quaternary-text-color;
+  $quaternary-text-color,
+  $success-text-color,
+  $warning-text-color,
+  $error-text-color;
 
 $link-color: 
   $primary-link-color,
   $secondary-link-color,
   $tertiary-link-color,
-  $quaternary-link-color;
+  $quaternary-link-color,
+  $success-link-color,
+  $warning-link-color,
+  $error-link-color;
 
 $button-color: 
   $primary-button-color,
   $secondary-button-color,
   $tertiary-button-color,
-  $quaternary-button-color;
+  $quaternary-button-color,
+  $success-button-color,
+  $warning-button-color,
+  $error-button-color;
 
 $button-text-color: 
   $primary-button-text-color,
   $secondary-button-text-color,
   $tertiary-button-text-color,
-  $quaternary-button-text-color;
+  $quaternary-button-text-color,
+  $success-button-text-color,
+  $warning-button-text-color,
+  $error-button-text-color;
 
 // Create a theme for each category
 @for $i from 1 through length($theme-names) {
