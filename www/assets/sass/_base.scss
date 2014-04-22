@@ -1,0 +1,11 @@
+.grid-container {
+    @extend %center-element; 
+    max-width:960px;
+}
+
+.grid-container--tb-xl {
+    @extend .grid-container; 
+    @extend .pt-xl;
+    @extend .pb-xl;
+
+}

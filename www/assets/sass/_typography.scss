@@ -1,6 +1,32 @@
 body {
   font-family: $sans-serif-stack;
 }
+
+.font-secondary {
+    @include font($font-secondary, $primary-font-weight , normal);
+}
+    .font-secondary--light {
+      @include font($font-secondary-light, $primary-font-weight--light , normal);
+      .ie8 & {
+        font-family:$font-secondary-light;
+      }
+    }
+
+
+    .font-secondary--italic {
+        @include font($font-secondary-italic, $primary-font-weight , italic);
+        .ie8 & {
+            font-family:$font-secondary-italic;
+        }
+    }
+
+    .font-secondary--bold {
+        @include font($font-secondary-bold, $primary-font-weight--bold , normal);
+        .ie8 & {
+            font-family:$font-secondary-bold;
+        }
+    }
+
 /* custom font set up for this project as it needs to import too screen smart and non screen smart */
 
 .blockquote {
@@ -21,6 +47,12 @@ h4 {
   @extend .font-primary--bold;
 }
 
-p.intro {
+p.intro, 
+.intro p {
   line-height:$line-height-s;
+}
+
+//when intro is the parent ...
+.intro p {
+    @extend .font-size-s;
 }

@@ -1,6 +1,6 @@
 {% import "macros.twig" as macros %}
 
-<div class='grid'>
+<div class='grid {{data.centergrid}}'>
     <div class='grid__item {{data.mediaRight}}'>
         <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
             {{ macros.blocks(data.content) }}

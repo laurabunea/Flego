@@ -1,28 +1,20 @@
 {% extends "template.twig" %}
 
 {% block content %}
-<div class='block--tertiary'>
-    <div class='grid-container pt-xl pb-xl' > 
-        <div class='grid grid--middle'>
-           <div class='grid__item col-3-4 col--q-small'>
-                <div class='block-m block--stacked'>
-                    <h2 class='font-primary--light h1'>
-                        Fred's closet
-                    </h2>
-                    <p class='intro'> 
-
-                        Fred has so many skeletons in his closet that he can’t keep track of them all! Just like Fred, websites also have a lot of skeletons but have no closet to store them in.
-
-                        Fred’s Closet is the perfect hideaway to keep all those little secrets.
-                    </p> 
-                </div>       
-            </div>
-            <div class='grid__item col-1-4 col--q-small'>
-                <img src='assets/images/freds-closet.png' alt='fred' class='img--responsive center-element' />
-            </div>
+    <div class='theme--tertiary'>
+        <div class='grid-container--tb-xl' >
+            {{ macros.lego('content.media.reversed', {
+                'content': data.closetcontent, 
+                'image': data.closetimage, 
+                'isStacked':'',
+                'centergrid':'grid--middle',
+                'blockSize': 'm',
+                'mediaLeft':'col-1-3 col--q-small',
+                'mediaRight':'col-2-3 col--q-small'
+            }) }}
         </div>
-    </div>
-    <div class='block--white'>
+    </div><!--theme ends-->
+    <div class='theme--secondary'>
         <div class='grid-container pt-xl pb-xl'>
             <div class='grid grid--middle'>
                 <div class='grid__item col-1-4'>
@@ -31,38 +23,28 @@
                 <div class='grid__item col-3-4 '>
                     <div class='block--stacked block-m'>
                         <h3 class='font-primary--light'>Why use Fred's closet?</h3>
-                            <ul class='list-styled intro' >
-                                <li>
-                                    Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
-                                </li>
-                                <li>
-                                    Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code. {#make sense of this#}
+                        <ul class='list-styled intro' >
+                            <li>
+                                Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
+                            </li>
+                            <li>
+                                Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code. {#make sense of this#}
 
-                                </li>
-                                <li>
-                                    Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.
-                                </li>
-                                <li>
-                                    It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns.
+                            </li>
+                            <li>
+                                Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.
+                            </li>
+                            <li>
+                                It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns.
 
-                                </li>
-                            </ul>
-                        </div>
-                        
-                  
-    {#<p>
-                        These style guides and pattern libraries aren’t being published in an attempt to provide ready-made solutions—every project should have its own distinct pattern library. Instead, these pattern libraries are being published in a spirit of openness and sharing …a way of saying “Hey, this is what worked for us in these particular circumstances.”
-                    </p>
-                    <p>
-                        Every project is a learning experience and each front-end style guide gives us ideas about how to do the next one better.
-                    </p>#}
-                    
-                  
-                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--grid item ends-->
 
                 <div class='grid__item col'>
                     <hr class='mt-xl mb-xl'/>
-                </div>
+                </div><!--grid item ends-->
                
                 <div class='grid__item col-3-4 col--q-small'>
 
@@ -92,22 +74,23 @@
                              A place for common HTML elements.
                         </p>
                     </div>
-                </div>
+                </div><!--grid item ends-->
                  <div class='grid__item col-1-4 col--q-small'>
                     <img src='assets/images/' alt='image here' class='img--responsive ' />
-                </div>
-            </div>
+                </div><!--grid item ends-->
+            </div><!--grid  ends-->
         </div>
     </div>
-</div>
+
+
 <!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
-<div style='' class='block--secondary'>
+<div class='theme--tertiary'>
     <div class='grid-container pt-xxl pb-xxl' style='max-width:960px; margin-left:auto; margin-right:auto'>
         
         <div class='grid'>
             <div class='grid__item col'>
                 <h2 class='text-center font-primary--light mb-m pt-m'>
-                    Colors
+                    Theme Colors
                 </h2>
                 
             </div>
@@ -115,57 +98,57 @@
         <div class='grid'>
             <div class='grid__item col-1-4 col-2-4--q-small'>
                 <div class='ml-xxs mr-xxs radius'>
-                    <div class='block--primary top--radius-s'>
+                    <div class='theme--primary top--radius-s'>
                         <h4 class='font-primary--light pt-m pb-m text-center h2'>
                             A<a href=''>a</a>
                         </h4>
 
                     </div>
-                    <div class='block--white bottom--radius-s mb-s'>
+                    <div class='theme--primary bottom--radius-s mb-s'>
                         <p class='small uppercase text-center pt-m pb-m'>
-                            block--primary
+                            theme--primary
                         </p>
                     </div>
                 </div>
             </div>
             <div class='grid__item col-1-4 col-2-4--q-small'>
                 <div class='ml-xxs mr-xxs '>
-                    <div class='block--secondary top--radius-s'>
+                    <div class='theme--secondary top--radius-s'>
                         <h4 class='font-primary--italic pt-m pb-m text-center h2'>
                             A<a href=''>a</a>
                         </h4>
                     </div>
-                    <div class='block--white bottom--radius-s mb-s'>
+                    <div class='theme--primary bottom--radius-s mb-s'>
                         <p class='small uppercase text-center pt-m pb-m'>
-                            block--secondary
+                            theme--secondary
                         </p>
                     </div>
                 </div>
             </div>
             <div class='grid__item col-1-4 col-2-4--q-small'>
                 <div class='ml-xxs mr-xxs '>
-                    <div class='block--tertiary top--radius-s'>
+                    <div class='theme--tertiary top--radius-s'>
                         <h4 class='pt-m pb-m text-center h2'>
                             A<a href=''>a</a>
                         </h4>
                     </div>
-                    <div class='block--white bottom--radius-s mb-s'>
+                    <div class='theme--primary bottom--radius-s mb-s'>
                         <p class='small uppercase text-center pt-m pb-m'>
-                            block--tertiary
+                            theme--tertiary
                         </p>
                     </div>
                 </div>
             </div>
             <div class='grid__item col-1-4 col-2-4--q-small '>
                 <div class='ml-xxs mr-xxs radius'>
-                    <div class='block--featured top--radius-s'>
+                    <div class='theme--quaternary top--radius-s'>
                         <h4 class='font-primary--bold pt-m pb-m text-center h2'>
                             A<a href=''>a</a>
                         </h4>
                     </div>
-                    <div class='block--white bottom--radius-s mb-s' >
+                    <div class='theme--primary bottom--radius-s mb-s' >
                         <p class='small uppercase text-center pt-m pb-m'>
-                            block--featured
+                            theme--quaternary
                         </p>
                     </div>
                 </div>
@@ -174,7 +157,7 @@
       
     </div>
 </div>
-<div class='block--tertiary'>
+<div class='theme--secondary'>
     <div class='grid-container pt-xxl pb-xxl' >
         
         <div class='grid'>
@@ -199,40 +182,40 @@
                 <div class='grid'>
                     <div class='grid__item col-1-4 '>
                         <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
+                            <div class='theme--primary top--radius-s'>
                                 <h4 class='font-primary--light pt-m pb-m text-center h2'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s'>
+                            <div class='theme--tertiary bottom--radius-s'>
                                 <p class='small uppercase text-center pt-m pb-m'>Light</p>
                             </div>
                         </div>
                     </div>
                     <div class='grid__item col-1-4'>
                         <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
+                            <div class='theme--primary top--radius-s'>
                                 <h4 class='font-primary--italic pt-m pb-m text-center h2'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s'>
+                            <div class='theme--tertiary bottom--radius-s'>
                                 <p class='small uppercase text-center pt-m pb-m'>Italic</p>
                             </div>
                         </div>
                     </div>
                     <div class='grid__item col-1-4'>
                         <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
+                            <div class='theme--primary top--radius-s'>
                                 <h4 class='pt-m pb-m text-center h2'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s'>
+                            <div class='theme--tertiary bottom--radius-s'>
                                 <p class='small uppercase text-center pt-m pb-m'>Regular</p>
                             </div>
                         </div>
                     </div>
                     <div class='grid__item col-1-4'>
                         <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
+                            <div class='theme--primary top--radius-s'>
                                 <h4 class='font-primary--bold pt-m pb-m text-center h2'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s' >
+                            <div class='theme--tertiary bottom--radius-s' >
                                 <p class='small uppercase text-center pt-m pb-m'>Bold</p>
                             </div>
                         </div>
@@ -246,10 +229,10 @@
             <div class='grid__item col-2-4 col--q-small'>
                 <div class='block-m block--stacked'>
                     <p class='small uppercase'>Font secondary:</p>
-                    <h3>
+                    <h3 class='font-secondary--bold'>
                        SourceSansPro
                     </h3>
-                    <p>
+                    <p class='font-secondary'>
                         The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. 
                     </p>
                 </div>
@@ -258,40 +241,40 @@
                 <div class='grid'>
                     <div class='grid__item col-1-4'>
                         <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--light pt-m pb-m text-center h2'>Aa</h4>
+                            <div class='theme--primary top--radius-s'>
+                                <h4 class='font-secondary--light pt-m pb-m text-center h2'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s'>
+                            <div class='theme--tertiary bottom--radius-s'>
                                 <p class='small uppercase text-center pt-m pb-m'>Light</p>
                             </div>
                         </div>
                     </div>
                     <div class='grid__item col-1-4'>
                         <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--italic pt-m pb-m text-center h2'>Aa</h4>
+                            <div class='theme--primary top--radius-s'>
+                                <h4 class='font-secondary--italic pt-m pb-m text-center h2'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s'>
+                            <div class='theme--tertiary bottom--radius-s'>
                                 <p class='small uppercase text-center pt-m pb-m'>Italic</p>
                             </div>
                         </div>
                     </div>
                     <div class='grid__item col-1-4'>
                         <div class='ml-xxs mr-xxs '>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='pt-m pb-m text-center h2'>Aa</h4>
+                            <div class='theme--primary top--radius-s '>
+                                <h4 class='pt-m pb-m text-center h2 font-secondary'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Regular</p>
+                            <div class='theme--tertiary bottom--radius-s'>
+                                <p class='small uppercase text-center pt-m pb-m' >Regular</p>
                             </div>
                         </div>
                     </div>
                     <div class='grid__item col-1-4'>
                         <div class='ml-xxs mr-xxs radius'>
-                            <div class='block--white top--radius-s'>
-                                <h4 class='font-primary--bold pt-m pb-m text-center h2'>Aa</h4>
+                            <div class='theme--primary top--radius-s'>
+                                <h4 class='font-secondary--bold pt-m pb-m text-center h2'>Aa</h4>
                             </div>
-                            <div class='block--secondary bottom--radius-s' >
+                            <div class='theme--tertiary bottom--radius-s' >
                                 <p class='small uppercase text-center pt-m pb-m'>Bold</p>
                             </div>
                         </div>
@@ -301,7 +284,7 @@
             <div class='grid__item col'>
                 <hr class='mt-m mb-m'/>
                 <p class='uppercase small mb-s ml-m mr-m'>Text heirarchy</p>
-                <div class='block--white block--stacked block-m radius'>
+                <div class='theme--primary block--stacked block-m radius'>
                     {% include "typography.twig" %}
                 </div>
             </div>

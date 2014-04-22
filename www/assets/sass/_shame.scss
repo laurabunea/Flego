@@ -12,7 +12,7 @@
         @extend .text-muted;
         @extend .uppercase;
         @extend .font-primary--light;
-        @extend .block--tertiary;
+        @extend .theme--secondary;
     }
 
 //change to use vendor mixin
@@ -68,7 +68,9 @@ label {
         border-color:darken($primary-color, 10%);
     } 
 }
-
+.intro p:first-child {
+    margin-top:$bs-s;
+}
 /*barchart */
 .barchart {
     background-color:#efefef;
@@ -81,3 +83,5 @@ label {
 .white-bg {
     background-color:#fff;
 }
+
+

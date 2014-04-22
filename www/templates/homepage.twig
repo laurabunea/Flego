@@ -1,22 +1,19 @@
 {% extends "template.twig" %}
 
 {% block content %}
-    <div class='block--secondary'>
-        <div class='grid-container pt-xl pb-xl' > 
-            <div class='grid'>
-               <div class='grid__item col'>
-                    <div class='block-m block--stacked'>
-                        <h2 class='text-center font-primary--light'>
-                            Why make life harder when Fred can help out :)
-                        </h2>
-                    </div>
-                </div> 
-            </div>
+    <div class='theme--tertiary'>
+        <div class='grid-container--tb-xl' >
+            {{ macros.lego('content.intro', {
+                'content': data.fredsintro,
+                'isStacked':'',
+                'blockSize': 'm text-center',
+                'colSize': ''
+            }) }}
         </div>
     </div>
 
-    <div class='block--white'>
-        <div class='grid-container pt-xl pb-xl' >
+    <div class='theme--primary'>
+        <div class='grid-container--tb-xl' >
             {{ macros.lego('content.media', {
                 'content': data.fredcontent, 
                 'image': data.fredimage, 
@@ -28,8 +25,8 @@
         </div>
     </div><!-- block white ends-->
 
-    <div class='block--featured'>
-        <div class='grid-container pt-xl pb-xl'>
+    <div class='theme--quaternary'>
+        <div class='grid-container--tb-xl'>
             {{ macros.lego('content.media.reversed', {
                 'content': data.flegocontent, 
                 'image': data.flegoimage, 
@@ -41,8 +38,8 @@
         </div>
     </div><!--block featured ends-->
 
-    <div class='block--white'>
-        <div class='grid-container pt-xl pb-xl' > 
+    <div class='theme--primary'>
+        <div class='grid-container--tb-xl' > 
             {{ macros.lego('content.media', {
                 'content': data.fredsclosetcontent, 
                 'image': data.fredsclosetimage, 

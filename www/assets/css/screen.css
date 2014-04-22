@@ -282,7 +282,7 @@ table {
   top: 0;
   right: 0; }
 
-.arrow--center .arrow, .grid-container {
+.arrow--center .arrow, .grid-container, .grid-container--tb-xl {
   margin-left: auto;
   margin-right: auto; }
 
@@ -334,6 +334,9 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
+.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary {
+  border-width: 1px;
+  border-style: solid; }
 
 /**
 ### Clearfixing
@@ -3296,7 +3299,7 @@ This box will be a square
 .pt-l {
   padding-top: 2.25em; }
 
-.pt-xl {
+.pt-xl, .grid-container--tb-xl {
   padding-top: 3em; }
 
 .pt-xxl {
@@ -3326,7 +3329,7 @@ This box will be a square
 .pb-l {
   padding-bottom: 2.25em; }
 
-.pb-xl {
+.pb-xl, .grid-container--tb-xl {
   padding-bottom: 3em; }
 
 .pb-xxl {
@@ -3840,7 +3843,7 @@ html, body {
   font-size: 20px;
   font-size: 1.25rem; }
 
-.font-size-s, h6, .h6, .intro {
+.font-size-s, h6, .h6, .intro, .intro p {
   font-size: 18px;
   font-size: 1.125rem; }
 
@@ -3894,7 +3897,7 @@ h5, .h5 {
   margin-top: 1.2em; }
 
 h6, .h6 {
-  line-height: 1.2;
+  line-height: 1.25;
   margin-top: 1.33333em; }
 
 p, .text, li, code, dt, dd {
@@ -4198,12 +4201,9 @@ Try to use these on a limited basis and avoid creating entirely different versio
 .img--responsive {
   vertical-align: top; }
 
-.arrow--center .arrow, .grid-container {
+.arrow--center .arrow, .grid-container, .grid-container--tb-xl {
   margin-left: auto;
   margin-right: auto; }
-
-.grid-container {
-  max-width: 960px; }
 
 /* add a hide block for desktop down */
 .tl--radius-s, .ls--radius-s, .top--radius-s {
@@ -4265,14 +4265,39 @@ Try to use these on a limited basis and avoid creating entirely different versio
 body {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
+.font-secondary, h2 {
+  font-family: "georgia", serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.font-secondary--light {
+  font-family: "georgia", serif;
+  font-weight: 300;
+  font-style: normal; }
+  .ie8 .font-secondary--light {
+    font-family: "georgia", serif; }
+
+.font-secondary--italic {
+  font-family: "georgia", serif;
+  font-weight: 400;
+  font-style: italic; }
+  .ie8 .font-secondary--italic {
+    font-family: "georgia", serif; }
+
+.font-secondary--bold {
+  font-family: "georgia", serif;
+  font-weight: 600;
+  font-style: normal; }
+  .ie8 .font-secondary--bold {
+    font-family: "georgia", serif; }
+
 /* custom font set up for this project as it needs to import too screen smart and non screen smart */
 
 
 
 
-p.intro {
-  line-height: 1.2; }
-
+p.intro, .intro p {
+  line-height: 1.25; }
 
 
 
@@ -4288,27 +4313,71 @@ hr {
   background-color: #37B67F;
   color: #fff; }
 
-.block--featured {
-  background-color: #37B67F;
-  color: #fff; }
-  .block--featured a {
-    color: #fff; }
-  .block--featured h1, .block--featured h2, .block--featured h3, .block--featured h4, .block--featured h5 {
-    color: #fff; }
-  .block--featured .btn {
-    background-color: #293F54;
-    color: #37B67F; }
-
 hr {
   margin: 0; }
 
-.block--color {
-  background-color: #37B67F;
-  color: #fff;
-  border-color: #37B67F; }
-
 .primary--border {
   border: 1px solid #37B67F; }
+
+.theme--primary {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff; }
+  .theme--primary a {
+    color: #000; }
+    .theme--primary a:hover {
+      color: black; }
+  .theme--primary .btn {
+    color: #000;
+    background-color: #37B67F; }
+    .theme--primary .btn:hover {
+      background-color: #31a271;
+      border-color: #31a271; }
+
+.theme--secondary, .lego--heading {
+  color: #000;
+  background-color: #EDEDED;
+  border-color: #EDEDED; }
+  .theme--secondary a, .theme--secondary .lego--heading {
+    color: #000; }
+    .theme--secondary a:hover, .theme--secondary .lego--heading {
+      color: black; }
+  .theme--secondary .btn, .theme--secondary .lego--heading {
+    color: #000;
+    background-color: #293F54; }
+    .theme--secondary .btn:hover, .theme--secondary .lego--heading {
+      background-color: #213243;
+      border-color: #213243; }
+
+.theme--tertiary {
+  color: #fff;
+  background-color: #293F54;
+  border-color: #293F54; }
+  .theme--tertiary a {
+    color: #fff; }
+    .theme--tertiary a:hover {
+      color: #e6e6e6; }
+  .theme--tertiary .btn {
+    color: #293F54;
+    background-color: #fff; }
+    .theme--tertiary .btn:hover {
+      background-color: #f2f2f2;
+      border-color: #f2f2f2; }
+
+.theme--quaternary {
+  color: #fff;
+  background-color: #37B67F;
+  border-color: #37B67F; }
+  .theme--quaternary a {
+    color: #fff; }
+    .theme--quaternary a:hover {
+      color: #e6e6e6; }
+  .theme--quaternary .btn {
+    color: #37B67F;
+    background-color: #293F54; }
+    .theme--quaternary .btn:hover {
+      background-color: #213243;
+      border-color: #213243; }
 
 .i-gecko {
   background-image: url('/assets/images/square-gecko.png');
@@ -4366,6 +4435,9 @@ label {
     color: #fff;
     border-color: #2b8f64; }
 
+.intro p:first-child {
+  margin-top: 1em; }
+
 /*barchart */
 .barchart {
   background-color: #efefef;
@@ -4376,3 +4448,7 @@ label {
 
 .white-bg {
   background-color: #fff; }
+
+.grid-container, .grid-container--tb-xl {
+  max-width: 960px; }
+

@@ -1,23 +1,16 @@
+{% import "macros.twig" as macros %}
 <div class='grid'>
     
     <div class='grid__item col{{data.colSizeHeading}} '>
         <div class='block-{{data.blockSize}} block--stacked {{data.isStackedTop}}'>
-            <h1 class='font-primary--light'>
-                {% if data.content.strapline %}
-                    {{ data.content.strapline }}
-                {% else %}
-                    {{ data.content.title }}
-                {% endif %}
-            </h1>
+            {{ macros.blocks(data.content) }}
         </div><!--block ends-->
     </div><!-- grid item ends-->
     
-    {% if data.content.intro %}
+    {% if data.intro %}
         <div class='grid__item col '>
             <div class='block-{{data.blockSize}} block--stacked pt-0  {{data.isStackedBottom}}'>
-                <p class='intro'>
-                    {{ data.content.intro }}
-                </p>
+                {{ macros.blocks(data.intro) }}
             </div><!--block ends-->
         </div><!--grid item ends-->
     {% endif %}

@@ -17,8 +17,7 @@ $sans-serif-stack:              'SourceSansPro','Open Sans',sans-serif;
 $serif-stack:                   "georgia", serif;
 
 $font-primary:                   $sans-serif-stack;
-
-
+$font-secondary:                   $serif-stack;
 
 // These variables are used to describe the font-family you want to serve
 // to IE8 and other detestable browers that don't entirely support
@@ -33,6 +32,13 @@ $font-primary-bold-italic:       $sans-serif-stack;
 $primary-font-weight:                      400;
 $primary-font-weight--light:               300;
 $primary-font-weight--bold:                600;
+
+$font-secondary-light:             $serif-stack;
+$font-secondary-light-italic:      $serif-stack;    
+$font-secondary-italic:            $serif-stack;
+$font-secondary-bold:              $serif-stack;
+$font-secondary-bold-italic:       $serif-stack;
+
 
 // Specify some font sizes to get your project rolling. These are predominantly
 // used by _typography.scss and _forms.scss
@@ -56,7 +62,7 @@ $line-height-xxl:                 1.2;              //h2
 $line-height-xl:                  1.2;              //h3
 $line-height-l:                   1.33333333;       //h4
 $line-height-m:                   1.2;              //h5
-$line-height-s:                   1.2;              //h6 & .intro
+$line-height-s:                   1.25;              //h6 & .intro
 $line-height-xs:                  1.5;              //p
 $line-height-xxs:                 1.4;              //.small
 $line-height-xxxs:                1.4;              //.tiny

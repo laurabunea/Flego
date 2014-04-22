@@ -6,7 +6,7 @@ $vars = array();
 $vars['fredsintro'] = array(
     array(
         "type" => "h1",
-        "data" => "Why make life harder when Fred can help out :) "
+        "data" => "Why make life harder when Fred can help out :)"
     )
 );
 

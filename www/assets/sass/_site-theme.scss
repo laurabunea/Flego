@@ -11,18 +11,6 @@ $primary-color:#37B67F;
     }
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-   // @extend %primary-color
-}
-
-a {
-   // @extend %primary-link;
-}
 .bl--grey {
     border-left:1px solid #E6EBEB;
 }
@@ -39,34 +27,8 @@ hr {
 }
 
 
-.block--featured {
-    background-color:$primary-color; 
-    color:#fff;
-    a {
-        color:#fff;
-    }
-    h1, 
-    h2, 
-    h3, 
-    h4, 
-    h5 {
-        color:#fff;
-    }
-    .btn {
-        background-color:#293F54;
-        color:$primary-color;
-    }
-}
-
 hr {
     margin:0;
-}
-
-
-.block--color {
-    background-color:$primary-color;
-    color:#fff;
-    border-color:$primary-color;
 }
 
 .primary--border {
@@ -84,102 +46,115 @@ hr {
 
 
 
-$primary-bg-color:                #fff;
-$primary-border-color:            #c4c4c4;
-$primary-text-color:              $base-link-color;
-$primary-link-color:              blue;
-$primary-button-color:            #293F54;
-$primary-button-text-color:       #fff;
+//$primary-bg-color:                #fff;
+//$primary-border-color:            #c4c4c4;
+//$primary-text-color:              $base-link-color;
+//$primary-link-color:              blue;
+//$primary-button-color:            #293F54;
+//$primary-button-text-color:       #fff;
 
-$secondary-bg-color:              #293F54;
-$secondary-border-color:          #293F54;
-$secondary-text-color:            #fff;
-$secondary-link-color:            #fff;
-$secondary-button-color:          #fff;
-$secondary-button-text-color:     #293F54;
+$primary-bg-color:                  #fff;
+$primary-border-color:              #fff;
+$primary-text-color:                #000;
+$primary-link-color:                #000;
+$primary-button-color:              #37B67F;
+$primary-button-text-color:         #000;
 
-$tertiary-bg-color:               #EDEDED;
-$tertiary-border-color:           #EDEDED;
-$tertiary-text-color:             #000;
-$tertiary-link-color:             #000;
-$tertiary-button-color:           #293F54;
-$tertiary-button-text-color:      #000;
+$secondary-bg-color:               #EDEDED;
+$secondary-border-color:           #EDEDED;
+$secondary-text-color:             #000;
+$secondary-link-color:             #000;
+$secondary-button-color:           #293F54;
+$secondary-button-text-color:      #000;
 
-$featured-bg-color:               #37B67F;
-$featured-border-color:           #37B67F;
-$featured-text-color:             #fff;
-$featured-link-color:             #fff;
-$featured-button-color:           #fff;
-$featured-button-text-color:      #37B67F;
+$tertiary-bg-color:              #293F54;
+$tertiary-border-color:          #293F54;
+$tertiary-text-color:            #fff;
+$tertiary-link-color:            #fff;
+$tertiary-button-color:          #fff;
+$tertiary-button-text-color:     #293F54;
 
-$white-bg-color:                  #fff;
-$white-border-color:              #fff;
-$white-text-color:                #000;
-$white-link-color:                #000;
-$white-button-color:              #37B67F;
-$white-button-text-color:         #000;
+$quaternary-bg-color:              #37B67F;
+$quaternary-border-color:          #37B67F;
+$quaternary-text-color:            #fff;
+$quaternary-link-color:            #fff;
+$quaternary-button-color:          #293F54;
+$quaternary-button-text-color:     #37B67F;
+
+
+
+//$featured-bg-color:               #37B67F;
+//$featured-border-color:           #37B67F;
+//$featured-text-color:             #fff;
+//$featured-link-color:             #fff;
+//$featured-button-color:           #fff;
+//$featured-button-text-color:      #37B67F;
+
+//$white-bg-color:                  #fff;
+//$white-border-color:              #fff;
+//$white-text-color:                #000;
+//$white-link-color:                #000;
+//$white-button-color:              #37B67F;
+//$white-button-text-color:         #000;
 
 //array of theme variables - the children of the array always need to be in the same order!
 $theme-names: 
   primary,
   secondary,
   tertiary,
-  featured,
-  white;
+  quaternary;
 
 $bg-color:
   $primary-bg-color,
   $secondary-bg-color,
   $tertiary-bg-color,
-  $featured-bg-color,
-  $white-bg-color;
+  $quaternary-bg-color;
 
 $border-color: 
   $primary-border-color,
   $secondary-border-color,
   $tertiary-border-color,
-  $featured-border-color,
-  $white-border-color;
+  $quaternary-border-color;
 
 $text-color: 
   $primary-text-color,
   $secondary-text-color,
   $tertiary-text-color,
-  $featured-text-color,
-  $white-text-color;
+  $quaternary-text-color;
 
 $link-color: 
   $primary-link-color,
   $secondary-link-color,
   $tertiary-link-color,
-  $featured-link-color,
-  $white-link-color;
+  $quaternary-link-color;
 
 $button-color: 
   $primary-button-color,
   $secondary-button-color,
   $tertiary-button-color,
-  $featured-button-color,
-  $white-button-color;
+  $quaternary-button-color;
 
 $button-text-color: 
   $primary-button-text-color,
   $secondary-button-text-color,
   $tertiary-button-text-color,
-  $featured-button-text-color,
-  $white-button-text-color;
+  $quaternary-button-text-color;
 
 // Create a theme for each category
 @for $i from 1 through length($theme-names) {
     
-  .#{nth($theme-names, $i)}--block {
+  .theme--#{nth($theme-names, $i)} {
     
     @extend %border;  
     color: nth($text-color, $i);
     background-color: nth($bg-color, $i); 
-    
+    border-color:nth($border-color, $i); 
+
     a {
       color: nth($link-color, $i);
+      &:hover {
+        color: darken(nth($link-color, $i), 10%);
+      }
     }
     
     //.pointerEvents & a:hover {
