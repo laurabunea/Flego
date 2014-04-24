@@ -9,7 +9,7 @@
     {% endif %}
 
             <div class='grid'>
-                
+
                 <div class='grid__item {{data.mediaLeft}}'>
                     <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
                        {{ macros.blocks(data.image) }}
@@ -18,13 +18,11 @@
                 
                 <div class='grid__item {{data.mediaRight}}'>
                     <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
-
                         {{ macros.blocks(data.content) }}
-                       
                     </div><!--block ends-->
                 </div><!--grid item ends-->
                
-            </div><!-- ends -->
+            </div><!-- grid ends -->
 
     {% if data.gridContainer %}
         </div><!--grid container ends-->

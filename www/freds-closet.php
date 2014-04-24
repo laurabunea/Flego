@@ -23,4 +23,26 @@ $vars['closetimage'] = array(
     )
               
 );
+
+$vars['closet2content'] = array(
+    array(
+        "type" => "h2",
+        "data" => "Why use Fred's closet?",
+        "class" => "font-primary--light"
+    ),
+    
+      
+    "data" => "I am some text"
+    
+);
+
+$vars['closet2image'] = array(
+    array(
+        "type" => "image-responsive",
+        "alt" => "alt text",
+        "title" => "image title",
+        "src" => "assets/images/freds-closet.png"
+    )
+              
+);
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));
