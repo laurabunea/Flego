@@ -24,7 +24,7 @@
         'mediaRight':'col-3-4  col--q-small'
     }) }}
 
-           
+         <!--todo-->  
     <!--<ul class='list-styled intro' >
         <li>
             Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.
@@ -41,164 +41,69 @@
 
         </li>
     </ul>-->
-    
-                  
-    <div class=''>
-        <div class='grid-container'>
-            <div class='grid'>
-               
-                <div class='grid__item col-3-4 col--q-small'>
+    {{ macros.lego('content.media.reversed', {
+        'themeClass': 'theme--secondary', 
+        'gridContainer': 'grid-container--tb-xl', 
+        'content': data.closet3content, 
+        'image': data.closet3image, 
+        'centergrid':'grid--middle',
+        'blockSize': 'm',
+        'mediaLeft':'col-1-4 col--q-small',
+        'mediaRight':'col-3-4 col--q-small'
+    }) }}
+                         
 
-                    <div class='block--stacked block-m '>
-                        <h3 class='font-primary--light'>
-                            How it works ?
-                        </h3>
-                        <p class='intro'>
-                            So that Fred's closest doesn't get messy. Fred has kindly seperated his closest into a few different sections. These are as follows:
-                        </p>
-                        <p class='font-primary--bold'>
-                            Colours:
-                        </p>
-                        <p class=' '>
-                            A place to document the main colors used on your project's site.
-                        </p>
-                        <p class='font-primary--bold'>
-                            Typography:
-                        </p>
-                        <p class=' '>
-                            A place to document the font-stacks used on your project's site as well as test the heirarchy
-                        </p>
-                        <p class='font-primary--bold'>
-                            Flego blocks
-                        </p>
-                        <p class=' '>
-                             A place for common HTML elements.
-                        </p>
-                    </div>
-                </div><!--grid item ends-->
-                 <div class='grid__item col-1-4 col--q-small'>
-                    <img src='assets/images/' alt='image here' class='img--responsive ' />
-                </div><!--grid item ends-->
-            </div><!--grid  ends-->
-        </div>
-    </div>
-
-
-<!-- i know the anchor shouldn't wrap everything but it will do for now :0 -->
 <div class='theme--tertiary'>
-    <div class='grid-container--tb-xl' style='max-width:960px; margin-left:auto; margin-right:auto'>
+    <div class='grid-container--tb-xl'>
         
-        <div class='grid'>
-            <div class='grid__item col'>
-                <div class='block-m block--stacked'>
-                    <h2 class='text-center font-primary--light'>
-                        Theme Colors
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div class='grid'>
-            <div class='grid__item col-1-4 col-2-4--q-small'>
-                <div class='ml-xxs mr-xxs radius'>
-                    <div class='theme--primary top--radius-s'>
-                        <h4 class='font-primary--light pt-m pb-m text-center h2'>
-                            A<a href=''>a</a>
-                        </h4>
+        {{ macros.lego('content.intro', {
+            'content': data.themecoloursintro, 
+            'blockSize': 'm'
+        }) }}
 
-                    </div>
-                    <div class='theme--primary bottom--radius-s mb-s'>
-                        <p class='small uppercase text-center pt-m pb-m'>
-                            theme--primary
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class='grid__item col-1-4 col-2-4--q-small'>
-                <div class='ml-xxs mr-xxs '>
-                    <div class='theme--secondary top--radius-s'>
-                        <h4 class='font-primary--italic pt-m pb-m text-center h2'>
-                            A<a href=''>a</a>
-                        </h4>
-                    </div>
-                    <div class='theme--primary bottom--radius-s mb-s'>
-                        <p class='small uppercase text-center pt-m pb-m'>
-                            theme--secondary
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class='grid__item col-1-4 col-2-4--q-small'>
-                <div class='ml-xxs mr-xxs '>
-                    <div class='theme--tertiary top--radius-s'>
-                        <h4 class='pt-m pb-m text-center h2'>
-                            A<a href=''>a</a>
-                        </h4>
-                    </div>
-                    <div class='theme--primary bottom--radius-s mb-s'>
-                        <p class='small uppercase text-center pt-m pb-m'>
-                            theme--tertiary
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class='grid'>
+            {{ macros.lego('pill', {
+                'content': data.themecolours1, 
+                'themeClass': 'theme--primary',
+                'colSize': 'col-1-4 col-2-4--q-small'
+            }) }}
+
+            
+            {{ macros.lego('pill', {
+                'content': data.themecolours2, 
+                'themeClass': 'theme--secondary',
+                'colSize': 'col-1-4 col-2-4--q-small'
+            }) }}
+
+            {{ macros.lego('pill', {
+                'content': data.themecolours3, 
+                'themeClass': 'theme--tertiary',
+                'colSize': 'col-1-4 col-2-4--q-small'
+            }) }}
+
+            {{ macros.lego('pill', {
+                'content': data.themecolours4, 
+                'themeClass': 'theme--quaternary',
+                'colSize': 'col-1-4 col-2-4--q-small'
+            }) }}
+
+            {{ macros.lego('pill', {
+                'content': data.themecolours5, 
+                'themeClass': 'theme--success',
+                'colSize': 'col-1-4 col-2-4--q-small'
+            }) }}
+            {{ macros.lego('pill', {
+                'content': data.themecolours6, 
+                'themeClass': 'theme--warning',
+                'colSize': 'col-1-4 col-2-4--q-small'
+            }) }}
+            {{ macros.lego('pill', {
+                'content': data.themecolours7, 
+                'themeClass': 'theme--error',
+                'colSize': 'col-1-4 col-2-4--q-small'
+            }) }}
+
             <div class='grid__item col-1-4 col-2-4--q-small '>
-                <div class='ml-xxs mr-xxs radius'>
-                    <div class='theme--quaternary top--radius-s'>
-                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>
-                            A<a href=''>a</a>
-                        </h4>
-                    </div>
-                    <div class='theme--primary bottom--radius-s mb-s' >
-                        <p class='small uppercase text-center pt-m pb-m'>
-                            theme--quaternary
-                        </p>
-                    </div>
-                </div>
-            </div><!--grid item ends-->
-            <div class='grid__item col-1-4 col-2-4--q-small '>
-                <div class='ml-xxs mr-xxs radius'>
-                    <div class='theme--success top--radius-s'>
-                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>
-                            A<a href=''>a</a>
-                        </h4>
-                    </div>
-                    <div class='theme--primary bottom--radius-s mb-s' >
-                        <p class='small uppercase text-center pt-m pb-m'>
-                            theme--success
-                        </p>
-                    </div>
-                </div>
-            </div><!--grid item ends-->
-            <div class='grid__item col-1-4 col-2-4--q-small '>
-                <div class='ml-xxs mr-xxs radius'>
-                    <div class='theme--warning top--radius-s'>
-                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>
-                            A<a href=''>a</a>
-                        </h4>
-                    </div>
-                    <div class='theme--primary bottom--radius-s mb-s' >
-                        <p class='small uppercase text-center pt-m pb-m'>
-                            theme--warning
-                        </p>
-                    </div>
-                </div>
-            </div><!--grid item ends-->
-            <div class='grid__item col-1-4 col-2-4--q-small '>
-                <div class='ml-xxs mr-xxs radius'>
-                    <div class='theme--error top--radius-s'>
-                        <h4 class='font-primary--bold pt-m pb-m text-center h2'>
-                            A<a href=''>a</a>
-                        </h4>
-                    </div>
-                    <div class='theme--primary bottom--radius-s mb-s' >
-                        <p class='small uppercase text-center pt-m pb-m'>
-                            theme--error
-                        </p>
-                    </div>
-                </div>
-            </div><!--grid item ends-->
-            <div class='grid__item col-1-4 col-2-4--q-small '>
-                
             </div><!--grid item ends-->
         </div><!--grid  ends-->
     </div>
@@ -341,7 +246,10 @@
                         </h2>
                     </div>
                     <div class='theme--primary block--stacked block-m radius'>
-                        {% include "typography.twig" %}
+                        {{ macros.lego('content.intro', {
+                            'gridContainer': 'grid-container--tb-xl', 
+                            'content': data.typography
+                        }) }}
                     </div>
                 </div>
             </div><!--grid  ends-->

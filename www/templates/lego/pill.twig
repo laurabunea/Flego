@@ -1,0 +1,15 @@
+{% import "macros.twig" as macros %}
+{% for item, value in data.content %}
+	<div class='grid__item {{data.colSize}}'>
+	    <div class='ml-xxs mr-xxs radius'>
+	        <div class='{{data.themeClass}} top--radius-s'>
+	            <h4 class='font-primary--light pt-m pb-m text-center h2'>
+	                A<a href=''>a</a>
+	            </h4>
+	        </div>
+	        <div class='theme--primary bottom--radius-s mb-s'>
+	            {{ macros.blocks(data.content) }}
+	        </div>
+	    </div>
+	</div>
+{% endfor %}
