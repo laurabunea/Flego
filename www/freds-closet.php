@@ -162,53 +162,72 @@ $vars['typography'] = array(
     )
 );
 
-$vars['themecolours1'] = array(
-    array(
-        "type" => "p",
-        "class" => "small uppercase text-center pt-m pb-m",
-        "data" => "theme--primary"
-    ),        
+
+$vars['themes'] = array(   
+    "primary",  
+    "secondary", 
+    "tertiary", 
+    "quaternary", 
+    "success", 
+    "warning", 
+    "error"      
 );
-$vars['themecolours2'] = array(
-    array(
-        "type" => "p",
-        "class" => "small uppercase text-center pt-m pb-m",
-        "data" => "theme--secondary"
-    ),        
+     
+$vars['fonts'] = array(   
+    "light",  
+    "italic", 
+    "regular", 
+    "bold"
 );
-$vars['themecolours3'] = array(
+
+/*$vars['fonts'] = array(   
+    "xxxs",  
+    "xxs", 
+    "xs", 
+    "s",
+    "m",
+    "l",
+    "xl",
+    "xxl",
+    "xxxl"
+);*/
+
+$vars['spacingUnits'] = array( 
     array(
-        "type" => "p",
-        "class" => "small uppercase text-center pt-m pb-m",
-        "data" => "theme--tertiary"
-    ),        
-);
-$vars['themecolours4'] = array(
+        "unit" => "xxxs",
+        "px" => "6"
+    ),
     array(
-        "type" => "p",
-        "class" => "small uppercase text-center pt-m pb-m",
-        "data" => "theme--quaternary"
-    ),        
-);
-$vars['themecolours5'] = array(
+        "unit" => "xxs",
+        "px" => "8"
+    ),
     array(
-        "type" => "p",
-        "class" => "small uppercase text-center pt-m pb-m",
-        "data" => "theme--success"
-    ),        
-);
-$vars['themecolours6'] = array(
+        "unit" => "xs",
+        "px" => "8"
+    ),
     array(
-        "type" => "p",
-        "class" => "small uppercase text-center pt-m pb-m",
-        "data" => "theme--warning"
-    ),        
-);
-$vars['themecolours7'] = array(
+        "unit" => "s",
+        "px" => "8"
+    ),
     array(
-        "type" => "p",
-        "class" => "small uppercase text-center pt-m pb-m",
-        "data" => "theme--error"
-    ),        
+        "unit" => "m",
+        "px" => "8"
+    ),
+    array(
+        "unit" => "l",
+        "px" => "8"
+    ),
+    array(
+        "unit" => "xl",
+        "px" => "48"
+    ),
+    array(
+        "unit" => "xxl",
+        "px" => "72"
+    ),
+    array(
+        "unit" => "xxxl",
+        "px" => "96"
+    )
 );
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));

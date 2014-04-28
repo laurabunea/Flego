@@ -1,0 +1,18 @@
+{% import "macros.twig" as macros %}
+    <div class='grid__item col-1-10'>
+        <div class='ml-xxs mr-xxs radius'>
+            <div class='theme--tertiary top--radius-s' >
+                <p class='small uppercase text-center pt-s pb-s'>
+                    -{{data.spacing.unit}}
+                </p>
+            </div>
+            <div class='theme--primary '>
+                <div class='text-center small pt-s pb-s'>
+                    {{data.spacing.px}}px
+                </div>
+            </div>
+            <div class='theme--quaternary bottom--radius-s'>
+                <div class='pt-{{data.spacing.unit}} text-center'></div>
+            </div> 
+        </div>
+    </div><!--grid item ends-->

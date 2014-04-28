@@ -62,46 +62,12 @@
         }) }}
 
         <div class='grid'>
-            {{ macros.lego('pill', {
-                'content': data.themecolours1, 
-                'themeClass': 'theme--primary',
-                'colSize': 'col-1-4 col-2-4--q-small'
-            }) }}
-
             
-            {{ macros.lego('pill', {
-                'content': data.themecolours2, 
-                'themeClass': 'theme--secondary',
-                'colSize': 'col-1-4 col-2-4--q-small'
-            }) }}
-
-            {{ macros.lego('pill', {
-                'content': data.themecolours3, 
-                'themeClass': 'theme--tertiary',
-                'colSize': 'col-1-4 col-2-4--q-small'
-            }) }}
-
-            {{ macros.lego('pill', {
-                'content': data.themecolours4, 
-                'themeClass': 'theme--quaternary',
-                'colSize': 'col-1-4 col-2-4--q-small'
-            }) }}
-
-            {{ macros.lego('pill', {
-                'content': data.themecolours5, 
-                'themeClass': 'theme--success',
-                'colSize': 'col-1-4 col-2-4--q-small'
-            }) }}
-            {{ macros.lego('pill', {
-                'content': data.themecolours6, 
-                'themeClass': 'theme--warning',
-                'colSize': 'col-1-4 col-2-4--q-small'
-            }) }}
-            {{ macros.lego('pill', {
-                'content': data.themecolours7, 
-                'themeClass': 'theme--error',
-                'colSize': 'col-1-4 col-2-4--q-small'
-            }) }}
+            {% for theme in data.themes %}
+                {{ macros.lego('theme.swatch', {
+                    'theme': theme
+                }) }}  
+            {% endfor %}
 
             <div class='grid__item col-1-4 col-2-4--q-small '>
             </div><!--grid item ends-->
@@ -133,46 +99,14 @@
             </div>
             <div class='grid__item col-2-4 col--q-small'>
                 <div class='grid'>
-                    <div class='grid__item col-1-4 '>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='theme--primary top--radius-s'>
-                                <h4 class='font-primary--light pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Light</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='theme--primary top--radius-s'>
-                                <h4 class='font-primary--italic pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Italic</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='theme--primary top--radius-s'>
-                                <h4 class='pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Regular</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='theme--primary top--radius-s'>
-                                <h4 class='font-primary--bold pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s' >
-                                <p class='small uppercase text-center pt-m pb-m'>Bold</p>
-                            </div>
-                        </div>
-                    </div><!--grid item ends-->
+                    
+                    {% for font in data.fonts %}
+                        {{ macros.lego('font.swatch', {
+                            'font': font,
+                            'type': 'primary'
+                        }) }}  
+                    {% endfor %} 
+
                 </div><!--grid  ends-->
             </div><!--grid item ends-->
 
@@ -192,46 +126,12 @@
             </div>
             <div class='grid__item col-2-4 col--q-small'>
                 <div class='grid'>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='theme--primary top--radius-s'>
-                                <h4 class='font-secondary--light pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Light</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='theme--primary top--radius-s'>
-                                <h4 class='font-secondary--italic pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m'>Italic</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs '>
-                            <div class='theme--primary top--radius-s '>
-                                <h4 class='pt-m pb-m text-center h2 font-secondary'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s'>
-                                <p class='small uppercase text-center pt-m pb-m' >Regular</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='grid__item col-1-4'>
-                        <div class='ml-xxs mr-xxs radius'>
-                            <div class='theme--primary top--radius-s'>
-                                <h4 class='font-secondary--bold pt-m pb-m text-center h2'>Aa</h4>
-                            </div>
-                            <div class='theme--tertiary bottom--radius-s' >
-                                <p class='small uppercase text-center pt-m pb-m'>Bold</p>
-                            </div>
-                        </div>
-                    </div><!--grid item ends-->
+                    {% for font in data.fonts %}
+                        {{ macros.lego('font.swatch', {
+                            'font': font,
+                            'type': 'secondary'
+                        }) }}  
+                    {% endfor %} 
                 </div><!--grid  ends-->
             </div><!--grid item ends-->
         </div>
@@ -268,7 +168,14 @@
                 </div>
                 <div class='grid__item col'>
                 <div class='grid'>
-                    <div class='grid__item col-1-10'>
+                    {% for unit in data.spacingUnits %}
+                        
+                        {{ macros.lego('spacing.swatch', {
+                            'spacing': unit
+                        }) }}  
+                       
+                    {% endfor %}
+                    {#<div class='grid__item col-1-10'>
                         <div class='ml-xxs mr-xxs radius'>
                             <div class='theme--tertiary top--radius-s' >
                                 <p class='small uppercase text-center pt-s pb-s'>
@@ -422,7 +329,7 @@
                         </div>
                     </div><!--grid item ends-->
                 </div><!--grid  ends-->
-            </div><!--grid item ends-->
+            </div><!--grid item ends-->#}
             </div>
           
         </div>
