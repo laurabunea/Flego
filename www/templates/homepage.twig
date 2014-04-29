@@ -1,42 +1,31 @@
 {% extends "template.twig" %}
 
 {% block content %}
-
+    
+    <!-- TODO look at content.intro -->
     {{ macros.lego('content.intro', {
-        'gridContainer': 'grid-container--tb-xl',
+        'gridContainer': 'grid-container-xl',
         'themeClass': 'theme--tertiary',
         'content': data.fredsintro,
-        'blockSize': 'm text-center',
+        'blockSize': 'm text-center'
     }) }}
 
     {{ macros.lego('content.media', {
-        'gridContainer': 'grid-container--tb-xl',
         'themeClass': 'theme--primary',
         'content': data.fredcontent,
-        'image': data.fredimage,
-        'blockSize': 'm',
-        'mediaLeft':'col-1-3 col--q-small',
-        'mediaRight':'col-2-3 col--q-small'
+        'image': data.fredimage
     }) }}
         
     {{ macros.lego('content.media.reversed', {
-        'gridContainer': 'grid-container--tb-xl',
         'themeClass': 'theme--quaternary',
         'content': data.flegocontent, 
-        'image': data.flegoimage,
-        'blockSize': 'm',
-        'mediaLeft':'col-1-3 col--q-small',
-        'mediaRight':'col-2-3 col--q-small'
+        'image': data.flegoimage
     }) }}
         
     {{ macros.lego('content.media', {
-        'gridContainer': 'grid-container--tb-xl',
         'themeClass': 'theme--primary',
         'content': data.fredsclosetcontent,
-        'image': data.fredsclosetimage,
-        'blockSize': 'm',
-        'mediaLeft':'col-1-3 col--q-small',
-        'mediaRight':'col-2-3 col--q-small'
+        'image': data.fredsclosetimage
     }) }}
 
 {% endblock %}

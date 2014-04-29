@@ -3,9 +3,8 @@
     max-width:960px;
 }
 
-.grid-container--tb-xl {
+.grid-container-xl {
     @extend .grid-container; 
     @extend .pt-xl;
     @extend .pb-xl;
-
 }

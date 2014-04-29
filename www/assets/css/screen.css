@@ -282,7 +282,7 @@ table {
   top: 0;
   right: 0; }
 
-.arrow--center .arrow, .grid-container, .grid-container--tb-xl {
+.arrow--center .arrow, .grid-container, .grid-container-xl {
   margin-left: auto;
   margin-right: auto; }
 
@@ -3299,7 +3299,7 @@ This box will be a square
 .pt-l {
   padding-top: 2.25em; }
 
-.pt-xl, .grid-container--tb-xl {
+.pt-xl, .grid-container-xl {
   padding-top: 3em; }
 
 .pt-xxl {
@@ -3329,7 +3329,7 @@ This box will be a square
 .pb-l {
   padding-bottom: 2.25em; }
 
-.pb-xl, .grid-container--tb-xl {
+.pb-xl, .grid-container-xl {
   padding-bottom: 3em; }
 
 .pb-xxl {
@@ -4201,7 +4201,7 @@ Try to use these on a limited basis and avoid creating entirely different versio
 .img--responsive {
   vertical-align: top; }
 
-.arrow--center .arrow, .grid-container, .grid-container--tb-xl {
+.arrow--center .arrow, .grid-container, .grid-container-xl {
   margin-left: auto;
   margin-right: auto; }
 
@@ -4494,6 +4494,6 @@ label {
 .white-bg {
   background-color: #fff; }
 
-.grid-container, .grid-container--tb-xl {
+.grid-container, .grid-container-xl {
   max-width: 960px; }
 

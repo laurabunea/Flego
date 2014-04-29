@@ -186,6 +186,48 @@ $vars['heirarchySection'] = array(
     )         
 );
 
+$vars['typographySection'] = array(
+    array(
+        "type" => "h2",
+        "class" => "font-primary--light text-center",
+        "data" => "Typography "
+    )       
+);
+    $vars['typographyPrimary'] = array(
+        array(
+            "type" => "p",
+            "class" => "small uppercase",
+            "data" => "Font primary:"
+        ),
+        array(
+            "type" => "h3",
+            "class" => "font-primary--bold",
+            "data" => "SourceSansPro"
+        )
+        ,array(
+            "type" => "p",
+            "class" => "font-secondary",
+            "data" => "The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. "
+        )          
+    );
+
+    $vars['typographySecondary'] = array(
+        array(
+            "type" => "p",
+            "class" => "small uppercase",
+            "data" => "Font secondary:"
+        ),
+        array(
+            "type" => "h3",
+            "class" => "font-primary--bold",
+            "data" => "SourceSansPro"
+        )
+        ,array(
+            "type" => "p",
+            "class" => "font-secondary",
+            "data" => "The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. "
+        )          
+    );
 $vars['typography'] = array(
     array(
         "type" => "h1",

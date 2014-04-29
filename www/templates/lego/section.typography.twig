@@ -1,0 +1,17 @@
+{% import "macros.twig" as macros %}
+    
+    <div class='grid__item col-2-4 col--q-small'>
+        {{ macros.lego('content.block', {
+            'content': data.content
+        }) }}
+    </div>
+    <div class='grid__item col-2-4 col--q-small'>
+        <div class='grid'>
+            {% for font in data.fonts %}
+                {{ macros.lego('swatch.font', {
+                    'font': font,
+                    'type': data.type
+                }) }}  
+            {% endfor %} 
+        </div><!--grid  ends-->
+    </div><!--grid item ends-->
