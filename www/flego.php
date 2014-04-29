@@ -85,6 +85,28 @@ $vars['mediaimage'] = array(
               
 );
 
+
+$vars['flegoContent'] = array(
+    array(
+        "type" => "h2",
+        "data" => "Flego, the cool kids lego ",
+        "class" => "font-primary--light"
+    ),
+     array(
+        "type" => "p",
+        "data" => "i am a p"
+    )       
+);
+
+$vars['flegoImage'] = array(
+    array(
+        "type" => "image-responsive",
+        "alt" => "Flego",
+        "title" => "felgo",
+        "src" => "assets/images/flego.png"
+        )           
+);
+
 echo $twig->render('flego.twig', array('data' => $vars));
 /*,
     array(

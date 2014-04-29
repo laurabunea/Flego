@@ -56,7 +56,8 @@ $vars['flegocontent'] = array(
         "type" => "content",
         "data" => array(
             "The primary benefit of using design patterns is that we are not constantly re-inventing the wheel when coming up with the general functionality of a site. ",
-            "It encouraged a much more modular approach to development, the idea being that any pattern could be used anywhere on a template. "
+            "It encouraged a much more modular approach to development, the idea being that any pattern could be used anywhere on a template. ",
+            "Flego is some dynamic building blocks to help your site get up and running fast. Once you recognise patterns you should delete repeated code and add it to the lego blocks"
             )
     ),
     array(

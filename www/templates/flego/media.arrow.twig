@@ -20,23 +20,24 @@
 {% endif %}
 
     {% if data.gridContainer %}
-        <div class='{{data.gridContainer}}'>
+        <div class='{{data.gridContainer}} {{data.arrow1}}'>
     {% endif %}
 
-            <div class='grid {{data.gridMiddle}}'>
+            <div class=' grid {{data.gridMiddle}}'>
                 <div class='grid__item {{data.mediaRight}}'>
                     <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
                         {{ macros.blocks(data.mediaRightData) }}
                     </div><!--block ends-->
                 </div><!--grid item ends-->
                 <div class='grid__item {{data.mediaLeft}}'>
-                    <div class='block-{{data.blockSize}} block--stacked {{data.paddingOverride}}'>
+                    <div class=' block-{{data.blockSize}} block--stacked {{data.paddingOverride}}'>
                        {{ macros.blocks(data.mediaLeftData) }}
                        
                     </div><!--block ends-->
                 </div><!-- grid item ends-->
+                
             </div><!-- ends -->
-
+<i class='arrow {{data.arrow2}}'></i>
     {% if data.gridContainer %}
         </div><!--grid container ends-->
     {% endif %}

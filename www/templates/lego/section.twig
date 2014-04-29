@@ -1,0 +1,23 @@
+{% import "macros.twig" as macros %}
+
+<div class='{{data.theme}}'>
+    <div class='grid-container-xl'>
+        
+        {{ macros.lego('content.intro', {
+            'content': data.setionIntro, 
+        }) }}
+
+        <div class='grid'>
+            
+            {% for item in data.items %}
+                {{ macros.lego('swatch.{{swatchName}}', {
+                    'theme': theme
+                }) }}  
+            {% endfor %}
+
+            <!--specify the extra grid item divs you need-->
+            <div class='grid__item col-1-4 col-2-4--q-small '>
+            </div><!--grid item ends-->
+        </div><!--grid ends-->
+    </div><!--grid container ends-->
+</div><!--theme ends-->

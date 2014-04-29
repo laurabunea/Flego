@@ -2,6 +2,12 @@
     {% include "lego/" ~ type ~ ".twig" ignore missing with { 'data': data } %} 
 {% endmacro %}
 
+
+{% macro flego(type, data) %}
+    {% include "flego/" ~ type ~ ".twig" ignore missing with { 'data': data } %} 
+{% endmacro %}
+
+
 {% macro blocks(data) %} 
 
     {% if data is iterable %}
