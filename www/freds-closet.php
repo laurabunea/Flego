@@ -2,7 +2,73 @@
 include_once __DIR__ . "/../init.php";
 
 $vars = array();
+$vars['themes'] = array(   
+    "primary",  
+    "secondary", 
+    "tertiary", 
+    "quaternary", 
+    "success", 
+    "warning", 
+    "error"      
+);
+     
+$vars['fonts'] = array(   
+    "light",  
+    "italic", 
+    "regular", 
+    "bold"
+);
 
+$vars['blocks'] = array(   
+    "xxxs",  
+    "xxs", 
+    "xs", 
+    "s",
+    "m",
+    "l",
+    "xl",
+    "xxl",
+    "xxxl"
+);
+
+$vars['spacingUnits'] = array( 
+    array(
+        "unit" => "xxxs",
+        "px" => "6px"
+    ),
+    array(
+        "unit" => "xxs",
+        "px" => "8"
+    ),
+    array(
+        "unit" => "xs",
+        "px" => "8"
+    ),
+    array(
+        "unit" => "s",
+        "px" => "8"
+    ),
+    array(
+        "unit" => "m",
+        "px" => "8"
+    ),
+    array(
+        "unit" => "l",
+        "px" => "8"
+    ),
+    array(
+        "unit" => "xl",
+        "px" => "48"
+    ),
+    array(
+        "unit" => "xxl",
+        "px" => "72"
+    ),
+    array(
+        "unit" => "xxxl",
+        "px" => "96"
+    )
+);
 $vars['closetcontent'] = array(
     array(
         "type" => "h1",
@@ -28,9 +94,8 @@ $vars['closet2content'] = array(
         "data" => "Why use Fred's closet?",
         "class" => "font-primary--light"
     ),
-    
       
-    "data" => "I am some text"
+    "data" => "Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.", "Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code", "Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.", "It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns."
     
 );
 
@@ -71,14 +136,56 @@ $vars['closet3image'] = array(
     )
               
 );
-$vars['themecoloursintro'] = array(
+
+$vars['themesSection'] = array(
     array(
         "type" => "h2",
         "class" => "font-primary--light text-center",
         "data" => "Theme Colors"
+    ),
+    array(
+        "type" => "intro",
+        "data" => "I am an intro para"
     )
               
 );
+
+$vars['spacingSection'] = array(
+    array(
+        "type" => "h2",
+        "class" => "font-primary--light text-center",
+        "data" => "Spacing helpers"
+    ),
+    array(
+        "type" => "intro",
+        "data" => "I am an intro para"
+    )          
+);
+$vars['blocksSection'] = array(
+    array(
+        "type" => "h2",
+        "class" => "font-primary--light text-center",
+        "data" => "Block helpers"
+    ),
+    array(
+        "type" => "intro",
+        "data" => "I am an intro para"
+    )
+              
+);
+
+$vars['heirarchySection'] = array(
+    array(
+        "type" => "h2",
+        "class" => "font-primary--light text-center",
+        "data" => "Text heirarchy"
+    ),
+    array(
+        "type" => "intro",
+        "data" => "I am an intro para"
+    )         
+);
+
 $vars['typography'] = array(
     array(
         "type" => "h1",
@@ -163,71 +270,5 @@ $vars['typography'] = array(
 );
 
 
-$vars['themes'] = array(   
-    "primary",  
-    "secondary", 
-    "tertiary", 
-    "quaternary", 
-    "success", 
-    "warning", 
-    "error"      
-);
-     
-$vars['fonts'] = array(   
-    "light",  
-    "italic", 
-    "regular", 
-    "bold"
-);
 
-/*$vars['fonts'] = array(   
-    "xxxs",  
-    "xxs", 
-    "xs", 
-    "s",
-    "m",
-    "l",
-    "xl",
-    "xxl",
-    "xxxl"
-);*/
-
-$vars['spacingUnits'] = array( 
-    array(
-        "unit" => "xxxs",
-        "px" => "6"
-    ),
-    array(
-        "unit" => "xxs",
-        "px" => "8"
-    ),
-    array(
-        "unit" => "xs",
-        "px" => "8"
-    ),
-    array(
-        "unit" => "s",
-        "px" => "8"
-    ),
-    array(
-        "unit" => "m",
-        "px" => "8"
-    ),
-    array(
-        "unit" => "l",
-        "px" => "8"
-    ),
-    array(
-        "unit" => "xl",
-        "px" => "48"
-    ),
-    array(
-        "unit" => "xxl",
-        "px" => "72"
-    ),
-    array(
-        "unit" => "xxxl",
-        "px" => "96"
-    )
-);
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));
