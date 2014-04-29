@@ -1,0 +1,43 @@
+{#
+    {{ macros.flego('panel', {
+        'blockSize': 'm', 
+        'close':true,
+        'radius':true,
+        'theme':'warning', 
+        'content':data.panel,
+        'buttonLabel':'Click me',
+        'buttonLink':'/clickme'
+    }) }}
+#}
+
+{% import "macros.twig" as macros %}
+
+<div class='grid'>
+    <div class='grid__item col'>
+        {% if data.theme %}
+        <div class='theme--{{data.theme}} {% if data.radius %}radius {% endif %}'>
+        {% endif %}
+            <div class='block-{{data.blockSize}} block--stacked'>
+                <div class='grid relative'>
+                    {% if data.close %}
+                    <span class='close absolute--top-right text-top'></span>
+                        {% endif %}
+                    <div class='grid__item col-3-4 col--q-small'>
+                        <div class='mr-m'>
+                            {{ macros.blocks(data.content) }}
+                        </div>
+                    </div><!--grid item ends-->
+                    
+                    <div class='grid__item col-1-4 col--q-small align--bottom'>
+                        <p>
+                            <a href='{{data.buttonLink}}' class='btn right col border-box mt-m--q-small'>{{data.buttonLabel}}</a>
+                        </p>
+                    </div><!--grid item ends-->
+
+                </div>
+            </div><!--block ends-->
+        {% if data.theme %}
+        </div>
+        {% endif %}
+    </div><!-- grid item ends-->
+</div><!-- grid ends -->

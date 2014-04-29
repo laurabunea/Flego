@@ -46,13 +46,6 @@ hr {
 
 
 
-//$primary-bg-color:                #fff;
-//$primary-border-color:            #c4c4c4;
-//$primary-text-color:              $base-link-color;
-//$primary-link-color:              blue;
-//$primary-button-color:            #293F54;
-//$primary-button-text-color:       #fff;
-
 $primary-bg-color:                  #fff;
 $primary-border-color:              #fff;
 $primary-text-color:                #000;
@@ -88,12 +81,12 @@ $success-link-color:            #fff;
 $success-button-color:          #fff;
 $success-button-text-color:     #4ab471;
 
-$warning-bg-color:              #f3ae4e;
+$warning-bg-color:              #fff;
 $warning-border-color:          #f3ae4e;
-$warning-text-color:            #fff;
+$warning-text-color:            #000;
 $warning-link-color:            #fff;
-$warning-button-color:          #fff;
-$warning-button-text-color:     #f3ae4e;
+$warning-button-color:          #f3ae4e;
+$warning-button-text-color:     #fff;
 
 $error-bg-color:              #D96383;
 $error-border-color:          #D96383;
@@ -192,7 +185,7 @@ $button-text-color:
     .btn {
       color: nth($button-text-color, $i);
       background-color:nth($button-color, $i);
-
+      border-color:nth($button-color, $i);
       &:hover {
         background-color:darken(nth($button-color, $i), 5%);
         border-color:darken(nth($button-color, $i), 5%);

@@ -334,7 +334,7 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
-.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary, .theme--success, .theme--warning, .theme--error {
+.theme--primary, .theme--secondary, .theme--tertiary, .lego--heading, .theme--quaternary, .theme--success, .theme--warning, .theme--error {
   border-width: 1px;
   border-style: solid; }
 
@@ -3982,7 +3982,7 @@ Also
 .text-right {
   text-align: right; }
 
-.text-center {
+.text-center, .lego--heading {
   text-align: center; }
 
 .text-nowrap {
@@ -4329,38 +4329,41 @@ hr {
       color: black; }
   .theme--primary .btn {
     color: #000;
-    background-color: #37B67F; }
+    background-color: #37B67F;
+    border-color: #37B67F; }
     .theme--primary .btn:hover {
       background-color: #31a271;
       border-color: #31a271; }
 
-.theme--secondary, .lego--heading {
+.theme--secondary {
   color: #000;
   background-color: #EDEDED;
   border-color: #EDEDED; }
-  .theme--secondary a, .theme--secondary .lego--heading {
+  .theme--secondary a {
     color: #000; }
-    .theme--secondary a:hover, .theme--secondary .lego--heading {
+    .theme--secondary a:hover {
       color: black; }
-  .theme--secondary .btn, .theme--secondary .lego--heading {
+  .theme--secondary .btn {
     color: #000;
-    background-color: #293F54; }
-    .theme--secondary .btn:hover, .theme--secondary .lego--heading {
+    background-color: #293F54;
+    border-color: #293F54; }
+    .theme--secondary .btn:hover {
       background-color: #213243;
       border-color: #213243; }
 
-.theme--tertiary {
+.theme--tertiary, .lego--heading {
   color: #fff;
   background-color: #293F54;
   border-color: #293F54; }
-  .theme--tertiary a {
+  .theme--tertiary a, .theme--tertiary .lego--heading {
     color: #fff; }
-    .theme--tertiary a:hover {
+    .theme--tertiary a:hover, .theme--tertiary .lego--heading {
       color: #e6e6e6; }
-  .theme--tertiary .btn {
+  .theme--tertiary .btn, .theme--tertiary .lego--heading {
     color: #293F54;
-    background-color: #fff; }
-    .theme--tertiary .btn:hover {
+    background-color: #fff;
+    border-color: #fff; }
+    .theme--tertiary .btn:hover, .theme--tertiary .lego--heading {
       background-color: #f2f2f2;
       border-color: #f2f2f2; }
 
@@ -4374,7 +4377,8 @@ hr {
       color: #e6e6e6; }
   .theme--quaternary .btn {
     color: #37B67F;
-    background-color: #293F54; }
+    background-color: #293F54;
+    border-color: #293F54; }
     .theme--quaternary .btn:hover {
       background-color: #213243;
       border-color: #213243; }
@@ -4389,25 +4393,27 @@ hr {
       color: #e6e6e6; }
   .theme--success .btn {
     color: #4ab471;
-    background-color: #fff; }
+    background-color: #fff;
+    border-color: #fff; }
     .theme--success .btn:hover {
       background-color: #f2f2f2;
       border-color: #f2f2f2; }
 
 .theme--warning {
-  color: #fff;
-  background-color: #f3ae4e;
+  color: #000;
+  background-color: #fff;
   border-color: #f3ae4e; }
   .theme--warning a {
     color: #fff; }
     .theme--warning a:hover {
       color: #e6e6e6; }
   .theme--warning .btn {
-    color: #f3ae4e;
-    background-color: #fff; }
+    color: #fff;
+    background-color: #f3ae4e;
+    border-color: #f3ae4e; }
     .theme--warning .btn:hover {
-      background-color: #f2f2f2;
-      border-color: #f2f2f2; }
+      background-color: #f1a036;
+      border-color: #f1a036; }
 
 .theme--error {
   color: #fff;
@@ -4419,7 +4425,8 @@ hr {
       color: #e6e6e6; }
   .theme--error .btn {
     color: #D96383;
-    background-color: #FFF; }
+    background-color: #FFF;
+    border-color: #FFF; }
     .theme--error .btn:hover {
       background-color: #f2f2f2;
       border-color: #f2f2f2; }
@@ -4470,16 +4477,6 @@ label {
 .bb-primary {
   border-bottom: 1px solid #ccc; }
 
-/*normally you would add a btn theme but becasue this is just a basic site i will just styel the btn class*/
-.btn {
-  background-color: #37B67F;
-  color: #fff;
-  border-color: #37B67F; }
-  .btn:hover {
-    background-color: #2b8f64;
-    color: #fff;
-    border-color: #2b8f64; }
-
 .intro p:first-child {
   margin-top: 1em; }
 
@@ -4528,7 +4525,7 @@ pre[class*="language-"] {
   -webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
   -moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
   box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-  border-left: 10px solid #358ccb;
+  border-left: 10px solid #37B67F;
   background-color: #fdfdfd;
   background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
   background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
