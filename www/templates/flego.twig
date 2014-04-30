@@ -15,9 +15,9 @@
 
     
 
-    {#******************************************************** 
+{#******************************************************** 
                        Panels
-    ********************************************************#}
+********************************************************#}
 
     <h3 class='lego--heading'>
         panel.twig
@@ -58,9 +58,9 @@
 
 
 
-    {#******************************************************** 
+{#******************************************************** 
                        Media blocks
-    ********************************************************#}
+********************************************************#}
     
     <h3 class='lego--heading'>
         media.twig
@@ -108,9 +108,9 @@
 
 
 
-    {#******************************************************** 
+{#******************************************************** 
                        title center
-    ********************************************************#}
+********************************************************#}
     <h3 class='lego--heading'>
         title.centered.twig
     </h3>
@@ -140,9 +140,9 @@
 
 
 
-    {#******************************************************** 
+{#******************************************************** 
                        Comments
-    ********************************************************#}
+********************************************************#}
 
     <h3 class='lego--heading'>
         comments.twig
@@ -188,7 +188,7 @@
 
 {#******************************************************** 
                        Bar chart
-    ********************************************************#}
+********************************************************#}
 
     <h3 class='lego--heading'>
         chart.bar.twig
@@ -213,6 +213,46 @@
                         'barchartDesc':'of all coupons printed are ever redeemed',
                         'barchartPercentage':'6',
                         'blockSize': 'm'
+                &rcub;) &rcub;&rcub;
+                </code>
+                </pre>
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+    </div><!-- grid ends -->
+
+{#******************************************************** 
+                       Forms
+********************************************************#}
+
+    <h3 class='lego--heading'>
+        forms.twig
+    </h3>
+    <div class='grid'>
+        <div class='grid__item col col--q-small'>
+            <div class='mb-m'>
+                    <form class='grid'>
+                    {% for key, form in data.formData %}
+                        {{ macros.flego('form', {
+                            'colSize':'col-2-4',
+                            'blockSize': 'm',
+                            'formData':form
+                        }) }}
+                    {% endfor %}
+                </form>
+            </div>
+        </div><!--grid item ends-->
+        <div class='grid__item col'>
+            <div class='block-m block--stacked pt-0'>
+                <p class='small uppercase'>
+                    Flego code:
+                </p>
+                <pre class='language-markup'>
+                <code class='language-markup'>
+                &lcub;&lcub; macros.flego('form', &lcub;
+                    'commentData':comment, 
+                        'colSize':'col-2-4',
+                        'blockSize': 'm',
+                        'formData':form
                 &rcub;) &rcub;&rcub;
                 </code>
                 </pre>
@@ -462,29 +502,5 @@
         'blockSize':'m',
         'colSize':'-2-4'}) 
     }}
-
-   
-
-    <h3 class='lego--heading'>
-        Forms
-    </h3>
-    {{ macros.lego('form', {
-        'barchart':barchart,
-        'colSize': '-2-4 col--q-small',
-        'blockSize': 'm'
-    }) }}
-    <hr />
-
-    {{ macros.lego('form', {
-        'formData':formData,
-        'colSize':'',
-        'blockSize':'m'
-    }) }}
-    
-    {{ macros.lego('definition.table', {
-        'formData':formData,
-        'colSize':'',
-        'blockSize':'m'
-    }) }}
 
 {% endblock %}
