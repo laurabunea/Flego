@@ -1,3 +1,9 @@
 <h2 {% if item.class %}class='{{item.class}}'{% endif %}>
-    {{item.data}}
+    {% if item.href %}
+    	<a href='{{item.href}}'>
+    {% endif %}
+    	{{item.data}}
+    {% if item.href %}
+    	</a>
+    {% endif %}
 </h2>

@@ -151,7 +151,7 @@ $vars['flegoContent'] = array(
         "class" => "font-primary--light"
     ),
      array(
-        "type" => "p",
+        "type" => "intro",
         "data" => "These blocks should be used for starting purposes only. Once you recognise a pattern you should make specific blocks so you dont have  to repeat the code"
     )       
 );
@@ -243,6 +243,21 @@ $vars['galleryData'] = array(
         "title" => "portrait",
         "src" => "assets/images/portrait.jpg"
     )       
+);
+$vars['galleryShowcase'] = array(
+    
+    array(
+        "type" => "h2",
+        "href" => "/clickme",
+        "data" => "Hello there"
+    ),
+    "data" => "Dont be a egg. After the fella is skived off, you add all the pretty suss cookie times to the foreshore and seabed issue youve got yourself a meal. Technology has allowed carked it housies to participate in the global conversation of hard case pieces of cheese on toast. The next Generation of nuclear-free manuses have already munted over at Rangitoto Island. Whats the hurry the Armed Offenders Squad? Theres plenty of jerseys in South Pacific."      
+    ,
+    array(
+        "type" => "link",
+        "href" => "/clickme",
+        "label" => "Read more .."
+    )
 );
 
 echo $twig->render('flego.twig', array('data' => $vars));
