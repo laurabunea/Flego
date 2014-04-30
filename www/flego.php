@@ -74,6 +74,7 @@ $vars['contentblock'] = array(
               
 );
 
+
 $vars['mediaimage'] = array(
  array(
     "type" => "image-responsive",
@@ -141,6 +142,23 @@ $vars['dummyContent'] = array(
         "data" => "I am a title"
     ),
     "data" => "Kia ora.. You're not in Guatemala now, this rip-off kumara is as sweet as as a sweet as scarfie. Mean while, in Shortland Street, Manus Morissette and The Hungery Caterpilar were up to no good with a bunch of beached as whitebait fritters. "     
+);
+
+$vars['comments'] = array(
+    array(
+        array(
+            "type" => "h4",
+            "data" => "Laura Bunea"
+        ),
+        "data" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum"
+    ),
+    array(
+        array(
+            "type" => "h4",
+            "data" => "Cody Bunea"
+        ),
+        "data" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum"
+    )
 );
 
 echo $twig->render('flego.twig', array('data' => $vars));

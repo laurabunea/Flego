@@ -13,55 +13,7 @@
         'mediaRightData': data.flegoContent
     }) }}
 
-    {#******************************************************** 
-                       Media blocks
-    ********************************************************#}
     
-    <h3 class='lego--heading'>
-        media.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col'>
-            <div class='block-m block--stacked '>
-                <p class='small uppercase'>Flego code:</p>
-            <pre class='language-markup'>
-            <code class='language-markup'>
-            &lcub;&lcub; macros.flego('media', {
-                    'gridContainer': 'grid-container',      &lt;!--Apply a grid container class to fix the page size--&gt;
-                    'gridMiddle': 'grid--middle',           &lt;!--Vertical align these grid items in the middle --&gt;
-                    'themeClass': 'theme--secondary',       &lt;!--Apply a theme class that bleeds to the edge --&gt;
-                    'blockSize': 'm',                       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-                    'isStacked' : 'pt-0',                   &lt;!--Overide the block Attributes eg pt-0, pb-0 --&gt;
-                    'mediaLeft':'col-1-3 col--q-small',     &lt;!--Controls the column size of the left hand content--&gt;
-                    'mediaRight':'col-2-3 col--q-small',    &lt;!--Controls the column size of the right hand content--&gt;
-                    'mediaLeftData': data.flegoContent,     &lt;!--This holds the data for the left hand content--&gt;
-                    'mediaRightData': data.flegoImage       &lt;!--This holds the data for the right hand content--&gt;
-                }) 
-            &rcub;&rcub;
-            </code>
-            </pre>
-                </div><!--block ends-->
-            </div><!-- grid item ends-->
-            
-            <div class='grid__item col col--q-small'>
-                <div class='block-m block--stacked pt-0'>
-                    <p class='small uppercase mb-xs'>Flego output:</p>
-                
-                    {{ macros.flego('media', {
-                        'gridContainer': 'grid-container',
-                        'gridMiddle': 'grid--middle',
-                        'themeClass': 'theme--quaternary',
-                        'blockSize': 'm',
-                        'isStacked' : 'pb-0 pb-m--q-small',
-                        'mediaLeft':'col-1-3 col--q-small',
-                        'mediaRight':'col-2-3 col--q-small',
-                        'mediaLeftData':  data.dummyImage,
-                        'mediaRightData': data.dummyContent
-                    }) }}
-                </div>
-            </div><!--grid item ends-->
-           
-        </div><!-- grid ends -->
 
     {#******************************************************** 
                        Panels
@@ -71,9 +23,24 @@
         panel.twig
     </h3>
     <div class='grid'>
-        <div class='grid__item col'>
+        <div class='grid__item col col--q-small'>
             <div class='block-m block--stacked '>
-                <p class='small uppercase'>Flego code:</p>
+                {{ macros.flego('panel', {
+                    'blockSize': 'm', 
+                    'close':true,
+                    'radius':true,
+                    'theme':'warning', 
+                    'content':data.panel,
+                    'buttonLabel':'Click me',
+                    'buttonLink':'/clickme'
+                }) }}
+            </div>
+        </div><!--grid item ends-->
+        <div class='grid__item col'>
+            <div class='block-m block--stacked pt-0'>
+                <p class='small uppercase'>
+                    Flego code:
+                </p>
                 <pre class='language-markup'>
                 <code class='language-markup'>
                 &lcub;&lcub; macros.flego('panel', &lcub;
@@ -85,48 +52,174 @@
                 &rcub;) &rcub;&rcub;
                 </code>
                 </pre>
-                </div><!--block ends-->
-            </div><!-- grid item ends-->
-            
-            <div class='grid__item col col--q-small'>
-                <div class='block-m block--stacked pt-0'>
-                    <p class='small uppercase mb-xs'>
-                        Flego output:
-                    </p>
-                    {{ macros.flego('panel', {
-                        'blockSize': 'm', 
-                        'close':true,
-                        'radius':true,
-                        'theme':'warning', 
-                        'content':data.panel,
-                        'buttonLabel':'Click me',
-                        'buttonLink':'/clickme'
-                    }) }}
-                </div>
-            </div><!--grid item ends-->
-           
-        </div><!-- grid ends -->
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+    </div><!-- grid ends -->
 
 
 
-    <!--**************************** 
-    Dummy data will need to put this some where else as its anoying 
-    ****************************-->
-    {% set barchart = [
-        {
-            'percentage':'6%', 
-            'desc':'of all coupons printed are ever redeemed' 
-        }, 
-        {
-            'percentage':'95%', 
-            'desc':'of the creatures on earth are smaller than a chicken egg' 
-        },
-        {
-            'percentage':'35%', 
-            'desc':'of people watching T.V. yell at it.' 
-        }
-        ]
-    %}
+    {#******************************************************** 
+                       Media blocks
+    ********************************************************#}
+    
+    <h3 class='lego--heading'>
+        media.twig
+    </h3>
+    <div class='grid'>
+        <div class='grid__item col col--q-small'>
+            <div class='block-m block--stacked '>
+                {{ macros.flego('media', {
+                    'gridContainer': 'grid-container',
+                    'gridMiddle': 'grid--middle',
+                    'themeClass': 'theme--quaternary',
+                    'blockSize': 'm',
+                    'isStacked' : 'pb-0 pb-m--q-small',
+                    'mediaLeft':'col-1-3 col--q-small',
+                    'mediaRight':'col-2-3 col--q-small',
+                    'mediaLeftData':  data.dummyImage,
+                    'mediaRightData': data.dummyContent
+                }) }}
+            </div>
+        </div><!--grid item ends-->
+        <div class='grid__item col'>
+            <div class='block-m block--stacked pt-0'>
+                <p class='small uppercase'>
+                    Flego code:
+                </p>
+                <pre class='language-markup'>
+                <code class='language-markup'>
+                &lcub;&lcub; macros.flego('media', {
+                        'gridContainer': 'grid-container',      &lt;!--Apply a grid container class to fix the page size--&gt;
+                        'gridMiddle': 'grid--middle',           &lt;!--Vertical align these grid items in the middle --&gt;
+                        'themeClass': 'theme--secondary',       &lt;!--Apply a theme class that bleeds to the edge --&gt;
+                        'blockSize': 'm',                       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+                        'isStacked' : 'pt-0',                   &lt;!--Overide the block Attributes eg pt-0, pb-0 --&gt;
+                        'mediaLeft':'col-1-3 col--q-small',     &lt;!--Controls the column size of the left hand content--&gt;
+                        'mediaRight':'col-2-3 col--q-small',    &lt;!--Controls the column size of the right hand content--&gt;
+                        'mediaLeftData': data.flegoContent,     &lt;!--This holds the data for the left hand content--&gt;
+                        'mediaRightData': data.flegoImage       &lt;!--This holds the data for the right hand content--&gt;
+                    }) 
+                &rcub;&rcub;
+                </code>
+                </pre>
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+    </div><!-- grid ends -->
+
+
+
+    {#******************************************************** 
+                       title center
+    ********************************************************#}
+    <h3 class='lego--heading'>
+        title.centered.twig
+    </h3>
+    <div class='grid'>
+        <div class='grid__item col col--q-small'>
+            <div class='block-m block--stacked'>
+                {{ macros.flego('title.centered', { 
+                    'blockSize': 's',
+                    'title': 'I am a title'
+                }) }}
+            </div>
+        </div><!--grid item ends-->
+        <div class='grid__item col'>
+            <div class='block-m block--stacked pt-0'>
+                <p class='small uppercase'>Flego code:</p>
+                <pre class='language-markup'>
+                <code class='language-markup'>
+                &lcub;&lcub; macros.flego('title.centered', &lcub;
+                    'blockSize': 's',           &lt;!--comment--&gt;
+                    'title': 'I am a title'     &lt;!--comment--&gt;
+                &rcub;) &rcub;&rcub;
+                </code>
+                </pre>
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+    </div><!-- grid ends -->
+
+
+
+    {#******************************************************** 
+                       Comments
+    ********************************************************#}
+
+    <h3 class='lego--heading'>
+        comments.twig
+    </h3>
+    <div class='grid'>
+        <div class='grid__item col col--q-small'>
+            <div class='block-m block--stacked'>
+                <div class='grid'>
+                    {% for key, comment in data.comments %}
+                        {{ macros.flego('comments', {
+                            'commentData':comment, 
+                            'isStacked':'',
+                            'blockSize': 'm',
+                            'radius': true,
+                            'theme': 'warning',
+                            'CommentImage': 'i-gecko',
+                            'colSize': '-2-4 col--q-small'
+                        }) }}
+                    {% endfor %}
+                </div><!--grid ends-->
+            </div>
+        </div><!--grid item ends-->
+        <div class='grid__item col'>
+            <div class='block-m block--stacked pt-0'>
+                <p class='small uppercase'>Flego code:</p>
+                <pre class='language-markup'>
+                <code class='language-markup'>
+                &lcub;&lcub; macros.flego('comments', &lcub;
+                    'commentData':comment, 
+                            'isStacked':'',                 &lt;!--comment--&gt;
+                            'blockSize': 'm',               &lt;!--comment--&gt;
+                            'radius': true,                 &lt;!--comment--&gt;
+                            'theme': 'warning',             &lt;!--comment--&gt;
+                            'CommentImage': 'i-gecko',      &lt;!--comment--&gt;
+                            'colSize': '-2-4 col--q-small'  &lt;!--comment--&gt;
+                &rcub;) &rcub;&rcub;
+                </code>
+                </pre>
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+    </div><!-- grid ends -->
+
+
+{#******************************************************** 
+                       Bar chart
+    ********************************************************#}
+
+    <h3 class='lego--heading'>
+        chart.bar.twig
+    </h3>
+    <div class='grid'>
+        <div class='grid__item col col--q-small'>
+            <div class='grid grid--middle'>
+                {{ macros.flego('chart.bar', {
+                    'barchartDesc':'of all coupons printed are ever redeemed',
+                    'barchartPercentage':'6',
+                    'blockSize': 'm'
+                }) }}
+            </div><!--grid ends-->
+        </div><!--grid item ends-->
+        <div class='grid__item col'>
+            <div class='block-m block--stacked pt-0'>
+                <p class='small uppercase'>Flego code:</p>
+                <pre class='language-markup'>
+                <code class='language-markup'>
+                &lcub;&lcub; macros.flego('comments', &lcub;
+                    'commentData':comment, 
+                        'barchartDesc':'of all coupons printed are ever redeemed',
+                        'barchartPercentage':'6',
+                        'blockSize': 'm'
+                &rcub;) &rcub;&rcub;
+                </code>
+                </pre>
+            </div><!--block ends-->
+        </div><!-- grid item ends-->
+    </div><!-- grid ends -->
+
 
     {% set places = [
         {
@@ -205,15 +298,6 @@
         } ]
 #}
 
-
-    {#{% set article = {
-    
-        'date':'January 2013', 
-        'category':'Television', 
-
-        
-        } 
-    %}#}
     
 
     {% set gallery2Items = [
@@ -228,29 +312,7 @@
     ]
     %}
 
-
-    {% set alertPanel = 
-        {
-            'title':'Warning',
-            'desc':'Do not touch that button',
-            'btnLink':'helpme.co.nz',
-            'btnTitle':'Click me, I am a button'
-        }
     
-    %}
-
-    {% set commentThread = [
-        {
-            'name':'Laura Bunea',
-            'comment':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.'
-        }, 
-        {
-            'name':'Mr Blob',
-            'comment':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.'
-        }
-    ]
-    %}
-
     {% set gallery3Items = [
         {
             'caption':'Item one',
@@ -266,26 +328,7 @@
         }
     ]
     %}
-    
-    {% set gallery4Items = [
-        {
-            'caption':'Item one',
-            'image':'assets/images/gallery-showcase.jpg'
-        }, 
-        {
-            'caption':'Item two',
-            'image':'assets/images/gallery-showcase.jpg'
-        }, 
-        {
-            'caption':'Item three',
-            'image':'assets/images/gallery-showcase.jpg'
-        },
-        {
-            'caption':'Item four',
-            'image':'assets/images/gallery-showcase.jpg'
-        }
-    ]
-    %}
+  
 
     {% set navigation = [
         {
@@ -325,47 +368,6 @@
         }]
     %}
 
-    {% set content3Items = [
-        {
-            'heading':'Heading 1',
-            'copy':'Anyway, Hairy Maclary from Donaldsons Dairy is just The Hungery Caterpilar in disguise, to find the true meaning of life, one must start chundering with the can of Watties Baked Beans, mate. After the vivid is munted, you add all the pearler wet blankets to the giant weka youve got yourself a meal. ', 
-            'link':'Click me', 'link-href':'http:www.clickme.co.nz'
-        },
-        {
-            'heading':'Heading 2',
-            'copy':'You have no idea how nuclear-free our hard case stubbies were aye. Every time I see those good as cans of Watties Baked Beans its like smoko time all over again aye, Im not here to frack spiders. Anyway, Rangi is just Sir Edmond Hillary in disguise, to find the true meaning of life, one must start burning my Vogels with the Tui, mate.', 
-            'link':'Click me', 'link-href':'http:www.clickme.co.nz'
-        },{
-            'heading':'Heading 3',
-            'copy':' Technology has allowed cool tiki tours to participate in the global conversation of random All Blacks. The next Generation of pretty suss sad guys have already cooked over at the fish n chip shop. Whats the hurry the Armed Offenders Squad? Theres plenty of Edmonds Cook Books in a waka.', 
-            'link':'Click me', 'link-href':'http:www.clickme.co.nz'
-        },]
-    %}
-
-    {% set content4Items = [
-        {
-            'heading':'Heading 1',
-            'copy':'Anyway, Hairy Maclary from Donaldsons Dairy is just The Hungery Caterpilar in disguise, to find the true meaning of life, one must start chundering with the can of Watties Baked Beans, mate. After the vivid is munted, you add all the pearler wet blankets to the giant weka youve got yourself a meal. ', 
-            'link':'Click me', 'link-href':'http:www.clickme.co.nz'
-        },
-        {
-            'heading':'Heading 2',
-            'copy':'You have no idea how nuclear-free our hard case stubbies were aye. Every time I see those good as cans of Watties Baked Beans its like smoko time all over again aye, Im not here to frack spiders. Anyway, Rangi is just Sir Edmond Hillary in disguise, to find the true meaning of life, one must start burning my Vogels with the Tui, mate.', 
-            'link':'Click me', 'link-href':'http:www.clickme.co.nz'
-        },
-        {
-            'heading':'Heading 3',
-            'copy':' Technology has allowed cool tiki tours to participate in the global conversation of random All Blacks. The next Generation of pretty suss sad guys have already cooked over at the fish n chip shop. Whats the hurry the Armed Offenders Squad? Theres plenty of Edmonds Cook Books in a waka.', 
-            'link':'Click me', 'link-href':'http:www.clickme.co.nz'
-        },
-        {
-            'heading':'Heading 4',
-            'copy':'Lake Taupo holds the most sweet community in the country.. James Cook was wobbling when the kiwi as rooting event occured. Fair suck of the sav, this beached as scarfie is as beaut as a hammered. Mean while, in South Pacific, James and the Giant Peach and Jonah Lomu were up to no good with a bunch of tapu whitebait fritters. ', 
-            'link':'Click me', 'link-href':'http:www.clickme.co.nz'
-        }]
-    %}
-
-    
 
     {% set galleryShowcase = {
         'title': 'Hello there',
@@ -380,38 +382,7 @@
     } %}
 
 
-
-
-
-
-
-
-
-
-
-    
-    {#{{ macros.flego('media.arrow', {
-        'gridContainer': 'grid-container-xl',
-        'gridMiddle': 'grid--middle',
-        'themeClass': 'theme--quaternary',
-        'blockSize': 'm',
-        'isStacked' : 'pt-0',
-        'mediaLeft':'col-1-3 col--q-small',
-        'mediaRight':'col-2-3 col--q-small',
-        'arrow1':'arrow--center',
-        'arrow2':'arrow-bottom',
-        'mediaLeftData':  data.flegoImage,
-        'mediaRightData': data.flegoContent
-    }) }}#}
-
-
-
-
-
-    
-
-
-    {#<h3 class='lego--heading'>
+    <h3 class='lego--heading'>
         header.twig
     </h3>
     {{ macros.lego('header', {
@@ -419,20 +390,6 @@
         'isStacked':'',
         'blockSize': 'm'
     }) }}
-
-
-    
-    <h3 class='lego--heading'>
-        content.title.twig
-    </h3>
-    {{ macros.lego('content.title', { 
-        'content': contentBlock, 
-        'isStackedTop': '',
-        'colSizeHeading':'-3-4',
-        'isStackedBottom':'',
-        'blockSize': 'm'
-    }) }}
-
 
     
     <h3 class='lego--heading'>
@@ -445,42 +402,6 @@
         'isStackedBottom':'',
         'blockSize': 'm'
     }) }}
-
-<hr />
-    {{ macros.lego('content.block', { 
-        'content': storyBlock, 
-        'isStackedTop': '',
-        'colSizeHeading':'-3-4',
-        'isStackedBottom':'',
-        'blockSize': 'm'
-    }) }}
-   <h3 class='lego--heading'>
-        content.block.twig
-    </h3>
-    {{ macros.lego('content.block', {
-        'content':content2Items, 
-        'isStacked':'',
-        'blockSize': 'm',
-        'colSize': '-2-4 col--q-small',
-        'headingSize': '3'
-    }) }}
-    <hr/>
-
-    {{ macros.lego('content.block', {
-        'content':content3Items, 
-        'isStacked':'',
-        'blockSize': 'm',
-        'colSize': '-1-3 col--q-small'
-    }) }}
-    <hr/>
-
-    {{ macros.lego('content.block', {
-        'content':content4Items, 
-        'isStacked':'',
-        'blockSize': 'm',
-        'colSize': '-1-4 col-2-4--q-medium col--q-small'
-    }) }}
-    <hr/>
     
     <h3 class='lego--heading'>
        content.list.twig
@@ -495,16 +416,7 @@
         'themeAttr':'pb-0'
     }) }}
     
-    <hr class='mt-m'/>
-
-    {{ macros.lego('content.list', {
-        'content': places,
-        'colSize':'-2-4', 
-        'isStacked':'', 
-        'headingSize': 'h4', 
-        'blockSize': 's',
-        'themeAttr':'bb-primary'
-    }) }}
+   
     <h3 class='lego--heading'>
         article.list.twig
     </h3>
@@ -516,8 +428,6 @@
         'headingSize': 'h4', 
         'blockSize': 'm'
     }) }}
-
-
 
 
     <h3 class='lego--heading'>
@@ -552,64 +462,9 @@
         'blockSize':'m',
         'colSize':'-2-4'}) 
     }}
-    <hr/>
 
-    {{ macros.lego('gallery.list', {
-        'gallery': gallery3Items, 
-        'isStacked':'',
-        'blockSize':'m',
-        'colSize': '-1-3'
-    }) }}
-    <hr/>
+   
 
-    {{ macros.lego('gallery.list', {
-        'gallery': gallery4Items, 
-        'isStacked':'',
-        'blockSize':'m',
-        'colSize': '-1-4'
-    }) }}
-    
-
-    
-    <h3 class='lego--heading'>
-        comments.twig
-    </h3>
-    {{ macros.lego('comments', {
-        'commentThread':commentThread, 
-        'isStacked':'',
-        'blockSize': 'm',
-        'colSize': '-2-4 col--q-small'
-    }) }}
-
-    
-    
-    <h3 class='lego--heading'>
-        Panel.twig
-    </h3>
-    
-    
-#}
-    <h3 class='lego--heading'>
-        panel.alert.twig
-    </h3>
-    {{ macros.lego('panel.alert', {
-        'panel':alertPanel,
-        'blockSize': 'm',
-        'theme': ''
-    }) }}
-
-{#
-    
-    <h3 class='lego--heading'>
-        Barchart.twig
-    </h3>
-    {{ macros.lego('barchart', {
-        'barchart':barchart,
-        'blockSize': 'm'
-    }) }}
-
-
-    
     <h3 class='lego--heading'>
         Forms
     </h3>
@@ -632,7 +487,4 @@
         'blockSize':'m'
     }) }}
 
-#}
-    {#{{ macros.lego('content.split', {'content':content4Items, 'isStacked':'','blockSize': 'm','colSize': 'col-1-4'}) }}
-    #}
 {% endblock %}
