@@ -77,3 +77,31 @@ label {
 code {
     @extend .font-size-xs;
 }
+
+/******************************/
+
+.tile-progress {
+  
+}
+    .tile-progress .tile-progressbar {
+        height: 2px;
+        background: rgba(0,0,0,0.18);
+    }
+
+    .tile-progress .tile-progressbar span {
+        background: #fff;
+    }
+
+    .tile-progress .tile-progressbar span {
+        display: block;
+        background: #fff;
+        width: 0;
+        height: 100%;
+        -webkit-transition: all 1.5s cubic-bezier(0.230,1.000,0.320,1.000);
+        -moz-transition: all 1.5s cubic-bezier(0.230,1.000,0.320,1.000);
+        -o-transition: all 1.5s cubic-bezier(0.230,1.000,0.320,1.000);
+        transition: all 1.5s cubic-bezier(0.230,1.000,0.320,1.000);
+    }
+    .tile-progress .tile-footer {  
+        background: rgba(0,0,0,0.1);
+    }

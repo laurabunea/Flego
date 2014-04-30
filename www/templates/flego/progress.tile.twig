@@ -1,0 +1,21 @@
+{% import "macros.twig" as macros %}
+
+<!--<div class="grid-container">-->
+    <div class="grid">
+        <div class="grid__item {{data.colSize}}">
+            <div class="tile-progress {% if data.theme %} theme--{{data.theme}} {% endif %} radius ">
+                <div class="tile-header block--stacked {% if data.blockSize %} block-{{data.blockSize}} {% endif %}">
+                    {{ macros.blocks(data.contentData) }}
+                </div>
+                <div class="tile-progressbar">
+                    <span data-fill="{{data.percentage}}%" style="width: {{data.percentage}}%;"></span>
+                </div>
+                <div class="tile-footer block--stacked {% if data.blockSize %} block-{{data.blockSize}} {% endif %} text-right">
+                    <h4>
+                        <span class="pct-counter">{{data.percentage}}</span>% increase
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--</div>-->

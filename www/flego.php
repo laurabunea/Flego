@@ -260,4 +260,14 @@ $vars['galleryShowcase'] = array(
     )
 );
 
+$vars['progressTile'] = array(
+    
+    array(
+        "type" => "h3",
+        "data" => "Visitors"
+    ),
+    "data" => "so far in our blog, and our website."      
+    
+);
+
 echo $twig->render('flego.twig', array('data' => $vars));

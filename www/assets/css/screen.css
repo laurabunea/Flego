@@ -4502,6 +4502,28 @@ label {
   background-color: #fff; }
 
 
+/******************************/
+
+.tile-progress .tile-progressbar {
+  height: 2px;
+  background: rgba(0, 0, 0, 0.18); }
+
+.tile-progress .tile-progressbar span {
+  background: #fff; }
+
+.tile-progress .tile-progressbar span {
+  display: block;
+  background: #fff;
+  width: 0;
+  height: 100%;
+  -webkit-transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1); }
+
+.tile-progress .tile-footer {
+  background: rgba(0, 0, 0, 0.1); }
+
 .grid-container, .grid-container-xl {
   max-width: 960px; }
 

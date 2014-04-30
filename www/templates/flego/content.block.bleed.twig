@@ -1,0 +1,25 @@
+{% import "macros.twig" as macros %}
+
+{% if data.themeClass %}
+    <div class='theme--{{data.themeClass}}'>
+{% endif %}
+
+    {% if data.gridContainer %}
+        <div class='{{data.gridContainer}}'>
+            <div class='grid'>
+    {% endif %}
+
+                <div class='grid__item {{data.colSize}}'>
+                    <div class='block-{{data.blockSize}} block--stacked'>
+                        {{ macros.blocks(data.content) }}
+                    </div>
+                </div>
+                
+    {% if data.gridContainer %}
+            </div><!--grid ends -->
+        </div><!-- grid container ends-->
+    {% endif %}
+
+{% if data.themeClass %}
+    </div>
+{% endif %}

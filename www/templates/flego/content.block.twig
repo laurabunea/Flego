@@ -1,6 +1,8 @@
 {% import "macros.twig" as macros %}
-	
-	{% if data.gridContainer %}
+{% if data.externalthemeClass %}
+	<div class='theme--{{data.externalthemeClass}}'>
+{% endif %}
+{% if data.gridContainer %}
 	<div class='grid-container'>
 		<div class='grid'>
 	{% endif %}
@@ -26,3 +28,6 @@
 	</div><!-- grid container ends-->
 	{% endif %}
 
+{% if data.externalthemeClass %}
+	</div>
+{% endif %}

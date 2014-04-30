@@ -1,32 +1,30 @@
 {% extends "template.twig" %}
 
 {% block content %}
-    
-    <!-- TODO look at content.intro change to content block-->
-    {{ macros.lego('content.intro', {
-        'gridContainer': 'grid-container-xl',
-        'themeClass': 'theme--tertiary',
-        'content': data.fredsintro,
-        'blockSize': 'm text-center'
+
+    {{ macros.lego('content.block.fullbleed', {
+        'themeClass': 'tertiary',
+        'textCenter': true,
+        'colSize': 'col',
+        'content': data.fredsintro
     }) }}
 
-    {{ macros.lego('content.media', {
+    {{ macros.lego('content.media.quarters', {
         'themeClass': 'theme--primary',
         'content': data.fredcontent,
         'image': data.fredimage
     }) }}
         
-    {{ macros.lego('content.media.reversed', {
+    {{ macros.lego('content.media.reversed.quarters', {
         'themeClass': 'theme--quaternary',
         'content': data.flegocontent, 
         'image': data.flegoimage
     }) }}
         
-    {{ macros.lego('content.media', {
+    {{ macros.lego('content.media.quarters', {
         'themeClass': 'theme--primary',
         'content': data.fredsclosetcontent,
         'image': data.fredsclosetimage
     }) }}
-
 
 {% endblock %}
