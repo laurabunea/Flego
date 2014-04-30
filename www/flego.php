@@ -218,5 +218,31 @@ $vars['comments'] = array(
         "data" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum"
     )
 );
+$vars['galleryData'] = array(
+    array(
+        "type" => "image-responsive",
+        "alt" => "Flego 1",
+        "title" => "portrait",
+        "src" => "assets/images/portrait.jpg"
+    ),
+     array(
+        "type" => "image-responsive",
+        "alt" => "Flego 2 ",
+        "title" => "portrait",
+        "src" => "assets/images/portrait.jpg"
+    ),
+    array(
+        "type" => "image-responsive",
+        "alt" => "Flego 3",
+        "title" => "portrait",
+        "src" => "assets/images/portrait.jpg"
+    ),
+    array(
+        "type" => "image-responsive",
+        "alt" => "Flego 4",
+        "title" => "portrait",
+        "src" => "assets/images/portrait.jpg"
+    )       
+);
 
 echo $twig->render('flego.twig', array('data' => $vars));

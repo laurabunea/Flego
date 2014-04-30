@@ -74,4 +74,6 @@ label {
     background-color:#fff;
 }
 
-
+code {
+    @extend .font-size-xs;
+}

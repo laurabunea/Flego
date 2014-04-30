@@ -3847,7 +3847,7 @@ html, body {
   font-size: 18px;
   font-size: 1.125rem; }
 
-.font-size-xs, p, .text, li, code, dt, dd {
+.font-size-xs, p, .text, li, code, dt, dd, code {
   font-size: 16px;
   font-size: 1rem; }
 
@@ -4408,7 +4408,7 @@ hr {
     .theme--warning a:hover {
       color: #e6e6e6; }
   .theme--warning .btn {
-    color: #fff;
+    color: #000;
     background-color: #f3ae4e;
     border-color: #f3ae4e; }
     .theme--warning .btn:hover {
@@ -4443,6 +4443,16 @@ hr {
   height: 35px;
   width: 50px;
   background-repeat: no-repeat; }
+
+.down-arrow {
+  background-image: url('/assets/images/down-arrow.png');
+  background-repeat: no-repeat;
+  height: 19px;
+  width: 30px;
+  display: inline-block; }
+  .down-arrow:hover {
+    background-image: url('/assets/images/down-arrow-dark.png');
+    cursor: pointer; }
 
 /* Shame */
 
@@ -4490,6 +4500,7 @@ label {
 
 .white-bg {
   background-color: #fff; }
+
 
 .grid-container, .grid-container-xl {
   max-width: 960px; }
@@ -4634,3 +4645,21 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
 /* Plugin styles */
 .token.tab:not(:empty):before, .token.cr:before, .token.lf:before {
   color: #e0d7d1; }
+
+.showhide-hidden {
+  display: none !important; }
+
+.showhide-open {
+  display: block !important; }
+
+
+.showhide-autoheight {
+  transition: height 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  overflow: hidden; }
+
+.showhide-autoheight > div {
+  -webkit-animation: FadeIn 300ms backwards 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-animation: FadeIn 300ms backwards 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -ms-animation: FadeIn 300ms backwards 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-animation: FadeIn 300ms backwards 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation: FadeIn 300ms backwards 500ms cubic-bezier(0.645, 0.045, 0.355, 1); }

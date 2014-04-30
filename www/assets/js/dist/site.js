@@ -10,7 +10,7 @@ var FP = (function(window, document) {
 
     var site = {
     init: function() {
-
+        
     }
 /* Add your site methods here */
 };

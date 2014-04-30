@@ -1,8 +1,6 @@
-
 (function(window, document){
 
     "use strict";
-
     window.ShowHide = (function(){
 
         // Constructor
@@ -45,7 +43,7 @@
                 var group = this.$container.attr("data-showhide-group");
                 var isDismissible = this.$container.attr("data-showhide-dismissible");
                 var $others;
-                var $doc =  $(document);
+                var $doc = $(document);
 
                 self.$container.removeClass(self.animOutClass);
                 self.$container.addClass(self.activeClass);
