@@ -1,0 +1,11 @@
+{% import "macros.twig" as macros %}
+    
+    <div class='grid__item {{data.colSize}}'>
+        <div class='block-{{data.blockSize}} block--stacked pb-0'>
+            <div class='grid'>
+                {{ macros.blocks(data.formData) }}
+            </div>
+        </div>
+    </div><!--grid item ends-->
+
+        
