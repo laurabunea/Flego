@@ -270,4 +270,5 @@ $vars['progressTile'] = array(
     
 );
 
+
 echo $twig->render('flego.twig', array('data' => $vars));

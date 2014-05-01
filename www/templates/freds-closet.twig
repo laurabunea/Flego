@@ -23,8 +23,8 @@
         'centergrid':'grid--middle'
     }) }}#}
 
-    <div class='theme--tertiary' id='theme-colours'>
-        <div class='grid-container-xl'>
+    <div id='theme-colours' style='background-color:#293F54; color:#fff'>
+        <div class='grid-container-xl pb-xxl'>
             
             {{ macros.lego('content.intro', {
                 'content': data.themesSection, 
@@ -47,7 +47,7 @@
 
 
     <div class='theme--secondary' id='spacing-helpers'>
-        <div class='grid-container-xl' >
+        <div class='grid-container-xl pb-xxl' >
             {{ macros.lego('content.intro', {
                 'content': data.spacingSection, 
             }) }}
@@ -63,7 +63,7 @@
 
 
     <div class='theme--tertiary' id='block-helpers'>
-        <div class='grid-container-xl' >
+        <div class='grid-container-xl pb-xxl' >
             {{ macros.lego('content.intro', {
                 'content': data.blocksSection, 
             }) }}
@@ -78,7 +78,7 @@
     </div><!--theme tertiary ends-->
 
     <div class='theme--secondary' id='typography'>
-        <div class='grid-container-xl' >
+        <div class='grid-container-xl pb-xxl' >
             
             {{ macros.lego('content.intro', {
                 'content': data.typographySection, 
@@ -106,7 +106,7 @@
     </div><!--theme ends-->
 
     <div class='theme--tertiary' id='text-heirarchy'>
-        <div class='grid-container-xl'>
+        <div class='grid-container-xl pb-xxl'>
             {{ macros.lego('content.intro', {
                 'content': data.heirarchySection, 
             }) }}
@@ -119,6 +119,52 @@
                     </div><!--theme ends-->
                 </div>
             </div>
+        </div><!--grid container ends-->
+    </div><!--theme ends-->
+
+    <div id='flego-blocks' style='background-color:#EDEDED;' class='pb-xxxl'>
+        <div class='grid-container-xl '>    
+            {{ macros.lego('content.intro', {
+                'content': data.flegoSection, 
+            }) }}
+        </div>
+        <div class='grid-container dummy--container' style=''>
+            
+                <h3 class='lego--heading-2'>
+                    content.media.quarters.twig
+                </h3>
+                
+                {{ macros.lego('content.media.quarters', {
+                    'themeClass': 'theme--primary',
+                    'content': data.dummycontent,
+                    'image': data.dummyimage
+                }) }}
+
+                {#<h3 class='lego--heading-2'>
+                    content.media.reversed.quarters.twig
+                </h3>
+
+                {{ macros.lego('content.media.reversed.quarters', {
+                    'themeClass': 'theme--primary',
+                    'content': data.dummycontent,
+                    'image': data.dummyimage
+                }) }}#}
+
+                <h3 class='lego--heading-2'>
+                    panel.twig
+                </h3>
+                <div class='block-m block--stacked'>
+                    {{ macros.flego('panel', {
+                    'blockSize': 'm', 
+                    'close':true,
+                    'radius':true,
+                    'theme':'warning', 
+                    'content':data.panel,
+                    'buttonLabel':'Click me',
+                    'buttonLink':'/clickme'
+                }) }}
+            </div>
+
         </div><!--grid container ends-->
     </div><!--theme ends-->
 

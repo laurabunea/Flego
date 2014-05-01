@@ -1,6 +1,6 @@
 <?php 
 include_once __DIR__ . "/../init.php";
-//include_once __DIR__ . "/global.php";
+
 
 $vars = array();
 
@@ -210,7 +210,7 @@ $vars['closetcontent'] = array(
     ),
     array(
         "type" => "button-inline",
-        "class" => "block-s inline-block theme--primary mr-s clean-link",
+        "class" => "block-s inline-block theme--primary mr-s  clean-link",
         "href" => "#flego-blocks",
         "label" => "Common flego blocks",
     )
@@ -299,7 +299,7 @@ $vars['flegoSection'] = array(
         "data" => "Flego blocks "
     ),array(
         "type" => "p",
-        "class" => "intro text-center ",
+        "class" => "intro text-center mb-m",
         "data" => "A place to store common flego blocks"    
     )   
 );
@@ -425,4 +425,6 @@ $vars['panel'] = array(
      
 );
 
-echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));
+
+//$data['data'] = $vars;
+echo $vars;

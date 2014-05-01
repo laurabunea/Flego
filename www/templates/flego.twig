@@ -47,9 +47,11 @@
 <pre class='language-markup'>
 <code class='language-markup'>
 &lcub;&lcub; macros.flego('panel', &lcub;
-    'blockSize': 'm'           &lt;!-- Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+    'blockSize': 'm',          &lt;!-- Controls content padding eg xxxs, xxs, xs, s ..--&gt;
     'close':true,              &lt;!-- Add this attribute if you require a close button --&gt;
-    'content':panelData,       &lt;!-- This hold the data for the panels content --&gt;
+    'radius':true,             &lt;!-- Add a radius to this panel --&gt;
+    'theme':'warning',         &lt;!-- Add a theme class --&gt;
+    'content':data.panel,      &lt;!-- This hold the data for the panels content --&gt;
     'buttonLabel':'Click me',  &lt;!-- This hold the data for the button Label --&gt;
     'buttonLink':'/clickme'    &lt;!-- This hold the data for the button Link --&gt;
 &rcub;) &rcub;&rcub;

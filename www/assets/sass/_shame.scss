@@ -15,6 +15,18 @@
         @extend .theme--tertiary;
         @extend .text-center;
     }
+    .lego--heading-2 {
+        @extend .mt-0; 
+        @extend .pl-l; 
+        @extend .pt-m;
+        @extend .pb-m;
+        @extend .small;
+        @extend .text-muted;
+        @extend .uppercase;
+        @extend .font-primary--light;
+        @extend .theme--secondary;
+        @extend .text-center;
+    }
 
 //change to use vendor mixin
 .border-box {
@@ -106,4 +118,22 @@ code {
         background: rgba(0,0,0,0.1);
     }
 
+.dummy--container {
+  
+    @include media(medium) {
+        border:50px solid #000; 
+        border-top:80px solid #000;
+        border-radius:30px;
+    }
+    @include media(small) {
+        
+        border:30px solid #000;
+        border-top:80px solid #000;
+        border-radius:20px;
+     
+    }
+    border:70px solid #000; 
+    border-radius:40px;
 
+    background-color:#fff;
+}

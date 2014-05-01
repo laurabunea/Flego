@@ -1,6 +1,7 @@
 <?php 
 include_once __DIR__ . "/../init.php";
 
+
 $vars = array();
 
 $vars['fredsintro'] = array(
@@ -86,7 +87,7 @@ $vars['fredsclosetcontent'] = array(
     ),
     array(
         "type" => "intro",
-        "data" => "A place to store a sites dirty little secrets "
+        "data" => "Fred has so many skeletons in his closet that he can’t keep track of them all! Just like Fred, websites also have a lot of skeletons but have no closet to store them in. Fred’s Closet is the perfect hideaway to keep all those little secrets."
     ),
    
     array(
