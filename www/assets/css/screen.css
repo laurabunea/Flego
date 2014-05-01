@@ -3386,7 +3386,7 @@ This box will be a square
 .pr-m {
   padding-right: 1.5em; }
 
-.pr-l {
+.pr-l, .lego--heading {
   padding-right: 2.25em; }
 
 .pr-xl {
@@ -3982,7 +3982,7 @@ Also
 .text-right {
   text-align: right; }
 
-.text-center, .lego--heading {
+.text-center {
   text-align: center; }
 
 .text-nowrap {
@@ -4195,8 +4195,9 @@ Try to use these on a limited basis and avoid creating entirely different versio
 .z-index--pull {
   z-index: 1; }
 
-.gallery--item:hover {
+.on-hover, .gallery--item:hover {
   cursor: pointer; }
+
 
 .img--responsive {
   vertical-align: top; }

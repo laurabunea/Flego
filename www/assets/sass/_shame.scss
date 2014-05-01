@@ -6,6 +6,7 @@
     .lego--heading {
         @extend .mt-0; 
         @extend .pl-l; 
+        @extend .pr-l;
         @extend .pt-m;
         @extend .pb-m;
         @extend .small;
@@ -13,7 +14,7 @@
         @extend .uppercase;
         @extend .font-primary--light;
         @extend .theme--secondary;
-        @extend .text-center;
+        //@extend .text-center;
     }
     
 
