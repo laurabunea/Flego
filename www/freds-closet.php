@@ -168,7 +168,39 @@ $vars['closetcontent'] = array(
     ),
     array(
         "type" => "intro",
-        "data" => " Fred has so many skeletons in his closet that he can’t keep track of them all! Just like Fred, websites also have a lot of skeletons but have no closet to store them in. Fred’s Closet is the perfect hideaway to keep all those little secrets. "
+        "data" => " Fred has so many skeletons in his closet that he can’t keep track of them all! Just like Fred, websites also have a lot of skeletons but have no closet to store them in. Fred’s Closet is the perfect hideaway to keep all those little secrets.",
+    ), 
+    "data" => "So that Fred's closest doesn't get too messy. Fred has kindly seperated his closest into a few different sections for us. These are as follows:"
+    ,
+    array(
+        "type" => "button-inline",
+        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "href" => "#theme-colours",
+        "label" => "Theme colours",
+    ),
+    array(
+        "type" => "button-inline",
+        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "href" => "#spacing-helpers",
+        "label" => "Spacing helpers",
+    ),
+    array(
+        "type" => "button-inline",
+        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "href" => "#block-helpers",
+        "label" => "Block helpers",
+    ),
+    array(
+        "type" => "button-inline",
+        "class" => "block-s inline-block theme--primary mr-s clean-link",
+        "href" => "#typography",
+        "label" => "Typography",
+    ),
+    array(
+        "type" => "button-inline",
+        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "href" => "#text-heirarchy",
+        "label" => "Text Heirarachy",
     )
 );
 
@@ -176,6 +208,7 @@ $vars['closetimage'] = array(
     array(
         "type" => "image-responsive",
         "alt" => "alt text",
+        "class" => "reset-image--q-small",
         "title" => "image title",
         "src" => "assets/images/freds-closet.png"
     )         
@@ -209,7 +242,7 @@ $vars['closet3content'] = array(
     array(
         "type" => "p",
         "class" => "intro",
-        "data" => "So that Fred's closest doesn't get messy. Fred has kindly seperated his closest into a few different sections. These are as follows:"
+        "data" => "So that Fred's closest doesn't get too messy. Fred has kindly seperated his closest into a few different sections. These are as follows:"
     ),
     "data" =>   "Colours:",
                 "A place to document the main colors used on your project's site.",
@@ -236,8 +269,9 @@ $vars['themesSection'] = array(
         "data" => "Theme Colors"
     ),
     array(
-        "type" => "intro",
-        "data" => "I am an intro para"
+        "type" => "p",
+        "class" => "intro text-center mb-m",
+        "data" => "A place to document the main colors used on your project's site."
     )
               
 );
@@ -249,8 +283,9 @@ $vars['spacingSection'] = array(
         "data" => "Spacing helpers"
     ),
     array(
-        "type" => "intro",
-        "data" => "I am an intro para"
+        "type" => "p",
+        "class" => "intro text-center mb-m",
+        "data" => "A place to document the base spacing sizes on your site"
     )          
 );
 $vars['blocksSection'] = array(
@@ -260,8 +295,9 @@ $vars['blocksSection'] = array(
         "data" => "Block helpers"
     ),
     array(
-        "type" => "intro",
-        "data" => "I am an intro para"
+        "type" => "p",
+        "class" => "intro mb-m text-center",
+        "data" => "A place to document the block sizes on your site"
     )
               
 );
@@ -273,8 +309,9 @@ $vars['heirarchySection'] = array(
         "data" => "Text heirarchy"
     ),
     array(
-        "type" => "intro",
-        "data" => "I am an intro para"
+        "type" => "p",
+        "class" => "intro text-center mb-m",
+        "data" => "A place to document the text heirarchy on your site"
     )         
 );
 
@@ -283,7 +320,11 @@ $vars['typographySection'] = array(
         "type" => "h2",
         "class" => "font-primary--light text-center",
         "data" => "Typography "
-    )       
+    ),array(
+        "type" => "p",
+        "class" => "intro text-center mb-m",
+        "data" => "A place to document font-stacks used on your project's site "    
+    )   
 );
     $vars['typographyPrimary'] = array(
         array(
@@ -320,7 +361,5 @@ $vars['typographySection'] = array(
             "data" => "The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. "
         )          
     );
-
-
 
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));

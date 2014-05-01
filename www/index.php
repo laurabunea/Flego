@@ -29,6 +29,7 @@ $vars['fredcontent'] = array(
     array(
         "type" => "button",
         "label" => "Read more about Fred.scss",
+        "class" => "mt-s",
         "href" => "http://springload.github.io/Fred.scss/#meet-fred-the-friendly-front-end-framework",
     )
 );
@@ -63,6 +64,7 @@ $vars['flegocontent'] = array(
     array(
         "type" => "button",
         "label" => "Read more about Flego",
+        "class" => "mt-s",
         "href" => "flego.php",
     )
 );

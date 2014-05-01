@@ -4328,7 +4328,7 @@ hr {
     .theme--primary a:hover {
       color: black; }
   .theme--primary .btn {
-    color: #000;
+    color: #fff;
     background-color: #37B67F;
     border-color: #37B67F; }
     .theme--primary .btn:hover {
@@ -4345,11 +4345,11 @@ hr {
       color: black; }
   .theme--secondary .btn {
     color: #000;
-    background-color: #293F54;
-    border-color: #293F54; }
+    background-color: #fff;
+    border-color: #fff; }
     .theme--secondary .btn:hover {
-      background-color: #213243;
-      border-color: #213243; }
+      background-color: #f2f2f2;
+      border-color: #f2f2f2; }
 
 .theme--tertiary, .lego--heading {
   color: #fff;

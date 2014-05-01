@@ -1,0 +1,85 @@
+/**
+ * -----------------------------------------------------------------------------
+ *  This section has usefull responsive snippets which at some stage i should to add to Fred
+ * -----------------------------------------------------------------------------
+ */
+
+// ----------------------------------------------------------------------------
+// media query for  small devices
+// ----------------------------------------------------------------------------
+@include media(small) {
+
+    //on a small sreen make this element relative
+    .q-small--relative {
+        position:relative;
+    }
+    .q-small--block {
+        display:block;
+    }
+    .max--q-small {
+      max-width: 100%;
+    }
+
+    //clear floats on a small device
+    .clear-float--q--small {
+        float:none!important; 
+    }
+
+    .text-left--q-small {
+        text-align:left!important;
+    }
+
+    .ml-0--q-small {
+        margin-left:0;
+    }
+    .mr-0--q-small {
+      margin-right:0!important;
+    }
+
+    .reset-image--q-small {
+      width:auto;
+    }
+}
+
+// ----------------------------------------------------------------------------
+// media query for extra small devices
+// ----------------------------------------------------------------------------
+@include media(xsmall) {
+  .list-block--q-xsmall li, 
+  .list-block--q-xsmall a {
+    display:block;
+  }
+  .col--q-xsmall {
+    width:100%;
+  }
+
+  .max--q-xsmall {
+    max-width: 100%;
+  }
+
+  .hidden--q-xsmall {
+    display:none;
+  }
+  .mb-s--q-xsmall {
+    margin-bottom:$bs-xs;
+  }
+  .pt-0--q-xsmall {
+    padding-top:0;
+  }
+  .col-6-10--q-xsmall {
+    width:60%;
+  }
+  .col-4-10--q-xsmall {
+    width:40%;
+  }
+  
+  .font-size-s--q-xsmall {
+    @include font-size($font-size-xs);
+  }
+  .btn--small--q-xsmall {
+    padding-right: $base-spacing-unit / 2;          
+    padding-left: $base-spacing-unit / 2;
+    line-height: 2;
+    @include font-size(14);
+  }
+}
