@@ -1,8 +1,4 @@
 <?php 
-include_once __DIR__ . "/../init.php";
-
-
-$vars = array();
 
 $vars['themes'] = array(   
     "primary",  
@@ -424,7 +420,3 @@ $vars['panel'] = array(
     "data" => "We would love to hear from you, you attractive person you."
      
 );
-
-
-//$data['data'] = $vars;
-echo $vars;

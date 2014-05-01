@@ -1,9 +1,9 @@
 <?php 
 include_once __DIR__ . "/../init.php";
-//include_once __DIR__ . "/global.php";
 
 $vars = array();
 
+include_once __DIR__ . "/global.php";
 $vars['themes'] = array(   
     "primary",  
     "secondary", 
@@ -414,15 +414,7 @@ $vars['closet3image'] = array(
     )
               
 );
-*/
-$vars['panel'] = array(
-    array(
-        "type" => "h2",
-        "data" => "Get in touch",
-        "class" => "font-primary--light"
-    ),
-    "data" => "We would love to hear from you, you attractive person you."
-     
-);
 
+
+*/
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));
