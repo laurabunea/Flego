@@ -60,9 +60,9 @@
 <body class='{{siteClass}}'>
 
 {% block navigation %}
-  <div class='grid-container block--white'>
+<div class='theme--primary' id='topofpage'>
+  <div class='grid-container'>
       <div class='grid'>
-      
           <div class='grid__item col'>
             <div class='pl-m left pt-xxs pb-xxs '>
               <h1>
@@ -101,6 +101,7 @@
 
       </div><!-- ends -->
   </div>
+</div>
 {% endblock %}
 <div class='content'>
     
@@ -118,6 +119,13 @@
               </div>
           </div>
       </div>
+  </div>
+  <div class='theme--primary' style='position:fixed; top:0; right:12px;'>
+   
+    <a href='#topofpage' class='block-s block--stacked small uppercase clean-link inline-block'>
+      &#9650;top
+    </a>
+  
   </div>
 {% endblock %}
 

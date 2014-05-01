@@ -156,6 +156,11 @@ $vars['typography'] = array(
 );
 
 
+
+
+
+
+
 /*
     Specific page content 
 */
@@ -213,54 +218,7 @@ $vars['closetimage'] = array(
         "src" => "assets/images/freds-closet.png"
     )         
 );
-$vars['closet2content'] = array(
-    array(
-        "type" => "h2",
-        "data" => "Why use Fred's closet?",
-        "class" => "font-primary--light"
-    ),
-      
-    "data" => "Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.", "Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code", "Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.", "It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns."
-    
-);
 
-$vars['closet2image'] = array(
-    array(
-        "type" => "image-responsive",
-        "alt" => "alt text",
-        "title" => "image title",
-        "src" => "assets/images/freds-closet.png"
-    )   
-);
-
-$vars['closet3content'] = array(
-    array(
-        "type" => "h3",
-        "data" => "Why use Fred's closet?",
-        "class" => "font-primary--light"
-    ),
-    array(
-        "type" => "p",
-        "class" => "intro",
-        "data" => "So that Fred's closest doesn't get too messy. Fred has kindly seperated his closest into a few different sections. These are as follows:"
-    ),
-    "data" =>   "Colours:",
-                "A place to document the main colors used on your project's site.",
-                "Typography:", 
-                "A place to document the font-stacks used on your project's site as well as test the heirarchy", 
-                "Flego blocks:", 
-                "A place for common HTML elements."
-
-);
-$vars['closet3image'] = array(
-    array(
-        "type" => "image-responsive",
-        "alt" => "alt text",
-        "title" => "image title",
-        "src" => "assets/images/freds-closet.png"
-    )
-              
-);
 
 $vars['themesSection'] = array(
     array(
@@ -361,5 +319,53 @@ $vars['typographySection'] = array(
             "data" => "The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. "
         )          
     );
+/*
+$vars['closet2content'] = array(
+    array(
+        "type" => "h2",
+        "data" => "Why use Fred's closet?",
+        "class" => "font-primary--light"
+    ),
+      
+    "data" => "Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.", "Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code", "Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.", "It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns."
+    
+);
 
+$vars['closet2image'] = array(
+    array(
+        "type" => "image-responsive",
+        "alt" => "alt text",
+        "title" => "image title",
+        "src" => "assets/images/freds-closet.png"
+    )   
+);
+
+$vars['closet3content'] = array(
+    array(
+        "type" => "h3",
+        "data" => "Why use Fred's closet?",
+        "class" => "font-primary--light"
+    ),
+    array(
+        "type" => "p",
+        "class" => "intro",
+        "data" => "So that Fred's closest doesn't get too messy. Fred has kindly seperated his closest into a few different sections. These are as follows:"
+    ),
+    "data" =>   "Colours:",
+                "A place to document the main colors used on your project's site.",
+                "Typography:", 
+                "A place to document the font-stacks used on your project's site as well as test the heirarchy", 
+                "Flego blocks:", 
+                "A place for common HTML elements."
+
+);
+$vars['closet3image'] = array(
+    array(
+        "type" => "image-responsive",
+        "alt" => "alt text",
+        "title" => "image title",
+        "src" => "assets/images/freds-closet.png"
+    )
+              
+);*/
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));
