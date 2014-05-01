@@ -28,7 +28,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
   position:relative;
-  padding: 1em;
+  padding: 0em;
   margin: .5em 0;
   -webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
   -moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
@@ -59,7 +59,8 @@ pre[class*="language-"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
+  margin-top: 1em;
 }
 
 /* Inline code */
