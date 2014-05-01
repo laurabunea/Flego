@@ -334,7 +334,7 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
-.theme--primary, .theme--secondary, .lego--heading-2, .theme--tertiary, .lego--heading, .theme--quaternary, .theme--success, .theme--warning, .theme--error {
+.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary, .theme--success, .theme--warning, .theme--error {
   border-width: 1px;
   border-style: solid; }
 
@@ -2830,7 +2830,7 @@ This box will be a square
   width: 100%;
   height: 100%; }
 
-.mt-0, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, .text:first-child, li:first-child, code:first-child, .lego--heading, .lego--heading-2 {
+.mt-0, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, .text:first-child, li:first-child, code:first-child, .lego--heading {
   margin-top: 0; }
 
 .mt-xxxs {
@@ -3293,7 +3293,7 @@ This box will be a square
 .pt-s {
   padding-top: 1em; }
 
-.pt-m, .lego--heading, .lego--heading-2 {
+.pt-m, .lego--heading {
   padding-top: 1.5em; }
 
 .pt-l {
@@ -3323,7 +3323,7 @@ This box will be a square
 .pb-s {
   padding-bottom: 1em; }
 
-.pb-m, .lego--heading, .lego--heading-2 {
+.pb-m, .lego--heading {
   padding-bottom: 1.5em; }
 
 .pb-l {
@@ -3356,7 +3356,7 @@ This box will be a square
 .pl-m {
   padding-left: 1.5em; }
 
-.pl-l, .lego--heading, .lego--heading-2 {
+.pl-l, .lego--heading {
   padding-left: 2.25em; }
 
 .pl-xl {
@@ -3778,11 +3778,11 @@ html, body {
   font-weight: 400;
   font-style: normal; }
 
-.font-primary--light, h1, .intro, .lego--heading, .lego--heading-2, .text-input {
+.font-primary--light, h1, .intro, .lego--heading, .text-input {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif;
   font-weight: 300;
   font-style: normal; }
-  .ie8 .font-primary--light, .ie8 h1, .ie8 .intro, .ie8 .lego--heading, .ie8 .lego--heading-2, .ie8 .text-input {
+  .ie8 .font-primary--light, .ie8 h1, .ie8 .intro, .ie8 .lego--heading, .ie8 .text-input {
     font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
 .font-primary--light-italic, .blockquote {
@@ -3851,7 +3851,7 @@ html, body {
   font-size: 16px;
   font-size: 1rem; }
 
-.font-size-xxs, .small, .lego--heading, .lego--heading-2, .caption {
+.font-size-xxs, .small, .lego--heading, .caption {
   font-size: 12px;
   font-size: 0.75rem; }
 
@@ -3928,7 +3928,7 @@ Also
 
 */
 
-.small, .lego--heading, .lego--heading-2 {
+.small, .lego--heading {
   line-height: 1.4; }
 
 .tiny {
@@ -3936,7 +3936,7 @@ Also
 
 
 
-.text-muted, .lego--heading, .lego--heading-2 {
+.text-muted, .lego--heading {
   color: #ccc; }
 
 .text-warning {
@@ -3970,7 +3970,7 @@ Also
 * .text-nowrap
 
 */
-.uppercase, .lego--heading, .lego--heading-2 {
+.uppercase, .lego--heading {
   text-transform: uppercase; }
 
 .lowercase {
@@ -3982,7 +3982,7 @@ Also
 .text-right {
   text-align: right; }
 
-.text-center, .lego--heading, .lego--heading-2 {
+.text-center, .lego--heading {
   text-align: center; }
 
 .text-nowrap {
@@ -4335,35 +4335,35 @@ hr {
       background-color: #31a271;
       border-color: #31a271; }
 
-.theme--secondary, .lego--heading-2 {
+.theme--secondary, .lego--heading {
   color: #000;
   background-color: #EDEDED;
   border-color: #EDEDED; }
-  .theme--secondary a, .theme--secondary .lego--heading-2 {
+  .theme--secondary a, .theme--secondary .lego--heading {
     color: #000; }
-    .theme--secondary a:hover, .theme--secondary .lego--heading-2 {
+    .theme--secondary a:hover, .theme--secondary .lego--heading {
       color: black; }
-  .theme--secondary .btn, .theme--secondary .lego--heading-2 {
+  .theme--secondary .btn, .theme--secondary .lego--heading {
     color: #000;
     background-color: #fff;
     border-color: #fff; }
-    .theme--secondary .btn:hover, .theme--secondary .lego--heading-2 {
+    .theme--secondary .btn:hover, .theme--secondary .lego--heading {
       background-color: #f2f2f2;
       border-color: #f2f2f2; }
 
-.theme--tertiary, .lego--heading {
+.theme--tertiary {
   color: #fff;
   background-color: #293F54;
   border-color: #293F54; }
-  .theme--tertiary a, .theme--tertiary .lego--heading {
+  .theme--tertiary a {
     color: #fff; }
-    .theme--tertiary a:hover, .theme--tertiary .lego--heading {
+    .theme--tertiary a:hover {
       color: #e6e6e6; }
-  .theme--tertiary .btn, .theme--tertiary .lego--heading {
+  .theme--tertiary .btn {
     color: #293F54;
     background-color: #fff;
     border-color: #fff; }
-    .theme--tertiary .btn:hover, .theme--tertiary .lego--heading {
+    .theme--tertiary .btn:hover {
       background-color: #f2f2f2;
       border-color: #f2f2f2; }
 
@@ -4457,7 +4457,6 @@ hr {
 /* Shame */
 
 
-
 .border-box, input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4539,6 +4538,30 @@ label {
       border: 30px solid #000;
       border-top: 80px solid #000;
       border-radius: 20px; } }
+
+@media only screen and (min-width: 48em) and (max-width: 63.99em) {
+  .append--q-medium:after {
+    content: attr(data-append-medium);
+    display: inline-block; } }
+
+@media only screen and (max-width: 47.99em) {
+  .append--q-small:after {
+    content: attr(data-append-small);
+    display: inline-block; } }
+
+.grey-gradient {
+  /* IE10 Consumer Preview */
+  background-image: -ms-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDEDED), color-stop(1, #BABABA));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+  /* W3C Markup, IE10 Release Preview */
+  background-image: linear-gradient(to bottom, #EDEDED 0%, #BABABA 100%); }
 
 .grid-container, .grid-container-xl {
   max-width: 960px; }

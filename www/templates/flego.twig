@@ -5,7 +5,7 @@
     {{ macros.flego('media', {
         'gridContainer': 'grid-container',
         'gridMiddle': 'grid--middle',
-        'themeClass': 'theme--quaternary',
+        'themeClass': 'theme--secondary',
         'blockSize': 'm',
         'mediaLeft':'col-1-3 col--q-small',
         'mediaRight':'col-2-3 col--q-small',
@@ -19,503 +19,512 @@
 {#******************************************************** 
                        Panels
 ********************************************************#}
-
-    <h3 class='lego--heading'>
-        panel.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='block-m block--stacked '>
-                {{ macros.flego('panel', {
-                    'blockSize': 'm', 
-                    'close':true,
-                    'radius':true,
-                    'theme':'warning', 
-                    'content':data.panel,
-                    'buttonLabel':'Click me',
-                    'buttonLink':'/clickme'
-                }) }}
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='panels-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='panels-code'>
-                
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('panel', &lcub;
-    'blockSize': 'm',          &lt;!-- Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-    'close':true,              &lt;!-- Add this attribute if you require a close button --&gt;
-    'radius':true,             &lt;!-- Add a radius to this panel --&gt;
-    'theme':'warning',         &lt;!-- Add a theme class --&gt;
-    'content':data.panel,      &lt;!-- This hold the data for the panels content --&gt;
-    'buttonLabel':'Click me',  &lt;!-- This hold the data for the button Label --&gt;
-    'buttonLink':'/clickme'    &lt;!-- This hold the data for the button Link --&gt;
-&rcub;) &rcub;&rcub;
-</code>
-</pre>
-            </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-
-{#******************************************************** 
-                       Media blocks
-********************************************************#}
+<div class='block-m'>
+    <div class='dummy--container'>
     
-    <h3 class='lego--heading'>
-        media.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='block-m block--stacked '>
-                {{ macros.flego('media', {
-                    'gridContainer': 'grid-container',
-                    'gridMiddle': 'grid--middle',
-                    'themeClass': 'theme--quaternary',
-                    'blockSize': 'm',
-                    'isStacked' : ' pb-m--q-small',
-                    'mediaLeft':'col-1-3 col--q-small',
-                    'mediaRight':'col-2-3 col--q-small',
-                    'mediaLeftData':  data.dummyImage,
-                    'mediaRightData': data.dummyContent
-                }) }}
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='media-block-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='media-block-code'>
-                
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('media', {
-        'gridContainer': 'grid-container',      &lt;!--Apply a grid container class to fix the page size--&gt;
-        'gridMiddle': 'grid--middle',           &lt;!--Vertical align these grid items in the middle --&gt;
-        'themeClass': 'theme--secondary',       &lt;!--Apply a theme class that bleeds to the edge --&gt;
-        'blockSize': 'm',                       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-        'isStacked' : 'pt-0',                   &lt;!--Overide the block Attributes eg pt-0, pb-0 --&gt;
-        'mediaLeft':'col-1-3 col--q-small',     &lt;!--Controls the column size of the left hand content--&gt;
-        'mediaRight':'col-2-3 col--q-small',    &lt;!--Controls the column size of the right hand content--&gt;
-        'mediaLeftData': data.flegoContent,     &lt;!--This holds the data for the left hand content--&gt;
-        'mediaRightData': data.flegoImage       &lt;!--This holds the data for the right hand content--&gt;
-    }) 
-&rcub;&rcub;
-</code>
-</pre>
-            </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-
-{#******************************************************** 
-                       title center
-********************************************************#}
-    <h3 class='lego--heading'>
-        title.centered.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='block-m block--stacked'>
-                {{ macros.flego('title.centered', { 
-                    'blockSize': 's',
-                    'title': 'I am a title'
-                }) }}
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='title-center-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='title-center-code'>
-                
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('title.centered', &lcub;
-    'blockSize': 's',           &lt;!-- Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-    'title': 'I am a title'     &lt;!--comment--&gt;
-&rcub;) &rcub;&rcub;
-</code>
-</pre>
-            </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-
-{#******************************************************** 
-                       Comments
-********************************************************#}
-
-    <h3 class='lego--heading'>
-        comments.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='block-m block--stacked'>
-                <div class='grid'>
-                    {% for key, comment in data.comments %}
-                        {{ macros.flego('comments', {
-                            'commentData':comment, 
-                            'isStacked':'',
-                            'blockSize': 'm',
-                            'radius': true,
-                            'theme': 'warning',
-                            'CommentImage': 'i-gecko',
-                            'colSize': '-2-4 col--q-small'
-                        }) }}
-                    {% endfor %}
-                </div><!--grid ends-->
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-               <p class='font-size-xl uppercase text-center' data-showhide-trigger='comments-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='comments-code'>
-                
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('comments', &lcub;
-    'commentData':comment, 
-            'isStacked':'',                 &lt;!--comment--&gt;
-            'blockSize': 'm',               &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-            'radius': true,                 &lt;!--comment--&gt;
-            'theme': 'warning',             &lt;!--comment--&gt;
-            'CommentImage': 'i-gecko',      &lt;!--comment--&gt;
-            'colSize': '-2-4 col--q-small'  &lt;!--comment--&gt;
-&rcub;) &rcub;&rcub;
-</code>
-</pre>
-            </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-
-{#******************************************************** 
-                       Bar chart
-********************************************************#}
-
-    <h3 class='lego--heading'>
-        chart.bar.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='grid grid--middle'>
-                {{ macros.flego('chart.bar', {
-                    'barchartDesc':'of all coupons printed are ever redeemed',
-                    'barchartPercentage':'6',
-                    'blockSize': 'm'
-                }) }}
-            </div><!--grid ends-->
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='bar-chart-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='bar-chart-code'>
-                
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('comments', &lcub;
-    'commentData':comment, 
-        'barchartDesc':'of all coupons printed are ever redeemed',
-        'barchartPercentage':'6',
-        'blockSize': 'm'       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-&rcub;) &rcub;&rcub;
-</code>
-</pre>
-            </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-{#******************************************************** 
-                       PROGRESS TILE
-********************************************************#}
-    
-    <h3 class='lego--heading'>
-        Progress.tile.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='block-m block--stacked '>
-                {{ macros.flego('progress.tile', {
-                    'contentData': data.progressTile, 
-                    'colSize':'col-1-3',
-                    'percentage':'65.5',
-                    'theme':'quaternary',
-                    'blockSize': 'm'
-                }) }}
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='progresstile-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='progresstile-code'>
-<pre class='language-markup showhide-active'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('media', {
-    'contentData': data.progressTile, 
-    'colSize':'col-1-3',
-    'percentage':'65.5',
-    'theme':'quaternary',
-    'blockSize': 'm'
-    }) 
-&rcub;&rcub;
-</code>
-</pre>
+        <p class='grey-gradient split small append append--q-small append--q-medium' data-append="computer" data-append-medium="tablet" data-append-small="iphone" >
+            &nbsp;&nbsp;&#63743; Laura's awesome 
+            <span class='split__right uppercase '>
+                12:00am &nbsp;&nbsp;
+            </span>
+        </p> 
+        <h3 class='lego--heading'>
+            panel.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='block-m block--stacked '>
+                    {{ macros.flego('panel', {
+                        'blockSize': 'm', 
+                        'close':true,
+                        'radius':true,
+                        'theme':'warning', 
+                        'content':data.panel,
+                        'buttonLabel':'Click me',
+                        'buttonLink':'/clickme'
+                    }) }}
                 </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-{#******************************************************** 
-                       Forms
-********************************************************#}
-
-    <h3 class='lego--heading'>
-        forms.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='mb-m'>
-                <form class='grid'>
-                    {% for key, form in data.formData %}
-                        {{ macros.flego('form', {
-                            'colSize':'col-2-4 col--q-small',
-                            'blockSize': 'm',
-                            'formData':form
-                        }) }}
-                    {% endfor %}
-                </form>
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='forms-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='forms-code'>
-                
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('form', &lcub;
-    'commentData':comment, 
-        'colSize':'col-2-4 col--q-small',
-        'blockSize': 'm',         &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-        'formData':form
-&rcub;) &rcub;&rcub;
-</code>
-</pre>
-            </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-
-
-
-{#******************************************************** 
-                       Gallery list
-********************************************************#}
-
-    <h3 class='lego--heading'>
-        gallery.list.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='grid gallery '>
-        
-            <!-- loop over gallery items -->  
-            {% for item, galleryItem in data.galleryData %}
-                {{ macros.flego('gallery.list', {
-                    'colSize':'col-1-4',
-                    'blockSize': 'm',
-                    'galleryData':galleryItem
-                }) }}
-            {% endfor %}
+            </div><!--grid item ends-->
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='panels-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='panels-code'>
                     
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('panel', &lcub;
+        'blockSize': 'm',          &lt;!-- Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+        'close':true,              &lt;!-- Add this attribute if you require a close button --&gt;
+        'radius':true,             &lt;!-- Add a radius to this panel --&gt;
+        'theme':'warning',         &lt;!-- Add a theme class --&gt;
+        'content':data.panel,      &lt;!-- This hold the data for the panels content --&gt;
+        'buttonLabel':'Click me',  &lt;!-- This hold the data for the button Label --&gt;
+        'buttonLink':'/clickme'    &lt;!-- This hold the data for the button Link --&gt;
+    &rcub;) &rcub;&rcub;
+    </code>
+    </pre>
+                </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+
+
+    {#******************************************************** 
+                           Media blocks
+    ********************************************************#}
+        
+        <h3 class='lego--heading'>
+            media.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='block-m block--stacked '>
+                    {{ macros.flego('media', {
+                        'gridContainer': 'grid-container',
+                        'gridMiddle': 'grid--middle',
+                        'themeClass': 'theme--quaternary',
+                        'blockSize': 'm',
+                        'isStacked' : ' pb-m--q-small',
+                        'mediaLeft':'col-1-3 col--q-small',
+                        'mediaRight':'col-2-3 col--q-small',
+                        'mediaLeftData':  data.dummyImage,
+                        'mediaRightData': data.dummyContent
+                    }) }}
+                </div>
             </div><!--grid item ends-->
-        </div>
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                 <p class='font-size-xl uppercase text-center' data-showhide-trigger='gallery-list-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='gallery-list-code'>
-                
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('gallery.list', &lcub;
-    'colSize':'col-1-4',
-    'blockSize': 'm',      &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-    'data':galleryData
-&rcub;) &rcub;&rcub;
-</code>
-</pre>
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='media-block-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='media-block-code'>
+                    
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('media', {
+            'gridContainer': 'grid-container',      &lt;!--Apply a grid container class to fix the page size--&gt;
+            'gridMiddle': 'grid--middle',           &lt;!--Vertical align these grid items in the middle --&gt;
+            'themeClass': 'theme--secondary',       &lt;!--Apply a theme class that bleeds to the edge --&gt;
+            'blockSize': 'm',                       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+            'isStacked' : 'pt-0',                   &lt;!--Overide the block Attributes eg pt-0, pb-0 --&gt;
+            'mediaLeft':'col-1-3 col--q-small',     &lt;!--Controls the column size of the left hand content--&gt;
+            'mediaRight':'col-2-3 col--q-small',    &lt;!--Controls the column size of the right hand content--&gt;
+            'mediaLeftData': data.flegoContent,     &lt;!--This holds the data for the left hand content--&gt;
+            'mediaRightData': data.flegoImage       &lt;!--This holds the data for the right hand content--&gt;
+        }) 
+    &rcub;&rcub;
+    </code>
+    </pre>
                 </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
 
 
 
-
-
-{#******************************************************** 
-                       Content blocks
-********************************************************#}
-    
-    <h3 class='lego--heading'>
-        content.block.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='block-m block--stacked '>
-                {{ macros.flego('content.block', { 
-                    'colSize':'col-3-4 col--q-small',
-                    'themeClass':'warning',
-                    'blockSize': 'm',
-                    'content': data.contentblock
-                }) }}
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='content-block-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='content-block-code'>
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('media', {
-    'gridContainer': true,
-    'colSize':'col-3-4',
-    'themeClass':'warning',
-    'blockSize': 'm',       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-    'content': data.contentblock
-    }) 
-&rcub;&rcub;
-</code>
-</pre>
+    {#******************************************************** 
+                           title center
+    ********************************************************#}
+        <h3 class='lego--heading'>
+            title.centered.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='block-m block--stacked'>
+                    {{ macros.flego('title.centered', { 
+                        'blockSize': 's',
+                        'title': 'I am a title'
+                    }) }}
                 </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-
-
-
-{#******************************************************** 
-                       Gallery showcase
-********************************************************#}
-
-    <h3 class='lego--heading'>
-        gallery.showcase.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='grid gallery '>
-                {{ macros.flego('gallery.showcase', { 
-                    'galleryShowcaseData':data.galleryShowcase,
-                    'category': 'television',
-                    'date': '4th of june 2010',
-                    'url': '/clickme',
-                    'categoryUrl': 'TV/clickme',
-                    'imageSource': 'assets/images/gallery-showcase.jpg',  
-                    'isStacked': '', 
-                    'blockSize': 'm',
-                    'theme': 'quaternary',
-                    'colSizeLeft':'col-1-3 col--q-small col--q-medium',
-                    'colSizeRight':'col-2-3 col--q-small col--q-medium'
-                   
-                }) }}    
             </div><!--grid item ends-->
-        </div>
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='gallery-showcase-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='gallery-showcase-code'>
-<pre class='language-markup'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('gallery.list', &lcub;
-'galleryShowcaseData':data.galleryShowcase, 
-    'isStacked': '', 
-    'blockSize': 'm',        &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-    'theme': 'quaternary',   &lt;!-- Apply a theme class --&gt;
-    'gridContainer': 'grid-container'
-&rcub;) &rcub;&rcub;
-</code>
-</pre>
-            </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
-
-
-
-
-{#******************************************************** 
-                       Header
-********************************************************#}
-    
-    <h3 class='lego--heading'>
-        header.twig
-    </h3>
-    <div class='grid'>
-        <div class='grid__item col col--q-small'>
-            <div class='block-m block--stacked '>
-                {{ macros.lego('header', {
-                    'navigation': navigation, 
-                    'isStacked':'',
-                    'blockSize': 'm'
-                }) }}
-            </div>
-        </div><!--grid item ends-->
-        <div class='grid__item col'>
-            <div class='block-m block--stacked pt-0 pb-0 pb-0'>
-                <p class='font-size-xl uppercase text-center' data-showhide-trigger='header-code'>
-                    <span class='down-arrow'></span>
-                </p>
-                <div class='showhide-hidden' data-showhide-container='header-code'>
-<pre class='language-markup showhide-active'>
-<code class='language-markup'>
-&lcub;&lcub; macros.flego('media', {
-    'gridContainer': true,
-    'colSize':'col-3-4',
-    'themeClass':'warning',
-    'blockSize': 'm',
-    'content': data.contentblock
-    }) 
-&rcub;&rcub;
-</code>
-</pre>
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='title-center-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='title-center-code'>
+                    
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('title.centered', &lcub;
+        'blockSize': 's',           &lt;!-- Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+        'title': 'I am a title'     &lt;!--comment--&gt;
+    &rcub;) &rcub;&rcub;
+    </code>
+    </pre>
                 </div>
-            </div><!--block ends-->
-        </div><!-- grid item ends-->
-    </div><!-- grid ends -->
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
 
+
+
+    {#******************************************************** 
+                           Comments
+    ********************************************************#}
+
+        <h3 class='lego--heading'>
+            comments.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='block-m block--stacked'>
+                    <div class='grid'>
+                        {% for key, comment in data.comments %}
+                            {{ macros.flego('comments', {
+                                'commentData':comment, 
+                                'isStacked':'',
+                                'blockSize': 'm',
+                                'radius': true,
+                                'theme': 'warning',
+                                'CommentImage': 'i-gecko',
+                                'colSize': '-2-4 col--q-small'
+                            }) }}
+                        {% endfor %}
+                    </div><!--grid ends-->
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                   <p class='font-size-xl uppercase text-center' data-showhide-trigger='comments-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='comments-code'>
+                    
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('comments', &lcub;
+        'commentData':comment, 
+                'isStacked':'',                 &lt;!--comment--&gt;
+                'blockSize': 'm',               &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+                'radius': true,                 &lt;!--comment--&gt;
+                'theme': 'warning',             &lt;!--comment--&gt;
+                'CommentImage': 'i-gecko',      &lt;!--comment--&gt;
+                'colSize': '-2-4 col--q-small'  &lt;!--comment--&gt;
+    &rcub;) &rcub;&rcub;
+    </code>
+    </pre>
+                </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+
+
+    {#******************************************************** 
+                           Bar chart
+    ********************************************************#}
+
+        <h3 class='lego--heading'>
+            chart.bar.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='grid grid--middle'>
+                    {{ macros.flego('chart.bar', {
+                        'barchartDesc':'of all coupons printed are ever redeemed',
+                        'barchartPercentage':'6',
+                        'blockSize': 'm'
+                    }) }}
+                </div><!--grid ends-->
+            </div><!--grid item ends-->
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='bar-chart-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='bar-chart-code'>
+                    
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('comments', &lcub;
+        'commentData':comment, 
+            'barchartDesc':'of all coupons printed are ever redeemed',
+            'barchartPercentage':'6',
+            'blockSize': 'm'       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+    &rcub;) &rcub;&rcub;
+    </code>
+    </pre>
+                </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+
+    {#******************************************************** 
+                           PROGRESS TILE
+    ********************************************************#}
+        
+        <h3 class='lego--heading'>
+            Progress.tile.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='block-m block--stacked '>
+                    {{ macros.flego('progress.tile', {
+                        'contentData': data.progressTile, 
+                        'colSize':'col-1-3',
+                        'percentage':'65.5',
+                        'theme':'quaternary',
+                        'blockSize': 'm'
+                    }) }}
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='progresstile-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='progresstile-code'>
+    <pre class='language-markup showhide-active'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('media', {
+        'contentData': data.progressTile, 
+        'colSize':'col-1-3',
+        'percentage':'65.5',
+        'theme':'quaternary',
+        'blockSize': 'm'
+        }) 
+    &rcub;&rcub;
+    </code>
+    </pre>
+                    </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+    {#******************************************************** 
+                           Forms
+    ********************************************************#}
+
+        <h3 class='lego--heading'>
+            forms.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='mb-m'>
+                    <form class='grid'>
+                        {% for key, form in data.formData %}
+                            {{ macros.flego('form', {
+                                'colSize':'col-2-4 col--q-small',
+                                'blockSize': 'm',
+                                'formData':form
+                            }) }}
+                        {% endfor %}
+                    </form>
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='forms-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='forms-code'>
+                    
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('form', &lcub;
+        'commentData':comment, 
+            'colSize':'col-2-4 col--q-small',
+            'blockSize': 'm',         &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+            'formData':form
+    &rcub;) &rcub;&rcub;
+    </code>
+    </pre>
+                </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+
+
+
+
+    {#******************************************************** 
+                           Gallery list
+    ********************************************************#}
+
+        <h3 class='lego--heading'>
+            gallery.list.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='grid gallery '>
+            
+                <!-- loop over gallery items -->  
+                {% for item, galleryItem in data.galleryData %}
+                    {{ macros.flego('gallery.list', {
+                        'colSize':'col-1-4',
+                        'blockSize': 'm',
+                        'galleryData':galleryItem
+                    }) }}
+                {% endfor %}
+                        
+                </div><!--grid item ends-->
+            </div>
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                     <p class='font-size-xl uppercase text-center' data-showhide-trigger='gallery-list-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='gallery-list-code'>
+                    
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('gallery.list', &lcub;
+        'colSize':'col-1-4',
+        'blockSize': 'm',      &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+        'data':galleryData
+    &rcub;) &rcub;&rcub;
+    </code>
+    </pre>
+                    </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+
+
+
+
+    {#******************************************************** 
+                           Content blocks
+    ********************************************************#}
+        
+        <h3 class='lego--heading'>
+            content.block.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='block-m block--stacked '>
+                    {{ macros.flego('content.block', { 
+                        'colSize':'col-3-4 col--q-small',
+                        'themeClass':'warning',
+                        'blockSize': 'm',
+                        'content': data.contentblock
+                    }) }}
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='content-block-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='content-block-code'>
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('media', {
+        'gridContainer': true,
+        'colSize':'col-3-4',
+        'themeClass':'warning',
+        'blockSize': 'm',       &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+        'content': data.contentblock
+        }) 
+    &rcub;&rcub;
+    </code>
+    </pre>
+                    </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+
+
+
+
+    {#******************************************************** 
+                           Gallery showcase
+    ********************************************************#}
+
+        <h3 class='lego--heading'>
+            gallery.showcase.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='grid gallery '>
+                    {{ macros.flego('gallery.showcase', { 
+                        'galleryShowcaseData':data.galleryShowcase,
+                        'category': 'television',
+                        'date': '4th of june 2010',
+                        'url': '/clickme',
+                        'categoryUrl': 'TV/clickme',
+                        'imageSource': 'assets/images/gallery-showcase.jpg',  
+                        'isStacked': '', 
+                        'blockSize': 'm',
+                        'theme': 'quaternary',
+                        'colSizeLeft':'col-1-3 col--q-small col--q-medium',
+                        'colSizeRight':'col-2-3 col--q-small col--q-medium'
+                       
+                    }) }}    
+                </div><!--grid item ends-->
+            </div>
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='gallery-showcase-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='gallery-showcase-code'>
+    <pre class='language-markup'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('gallery.list', &lcub;
+    'galleryShowcaseData':data.galleryShowcase, 
+        'isStacked': '', 
+        'blockSize': 'm',        &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
+        'theme': 'quaternary',   &lt;!-- Apply a theme class --&gt;
+        'gridContainer': 'grid-container'
+    &rcub;) &rcub;&rcub;
+    </code>
+    </pre>
+                </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+
+
+
+
+    {#******************************************************** 
+                           Header
+    ********************************************************#}
+        
+        <h3 class='lego--heading'>
+            header.twig
+        </h3>
+        <div class='grid'>
+            <div class='grid__item col col--q-small'>
+                <div class='block-m block--stacked '>
+                    {{ macros.lego('header', {
+                        'navigation': navigation, 
+                        'isStacked':'',
+                        'blockSize': 'm'
+                    }) }}
+                </div>
+            </div><!--grid item ends-->
+            <div class='grid__item col'>
+                <div class='block-m block--stacked pt-0 pb-0 pb-0'>
+                    <p class='font-size-xl uppercase text-center' data-showhide-trigger='header-code'>
+                        <span class='down-arrow'></span>
+                    </p>
+                    <div class='showhide-hidden' data-showhide-container='header-code'>
+    <pre class='language-markup showhide-active'>
+    <code class='language-markup'>
+    &lcub;&lcub; macros.flego('media', {
+        'gridContainer': true,
+        'colSize':'col-3-4',
+        'themeClass':'warning',
+        'blockSize': 'm',
+        'content': data.contentblock
+        }) 
+    &rcub;&rcub;
+    </code>
+    </pre>
+                    </div>
+                </div><!--block ends-->
+            </div><!-- grid item ends-->
+        </div><!-- grid ends -->
+    </div>
+</div>
 {% endblock %}

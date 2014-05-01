@@ -129,40 +129,45 @@
             }) }}
         </div>
         <div class='grid-container dummy--container' style=''>
+            <p class='grey-gradient split small append append--q-small append--q-medium' data-append="computer" data-append-medium="tablet" data-append-small="iphone" >
+                &nbsp;&nbsp;&#63743; Laura's awesome 
+                <span class='split__right uppercase '>
+                    12:00am &nbsp;&nbsp;
+                </span>
+            </p> 
+            <h3 class='lego--heading'>
+                content.media.quarters.twig
+            </h3>
             
-                <h3 class='lego--heading-2'>
-                    content.media.quarters.twig
-                </h3>
-                
-                {{ macros.lego('content.media.quarters', {
-                    'themeClass': 'theme--primary',
-                    'content': data.dummycontent,
-                    'image': data.dummyimage
-                }) }}
+            {{ macros.lego('content.media.quarters', {
+                'themeClass': 'theme--primary',
+                'content': data.dummycontent,
+                'image': data.dummyimage
+            }) }}
 
-                {#<h3 class='lego--heading-2'>
-                    content.media.reversed.quarters.twig
-                </h3>
+            {#<h3 class='lego--heading-2'>
+                content.media.reversed.quarters.twig
+            </h3>
 
-                {{ macros.lego('content.media.reversed.quarters', {
-                    'themeClass': 'theme--primary',
-                    'content': data.dummycontent,
-                    'image': data.dummyimage
-                }) }}#}
+            {{ macros.lego('content.media.reversed.quarters', {
+                'themeClass': 'theme--primary',
+                'content': data.dummycontent,
+                'image': data.dummyimage
+            }) }}#}
 
-                <h3 class='lego--heading-2'>
-                    panel.twig
-                </h3>
-                <div class='block-m block--stacked'>
-                    {{ macros.flego('panel', {
-                    'blockSize': 'm', 
-                    'close':true,
-                    'radius':true,
-                    'theme':'warning', 
-                    'content':data.panel,
-                    'buttonLabel':'Click me',
-                    'buttonLink':'/clickme'
-                }) }}
+            <h3 class='lego--heading'>
+                panel.twig
+            </h3>
+            <div class='block-m block--stacked'>
+                {{ macros.flego('panel', {
+                'blockSize': 'm', 
+                'close':true,
+                'radius':true,
+                'theme':'warning', 
+                'content':data.panel,
+                'buttonLabel':'Click me',
+                'buttonLink':'/clickme'
+            }) }}
             </div>
 
         </div><!--grid container ends-->

@@ -12,21 +12,10 @@
         @extend .text-muted;
         @extend .uppercase;
         @extend .font-primary--light;
-        @extend .theme--tertiary;
-        @extend .text-center;
-    }
-    .lego--heading-2 {
-        @extend .mt-0; 
-        @extend .pl-l; 
-        @extend .pt-m;
-        @extend .pb-m;
-        @extend .small;
-        @extend .text-muted;
-        @extend .uppercase;
-        @extend .font-primary--light;
         @extend .theme--secondary;
         @extend .text-center;
     }
+    
 
 //change to use vendor mixin
 .border-box {
@@ -136,4 +125,43 @@ code {
     border-radius:40px;
 
     background-color:#fff;
+}
+
+
+@include media(medium) {
+    .append--q-medium {
+        &:after{
+            content: attr(data-append-medium);
+            display: inline-block;
+        }
+    }
+}
+@include media(small) {
+    .append--q-small {
+        &:after{
+            content: attr(data-append-small);
+            display: inline-block;
+        }
+    }
+}
+//todo
+.grey-gradient {  
+
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDEDED), color-stop(1, #BABABA));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #EDEDED 0%, #BABABA 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #EDEDED 0%, #BABABA 100%);
 }
