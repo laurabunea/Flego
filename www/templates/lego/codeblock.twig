@@ -19,11 +19,14 @@
         </div><!--block ends-->
     </div><!-- grid item ends-->
     <div class='grid__item col col--q-small'>
-        <div class='block-m block--stacked'>
+        {% if data.blockSize %}
+        <div class='block-{{data.blockSize}} block--stacked'>
+        {% endif %}
            
             {{ data.renderedView | raw }}
       
-            
+        {% if data.blockSize %}
         </div>
+        {% endif %}
     </div><!--grid item ends-->
 </div><!-- grid ends -->

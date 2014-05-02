@@ -58,21 +58,6 @@ $vars['article'] = array(
     )
 );
 
-$vars['contentblock'] = array(
-    array(
-        "type" => "h1",
-        "data" => "I am a title"
-    ),
-    array(
-        "type" => "intro",
-        "data" => "A slice of heaven. Always blow on the pie. Ill see you right, this bung seabed is as bloody as a tapu Undie 500. Chur bro, we go together, kinda like mince n cheese ya know"
-    ),
-    array(
-        "type" => "content",
-        "data" => "Oh no! No worries, this cool morepork is as kiwi as as a paru Undie 500. Across the ditch, good as gold, fully. Mean while, in behind the bicycle shed, Lomu and Helen Clarke were up to no good with a bunch of cracker vivids. The pretty suss force of his chundering was on par with John Keys heaps good Grandpas slipper. Put the jug on will you bro, all these wicked slippers can wait till later. The first prize for burning my Vogels goes to... the Armed Offenders Squad and his same same but different cookie time, what a dole bludger."
-    )
-              
-);
 
 
 $vars['mediaimage'] = array(
@@ -85,64 +70,7 @@ $vars['mediaimage'] = array(
               
 );
 
-$vars['formData'] = array(
-    array(
-        array(
-            "type" => "label",
-            "for" => "firstname",
-            "data" => "First name",
-            "class" => "col"
-        ),
-        array(
-            "type" => "input",
-            "placeholder" => "type first name here",
-            "id" => "firstname",
-            "class" => "col text-input"
-        )
-    ),
-    array(
-        array(
-            "type" => "label",
-            "for" => "lastname",
-            "data" => "Last name",
-            "class" => "col "
-        ),
-        array(
-            "type" => "input",
-            "placeholder" => "type last name here",
-            "id" => "lastname",
-            "class" => "col text-input"
-        )
-    ),
-    array(
-        array(
-            "type" => "label",
-            "for" => "Passwor",
-            "data" => "Email address",
-            "class" => "col "
-        ),
-        array(
-            "type" => "input",
-            "placeholder" => "type email here",
-            "id" => "email",
-            "class" => "col text-input"
-        )
-    ),
-    array(
-        array(
-            "type" => "label",
-            "for" => "Passwor",
-            "data" => "Email address",
-            "class" => "col"
-        ),
-        array(
-            "type" => "input",
-            "placeholder" => "type email here",
-            "id" => "email",
-            "class" => "col text-input"
-        )
-    )          
-);
+
 
 $vars['flegoContent'] = array(
     array(
@@ -164,20 +92,6 @@ $vars['flegoImage'] = array(
         "src" => "assets/images/flego.png"
         )           
 );
-//{#$vars['panelButton'] = array(
-//    array(
- //       "type" => "button",
-//       "label" => "Click me",
- //       "href" => "/clickme",
- //       "class" => "right col border-box mt-m--q-small"
- //   )
-     
-//);#}
-
-
-
-
-
 
 $vars['galleryData'] = array(
     array(
@@ -205,33 +119,37 @@ $vars['galleryData'] = array(
         "src" => "assets/images/portrait.jpg"
     )       
 );
-$vars['galleryShowcase'] = array(
-    
-    array(
-        "type" => "h2",
-        "href" => "/clickme",
-        "data" => "Hello there"
-    ),
-    "data" => "Dont be a egg. After the fella is skived off, you add all the pretty suss cookie times to the foreshore and seabed issue youve got yourself a meal. Technology has allowed carked it housies to participate in the global conversation of hard case pieces of cheese on toast. The next Generation of nuclear-free manuses have already munted over at Rangitoto Island. Whats the hurry the Armed Offenders Squad? Theres plenty of jerseys in South Pacific."      
-    ,
-    array(
-        "type" => "link",
-        "href" => "/clickme",
-        "label" => "Read more .."
-    )
-);
 
-$vars['progressTile'] = array(
-    
-    array(
-        "type" => "h3",
-        "data" => "Visitors"
-    ),
-    "data" => "so far in our blog, and our website."      
-    
+include_once __DIR__ . "/dummyData/gallery-showcase.php";
+$vars['galleryShowcaseView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/gallery-showcase.twig')),
+    "rendered" => $twig->render('macros/gallery-showcase.twig', array('data' => $vars)),
 );
 
 
+include_once __DIR__ . "/dummyData/content-block.php";
+$vars['contentBlockView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/content-block.twig')),
+    "rendered" => $twig->render('macros/content-block.twig', array('data' => $vars)),
+);
+
+
+include_once __DIR__ . "/dummyData/forms.php";
+$vars['formsView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/forms.twig')),
+    "rendered" => $twig->render('macros/forms.twig', array('data' => $vars)),
+);
+
+
+include_once __DIR__ . "/dummyData/progress-tile.php";
+$vars['progressTileView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/progress-tile.twig')),
+    "rendered" => $twig->render('macros/progress-tile.twig', array('data' => $vars)),
+);
 
 include_once __DIR__ . "/dummyData/bar-chart.php";
 $vars['barchartView'] = array(

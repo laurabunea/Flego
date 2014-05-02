@@ -1,11 +1,23 @@
 {% import "macros.twig" as macros %}
-    
-    <div class='grid__item {{data.colSize}}'>
-        <div class='block-{{data.blockSize}} block--stacked pb-0'>
-            <div class='grid'>
-                {{ macros.blocks(data.formData) }}
-            </div>
-        </div>
-    </div><!--grid item ends-->
 
-        
+{% if data.gridContainer %}
+<div class='{{data.gridContainer}}'>
+{% endif %}
+
+    <div class='grid pb-m'>
+	    
+	    {% for key, item in data.formData %}
+	    <div class='grid__item {{data.colSize}}'>
+	        <div class='block-{{data.blockSize}} block--stacked pb-0'>
+	            <div class='grid'>
+	                {{ macros.blocks(item) }}
+	            </div>
+	        </div>
+	    </div><!--grid item ends-->
+	    {% endfor %}
+	    
+    </div>
+    
+{% if data.gridContainer %}
+</div>
+{% endif %}  

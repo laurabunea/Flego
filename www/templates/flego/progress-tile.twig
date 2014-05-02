@@ -1,21 +1,21 @@
 {% import "macros.twig" as macros %}
 
-<!--<div class="grid-container">-->
     <div class="grid">
+        {% for key, content in data.contentData %}
         <div class="grid__item {{data.colSize}}">
             <div class="tile-progress {% if data.theme %} theme--{{data.theme}} {% endif %} radius ">
                 <div class="tile-header block--stacked {% if data.blockSize %} block-{{data.blockSize}} {% endif %}">
-                    {{ macros.blocks(data.contentData) }}
+                    {{ macros.blocks(content) }}
                 </div>
                 <div class="tile-progressbar">
-                    <span data-fill="{{data.percentage}}%" style="width: {{data.percentage}}%;"></span>
+                    <span data-fill="{{data.percentage}}%" style="width: {{content.percentage}}%;"></span>
                 </div>
                 <div class="tile-footer block--stacked {% if data.blockSize %} block-{{data.blockSize}} {% endif %} text-right">
                     <h4>
-                        <span class="pct-counter">{{data.percentage}}</span>% increase
+                        <span class="pct-counter">{{content.percentage}}</span>% {{content.blurb}}
                     </h4>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-<!--</div>-->
