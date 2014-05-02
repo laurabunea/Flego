@@ -3,7 +3,7 @@ include_once __DIR__ . "/../init.php";
 
 $vars = array();
 
-include_once __DIR__ . "/global.php";
+include_once __DIR__ . "/flego-blocks.php";
 $vars['themes'] = array(   
     "primary",  
     "secondary", 
