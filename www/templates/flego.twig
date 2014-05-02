@@ -2,20 +2,18 @@
 
 {% block content %}
     
-    {{ macros.lego('content.media.reversed.quarters', {
-        'themeClass': 'theme--secondary',
-        'content': data.flegoContent,
-        'image': data.flegoImage
-    }) }}
-  
-<div class='block-m'>
+<div class='block-m block--stacked'>
     <div class='device-container'>
     
         {{ macros.lego('device-header', {
             'splitLeft':"Flego's awesome",
             'splitRight':'12:00am'
         }) }}
-
+        {{ macros.lego('content.media.reversed.quarters', {
+            'themeClass': 'theme--quaternary',
+            'content': data.flegoContent,
+            'image': data.flegoImage
+        }) }}
         {{ macros.lego('codeblock', {
             'title':'panel.twig',
             'anchor':'panel-code',
@@ -92,7 +90,6 @@
             'renderedView':data.galleryListView.rendered
         }) }}
 
-        
         {#header code {{ macros.lego('header', {
             'navigation': navigation, 
             'isStacked':'',
