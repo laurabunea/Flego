@@ -7,13 +7,11 @@
     {% include "flego/" ~ type ~ ".twig" ignore missing with { 'data': data } %} 
 {% endmacro %}
 
-
-{% macro blocks(data) %} 
-
+{% macro blocks(data) %}
     {% if data is iterable %}
 
         {% for item in data %}
-       
+
             {% if item.type %}
                 {% include "elements/" ~ item.type ~ ".twig" ignore missing with { 'item': item } %} 
             {% else %}   

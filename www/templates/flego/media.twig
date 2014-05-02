@@ -23,15 +23,14 @@
     {% endif %}
 
             <div class='grid {{data.gridMiddle}}'>
-                <div class='grid__item {{data.mediaRight}}'>
-                    <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
+                <div class='grid__item {{data.mediaLeft}}'>
+                    <div class='block-{{data.blockSize | default("m")}} block--stacked {{data.isStacked}}'>
                         {{ macros.blocks(data.mediaRightData) }}
                     </div><!--block ends-->
                 </div><!--grid item ends-->
-                <div class='grid__item {{data.mediaLeft}}'>
-                    <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
-                       {{ macros.blocks(data.mediaLeftData) }}
-                       
+                <div class='grid__item {{data.mediaRight}}'>
+                    <div class='block-{{data.blockSize | default("m")}} block--stacked {{data.isStacked}}'>
+                       {{ macros.blocks(data.mediaLeftData) }}   
                     </div><!--block ends-->
                 </div><!-- grid item ends-->
             </div><!-- ends -->

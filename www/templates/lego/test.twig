@@ -1,0 +1,29 @@
+{% import "macros.twig" as macros %}
+
+<h3 class='lego--heading split on-hover' data-showhide-trigger='{{data.anchor}}'>
+    {{data.title}}
+    <span class='split__right'>
+        show me some code &#9660;
+    </span>
+</h3>
+<div class='grid'>
+    <div class='grid__item col'>
+        <div class='block-m block--stacked pt-0 pb-0'>
+            <div class='showhide-hidden' data-showhide-container='{{data.anchor}}'>              
+                <pre class='language-markup'>
+                    <code class='language-markup'>
+                        {{data.codeView}}
+                    </code>
+                </pre>
+            </div>
+        </div><!--block ends-->
+    </div><!-- grid item ends-->
+    <div class='grid__item col col--q-small'>
+        <div class='block-m block--stacked'>
+           
+            {{ data.renderedView | raw }}
+      
+            
+        </div>
+    </div><!--grid item ends-->
+</div><!-- grid ends -->

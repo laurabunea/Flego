@@ -1,9 +1,12 @@
 {% import "macros.twig" as macros %}
-        
+
+{% for key, comment in data.commentData %}
+
     <div class='grid__item col{{data.colSize}}'>
         <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
             <div class='arrow--left block-xs {% if data.theme %}theme--{{data.theme}}{% endif %} {% if data.radius %}radius{% endif %}'>
-                {{ macros.blocks(data.commentData) }}
+
+                {{ macros.blocks(comment) }}
         
                 <i class='arrow arrow-bottom '></i>
             </div>
@@ -14,4 +17,6 @@
             </p>
         </div><!--block ends-->
     </div><!-- grid item ends-->
+
+{% endfor %}
 

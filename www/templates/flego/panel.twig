@@ -1,27 +1,31 @@
 {#
     {{ macros.flego('panel', {
-        'blockSize': 'm', 
-        'close':true,
-        'radius':true,
-        'theme':'warning', 
-        'content':data.panel,
-        'buttonLabel':'Click me',
-        'buttonLink':'/clickme'
+        'blockSize': 'm',          <!-- Controls content padding eg xxxs, xxs, xs, s ..-->
+        'close':true,              <!-- Add this attribute if you require a close button -->
+        'radius':true,             <!-- Add a radius to this panel -->
+        'theme':'warning',         <!-- Add a theme class -->
+        'content':data.panel,      <!-- This hold the data for the panels content -->
+        'buttonLabel':'Click me',  <!-- This hold the data for the button Label -->
+        'buttonLink':'/clickme'    <!-- This hold the data for the button Link -->
     }) }}
 #}
 
 {% import "macros.twig" as macros %}
+
 
 <div class='grid'>
     <div class='grid__item col'>
         {% if data.theme %}
         <div class='theme--{{data.theme}} {% if data.radius %}radius {% endif %}'>
         {% endif %}
+
             <div class='block-{{data.blockSize}} block--stacked'>
                 <div class='grid relative'>
+                    
                     {% if data.close %}
                     <span class='close absolute--top-right text-top'></span>
-                        {% endif %}
+                    {% endif %}
+
                     <div class='grid__item col-3-4 col--q-small'>
                         <div class='mr-m'>
                             {{ macros.blocks(data.content) }}

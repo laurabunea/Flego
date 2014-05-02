@@ -164,60 +164,21 @@ $vars['flegoImage'] = array(
         "src" => "assets/images/flego.png"
         )           
 );
-
-$vars['dummyImage'] = array(
-    array(
-        "type" => "image-responsive",
-        "alt" => "Flego",
-        "title" => "portrait",
-        "src" => "assets/images/portrait.jpg"
-        )           
-);
-
-
-$vars['panel'] = array(
-    array(
-        "type" => "h2",
-        "data" => "Get in touch",
-        "class" => "font-primary--light"
-    ),
-    "data" => "We would love to hear from you, you attractive person you."
+//{#$vars['panelButton'] = array(
+//    array(
+ //       "type" => "button",
+//       "label" => "Click me",
+ //       "href" => "/clickme",
+ //       "class" => "right col border-box mt-m--q-small"
+ //   )
      
-);
+//);#}
 
-$vars['panelButton'] = array(
-    array(
-        "type" => "button",
-        "label" => "Click me",
-        "href" => "/clickme",
-        "class" => "right col border-box mt-m--q-small"
-    )
-     
-);
-$vars['dummyContent'] = array(
-    array(
-        "type" => "h2",
-        "data" => "I am a title"
-    ),
-    "data" => "Kia ora.. You're not in Guatemala now, this rip-off kumara is as sweet as as a sweet as scarfie. Mean while, in Shortland Street, Manus Morissette and The Hungery Caterpilar were up to no good with a bunch of beached as whitebait fritters. "     
-);
 
-$vars['comments'] = array(
-    array(
-        array(
-            "type" => "h4",
-            "data" => "Laura Bunea"
-        ),
-        "data" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum"
-    ),
-    array(
-        array(
-            "type" => "h4",
-            "data" => "Cody Bunea"
-        ),
-        "data" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum"
-    )
-);
+
+
+
+
 $vars['galleryData'] = array(
     array(
         "type" => "image-responsive",
@@ -268,6 +229,36 @@ $vars['progressTile'] = array(
     ),
     "data" => "so far in our blog, and our website."      
     
+);
+
+
+
+
+
+
+include_once __DIR__ . "/dummyData/panel.php";
+$vars['panelView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/panel.twig')),
+    "rendered" => $twig->render('macros/panel.twig', array('data' => $vars)),
+);
+
+
+
+include_once __DIR__ . "/dummyData/media.php";
+$vars['mediaView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/media.twig')),
+    "rendered" => $twig->render('macros/media.twig', array('data' => $vars)),
+);
+
+
+include_once __DIR__ . "/dummyData/comments.php";
+
+$vars['commentsView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/comments.twig')),
+    "rendered" => $twig->render('macros/comments.twig', array('data' => $vars)),
 );
 
 

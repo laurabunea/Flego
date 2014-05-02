@@ -9,3 +9,10 @@ $twig = new Twig_Environment($loader, array(
     'auto_reload' => true,
     'debug' => true
 ));
+$twig->addExtension(new Twig_Extension_Debug());
+
+function print_rr($thing) {
+    print "<pre>";
+    print_r($thing);
+    print "</pre>";
+}

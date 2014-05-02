@@ -4445,16 +4445,17 @@ hr {
   width: 50px;
   background-repeat: no-repeat; }
 
-.down-arrow {
-  background-image: url('/assets/images/down-arrow.png');
-  background-repeat: no-repeat;
-  height: 19px;
-  width: 30px;
-  display: inline-block; }
-  .down-arrow:hover {
-    background-image: url('/assets/images/down-arrow-dark.png');
-    cursor: pointer; }
-
+/*.down-arrow {
+    background-image:url('/assets/images/down-arrow.png');
+    background-repeat: no-repeat;
+    height:19px; 
+    width:30px;
+    display:inline-block;
+    &:hover {
+    	background-image:url('/assets/images/down-arrow-dark.png');
+    	cursor:pointer;
+    }
+}*/
 /* Shame */
 
 
@@ -4525,17 +4526,17 @@ label {
 .tile-progress .tile-footer {
   background: rgba(0, 0, 0, 0.1); }
 
-.dummy--container {
+.device-container {
   border: 70px solid #000;
   border-radius: 40px;
   background-color: #fff; }
   @media only screen and (min-width: 48em) and (max-width: 63.99em) {
-    .dummy--container {
+    .device-container {
       border: 50px solid #000;
       border-top: 80px solid #000;
       border-radius: 30px; } }
   @media only screen and (max-width: 47.99em) {
-    .dummy--container {
+    .device-container {
       border: 30px solid #000;
       border-top: 80px solid #000;
       border-radius: 20px; } }

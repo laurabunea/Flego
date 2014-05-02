@@ -2,44 +2,63 @@
 
 {% block content %}
     
-    {{ macros.flego('media', {
-        'gridContainer': 'grid-container',
-        'gridMiddle': 'grid--middle',
+    {{ macros.lego('content.media.reversed.quarters', {
         'themeClass': 'theme--secondary',
-        'blockSize': 'm',
-        'mediaLeft':'col-1-4',
-        'mediaRight':'col-3-4',
-        'mediaLeftData':  data.flegoImage,
-        'mediaRightData': data.flegoContent
+        'content': data.flegoContent,
+        'image': data.flegoImage
     }) }}
   
-
-
-
 {#******************************************************** 
                        Panels
 ********************************************************#}
 <div class='block-m'>
-    <div class='dummy--container'>
+    <div class='device-container'>
     
         <p class='grey-gradient split small append append--q-small append--q-medium' data-append="computer" data-append-medium="tablet" data-append-small="iphone" >
             &nbsp;&nbsp;&#63743; Laura's awesome 
             <span class='split__right uppercase '>
                 12:00am &nbsp;&nbsp;
             </span>
-        </p> 
-        <h3 class='lego--heading split on-hover' data-showhide-trigger='panels-code'>
+        </p>
+
+        {{ macros.lego('test', {
+            'title':'panel.twig',
+            'anchor':'panel-code',
+            'codeView':data.panelView.code,
+            'renderedView':data.panelView.rendered
+        }) }}
+
+        {{ macros.lego('test', {
+            'title':'media.twig',
+            'anchor':'media-block-code',
+            'codeView':data.mediaView.code,
+            'renderedView':data.mediaView.rendered
+        }) }}
+
+        {{ macros.lego('test', {
+            'title':'tile.centered.twig',
+            'anchor':'title-center-code',
+            'codeView':data.tileCenterView.code,
+            'renderedView':data.tileCenterView.rendered
+        }) }}
+
+        {{ macros.lego('test', {
+            'title':'comments.twig',
+            'anchor':'comments-code',
+            'codeView':data.commentsView.code,
+            'renderedView':data.commentsView.rendered
+        }) }}
+ 
+        {#<h3 class='lego--heading split on-hover' data-showhide-trigger='panels-code'>
             panel.twig
             <span class='split__right'>
                 show me some code &#9660;
             </span>
         </h3>
+
         <div class='grid'>
             <div class='grid__item col'>
                 <div class='block-m block--stacked pt-0 pb-0'>
-                    <!--<p class='font-size-xl uppercase text-center' data-showhide-trigger='panels-code'>
-                        <span class='down-arrow'></span>
-                    </p>-->
                     <div class='showhide-hidden' data-showhide-container='panels-code'>
                     
     <pre class='language-markup'>
@@ -75,9 +94,7 @@
 
 
 
-    {#******************************************************** 
-                           Media blocks
-    ********************************************************#}
+   
         
         <h3 class='lego--heading split on-hover' data-showhide-trigger='media-block-code'>
             media.twig
@@ -130,9 +147,7 @@
 
 
 
-    {#******************************************************** 
-                           title center
-    ********************************************************#}
+
         <h3 class='lego--heading split on-hover' data-showhide-trigger='title-center-code'>
             title.centered.twig
             <span class='split__right'>
@@ -167,7 +182,7 @@
         </div><!-- grid ends -->
 
 
-
+#}
     {#******************************************************** 
                            Comments
     ********************************************************#}
@@ -202,9 +217,9 @@
             <div class='grid__item col col--q-small'>
                 <div class='block-m block--stacked'>
                     <div class='grid'>
-                        {% for key, comment in data.comments %}
+                     
                             {{ macros.flego('comments', {
-                                'commentData':comment, 
+                                'commentData':data.commentData, 
                                 'isStacked':'',
                                 'blockSize': 'm',
                                 'radius': true,
@@ -212,7 +227,7 @@
                                 'CommentImage': 'i-gecko',
                                 'colSize': '-2-4 col--q-small'
                             }) }}
-                        {% endfor %}
+                   
                     </div><!--grid ends-->
                 </div>
             </div><!--grid item ends-->
