@@ -233,7 +233,12 @@ $vars['progressTile'] = array(
 
 
 
-
+include_once __DIR__ . "/dummyData/bar-chart.php";
+$vars['barchartView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/bar-chart.twig')),
+    "rendered" => $twig->render('macros/bar-chart.twig', array('data' => $vars)),
+);
 
 
 include_once __DIR__ . "/dummyData/panel.php";
