@@ -3,47 +3,6 @@ include_once __DIR__ . "/../init.php";
 
 $vars = array();
 
-$vars['galleryItems'] = array(
-    array(
-        array(
-        "type" => "h4",
-        "data" => "caption one"
-        ),
-        array(
-            "type" => "image-responsive",
-            "src" => "assets/images/gallery-showcase.jpg",
-            "alt" => "alt text"
-        ),
-        "data" => "I am a paragraph of text "
-    ),
-    array(
-        array(
-        "type" => "h4",
-        "data" => "caption two"
-        ),
-        array(
-            "type" => "image-responsive",
-            "src" => "assets/images/gallery-showcase.jpg",
-            "alt" => "alt text"
-        ),
-        "data" => "Second para"
-        
-    ),
-    array(
-        array(
-        "type" => "h4",
-        "data" => "caption three"
-        ),
-        array(
-            "type" => "image-responsive",
-            "src" => "assets/images/gallery-showcase.jpg",
-            "alt" => "alt text"
-        ),
-        "data" => "I am a paragraph of text "
-        
-    )
-         
-);
 
 
 $vars['article'] = array(
@@ -119,6 +78,22 @@ $vars['galleryData'] = array(
         "src" => "assets/images/portrait.jpg"
     )       
 );
+
+
+include_once __DIR__ . "/dummyData/title-centered.php";
+$vars['titleCenteredView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/title-centered.twig')),
+    "rendered" => $twig->render('macros/title-centered.twig', array('data' => $vars)),
+);
+
+include_once __DIR__ . "/dummyData/gallery-list.php";
+$vars['galleryListView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/gallery-list.twig')),
+    "rendered" => $twig->render('macros/gallery-list.twig', array('data' => $vars)),
+);
+
 
 include_once __DIR__ . "/dummyData/gallery-showcase.php";
 $vars['galleryShowcaseView'] = array(

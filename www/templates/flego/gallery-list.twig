@@ -1,0 +1,11 @@
+{% import "macros.twig" as macros %}
+	
+	<div class='grid'>
+		{% for item, galleryItem in data.galleryData %}
+		 <div class='grid__item {{data.colSize}} gallery--item'>
+		    <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>         
+		        {{ macros.blocks(galleryItem) }}
+		    </div><!--block ends-->
+		</div><!--grid item ends-->
+		{% endfor %}
+  	</div><!--grid ends-->

@@ -1,16 +1,11 @@
-{#
-    {{ macros.lego('content.title', { 
-        'blockSize': 'm'
-        'title': 'I am a title'
-    }) }}
-#}
+{% import "macros.twig" as macros %}
 <div class='grid'>
 
     <div class='grid__item col'>
         <div class='relative'>
             <h1 class='font-primary--light text-center'>
                 <span class='block-{{data.blockSize}} block--stacked inline-block white-bg'>
-                    {{ data.title }}
+                    {{ data.titleCenteredData }}
                 </span>
             </h1>
             <hr class='absolute col z-index--push absolute--v-middle'/>

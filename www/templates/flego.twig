@@ -34,13 +34,13 @@
             'renderedView':data.mediaView.rendered
         }) }}
 
-        {{ macros.lego('codeblock', {
-            'title':'tile.centered.twig',
+        {#{{ macros.lego('codeblock', {
+            'title':'title-centered.twig',
             'anchor':'title-center-code',
             'blockSize':'m',
-            'codeView':data.tileCenterView.code,
-            'renderedView':data.tileCenterView.rendered
-        }) }}
+            'codeView':data.titleCenteredView.code,
+            'renderedView':data.titleCenteredView.rendered
+        }) }}#}
 
         {{ macros.lego('codeblock', {
             'title':'comments.twig',
@@ -87,129 +87,23 @@
             'renderedView':data.galleryShowcaseView.rendered
         }) }}
 
-    
-
-
-         <h3 class='lego--heading split on-hover' data-showhide-trigger='title-center-code'>
-            title.centered.twig
-            <span class='split__right'>
-                show me some code &#9660;
-            </span>
-        </h3>
-        <div class='grid'>
-            <div class='grid__item col'>
-                <div class='block-m block--stacked pt-0 pb-0'>
-                    <div class='showhide-hidden' data-showhide-container='title-center-code'>
-                    
-    <pre class='language-markup'>
-    <code class='language-markup'>
-    &lcub;&lcub; macros.flego('title.centered', &lcub;
-        'blockSize': 's',           &lt;!-- Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-        'title': 'I am a title'     &lt;!--comment--&gt;
-    &rcub;) &rcub;&rcub;
-    </code>
-    </pre>
-                    </div>
-                </div><!--block ends-->
-            </div><!-- grid item ends-->
-            <div class='grid__item col col--q-small'>
-                <div class='block-m block--stacked'>
-                    {{ macros.flego('title.centered', { 
-                        'blockSize': 's',
-                        'title': 'I am a title'
-                    }) }}
-                </div>
-            </div><!--grid item ends-->
-            
-        </div><!-- grid ends -->
-
-        
-
-    
+       {{ macros.lego('codeblock', {
+            'title':'gallery-list.twig',
+            'anchor':'gallery-list-code',
+            'codeView':data.galleryListView.code,
+            'renderedView':data.galleryListView.rendered
+        }) }}
 
 
 
-
-
-
-
-
-
-        <h3 class='lego--heading split on-hover' data-showhide-trigger='gallery-list-codee'>
-            gallery.list.twig
-            <span class='split__right'>
-                show me some code &#9660;
-            </span>
-        </h3>
-        <div class='grid'>
-            <div class='grid__item col'>
-                <div class='block-m block--stacked pt-0 pb-0'>
-                    <div class='showhide-hidden' data-showhide-container='gallery-list-code'>
-                    
-    <pre class='language-markup'>
-    <code class='language-markup'>
-    &lcub;&lcub; macros.flego('gallery.list', &lcub;
-        'colSize':'col-1-4',
-        'blockSize': 'm',      &lt;!--Controls content padding eg xxxs, xxs, xs, s ..--&gt;
-        'data':galleryData
-    &rcub;) &rcub;&rcub;
-    </code>
-    </pre>
-                    </div>
-                </div><!--block ends-->
-            </div><!-- grid item ends-->
-            <div class='grid__item col col--q-small'>
-                <div class='grid gallery '>
-            
-                <!-- loop over gallery items -->  
-                {% for item, galleryItem in data.galleryData %}
-                    {{ macros.flego('gallery.list', {
-                        'colSize':'col-1-4',
-                        'blockSize': 'm',
-                        'galleryData':galleryItem
-                    }) }}
-                {% endfor %}
-                        
-                </div><!--grid item ends-->
-            </div>
-        </div><!-- grid ends -->
-
-
-        <h3 class='lego--heading split on-hover' data-showhide-trigger='header-code'>
-            header.twig
-            <span class='split__right'>
-                show me some code &#9660;
-            </span>
-        </h3>
-        <div class='grid'>
-            <div class='grid__item col'>
-                <div class='block-m block--stacked pt-0 pb-0 pb-0'>
-                    <div class='showhide-hidden' data-showhide-container='header-code'>
-    <pre class='language-markup showhide-active'>
-    <code class='language-markup'>
-    &lcub;&lcub; macros.flego('media', {
-        'gridContainer': true,
-        'colSize':'col-3-4',
-        'themeClass':'warning',
-        'blockSize': 'm',
-        'content': data.contentblock
-        }) 
-    &rcub;&rcub;
-    </code>
-    </pre>
-                    </div>
-                </div><!--block ends-->
-            </div><!-- grid item ends-->
-            <div class='grid__item col col--q-small'>
-                <div class='block-m block--stacked '>
-                    {{ macros.lego('header', {
-                        'navigation': navigation, 
-                        'isStacked':'',
-                        'blockSize': 'm'
-                    }) }}
-                </div>
-            </div><!--grid item ends-->
-        </div><!-- grid ends -->
+       
+        {#
+        header code {{ macros.lego('header', {
+            'navigation': navigation, 
+            'isStacked':'',
+            'blockSize': 'm'
+        }) }}#}
+         
     </div>
 </div>
 {% endblock %}
