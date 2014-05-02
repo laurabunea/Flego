@@ -11,12 +11,10 @@
 <div class='block-m'>
     <div class='device-container'>
     
-        <p class='grey-gradient split small append append--q-small append--q-medium' data-append="computer" data-append-medium="tablet" data-append-small="iphone" >
-            &nbsp;&nbsp;&#63743; Laura's awesome 
-            <span class='split__right uppercase '>
-                12:00am &nbsp;&nbsp;
-            </span>
-        </p>
+        {{ macros.lego('device-header', {
+            'splitLeft':"Flego's awesome",
+            'splitRight':'12:00am'
+        }) }}
 
         {{ macros.lego('codeblock', {
             'title':'panel.twig',
@@ -94,11 +92,8 @@
             'renderedView':data.galleryListView.rendered
         }) }}
 
-
-
-       
-        {#
-        header code {{ macros.lego('header', {
+        
+        {#header code {{ macros.lego('header', {
             'navigation': navigation, 
             'isStacked':'',
             'blockSize': 'm'

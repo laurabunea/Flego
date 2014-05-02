@@ -129,12 +129,10 @@
             }) }}
         </div>
         <div class='grid-container device-container' style=''>
-            <p class='grey-gradient split small append append--q-small append--q-medium' data-append="computer" data-append-medium="tablet" data-append-small="iphone" >
-                &nbsp;&nbsp;&#63743; Laura's awesome 
-                <span class='split__right uppercase '>
-                    12:00am &nbsp;&nbsp;
-                </span>
-            </p> 
+             {{ macros.lego('device-header', {
+            'splitLeft':"Fred's awesome",
+            'splitRight':'12:00am'
+        }) }} 
             <h3 class='lego--heading'>
                 content.media.quarters.twig
             </h3>
