@@ -1,0 +1,10 @@
+{% import "macros.twig" as macros %}
+
+{% for key, item in data.contentData %}
+<p class='block-{{data.blockSize | default("m")}} block--stacked split small'>
+    {{item.splitLeft}} 
+    <span class='split__right'>
+        {{item.splitRight}} 
+    </span>
+</p>
+{% endfor %}
