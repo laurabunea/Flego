@@ -5,7 +5,7 @@
     <!-- Freds closet introduction -->
     {{ macros.flego('media', {
         'gridContainer': 'grid-container-xl', 
-        'themeClass': 'secondary', 
+        'themeClass': 'secondary',
         'gridMiddle':'grid--middle',
         'mediaLeft':'col-2-3',
         'mediaRight':'col-1-3',
@@ -22,7 +22,7 @@
             }) }}
 
             <div class='grid'>
-                
+            
                 {% for theme in data.themes %}
                     {{ macros.lego('swatch.theme', {
                         'theme': theme
@@ -103,11 +103,11 @@
             }) }}
             <div class='theme--primary radius'>
                 <div class='grid'>
-                    <div class='grid__item col'>
-                        {{ macros.lego('content.block', {
-                            'content': data.typography,
-                        }) }}
-                    </div><!--theme ends-->
+                   
+                    {{ macros.flego('content-block', {
+                        'content': data.typography,
+                    }) }}
+            
                 </div>
             </div>
         </div><!--grid container ends-->
