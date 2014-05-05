@@ -2,31 +2,22 @@
 
 {% block content %}
  
-    {{ macros.lego('content.media.reversed', {
-        'themeClass': 'theme--secondary', 
-        'centergrid':'grid--middle',
-        'content': data.closetcontent, 
-        'image': data.closetimage
+    <!-- Freds closet introduction -->
+    {{ macros.flego('media', {
+        'gridContainer': 'grid-container-xl', 
+        'themeClass': 'secondary', 
+        'gridMiddle':'grid--middle',
+        'mediaLeft':'col-2-3',
+        'mediaRight':'col-1-3',
+        'mediaLeftData': data.closetimage, 
+        'mediaRightData': data.closetcontent
     }) }}
 
-    {#{{ macros.lego('content.media', {
-        'themeClass': 'theme--secondary', 
-        'centergrid':'grid--middle', 
-        'content': data.closet2content, 
-        'image': data.closet2image 
-    }) }}
-
-    {{ macros.lego('content.media.reversed', {
-        'themeClass': 'theme--secondary', 
-        'content': data.closet3content, 
-        'image': data.closet3image, 
-        'centergrid':'grid--middle'
-    }) }}#}
-
+    <!-- Freds closet introduction -->
     <div id='theme-colours' style='background-color:#293F54; color:#fff'>
         <div class='grid-container-xl pb-xxl'>
             
-            {{ macros.lego('content.intro', {
+            {{ macros.flego('content-block', {
                 'content': data.themesSection, 
             }) }}
 
@@ -48,7 +39,7 @@
 
     <div class='theme--secondary' id='spacing-helpers'>
         <div class='grid-container-xl pb-xxl' >
-            {{ macros.lego('content.intro', {
+            {{ macros.flego('content-block', {
                 'content': data.spacingSection, 
             }) }}
             <div class='grid'>
@@ -64,7 +55,7 @@
 
     <div class='theme--tertiary' id='block-helpers'>
         <div class='grid-container-xl pb-xxl' >
-            {{ macros.lego('content.intro', {
+            {{ macros.flego('content-block', {
                 'content': data.blocksSection, 
             }) }}
             <div class='grid'>
@@ -80,7 +71,7 @@
     <div class='theme--secondary' id='typography'>
         <div class='grid-container-xl pb-xxl' >
             
-            {{ macros.lego('content.intro', {
+            {{ macros.flego('content-block', {
                 'content': data.typographySection, 
             }) }}
             
@@ -107,7 +98,7 @@
 
     <div class='theme--tertiary' id='text-heirarchy'>
         <div class='grid-container-xl pb-xxl'>
-            {{ macros.lego('content.intro', {
+            {{ macros.flego('content-block', {
                 'content': data.heirarchySection, 
             }) }}
             <div class='theme--primary radius'>
@@ -124,38 +115,30 @@
 
     <div id='flego-blocks' style='background-color:#EDEDED;' class='pb-xxxl'>
         <div class='grid-container-xl '>    
-            {{ macros.lego('content.intro', {
+            {{ macros.flego('content-block', {
                 'content': data.flegoSection, 
             }) }}
         </div>
         <div class='grid-container device-container' style=''>
              {{ macros.lego('device-header', {
-            'splitLeft':"Fred's awesome",
-            'splitRight':'12:00am'
-        }) }} 
-            <h3 class='lego--heading'>
-                content.media.quarters.twig
-            </h3>
-            
-            {{ macros.lego('content.media.quarters', {
-                'themeClass': 'theme--primary',
-                'content': data.dummycontent,
-                'image': data.dummyimage
+                'splitLeft':"Fred's awesome",
+                'splitRight':'12:00am'
             }) }}
 
-            {#<h3 class='lego--heading-2'>
-                content.media.reversed.quarters.twig
-            </h3>
+            <h3 class='lego--heading'>media.twig </h3>  
+            {{ macros.flego('media', {
+                'themeClass': 'primary',
+                'mediaLeftData': data.dummycontent,
+                'mediaRightData': data.dummyimage
+            }) }}
 
-            {{ macros.lego('content.media.reversed.quarters', {
-                'themeClass': 'theme--primary',
-                'content': data.dummycontent,
-                'image': data.dummyimage
-            }) }}#}
+            <h3 class='lego--heading'>split.twig </h3>  
+            {{ macros.flego('split', {
+                'splitLeft': data.dummycontent.splitLeft,
+                'data': data.dummycontent,
+            }) }}
 
-            <h3 class='lego--heading'>
-                panel.twig
-            </h3>
+            <h3 class='lego--heading'> panel.twig </h3>
             <div class='block-m block--stacked'>
                 {{ macros.flego('panel', {
                 'blockSize': 'm', 

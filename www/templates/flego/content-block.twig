@@ -1,33 +1,19 @@
 {% import "macros.twig" as macros %}
-{% if data.externalthemeClass %}
-	<div class='theme--{{data.externalthemeClass}}'>
-{% endif %}
-{% if data.gridContainer %}
-	<div class='grid-container'>
-		<div class='grid'>
+
+	
+<div class='grid__item {{data.colSize | default("col")}}'>
+
+	{% if data.themeClass %}
+	<div class='theme--{{data.themeClass}}'>
 	{% endif %}
+	    
+	    <div class='block-{{data.blockSize | default("m")}} block--stacked  {% if data.textCenter %}text-center {% endif %}'>
+	        {{ macros.blocks(data.content) }}
+	    </div><!--block ends-->
 
-		{% if data.colSize %}
-			<div class='grid__item {{data.colSize}}'>
-		{% endif %} 
-			{% if data.themeClass %}
-				<div class='theme--{{data.themeClass}}'>
-			{% endif %}
-				    <div class='block-{{data.blockSize}} block--stacked'>
-				        {{ macros.blocks(data.content) }}
-				    </div><!--block ends-->
-			{% if data.themeClass %}
-				</div>
-			{% endif %}
-		{% if data.colSize %}
-			</div>
-		{% endif %}
-
-	{% if data.gridContainer %}
-		</div><!--grid ends -->
-	</div><!-- grid container ends-->
-	{% endif %}
-
-{% if data.externalthemeClass %}
+	{% if data.themeClass %}
 	</div>
-{% endif %}
+	{% endif %}
+
+</div>
+

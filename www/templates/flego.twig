@@ -4,16 +4,21 @@
     
 <div class='block-m block--stacked'>
     <div class='device-container'>
-    
+        <!---->
         {{ macros.lego('device-header', {
             'splitLeft':"Flego's awesome",
             'splitRight':'12:00am'
         }) }}
-        {{ macros.lego('content.media.reversed.quarters', {
-            'themeClass': 'theme--quaternary',
-            'content': data.flegoContent,
-            'image': data.flegoImage
+
+        <!-- Flego introduction -->
+        {{ macros.flego('media', {
+            'gridContainer': 'grid-container-xl',
+            'themeClass': 'quaternary',
+            'mediaLeftData': data.flegoContent,
+            'mediaRightData': data.flegoImage
         }) }}
+
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'panel.twig',
             'anchor':'panel-code',
@@ -22,6 +27,7 @@
             'renderedView':data.panelView.rendered
         }) }}
 
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'media.twig',
             'anchor':'media-block-code',
@@ -30,6 +36,7 @@
             'renderedView':data.mediaView.rendered
         }) }}
 
+        <!--example of :-->
         {#{{ macros.lego('codeblock', {
             'title':'title-centered.twig',
             'anchor':'title-center-code',
@@ -38,6 +45,7 @@
             'renderedView':data.titleCenteredView.rendered
         }) }}#}
 
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'comments.twig',
             'anchor':'comments-code',
@@ -45,6 +53,7 @@
             'renderedView':data.commentsView.rendered
         }) }}
  
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'bar-chart.twig',
             'anchor':'bar-chart-code',
@@ -52,6 +61,7 @@
             'renderedView':data.barchartView.rendered
         }) }}
 
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'Progress-tile.twig',
             'anchor':'progress-tile-code',
@@ -60,6 +70,7 @@
             'renderedView':data.progressTileView.rendered
         }) }}
 
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'forms.twig',
             'anchor':'forms-code',
@@ -67,7 +78,7 @@
             'renderedView':data.formsView.rendered
         }) }}
 
-
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'content-block.twig',
             'anchor':'content-block-code',
@@ -76,6 +87,7 @@
             'renderedView':data.contentBlockView.rendered
         }) }}
 
+        <!--example of :-->
         {{ macros.lego('codeblock', {
             'title':'gallery-showcase.twig',
             'anchor':'gallery-showcase-code',
@@ -83,6 +95,7 @@
             'renderedView':data.galleryShowcaseView.rendered
         }) }}
 
+        <!--example of :-->
        {{ macros.lego('codeblock', {
             'title':'gallery-list.twig',
             'anchor':'gallery-list-code',
@@ -90,6 +103,7 @@
             'renderedView':data.galleryListView.rendered
         }) }}
 
+        <!--example of :-->
         {#header code {{ macros.lego('header', {
             'navigation': navigation, 
             'isStacked':'',

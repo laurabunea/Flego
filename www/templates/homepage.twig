@@ -2,29 +2,38 @@
 
 {% block content %}
 
-    {{ macros.lego('content.block.fullbleed', {
-        'themeClass': 'tertiary',
+    <!-- Introduction -->
+    {{ macros.flego('section', {  
+        'gridContainer':'grid-container-xl',
+        'externalthemeClass':'tertiary',
         'textCenter': true,
-        'colSize': 'col',
         'content': data.fredsintro
     }) }}
 
-    {{ macros.flego('media', {
-        'themeClass': 'theme--primary',
-        'content': data.fredcontent,
-        'image': data.fredimage
+    <!-- Fred content -->
+    {{ macros.flego('media', {  
+        'gridContainer':'grid-container-xl',
+        'themeClass': 'primary',
+        'mediaLeftData': data.fredcontent,
+        'mediaRightData': data.fredimage
     }) }}
-        
-    {{ macros.lego('content.media.reversed.quarters', {
-        'themeClass': 'theme--quaternary',
-        'content': data.flegocontent, 
-        'image': data.flegoimage
+    
+    <!-- Flego content -->
+    {{ macros.flego('media', {  
+        'gridContainer':'grid-container-xl',
+        'themeClass': 'quaternary',
+        'mediaLeft':'col-3-4',
+        'mediaRight':'col-1-4',
+        'mediaLeftData': data.flegoimage,
+        'mediaRightData': data.flegocontent
     }) }}
-        
-    {{ macros.lego('content.media.quarters', {
-        'themeClass': 'theme--primary',
-        'content': data.fredsclosetcontent,
-        'image': data.fredsclosetimage
+    
+    <!-- Freds closet -->
+    {{ macros.flego('media', {  
+        'gridContainer':'grid-container-xl',
+        'themeClass': 'primary',
+        'mediaLeftData': data.fredsclosetcontent,
+        'mediaRightData': data.fredsclosetimage
     }) }}
 
 {% endblock %}

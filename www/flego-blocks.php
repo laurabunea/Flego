@@ -27,6 +27,13 @@ $vars['contentBlockView'] = array(
     "rendered" => $twig->render('macros/content-block.twig', array('data' => $vars)),
 );
 
+include_once __DIR__ . "/dummyData/split.php";
+$vars['splitData'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/split.twig')),
+    "rendered" => $twig->render('macros/split.twig', array('data' => $vars)),
+);
+
 include_once __DIR__ . "/dummyData/forms.php";
 $vars['formsView'] = array(
    
