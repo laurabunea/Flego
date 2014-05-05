@@ -1,9 +1,9 @@
 {% import "macros.twig" as macros %}
     
     <div class='grid__item col-2-4 col--q-small'>
-        {{ macros.lego('content.block', {
-            'content': data.content
-        }) }}
+        <div class='block-m block--stacked'>
+            {{ macros.blocks(data.content) }}
+        </div><!--block ends-->
     </div>
     <div class='grid__item col-2-4 col--q-small'>
         <div class='grid'>

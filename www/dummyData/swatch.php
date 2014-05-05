@@ -2,8 +2,8 @@
 $vars['swatchData'] = array(
     
  
-	    "swatchTop" => "1",
-	    "swatchBottom" => "accom"  
+	"swatchTop" => "1",
+	"swatchBottom" => "accom"  
 	
 );
 ?>

@@ -1,10 +1,10 @@
 {% import "macros.twig" as macros %}
 
-<div class='{{data.theme}}'>
+<div class='theme--{{data.themeClass}}'>
     <div class='grid-container-xl'>
         
-        {{ macros.lego('content.intro', {
-            'content': data.setionIntro, 
+        {{ macros.lego('content-block', {
+            'content': data.sectionIntro, 
         }) }}
 
         <div class='grid'>
