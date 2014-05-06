@@ -1,15 +1,21 @@
 {% import "macros.twig" as macros %}
+	
+	{% for item in data.content %}
+		<div class='grid__item col-1-4 col-2-4--q-small'>
+		    <div class='ml-xxs mr-xxs radius'>
+		        <div class='{% if item %}theme--{{item}} {% endif %}top--radius-s'>
+		            <h4 class='font-primary--light pt-m pb-m text-center h2'>
+		                A<a href=''>a</a>
+		            </h4>
+		        </div>
+		        <div class='theme--primary bottom--radius-s mb-s'>
+		            <p class='small uppercase text-center pt-m pb-m'>theme--{{item}}</p>
+		        </div>
+		    </div>
+		</div>
+	{% endfor %}
 
-	<div class='grid__item col-1-4 col-2-4--q-small'>
-	    <div class='ml-xxs mr-xxs radius'>
-	        <div class='{% if data.theme%}theme--{{data.theme}} {% endif %}top--radius-s'>
-	            <h4 class='font-primary--light pt-m pb-m text-center h2'>
-	                A<a href=''>a</a>
-	            </h4>
-	        </div>
-	        <div class='theme--primary bottom--radius-s mb-s'>
-	            <p class='small uppercase text-center pt-m pb-m'>theme--{{data.theme}}</p>
-	        </div>
-	    </div>
-	</div>
+	<div class='grid__item col-1-4'></div>
+	<div class='grid__item col-1-4'></div>
+	<div class='grid__item col-1-4'></div>
 

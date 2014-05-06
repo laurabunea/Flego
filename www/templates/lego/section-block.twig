@@ -1,23 +1,43 @@
 {% import "macros.twig" as macros %}
 
-<div class='theme--{{data.themeClass}}'>
-    <div class='grid-container-xl'>
-        
-        {{ macros.lego('content-block', {
-            'content': data.sectionIntro, 
+{#
+{{ macros.lego('section', {
+    'contentData':data.spacingSection, 
+    'theme': 'secondary',
+    'CommentImage': 'i-gecko',
+    'swatchData': data.spacingUnits
+    
+}) }}
+#}
+
+<div class='theme--{{data.themeClass}}' id='{{data.anchor}}'>
+    <div class='grid-container-xl pb-xxl' >
+
+        {{ macros.flego('content-block', {
+            'content': data.contentData, 
         }) }}
 
-        <div class='grid'>
-            
-            {% for item in data.items %}
-                {{ macros.lego('swatch.{{swatchName}}', {
-                    'theme': theme
-                }) }}  
-            {% endfor %}
+        {% if data.externalThemeWrapper %}
+        <div class='{{data.externalThemeWrapper}}'>
+        {% endif %}
 
-            <!--specify the extra grid item divs you need-->
-            <div class='grid__item col-1-4 col-2-4--q-small '>
-            </div><!--grid item ends-->
-        </div><!--grid ends-->
+            <div class='grid'>
+              
+                {{ macros.lego(data.legoBlock, {
+                    'content': data.swatchData
+                }) }}  
+               
+            </div><!--grid ends-->
+
+        {% if data.externalThemeWrapper %}
+        </div><!--externalThemeWrapper-->
+        {% endif %}
+
     </div><!--grid container ends-->
 </div><!--theme ends-->
+
+ 
+        
+                   
+        
+ 

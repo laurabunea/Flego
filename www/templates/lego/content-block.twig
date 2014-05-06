@@ -1,0 +1,19 @@
+{% import "macros.twig" as macros %}
+
+    
+<div class='grid__item {{data.colSize | default("col")}}'>
+
+    {% if data.themeClass %}
+    <div class='theme--{{data.themeClass}}'>
+    {% endif %}
+        
+        <div class='block-{{data.blockSize | default("m")}} block--stacked  {% if data.textCenter %}text-center {% endif %}'>
+            {{ macros.blocks(data.content) }}
+        </div><!--block ends-->
+
+    {% if data.themeClass %}
+    </div>
+    {% endif %}
+
+</div>
+

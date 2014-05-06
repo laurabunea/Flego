@@ -13,61 +13,34 @@
         'mediaRightData': data.closetcontent
     }) }}
 
-    <!-- Freds closet introduction -->
-    <div id='theme-colours' style='background-color:#293F54; color:#fff'>
-        <div class='grid-container-xl pb-xxl'>
-            
-            {{ macros.flego('content-block', {
-                'content': data.themesSection, 
-            }) }}
+    <!-- Theme section -->
+    {{ macros.lego('section-block', {
+        'anchor': 'theme-colours',
+        'themeClass': 'tertiary',
+        'legoBlock':'swatch.theme',
+        'contentData':data.themesSection, 
+        'swatchData': data.themes
+    }) }}
+    
+    <!-- spacing section -->
+    {{ macros.lego('section-block', {
+        'anchor': 'spacing-helpers',
+        'themeClass': 'secondary',
+        'legoBlock':'swatch.spacing',
+        'contentData':data.spacingSection, 
+        'swatchData': data.spacingUnits
+    }) }}
 
-            <div class='grid'>
-            
-                {% for theme in data.themes %}
-                    {{ macros.lego('swatch.theme', {
-                        'theme': theme
-                    }) }}  
-                {% endfor %}
+    <!-- block section -->
+    {{ macros.lego('section-block', {
+        'anchor': 'block-helpers',
+        'themeClass':'tertiary',
+        'legoBlock':'swatch.block',
+        'contentData':data.blocksSection, 
+        'swatchData': data.blocks
+    }) }}
 
-                <!--specify the extra grid item divs you need-->
-                <div class='grid__item col-1-4 col-2-4--q-small '>
-                </div><!--grid item ends-->
-            </div><!--grid ends-->
-        </div><!--grid container ends-->
-    </div><!--theme ends-->
-
-
-    <div class='theme--secondary' id='spacing-helpers'>
-        <div class='grid-container-xl pb-xxl' >
-            {{ macros.flego('content-block', {
-                'content': data.spacingSection, 
-            }) }}
-            <div class='grid'>
-                {% for unit in data.spacingUnits %}
-                    {{ macros.lego('swatch.spacing', {
-                        'spacing': unit
-                    }) }}  
-                {% endfor %}     
-            </div><!--grid ends-->
-        </div><!--grid container ends-->
-    </div><!--theme ends-->
-
-
-    <div class='theme--tertiary' id='block-helpers'>
-        <div class='grid-container-xl pb-xxl' >
-            {{ macros.flego('content-block', {
-                'content': data.blocksSection, 
-            }) }}
-            <div class='grid'>
-                {% for blocks in data.blocks %}
-                    {{ macros.lego('swatch.block', {
-                        'block': blocks
-                    }) }}  
-                {% endfor %} 
-            </div><!--grid ends-->
-        </div><!--grid container ends-->
-    </div><!--theme tertiary ends-->
-
+    <!-- font size section -->
     <div class='theme--secondary' id='typography'>
         <div class='grid-container-xl pb-xxl' >
             
@@ -95,32 +68,27 @@
             </div><!--grid ends-->
         </div><!--grid container ends-->
     </div><!--theme ends-->
+    
+    <!-- heirarchy section -->
+    {{ macros.lego('section-block', {
+        'anchor': 'text-heirarchy',
+        'themeClass':'tertiary',
+        'legoBlock':'content-block',
+        'contentData':data.heirarchySection, 
+        'swatchData': data.typography,
+        'externalThemeWrapper': 'theme--primary radius'
+    }) }}
 
-    <div class='theme--tertiary' id='text-heirarchy'>
-        <div class='grid-container-xl pb-xxl'>
-            {{ macros.flego('content-block', {
-                'content': data.heirarchySection, 
-            }) }}
-            <div class='theme--primary radius'>
-                <div class='grid'>
-                   
-                    {{ macros.flego('content-block', {
-                        'content': data.typography,
-                    }) }}
-            
-                </div>
-            </div>
-        </div><!--grid container ends-->
-    </div><!--theme ends-->
 
+   
     <div id='flego-blocks' style='background-color:#EDEDED;' class='pb-xxxl'>
         <div class='grid-container-xl '>    
             {{ macros.flego('content-block', {
                 'content': data.flegoSection, 
             }) }}
         </div>
-        <div class='grid-container device-container' style=''>
-             {{ macros.lego('device-header', {
+        <div class='grid-container device-container' >
+            {{ macros.lego('device-header', {
                 'splitLeft':"Fred's awesome",
                 'splitRight':'12:00am'
             }) }}
@@ -159,5 +127,7 @@
 
         </div><!--grid container ends-->
     </div><!--theme ends-->
+
+    <!--grid breakpoint helpers -->
 
 {% endblock %}
