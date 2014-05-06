@@ -375,7 +375,7 @@ $vars['flegoSection'] = array(
         array(
             "type" => "h3",
             "class" => "font-secondary--bold",
-            "data" => "georgia"
+            "data" => "Georgia"
         )
         ,array(
             "type" => "p",
