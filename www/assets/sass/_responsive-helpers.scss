@@ -8,7 +8,10 @@
 // media query for  small devices
 // ----------------------------------------------------------------------------
 @include media(small) {
-
+    .pink--q-small {
+      background-color:#D96383;
+      border-color:#D96383;
+    }
     //on a small sreen make this element relative
     .q-small--relative {
         position:relative;
@@ -45,6 +48,10 @@
 // media query for extra small devices
 // ----------------------------------------------------------------------------
 @include media(xsmall) {
+  .pink--q-xsmall {
+      background-color:#D96383;
+      border-color:#D96383;
+  }
   .list-block--q-xsmall li, 
   .list-block--q-xsmall a {
     display:block;
@@ -81,5 +88,23 @@
     padding-left: $base-spacing-unit / 2;
     line-height: 2;
     @include font-size(14);
+  }
+}
+@include media(medium) {
+  .pink--q-medium {
+      background-color:#D96383;
+      border-color:#D96383;
+  }
+}
+@include media(large) {
+  .pink--q-large {
+      background-color:#D96383;
+      border-color:#D96383;
+  }
+}
+@include media(xlarge) {
+  .pink--q-xlarge {
+      background-color:#D96383;
+      border-color:#D96383;
   }
 }

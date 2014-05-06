@@ -176,7 +176,7 @@ $blockSizes:
 // xxxlarge     | Full HD 
 
 $breakpoint-none:"";
-$breakpoint-xxlarge-name: "xxlarge";
+//$breakpoint-xxlarge-name: "xxlarge";
 $breakpoint-xlarge-name: "xlarge";
 $breakpoint-large-name: "large";
 $breakpoint-medium-name: "medium";
@@ -198,8 +198,8 @@ $breakpoint-medium-max: 63.99em;  // 59.99em
 $breakpoint-large:      64em;   // Desktop 960px
 $breakpoint-large-max:  74.99em;   
 $breakpoint-xlarge:     75em;   // Wide 1200px
-$breakpoint-xxlarge:    90em;   // Wide 1440px
-$breakpoint-xxxlarge:   120em;  // Full HD
+//$breakpoint-xxlarge:    90em;   // Wide 1440px
+//$breakpoint-xxxlarge:   120em;  // Full HD
 
 $breakpoints:
         (
@@ -209,7 +209,7 @@ $breakpoints:
             small-up "only screen"
         ),
         (
-            small "only screen and (max-width: #{$breakpoint-small-max})"
+            small "only screen and (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-small-max})"
         ),
         (
             medium-up "only screen and (min-width: #{$breakpoint-medium})"
@@ -231,12 +231,6 @@ $breakpoints:
         ),
         (
             screen "only screen"
-        ),
-        (
-            landscape "only screen and (orientation: landscape)"
-        ),
-        (
-            portrait "only screen and (orientation: portrait)"
         )
 ;
 

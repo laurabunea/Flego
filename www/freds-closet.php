@@ -72,6 +72,30 @@ $vars['spacingUnits'] = array(
     )
 );
 
+$vars['gridBreakpoints'] = array( 
+    array(
+        "theme" => "secondary",
+        "unit" => "col--q-xsmall",
+        "px" => "< 29ems"
+    ),
+    array(
+        "theme" => "tertiary",
+        "unit" => "col--q-small",
+        "px" => "30ems > 47.99ems"
+    ),
+    array(
+        "theme" => "quaternary",
+        "unit" => "col--q-medium",
+        "px" => "48ems > 63.99em"
+    ),
+    array(
+        "theme" => "secondary",
+        "unit" => "col--q-large",
+        "px" => "64ems >"
+    )
+    
+);
+
 
 $vars['typography'] = array(
     array(
@@ -263,6 +287,20 @@ $vars['blocksSection'] = array(
         "type" => "p",
         "class" => "intro mb-m text-center",
         "data" => "A place to document the block sizes on your site"
+    )
+              
+);
+
+$vars['gridSection'] = array(
+    array(
+        "type" => "h2",
+        "class" => "font-primary--light text-center",
+        "data" => "Grid breakpoints"
+    ),
+    array(
+        "type" => "p",
+        "class" => "intro mb-m text-center",
+        "data" => "A place to document your grids breakpoints"
     )
               
 );
