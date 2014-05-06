@@ -369,13 +369,13 @@ $vars['flegoSection'] = array(
     $vars['typographySecondary'] = array(
         array(
             "type" => "p",
-            "class" => "small uppercase",
+            "class" => "small uppercase font-secondary",
             "data" => "Font secondary:"
         ),
         array(
             "type" => "h3",
-            "class" => "font-primary--bold",
-            "data" => "SourceSansPro"
+            "class" => "font-secondary--bold",
+            "data" => "georgia"
         )
         ,array(
             "type" => "p",
