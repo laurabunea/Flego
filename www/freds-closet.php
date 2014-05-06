@@ -74,24 +74,29 @@ $vars['spacingUnits'] = array(
 
 $vars['gridBreakpoints'] = array( 
     array(
-        "theme" => "secondary",
-        "unit" => "col--q-xsmall",
-        "px" => "< 29ems"
+        
+        "name" => "--q-xsmall",
+        "size" => "< 29ems"
     ),
     array(
-        "theme" => "tertiary",
-        "unit" => "col--q-small",
-        "px" => "30ems > 47.99ems"
+       
+        "name" => "--q-small",
+        "size" => "30ems > 47.99ems"
     ),
     array(
-        "theme" => "quaternary",
-        "unit" => "col--q-medium",
-        "px" => "48ems > 63.99em"
+       
+        "name" => "--q-medium",
+        "size" => "48ems > 63.99em"
     ),
     array(
-        "theme" => "secondary",
-        "unit" => "col--q-large",
-        "px" => "64ems >"
+
+        "name" => "--q-large",
+        "size" => "64ems > 74.99em"
+    )
+    ,array(
+
+        "name" => "--q-xlarge",
+        "size" => "75em >"
     )
     
 );
@@ -182,10 +187,6 @@ $vars['typography'] = array(
 
 
 
-
-
-
-
 /*
     Specific page content 
 */
@@ -204,37 +205,43 @@ $vars['closetcontent'] = array(
     ,
     array(
         "type" => "button-inline",
-        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "class" => "block-s inline-block theme--primary mr-xs  clean-link",
         "href" => "#theme-colours",
         "label" => "Theme colours",
     ),
     array(
         "type" => "button-inline",
-        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "class" => "block-s inline-block theme--primary mr-xs  clean-link",
         "href" => "#spacing-helpers",
         "label" => "Spacing helpers",
     ),
     array(
         "type" => "button-inline",
-        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "class" => "block-s inline-block theme--primary mr-xs  clean-link",
         "href" => "#block-helpers",
         "label" => "Block helpers",
     ),
     array(
         "type" => "button-inline",
-        "class" => "block-s inline-block theme--primary mr-s clean-link",
+        "class" => "block-s inline-block theme--primary mr-xs clean-link",
+        "href" => "#grid-breakpoints",
+        "label" => "Grid breakpoints",
+    ),
+    array(
+        "type" => "button-inline",
+        "class" => "block-s inline-block theme--primary mr-xs clean-link",
         "href" => "#typography",
         "label" => "Typography",
     ),
     array(
         "type" => "button-inline",
-        "class" => "block-s inline-block theme--primary mr-s  clean-link",
+        "class" => "block-s inline-block theme--primary mr-xs  clean-link",
         "href" => "#text-heirarchy",
         "label" => "Text Heirarachy",
     ),
     array(
         "type" => "button-inline",
-        "class" => "block-s inline-block theme--primary mr-s clean-link",
+        "class" => "block-s inline-block theme--primary mr-xs clean-link",
         "href" => "#flego-blocks",
         "label" => "Common flego blocks",
     )

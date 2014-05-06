@@ -1,0 +1,19 @@
+{% import "macros.twig" as macros %}
+{% for item in data.content %}
+<div class='grid__item col-1-5 col-2-4--q-small col--q-xsmall'>
+    <div class='ml-xxs mr-xxs radius mb-m'>
+        <div class='theme--quaternary top--radius-s pink{{item.name}}' >
+            <p class='small uppercase text-center pt-s pb-s'>
+                col{{item.name}}
+            </p>
+        </div>
+        <div class='theme--secondary bottom--radius-s'>
+            <div class='block-m block--stacked text-center'>
+                <p>
+                    {{item.size}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div><!--grid item ends-->
+{% endfor %}

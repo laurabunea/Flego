@@ -40,108 +40,14 @@
         'swatchData': data.blocks
     }) }}
 
-    <!-- grid section -->
-    {#{{ macros.lego('section-block', {
+    <!-- grid breakpoints section -->
+    {{ macros.lego('section-block', {
         'anchor': 'block-helpers',
         'themeClass':'primary',
-        'legoBlock':'swatch.block',
+        'legoBlock':'swatch.grid',
         'contentData':data.gridSection, 
-        'swatchData': data.blocks
-    }) }}#}
-    <div class='theme--primary' id='grid-helpers'>
-    <div class='grid-container-xl pb-xxl' >
-
-        {{ macros.flego('content-block', {
-            'content': data.gridSection, 
-        }) }}
-            
-            {# what do people want to know is it merely how many break points there are? or do they want to see common patterns #}
-
-           <div class='grid'>
-                <div class='grid__item col-1-5 col-2-4--q-small col--q-xsmall'>
-                    <div class='ml-xxs mr-xxs radius mb-m'>
-                        <div class='theme--quaternary top--radius-s pink--q-xsmall' >
-                            <p class='small uppercase text-center pt-s pb-s'>
-                                col-q--xsmall
-                            </p>
-                        </div>
-                        <div class='theme--secondary bottom--radius-s'>
-                            <div class='block-m block--stacked text-center'>
-                                <p>
-                                    > 29ems 
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div><!--grid item ends-->
-                <div class='grid__item col-1-5 col-2-4--q-small col--q-xsmall'>
-                    <div class='ml-xxs mr-xxs radius mb-m'>
-                        <div class='theme--quaternary top--radius-s pink--q-small' >
-                            <p class='small uppercase text-center pt-s pb-s'>
-                                col-q--small
-                            </p>
-                        </div>
-                        <div class='theme--secondary bottom--radius-s'>
-                            <div class='block-m block--stacked text-center'>
-                                <p>
-                                    30ems > 47.99ems 
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div><!--grid item ends-->
-                <div class='grid__item col-1-5 col-2-4--q-small col--q-xsmall'>
-                    <div class='ml-xxs mr-xxs radius mb-m'>
-                        <div class='theme--quaternary top--radius-s pink--q-medium' >
-                            <p class='small uppercase text-center pt-s pb-s'>
-                                col-q--medium
-                            </p>
-                        </div>
-                        <div class='theme--secondary bottom--radius-s'>
-                            <div class='block-m block--stacked text-center'>
-                                <p>
-                                    48ems > 63.99em
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div><!--grid item ends-->
-                <div class='grid__item col-1-5 col-2-4--q-small col--q-xsmall'>
-                    <div class='ml-xxs mr-xxs radius mb-m'>
-                        <div class='theme--quaternary top--radius-s pink--q-large'  >
-                            <p class='small uppercase text-center pt-s pb-s'>
-                                col-q--large
-                            </p>
-                        </div>
-                        <div class='theme--secondary bottom--radius-s'>
-                            <div class='block-m block--stacked text-center'>
-                                <p>
-                                    64ems > 74.99em
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div><!--grid item ends-->
-                <div class='grid__item col-1-5 col-2-4--q-small col--q-xsmall'>
-                    <div class='ml-xxs mr-xxs radius mb-m'>
-                        <div class='theme--quaternary top--radius-s pink--q-xlarge'  >
-                            <p class='small uppercase text-center pt-s pb-s'>
-                                col-q--xlarge
-                            </p>
-                        </div>
-                        <div class='theme--secondary bottom--radius-s'>
-                            <div class='block-m block--stacked text-center'>
-                                <p>
-                                    < 75em 
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div><!--grid item ends-->
-            </div>
-            
-        </div><!--grid container ends-->
-    </div><!--theme ends-->
+        'swatchData': data.gridBreakpoints
+    }) }}
 
     <!-- font size section -->
     <div class='theme--secondary' id='typography'>
