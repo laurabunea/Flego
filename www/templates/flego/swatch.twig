@@ -1,16 +1,18 @@
 {% import "macros.twig" as macros %}
 
+{% for item, swatch in data.data %}
     <div class='grid__item {{data.colSize}}'>
-        <div class='ml-xxs mr-xxs radius mb-m'>
+        <div class='block-s block--stacked'>
             <div class='theme--{{data.themeClassTop}} top--radius-s' >
                 <p class='small uppercase text-center pt-s pb-s'>
-                    {{data.swatchTop}}
+                    {{swatch.swatchTop}}
                 </p>
             </div>
             <div class='theme--{{data.themeClassBottom}} bottom--radius-s'>
                 <div class='block-{{data.blockSize}} block--stacked'>
-                    {{data.swatchBottom}}
+                    {{swatch.swatchBottom}}
                 </div>
             </div> 
         </div>
     </div><!--grid item ends-->
+{% endfor %}

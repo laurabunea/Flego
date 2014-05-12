@@ -42,7 +42,7 @@
 
     <!-- grid breakpoints section -->
     {{ macros.lego('section-block', {
-        'anchor': 'grid-helpers',
+        'anchor': 'grid-breakpoints',
         'themeClass':'primary',
         'legoBlock':'swatch.grid',
         'contentData':data.gridSection, 
@@ -105,26 +105,23 @@
                 'splitRight':'12:00am'
             }) }}
 
-            <h3 class='lego--heading'>media.twig </h3>  
+           
             {{ macros.flego('media', {
                 'themeClass': 'primary',
                 'mediaLeftData': data.dummycontent,
                 'mediaRightData': data.dummyimage
             }) }}
 
-            <h3 class='lego--heading'>split.twig </h3>  
-            {{ macros.flego('split', {
-                'splitLeft': data.dummycontent.splitLeft,
-                'data': data.dummycontent,
-            }) }}
             
-            <h3 class='lego--heading'>swatch.twig </h3>
             {{ macros.flego('swatch', {
-                'swatchTop': data.swatchData,
-                'swatchBottom': data.swatchData.swatchBottom,
+                'colSize':'col-1-4',
+                'blockSize': 'm',
+                'themeClassTop' :'tertiary',
+                'themeClassBottom': 'quaternary',
+            'data':data.swatchData
             }) }}
 
-            <h3 class='lego--heading'> panel.twig </h3>
+           
             <div class='block-m block--stacked'>
                 {{ macros.flego('panel', {
                     'blockSize': 'm', 

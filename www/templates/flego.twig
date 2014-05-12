@@ -103,6 +103,13 @@
             'renderedView':data.galleryListView.rendered
         }) }}
 
+        {{ macros.lego('codeblock', {
+            'title':'swatch.twig',
+            'anchor':'swatch-code',
+            'codeView':data.swatchView.code,
+            'renderedView':data.swatchView.rendered
+        }) }}
+
         <!--example of :-->
         {#header code {{ macros.lego('header', {
             'navigation': navigation, 

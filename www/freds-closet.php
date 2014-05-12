@@ -81,12 +81,12 @@ $vars['gridBreakpoints'] = array(
     array(
        
         "name" => "--q-small",
-        "size" => "30ems > 47.99ems"
+        "size" => "30ems  > 47.99ems"
     ),
     array(
        
         "name" => "--q-medium",
-        "size" => "48ems > 63.99em"
+        "size" => "48ems  > 63.99em"
     ),
     array(
 

@@ -1,4 +1,12 @@
 <?php 
+
+include_once __DIR__ . "/dummyData/swatch.php";
+$vars['swatchView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/swatch.twig')),
+    "rendered" => $twig->render('macros/swatch.twig', array('data' => $vars)),
+);
+
 include_once __DIR__ . "/dummyData/title-centered.php";
 $vars['titleCenteredView'] = array(
    
