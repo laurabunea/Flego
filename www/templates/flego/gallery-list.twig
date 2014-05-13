@@ -1,11 +1,22 @@
 {% import "macros.twig" as macros %}
-	
-	<div class='grid'>
-		{% for item, galleryItem in data.galleryData %}
-		 <div class='grid__item {{data.colSize}} gallery--item'>
-		    <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>         
-		        {{ macros.blocks(galleryItem) }}
-		    </div><!--block ends-->
-		</div><!--grid item ends-->
-		{% endfor %}
-  	</div><!--grid ends-->
+{% if data.themeClass %}
+<div class='theme--{{data.themeClass}}'>
+{% endif %}
+	{% if data.gridContainer %}
+	<div class='{{data.gridContainer}}'>
+	{% endif %}
+		<div class='grid'>
+			{% for item, galleryItem in data.galleryData %}
+			 <div class='grid__item {{data.colSize}} gallery--item'>
+			    <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}} {% if data.textCenter %}text-center{% endif %}'>         
+			        {{ macros.blocks(galleryItem) }}
+			    </div><!--block ends-->
+			</div><!--grid item ends-->
+			{% endfor %}
+	  	</div><!--grid ends-->
+	{% if data.gridContainer %}
+	</div>
+	{% endif %}
+{% if data.themeClass %}
+</div>
+{% endif %}

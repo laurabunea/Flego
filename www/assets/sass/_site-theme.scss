@@ -20,11 +20,11 @@ hr {
     height:1px;
 }
 
-.gallery--item:hover {
+/*.gallery--item:hover {
     @extend %on-hover;
-    background-color:$primary-color;
+    background-color:#EDEDED;
     color:#fff;
-}
+}*/
 
 
 hr {
@@ -95,6 +95,12 @@ $error-link-color:            #fff;
 $error-button-color:          #FFF;
 $error-button-text-color:     #D96383;
 
+$watermelon-bg-color:              #f16c65;
+$watermelon-border-color:          #f16c65;
+$watermelon-text-color:            #fff;
+$watermelon-link-color:            #fff;
+$watermelon-button-color:          #d75650;
+$watermelon-button-text-color:     #fff;
 
 //array of theme variables - the children of the array always need to be in the same order!
 $theme-names: 
@@ -104,7 +110,8 @@ $theme-names:
   quaternary,
   success,
   warning,
-  error;
+  error,
+  watermelon;
 
 $bg-color:
   $primary-bg-color,
@@ -113,7 +120,8 @@ $bg-color:
   $quaternary-bg-color,
   $success-bg-color,
   $warning-bg-color,
-  $error-bg-color;
+  $error-bg-color,
+  $watermelon-bg-color;
 
 $border-color: 
   $primary-border-color,
@@ -122,7 +130,8 @@ $border-color:
   $quaternary-border-color,
   $success-border-color,
   $warning-border-color,
-  $error-border-color;
+  $error-border-color,
+  $watermelon-border-color;
 
 $text-color: 
   $primary-text-color,
@@ -131,7 +140,8 @@ $text-color:
   $quaternary-text-color,
   $success-text-color,
   $warning-text-color,
-  $error-text-color;
+  $error-text-color,
+  $watermelon-text-color;
 
 $link-color: 
   $primary-link-color,
@@ -140,7 +150,8 @@ $link-color:
   $quaternary-link-color,
   $success-link-color,
   $warning-link-color,
-  $error-link-color;
+  $error-link-color,
+  $watermelon-link-color;
 
 $button-color: 
   $primary-button-color,
@@ -149,7 +160,8 @@ $button-color:
   $quaternary-button-color,
   $success-button-color,
   $warning-button-color,
-  $error-button-color;
+  $error-button-color,
+  $watermelon-button-color;
 
 $button-text-color: 
   $primary-button-text-color,
@@ -158,7 +170,8 @@ $button-text-color:
   $quaternary-button-text-color,
   $success-button-text-color,
   $warning-button-text-color,
-  $error-button-text-color;
+  $error-button-text-color,
+  $watermelon-button-text-color;
 
 // Create a theme for each category
 @for $i from 1 through length($theme-names) {

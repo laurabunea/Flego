@@ -401,33 +401,74 @@ $vars['flegoSection'] = array(
         )
     );
 
-$vars['introCopyNS'] = array(
+$vars['aboutNS'] = array(
+ 
     array(
-        "type" => "h1",
-        "data" => "Welcome to my new site"
+        "type" => "h2",
+        "data" => "About us"
     ),
     array(
         "type" => "intro",
-        "data" => "This page is made up from pre made elements. How cool is that! Shit just crazy"
+        "data" => "James Cook was cooking up a feed when the tapu chundering event occured. Au, this sweet as hokey pokey is as pretty suss as a beached as Undie 500. Mean while, in the pub, Jonah Lomu and The Topp Twins were up to no good with a bunch of wicked Longest Drink in Towns."
     )
+    
+);
+$vars['portfolioNS'] = array(
+ 
+    array(
+        "type" => "h2",
+        "data" => "Portfolio"
+    ),
+    array(
+        "type" => "intro",
+        "data" => "James Cook was cooking up a feed when the tapu chundering event as a beached as Undie 500. Mean while, in the pub, Jonah Lomu and The Topp Twins were up to no good with a bunch of wicked Longest Drink in Towns."
+    )
+    
+);
+$vars['contactNS'] = array(
+ 
+    array(
+        "type" => "h2",
+        "data" => "Contact Us"
+    ),
+    array(
+        "type" => "intro",
+        "data" => "Drop me a message"
+    )
+    
+);
+$vars['CopyNS'] = array(
+    array(
+        "type" => "h3",
+        "data" => "Welcome to my new site"
+    ),
+    
+    "data" => "A slice of heaven. You don't know his story, bro, this sweet chick is as buzzy as a bung treaty. Mean while, in the sleepout, Sir Edmond Hillary and Dr Ropata were up to no good with a bunch of stoked pauas. The beaut force of his boiling-up was on par with John Key's flat stick marmite shortage. Put the jug on will you bro, all these beautiful lamingtons can wait till later. The first prize for wobbling goes to... James and the Giant Peach and his epic can of Watties Baked Beans, what a sad guy. Bro, rugby balls are really cool good with heaps good wekas, aye. Eh, oh stink buzz, Morningside for life.",
+    "
+
+A slice of heaven. You don't know his story, bro, this sweet chick is as buzzy as a bung treaty. Mean while, in the sleepout, Sir Edmond Hillary and Dr Ropata were up to no good with a bunch of stoked pauas. The beaut force of his boiling-up was on par with John Key's flat stick marmite shortage. Put the jug on will you bro, all these beautiful lamingtons can wait till later. The first prize for wobbling goes to... James and the Giant Peach and his epic can of Watties Baked Beans, what a sad guy. Bro, rugby balls are really cool good with heaps good wekas, aye. Eh, oh stink buzz, Morningside for life.
+
+You have no idea how snarky our primo Jafas were aye. Every time I see those shithouse stubbies it's like Rangitoto Island all over again aye"
+    
     
 );
 $vars['mediaBlock1NS'] = array(
     "leftCopy" => array(
         array(
             "type" => "image-responsive",
-            "alt" => "alt text",
-            "title" => "image title",
-            "src" => "assets/images/portrait.jpg"
+            "alt" => "I am some copy",
+            "src" => "/assets/images/iphone.png"
         )
     ),
     "rightCopy" => array(
+
         array(
-            "type" => "h3",
-            "data" => "I am some copy"
+            "type" => "h1",
+            "class" => "h0",
+            "data" => "Hello."
         ),
         array(
-            "type" => "p",
+            "type" => "intro",
             "data" => "Technology has allowed cool blokes to participate in the global conversation of bung stubbies. The next Generation of heaps good sad guys have already skived off over at the tinny house. "
         )
     )        
@@ -462,6 +503,79 @@ $vars['mediaBlock2NS'] = array(
 );
 
 
+$vars['galleryNS'] = array(
+    array(
+        
+        array(
+            "type" => "image-responsive",
+            "src" => "assets/images/placeholder3.jpg",
+            "alt" => "alt text"
+        ),
+        array(
+            "type" => "h4",
+            "data" => "Mr Coolio"
+        ),
+        "data" => "I am a paragraph of text ",
+        array(
+            "type" => "image",
+            "src" => "assets/images/facebook.png",
+            "alt" => "alt text",
+            "class" => "mt-xs"
+        ),
+    ),
+    array(
+        
+        array(
+            "type" => "image-responsive",
+            "src" => "assets/images/placeholder2.jpg",
+            "alt" => "alt text"
+        ),
 
+        array(
+            "type" => "h4",
+            "data" => "Mrs Thinkalot"
+        ),
+        "data" => "Second para",
+        array(
+            "type" => "image",
+            "src" => "assets/images/facebook.png",
+            "alt" => "alt text",
+            "class" => "mt-xs"
+        ),
+        array(
+            "type" => "image",
+            "src" => "assets/images/twitter.png",
+            "alt" => "alt text",
+            "class" => "mt-xs"
+        )
+        
+    ),
+    array(
+        array(
+            "type" => "image-responsive",
+            "src" => "assets/images/placeholder1.jpg",
+            "alt" => "alt text"
+        ),
+        array(
+            "type" => "h4",
+            "data" => "Miss Tired"
+        ),
+        "data" => "I am a paragraph of text ",
+        array(
+            "type" => "image",
+            "src" => "assets/images/facebook.png",
+            "alt" => "alt text",
+            "class" => "mt-xs"
+        ),
+        array(
+            "type" => "image",
+            "src" => "assets/images/google.png",
+            "alt" => "alt text",
+            "class" => "mt-xs"
+        )
+        
+    )
+         
+);
 
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));

@@ -1,5 +1,7 @@
 {% import "macros.twig" as macros %}
-
+{% if data.themeClass %}
+<div class='theme--{{data.themeClass}}'>
+{% endif %}
 {% if data.gridContainer %}
 <div class='{{data.gridContainer}}'>
 {% endif %}
@@ -19,5 +21,8 @@
     </div>
     
 {% if data.gridContainer %}
+</div>
+{% endif %}  
+{% if data.themeClass %}
 </div>
 {% endif %}  

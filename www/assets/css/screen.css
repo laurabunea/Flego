@@ -334,7 +334,7 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
-.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary, .theme--success, .theme--warning, .theme--error {
+.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary, .theme--success, .theme--warning, .theme--error, .theme--watermelon {
   border-width: 1px;
   border-style: solid; }
 
@@ -4195,7 +4195,7 @@ Try to use these on a limited basis and avoid creating entirely different versio
 .z-index--pull {
   z-index: 1; }
 
-.on-hover, .gallery--item:hover {
+.on-hover {
   cursor: pointer; }
 
 
@@ -4319,10 +4319,11 @@ hr {
   background-color: #E6EBEB;
   height: 1px; }
 
-.gallery--item:hover {
-  background-color: #37B67F;
-  color: #fff; }
-
+/*.gallery--item:hover {
+    @extend %on-hover;
+    background-color:#EDEDED;
+    color:#fff;
+}*/
 hr {
   margin: 0; }
 
@@ -4440,6 +4441,22 @@ hr {
     .theme--error .btn:hover {
       background-color: #f2f2f2;
       border-color: #f2f2f2; }
+
+.theme--watermelon {
+  color: #fff;
+  background-color: #f16c65;
+  border-color: #f16c65; }
+  .theme--watermelon a {
+    color: #fff; }
+    .theme--watermelon a:hover {
+      color: #e6e6e6; }
+  .theme--watermelon .btn {
+    color: #fff;
+    background-color: #d75650;
+    border-color: #d75650; }
+    .theme--watermelon .btn:hover {
+      background-color: #d2403b;
+      border-color: #d2403b; }
 
 i {
   font-style: normal; }

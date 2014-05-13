@@ -2,11 +2,11 @@
 
 <!-- breadcrumbs lego block starts-->
 {% if data.gridContainer %}
-<div class='{{data.gridContainer}}'>
+<div class='{{data.gridContainer}} theme--{{data.themeClass}}' >
 {% endif %}
     <div class='grid {% if data.gridMiddle %}grid--middle {% endif %}'>
         <div class='grid__item col'>
-            <div class='block-{{data.blockSize}} theme--{{data.themeClass}} {{data.isStacked}}'>
+            <div class='block-{{data.blockSize}} block--stacked {{data.isStacked}}'>
                 <ol class='list-unstyled clean-link-list nav breadcrumb'>
                     {% for item in data.content %}
                     <li class='tiny uppercase {% if loop.last %} breadcrumb__last {% endif %}' >

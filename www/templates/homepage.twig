@@ -14,8 +14,8 @@
     {{ macros.flego('media', {  
         'gridContainer':'grid-container-xl',
         'themeClass': 'primary',
-        'mediaLeftData': data.fredcontent,
-        'mediaRightData': data.fredimage
+        'mediaLeftData': data.fredimage,
+        'mediaRightData': data.fredcontent
     }) }}
     
     <!-- Flego content -->
@@ -24,16 +24,16 @@
         'themeClass': 'quaternary',
         'mediaLeft':'col-3-4',
         'mediaRight':'col-1-4',
-        'mediaLeftData': data.flegoimage,
-        'mediaRightData': data.flegocontent
+        'mediaLeftData': data.flegocontent,
+        'mediaRightData': data.flegoimage
     }) }}
     
     <!-- Freds closet -->
     {{ macros.flego('media', {  
         'gridContainer':'grid-container-xl',
         'themeClass': 'primary',
-        'mediaLeftData': data.fredsclosetcontent,
-        'mediaRightData': data.fredsclosetimage
+        'mediaLeftData': data.fredsclosetimage,
+        'mediaRightData': data.fredsclosetcontent
     }) }}
 
 {% endblock %}
