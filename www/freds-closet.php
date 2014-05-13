@@ -75,28 +75,28 @@ $vars['spacingUnits'] = array(
 $vars['gridBreakpoints'] = array( 
     array(
         
-        "name" => "--q-xsmall",
-        "size" => "< 29ems"
+        "swatchTop" => "--q-xsmall",
+        "swatchBottom" => "< 29ems"
     ),
     array(
        
-        "name" => "--q-small",
-        "size" => "30ems  > 47.99ems"
+        "swatchTop" => "--q-small",
+        "swatchBottom" => "30ems  > 47.99ems"
     ),
     array(
        
-        "name" => "--q-medium",
-        "size" => "48ems  > 63.99em"
+        "swatchTop" => "--q-medium",
+        "swatchBottom" => "48ems  > 63.99em"
     ),
     array(
 
-        "name" => "--q-large",
-        "size" => "64ems > 74.99em"
+        "swatchTop" => "--q-large",
+        "swatchBottom" => "64ems > 74.99em"
     )
     ,array(
 
-        "name" => "--q-xlarge",
-        "size" => "75em >"
+        "swatchTop" => "--q-xlarge",
+        "swatchBottom" => "75em >"
     )
     
 );
@@ -251,7 +251,7 @@ $vars['closetimage'] = array(
     array(
         "type" => "image-responsive",
         "alt" => "alt text",
-        "class" => "reset-image--q-small",
+        "class" => "",
         "title" => "image title",
         "src" => "assets/images/freds-closet.png"
     )         
@@ -385,81 +385,83 @@ $vars['flegoSection'] = array(
     );
 
     $vars['dummycontent'] = array(
+        array(
+            "type" => "h1",
+            "data" => "Common media block"
+        ),
+        array(
+            "type" => "intro",
+            "data" => "Intro para"
+        ),
+        array(
+            "type" => "button",
+            "label" => "I'm a button",
+            "class" => "mt-s",
+            "href" => "clickme",
+        )
+    );
+
+$vars['introCopyNS'] = array(
     array(
         "type" => "h1",
-        "data" => "Common media block"
+        "data" => "Welcome to my new site"
     ),
     array(
         "type" => "intro",
-        "data" => "Intro para"
-    ),
-    array(
-        "type" => "button",
-        "label" => "I'm a button",
-        "class" => "mt-s",
-        "href" => "clickme",
+        "data" => "This page is made up from pre made elements. How cool is that! Shit just crazy"
     )
-);
-
-$vars['dummyimage'] = array(
-    array(
-        "type" => "image-responsive",
-        "alt" => "alt text",
-        "title" => "image title",
-        "src" => "assets/images/portrait.jpg"
-    )
-              
-);
-/*
-$vars['closet2content'] = array(
-    array(
-        "type" => "h2",
-        "data" => "Why use Fred's closet?",
-        "class" => "font-primary--light"
-    ),
-      
-    "data" => "Makes it easy for a new designer to join the team and start contributing work that is consistent with the current design and it makes sure there are no gaps in your styling, no matter what content is being displayed.", "Makes it easy for a new FED to join the team as they can see what patterns already exist and can extend and maintain code", "Good for debugging - Because all of the elements that appear on the site are in one place so you don’t have to go searching round for them.", "It also makes device testing easier because everything is on one page. It’s also quick to see if CSS changes to one pattern affect other patterns."
     
 );
-
-$vars['closet2image'] = array(
-    array(
-        "type" => "image-responsive",
-        "alt" => "alt text",
-        "title" => "image title",
-        "src" => "assets/images/freds-closet.png"
-    )   
-);
-
-$vars['closet3content'] = array(
-    array(
-        "type" => "h3",
-        "data" => "Why use Fred's closet?",
-        "class" => "font-primary--light"
+$vars['mediaBlock1NS'] = array(
+    "leftCopy" => array(
+        array(
+            "type" => "image-responsive",
+            "alt" => "alt text",
+            "title" => "image title",
+            "src" => "assets/images/portrait.jpg"
+        )
     ),
-    array(
-        "type" => "p",
-        "class" => "intro",
-        "data" => "So that Fred's closest doesn't get too messy. Fred has kindly seperated his closest into a few different sections. These are as follows:"
+    "rightCopy" => array(
+        array(
+            "type" => "h3",
+            "data" => "I am some copy"
+        ),
+        array(
+            "type" => "p",
+            "data" => "Technology has allowed cool blokes to participate in the global conversation of bung stubbies. The next Generation of heaps good sad guys have already skived off over at the tinny house. "
+        )
+    )        
+);
+
+$vars['mediaBlock2NS'] = array(
+    "leftCopy" => array(
+        array(
+            "type" => "h3",
+            "data" => "I am some copy"
+        ),
+        array(
+            "type" => "p",
+            "data" => "Oh no! Till the cows come home. Good on ya, mate, this rip-off pukeko is as choice as a beached as treaty. Mean while, in the bushes, James Cook and Tama were up to no good with a bunch of rough as guts keas."
+        ),
+        array(
+            "type" => "button",
+            "label" => "Find out more",
+            "class" => "mt-s",
+            "href" => "clickme",
+        )
     ),
-    "data" =>   "Colours:",
-                "A place to document the main colors used on your project's site.",
-                "Typography:", 
-                "A place to document the font-stacks used on your project's site as well as test the heirarchy", 
-                "Flego blocks:", 
-                "A place for common HTML elements."
+    "rightCopy" => array(
 
-);
-$vars['closet3image'] = array(
-    array(
-        "type" => "image-responsive",
-        "alt" => "alt text",
-        "title" => "image title",
-        "src" => "assets/images/freds-closet.png"
-    )
-              
+        array(
+            "type" => "image-responsive",
+            "alt" => "alt text",
+            "title" => "image title",
+            "src" => "assets/images/portrait.jpg"
+        )
+    )        
 );
 
 
-*/
+
+
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));

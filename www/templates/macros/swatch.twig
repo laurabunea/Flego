@@ -1,9 +1,11 @@
 {% import "macros.twig" as macros %}
 
 {{ macros.flego('swatch', {
-    'colSize':'col-1-4',
+    'colSize':'col-1-3 col--q-xsmall',
     'blockSize': 'm',
-    'themeClassTop' :'tertiary',
-    'themeClassBottom': 'quaternary',
-    'data':data.swatchData
+    'themeClassTop' :'quaternary',
+    'themeClassBottom': 'secondary',
+    'margin':'block-m',
+    'content':data.swatchData,
+    'textCenter':true
 }) }}

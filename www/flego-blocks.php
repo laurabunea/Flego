@@ -1,4 +1,24 @@
 <?php 
+include_once __DIR__ . "/dummyData/breadcrumbs.php";
+$vars['breadcrumbView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/breadcrumbs.twig')),
+    "rendered" => $twig->render('macros/breadcrumbs.twig', array('data' => $vars)),
+);
+
+include_once __DIR__ . "/dummyData/header.php";
+$vars['headerView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/header.twig')),
+    "rendered" => $twig->render('macros/header.twig', array('data' => $vars)),
+);
+
+include_once __DIR__ . "/dummyData/block-list.php";
+$vars['blockListView'] = array(
+   
+    "code" => str_replace("{% import \"macros.twig\" as macros %}\n", "", file_get_contents(__DIR__ . '/templates/macros/block-list.twig')),
+    "rendered" => $twig->render('macros/block-list.twig', array('data' => $vars)),
+);
 
 include_once __DIR__ . "/dummyData/swatch.php";
 $vars['swatchView'] = array(

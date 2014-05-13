@@ -1,0 +1,10 @@
+{% import "macros.twig" as macros %}
+
+{{ macros.flego('breadcrumbs', {
+    'gridContainer': 'grid-container',
+    'blockSize':'m',
+    'themeClass':'primary',
+    'isStacked':'pb-0',
+    'content': data.breadcrumbsData, 
+    'gridMiddle': true
+}) }}

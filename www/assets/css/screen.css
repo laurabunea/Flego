@@ -4263,6 +4263,15 @@ Try to use these on a limited basis and avoid creating entirely different versio
   -o-border-bottom-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important; }
 
+.breadcrumb > li {
+  padding-right: 0.5em; }
+  .breadcrumb > li:after {
+    content: "›";
+    padding-left: 0.5em; }
+
+.breadcrumb > li:last-child:after, .breadcrumb__last {
+  content: none; }
+
 body {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
@@ -4432,6 +4441,9 @@ hr {
       background-color: #f2f2f2;
       border-color: #f2f2f2; }
 
+i {
+  font-style: normal; }
+
 .i-gecko {
   background-image: url('/assets/images/square-gecko.png');
   background-repeat: no-repeat;
@@ -4445,17 +4457,12 @@ hr {
   width: 50px;
   background-repeat: no-repeat; }
 
-/*.down-arrow {
-    background-image:url('/assets/images/down-arrow.png');
-    background-repeat: no-repeat;
-    height:19px; 
-    width:30px;
-    display:inline-block;
-    &:hover {
-    	background-image:url('/assets/images/down-arrow-dark.png');
-    	cursor:pointer;
-    }
-}*/
+.i-right-arrow {
+  top: 40%;
+  right: 1.5em; }
+  .i-right-arrow:before {
+    content: "\2192"; }
+
 /* Shame */
 
 

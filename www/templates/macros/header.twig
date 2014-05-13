@@ -1,0 +1,9 @@
+{% import "macros.twig" as macros %}
+
+{{ macros.flego('header', { 
+      'companyName':"lauras company",
+      'logo': data.headerData.logo,
+      'navigation': data.headerData.navigation,
+      'imagePosition': "pl-m pt-s pb-s",
+      'themeClass': 'primary'
+}) }}

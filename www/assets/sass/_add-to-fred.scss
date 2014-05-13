@@ -77,3 +77,20 @@
   @include vendor(border-top-right-radius, 0px!important);
   @include vendor(border-bottom-right-radius, 0px!important);
 }
+
+.breadcrumb > li {
+
+    padding-right: .5em;
+    
+    &:after {
+        content: "›";
+        padding-left: .5em;
+    }
+}
+
+    .breadcrumb > li:last-child:after,
+    .breadcrumb__last{
+
+      //unfortunately this doesnt work in ie8 but hey its ie8 they deserve to see an extra arrow
+        content : none;
+    }

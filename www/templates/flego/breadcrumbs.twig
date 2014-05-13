@@ -1,0 +1,27 @@
+{% import "macros.twig" as macros %}
+
+<!-- breadcrumbs lego block starts-->
+{% if data.gridContainer %}
+<div class='{{data.gridContainer}}'>
+{% endif %}
+    <div class='grid {% if data.gridMiddle %}grid--middle {% endif %}'>
+        <div class='grid__item col'>
+            <div class='block-{{data.blockSize}} theme--{{data.themeClass}} {{data.isStacked}}'>
+                <ol class='list-unstyled clean-link-list nav breadcrumb'>
+                    {% for item in data.content %}
+                    <li class='tiny uppercase {% if loop.last %} breadcrumb__last {% endif %}' >
+                        {% if not loop.last %}
+                            <a href='{{ item.url }}'>
+                                {% endif %}{{ item.title }}
+                                {% if not loop.last %}
+                            </a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+               </ol>
+            </div><!--BLOCK ENDS-->
+        </div><!--GRID ITEM ENDS-->
+    </div><!--grid ends-->
+{% if data.gridContainer %}
+</div>
+{% endif %}

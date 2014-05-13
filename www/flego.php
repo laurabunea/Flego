@@ -21,7 +21,7 @@ $vars['flegoImage'] = array(
     array(
         "type" => "image-responsive",
         "alt" => "Flego",
-        "title" => "felgo",
+        "title" => "flego",
         "src" => "assets/images/flego.png"
         )           
 );

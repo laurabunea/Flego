@@ -2,29 +2,33 @@
 <div class='grid'>
     
     <div class='grid__item col'>
-      <div class='block-{{data.blockSize}} block--stacked left'>
-        <h1>
-          <span class='visually-hidden'>
-            <a href='/' class='clean-link'>{{data.companyName}},/a>
-          </span>
-          <img class='' src='' alt='Flego'/>
-        </h1>
-      </div>
-      <ul class='nav right clean-link-list'>
-        {% for key, page in data.navigation %}
-          <li class='hidden--q-small'>
-               <a href='{{page.anchor}}' class='block-m block--stacked inline-block {{data.isStacked}}'>
-                   {{page.title}}
-               </a> 
-            </li>  
-        {% endfor %}
-        <li class='visible--q-small hidden--q-large hidden--q-medium hidden--q-large hidden--q-xlarge'>
-          <a href='#anchor' class='block-m block--stacked inline-block'>
-            <i class='i i-menu inline-block'></i>
-          </a>
-        </li>
-      </ul>
-      
-    </div><!-- grid item ends-->
+      <div class='block-m pt-0 pb-0'>
+        {% if data.logo %}
+        <div class='left theme--{{data.themeClass}}'>
+          <h1>
+            <span class='visually-hidden'>
+              <a href='/' class='clean-link'>{{data.companyName}}</a>
+            </span>
+            {{ macros.blocks(data.logo) }}
+          </h1>
+        </div>
+        {% endif %}
+        <ul class='nav right clean-link-list theme--{{data.themeClass}}'>
+          {{ macros.blocks(data.navigation) }}
+          {#{% for key, page in data.navigation %}
+            <li class='hidden--q-small'>
+                 <a href='{{page.anchor}}' class='block-m block--stacked inline-block {{data.isStacked}}'>
+                     {{page.title}}
+                 </a> 
+              </li>
+          {% endfor %}#}
+          {#<li class='visible--q-small hidden--q-large hidden--q-medium hidden--q-large hidden--q-xlarge'>
+            <a href='#anchor' class='block-m block--stacked inline-block'>
+              <i class='i i-menu inline-block'></i>
+            </a>
+          </li>#}
+        </ul>
+        </div>
+      </div><!-- grid item ends-->
 
 </div><!-- ends -->

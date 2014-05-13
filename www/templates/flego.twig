@@ -14,8 +14,8 @@
         {{ macros.flego('media', {
             'gridContainer': 'grid-container-xl',
             'themeClass': 'quaternary',
-            'mediaLeftData': data.flegoContent,
-            'mediaRightData': data.flegoImage
+            'mediaLeftData': data.flegoImage,
+            'mediaRightData': data.flegoContent
         }) }}
 
         <!--example of :-->
@@ -110,12 +110,27 @@
             'renderedView':data.swatchView.rendered
         }) }}
 
-        <!--example of :-->
-        {#header code {{ macros.lego('header', {
-            'navigation': navigation, 
-            'isStacked':'',
-            'blockSize': 'm'
-        }) }}#}
+        {{ macros.lego('codeblock', {
+            'title':'block-list.twig',
+            'anchor':'block-list-code',
+            'codeView':data.blockListView.code,
+            'renderedView':data.blockListView.rendered
+        }) }}
+
+        {{ macros.lego('codeblock', {
+            'title':'header.twig',
+            'anchor':'header-code',
+            'codeView':data.headerView.code,
+            'renderedView':data.headerView.rendered
+        }) }}
+
+        {{ macros.lego('codeblock', {
+            'title':'breadcrumbs.twig',
+            'anchor':'breadcrumbs-code',
+            'codeView':data.breadcrumbView.code,
+            'renderedView':data.breadcrumbView.rendered
+        }) }}
+       
          
     </div>
 </div>

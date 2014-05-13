@@ -1,3 +1,7 @@
+i {
+    font-style: normal;
+}
+
 .i-gecko {
     background-image:url('/assets/images/square-gecko.png');
     background-repeat: no-repeat;
@@ -12,14 +16,11 @@
     width:50px;
     background-repeat: no-repeat;
 }
-/*.down-arrow {
-    background-image:url('/assets/images/down-arrow.png');
-    background-repeat: no-repeat;
-    height:19px; 
-    width:30px;
-    display:inline-block;
-    &:hover {
-    	background-image:url('/assets/images/down-arrow-dark.png');
-    	cursor:pointer;
+
+.i-right-arrow {
+    top: 40%; 
+    right: $bs-m;
+    &:before {
+        content:"\2192";
     }
-}*/
+}

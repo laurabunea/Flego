@@ -8,15 +8,15 @@
         <div class='{{data.gridContainer | default("grid-container-xl")}}'>
     {% endif %}
 
-            <div class='grid {% if data.centergrid %}grid--middle{% endif %}'>
+            <div class='grid {% if data.gridMiddle %}grid--middle{% endif %}'>
                 <div class='grid__item {{data.mediaLeft | default("col-1-4")}}'>
                     <div class='block-{{data.blockSize | default("m")}} block--stacked {{data.isStacked}}'>
-                        {{ macros.blocks(data.mediaRightData) }}
+                        {{ macros.blocks(data.mediaLeftData) }}
                     </div><!--block ends-->
                 </div><!--grid item ends-->
                 <div class='grid__item {{data.mediaRight | default("col-3-4")}}'>
                     <div class='block-{{data.blockSize | default("m")}} block--stacked {{data.isStacked}}'>
-                       {{ macros.blocks(data.mediaLeftData) }}   
+                       {{ macros.blocks(data.mediaRightData) }}   
                     </div><!--block ends-->
                 </div><!-- grid item ends-->
             </div><!-- ends -->

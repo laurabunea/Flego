@@ -1,0 +1,21 @@
+{% import "macros.twig" as macros %}
+
+{% if data.gridContainer %}
+    <div class='{{data.gridContainer}}'>
+{% endif %}
+
+    <div class='grid'>
+        {% for item in data.content %}
+            <div class='grid__item {{data.colSize}}'>
+                <a href='{{item.href}}' class='clean-link block-{{data.blockSize}} block--stacked block-element bb-primary relative theme--primary'>
+                    {{ macros.blocks(item.content) }}
+                    <i class='i-{{data.icon}} absolute' ></i>
+                </a><!--block ends-->
+            </div><!-- grid item ends-->  
+        {% endfor %}
+    </div><!--grid ends-->
+
+
+{% if data.gridContainer %}
+    </div>
+{% endif %}

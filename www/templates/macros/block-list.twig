@@ -1,0 +1,9 @@
+{% import "macros.twig" as macros %}
+
+{{ macros.flego('block-list', {
+    'gridContainer':'',
+    'blockSize': 'm',
+    'colSize':'col',
+    'icon':'right-arrow',
+    'content': data.blockListData
+}) }}
