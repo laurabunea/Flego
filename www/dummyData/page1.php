@@ -21,8 +21,8 @@ $vars['introSection'] = array(
         )
     )        
 );
-//breadcrumbs is just dummy breadcrumbs from flego 
 
+//breadcrumbs is just dummy breadcrumbs from flego 
 $vars['aboutUsSection'] = array(
     array(
         "type" => "h2",
@@ -110,12 +110,72 @@ $vars['aboutUsGallery'] = array(
 $vars['portfolioSection'] = array(
     array(
         "type" => "h2",
-        "data" => "Portfolio"
+        "data" => "My friends"
     ),
     array(
         "type" => "intro",
         "data" => "James Cook was cooking up a feed when the tapu chundering event as a beached as Undie 500. Mean while, in the pub, Jonah Lomu and The Topp Twins were up to no good with a bunch of wicked Longest Drink in Towns."
     )
+);
+$vars['portfolioGallery'] = array(
+  
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph1.jpg",
+            "alt" => "alt text"
+            )
+        ),
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph2.jpg",
+            "alt" => "alt text"
+            )
+        ),
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph3.jpg",
+            "alt" => "alt text"
+            )
+        ),
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph4.jpg",
+            "alt" => "alt text"
+            )
+        ),
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph5.jpg",
+            "alt" => "alt text"
+            )
+        ),
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph6.jpg",
+            "alt" => "alt text"
+            )
+        ),
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph7.jpg",
+            "alt" => "alt text"
+            )
+        ),
+        array(
+            array(
+            "type" => "image-responsive",
+            "src" => "assets/images/ph8.jpg",
+            "alt" => "alt text"
+            )
+        )
+      
 );
 
 $vars['contactSection'] = array(

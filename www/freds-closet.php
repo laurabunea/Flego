@@ -401,6 +401,6 @@ $vars['flegoSection'] = array(
         )
     );
 
-include_once __DIR__ . "/page1.php";
+include_once __DIR__ . "/dummyData/page1.php";
 
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));

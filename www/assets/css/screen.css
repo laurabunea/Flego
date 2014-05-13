@@ -3778,11 +3778,11 @@ html, body {
   font-weight: 400;
   font-style: normal; }
 
-.font-primary--light, h1, .intro, .lego--heading, .text-input {
+.font-primary--light, h1, .intro, h2, .lego--heading, .text-input {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif;
   font-weight: 300;
   font-style: normal; }
-  .ie8 .font-primary--light, .ie8 h1, .ie8 .intro, .ie8 .lego--heading, .ie8 .text-input {
+  .ie8 .font-primary--light, .ie8 h1, .ie8 .intro, .ie8 h2, .ie8 .lego--heading, .ie8 .text-input {
     font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
 .font-primary--light-italic, .blockquote {
@@ -4275,7 +4275,7 @@ Try to use these on a limited basis and avoid creating entirely different versio
 body {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
-.font-secondary, h2 {
+.font-secondary {
   font-family: "georgia", serif;
   font-weight: 400;
   font-style: normal; }
