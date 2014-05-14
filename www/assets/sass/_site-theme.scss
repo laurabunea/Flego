@@ -102,6 +102,20 @@ $watermelon-link-color:            #fff;
 $watermelon-button-color:          #d75650;
 $watermelon-button-text-color:     #fff;
 
+$music-bg-color:              #fff;
+$music-border-color:          #fff;
+$music-text-color:            #000;
+$music-link-color:            #37B67F;
+$music-button-color:          #37B67F;
+$music-button-text-color:     #fff;
+
+$digital-bg-color:              #fff;
+$digital-border-color:          #fff;
+$digital-text-color:            #000;
+$digital-link-color:            #1392B2;
+$digital-button-color:          #1392B2;
+$digital-button-text-color:     #fff;
+
 //array of theme variables - the children of the array always need to be in the same order!
 $theme-names: 
   primary,
@@ -111,7 +125,9 @@ $theme-names:
   success,
   warning,
   error,
-  watermelon;
+  watermelon,
+  music,
+  digital;
 
 $bg-color:
   $primary-bg-color,
@@ -121,7 +137,9 @@ $bg-color:
   $success-bg-color,
   $warning-bg-color,
   $error-bg-color,
-  $watermelon-bg-color;
+  $watermelon-bg-color,
+  $music-bg-color,
+  $digital-bg-color;
 
 $border-color: 
   $primary-border-color,
@@ -131,7 +149,9 @@ $border-color:
   $success-border-color,
   $warning-border-color,
   $error-border-color,
-  $watermelon-border-color;
+  $watermelon-border-color,
+  $music-border-color,
+  $digital-border-color;
 
 $text-color: 
   $primary-text-color,
@@ -141,7 +161,10 @@ $text-color:
   $success-text-color,
   $warning-text-color,
   $error-text-color,
-  $watermelon-text-color;
+  $watermelon-text-color,
+  $music-text-color,
+  $digital-text-color
+  ;
 
 $link-color: 
   $primary-link-color,
@@ -151,7 +174,9 @@ $link-color:
   $success-link-color,
   $warning-link-color,
   $error-link-color,
-  $watermelon-link-color;
+  $watermelon-link-color,
+  $music-link-color,
+  $digital-link-color;
 
 $button-color: 
   $primary-button-color,
@@ -161,7 +186,9 @@ $button-color:
   $success-button-color,
   $warning-button-color,
   $error-button-color,
-  $watermelon-button-color;
+  $watermelon-button-color,
+  $music-button-color,
+  $digital-button-color;
 
 $button-text-color: 
   $primary-button-text-color,
@@ -171,7 +198,9 @@ $button-text-color:
   $success-button-text-color,
   $warning-button-text-color,
   $error-button-text-color,
-  $watermelon-button-text-color;
+  $watermelon-button-text-color,
+  $music-button-text-color,
+  $digital-button-text-color;
 
 // Create a theme for each category
 @for $i from 1 through length($theme-names) {

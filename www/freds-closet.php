@@ -7,7 +7,7 @@ include_once __DIR__ . "/flego-blocks.php";
 include_once __DIR__ . "/dummyData/typography-heirarchy.php";
 include_once __DIR__ . "/dummyData/page1.php";
 include_once __DIR__ . "/dummyData/page2.php";
-
+include_once __DIR__ . "/dummyData/page3.php";
 //List your sites themes here: 
 $vars['themes'] = array(   
     "primary",  

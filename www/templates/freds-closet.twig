@@ -108,6 +108,9 @@
                 <a href='' class='btn block-s inline-block theme--primary mr-xs clean-link' data-showhide-trigger='pagetwo'>
                     Page 2
                 </a>
+                <a href='' class='btn block-s inline-block theme--primary mr-xs clean-link' data-showhide-trigger='pagethree'>
+                    Page 3
+                </a>
             </div>
         </div>
         <div class='block-m pt-0'>
@@ -125,6 +128,14 @@
                     'splitRight':'12:00am'
                 }) }}
                 {% include "page2.twig" %}
+            </div><!--grid container ends-->
+
+            <div  data-showhide-group='devices' class='grid-container device-container showhide-hidden' data-showhide-container='pagethree'>
+                {{ macros.lego('device-header', {
+                    'splitLeft':"Fred's awesome",
+                    'splitRight':'12:00am'
+                }) }}
+                {% include "page3.twig" %}
             </div><!--grid container ends-->
         </div>
     </div><!--theme ends-->

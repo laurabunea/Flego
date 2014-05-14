@@ -1,5 +1,5 @@
 <p>
-    <a href="{{item.href}}">
+    <a href="{{item.href}}" {% if item.class %}class='{{item.class}}'{% endif %}>
         {{item.label}}
     </a>
 </p>

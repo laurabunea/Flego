@@ -334,7 +334,7 @@ To cut down on rules in your stylesheet, you can extend this placeholder in your
 .block-element {
   display: block; }
 
-.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary, .theme--success, .theme--warning, .theme--error, .theme--watermelon {
+.theme--primary, .theme--secondary, .lego--heading, .theme--tertiary, .theme--quaternary, .theme--success, .theme--warning, .theme--error, .theme--watermelon, .theme--music, .theme--digital {
   border-width: 1px;
   border-style: solid; }
 
@@ -4457,6 +4457,38 @@ hr {
     .theme--watermelon .btn:hover {
       background-color: #d2403b;
       border-color: #d2403b; }
+
+.theme--music {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff; }
+  .theme--music a {
+    color: #37B67F; }
+    .theme--music a:hover {
+      color: #2b8f64; }
+  .theme--music .btn {
+    color: #fff;
+    background-color: #37B67F;
+    border-color: #37B67F; }
+    .theme--music .btn:hover {
+      background-color: #31a271;
+      border-color: #31a271; }
+
+.theme--digital {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff; }
+  .theme--digital a {
+    color: #1392B2; }
+    .theme--digital a:hover {
+      color: #0e6c84; }
+  .theme--digital .btn {
+    color: #fff;
+    background-color: #1392B2;
+    border-color: #1392B2; }
+    .theme--digital .btn:hover {
+      background-color: #117f9b;
+      border-color: #117f9b; }
 
 i {
   font-style: normal; }
