@@ -22,6 +22,7 @@ $vars['NZOnAirNav'] = array(
         )
     )     
 );
+
 $vars['NZOnAirIntro'] = array(
     array(
         "type" => "h1",
@@ -33,6 +34,7 @@ $vars['NZOnAirIntro'] = array(
         "data" => "A government broadcast funding agency - we invest in diverse local television, radio, music and digital media for New Zealand audiences."
     )
 );
+
 $vars['NZOnAirShowcase'] = array(
     "content" => array(
         array(
