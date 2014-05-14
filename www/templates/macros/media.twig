@@ -1,14 +1,14 @@
 {% import "macros.twig" as macros %}
 
-    {{ macros.flego('media', {
-            'gridContainer': 'grid-container',      
-            'gridMiddle': true,           
-            'themeClass': 'theme--quaternary',       
-            'blockSize': 'm',                       
-            'isStacked' : '',                   
-            'mediaLeft':'col-1-4 col--q-small',     
-            'mediaRight':'col-3-4 col--q-small',    
-            'mediaLeftData': data.dummyImage,     
-            'mediaRightData': data.dummyContent      
-        }) 
-    }}
+{{ macros.flego('media', {
+        'gridContainer': 'grid-container',      
+        'gridMiddle': true,           
+        'themeClass': 'quaternary',       
+        'blockSize': 'm',                       
+        'isStacked' : '',                   
+        'mediaLeft':'col-1-4 col--q-small',     
+        'mediaRight':'col-3-4 col--q-small',    
+        'mediaLeftData': data.dummyImage,     
+        'mediaRightData': data.dummyContent      
+    }) 
+}}

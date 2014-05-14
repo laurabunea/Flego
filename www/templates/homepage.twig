@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <!-- Introduction -->
+    <!--  Introduction -->
     {{ macros.flego('section', {  
         'gridContainer':'grid-container-xl',
         'externalThemeClass':'tertiary',
@@ -14,8 +14,8 @@
     {{ macros.flego('media', {  
         'gridContainer':'grid-container-xl',
         'themeClass': 'primary',
-        'mediaLeftData': data.fredimage,
-        'mediaRightData': data.fredcontent
+        'mediaLeftData': data.fredSection.image,
+        'mediaRightData': data.fredSection.content
     }) }}
     
     <!-- Flego content -->
@@ -24,16 +24,16 @@
         'themeClass': 'quaternary',
         'mediaLeft':'col-3-4',
         'mediaRight':'col-1-4',
-        'mediaLeftData': data.flegocontent,
-        'mediaRightData': data.flegoimage
+        'mediaLeftData': data.flegoSection.content,
+        'mediaRightData': data.flegoSection.image
     }) }}
     
     <!-- Freds closet -->
     {{ macros.flego('media', {  
         'gridContainer':'grid-container-xl',
         'themeClass': 'primary',
-        'mediaLeftData': data.fredsclosetimage,
-        'mediaRightData': data.fredsclosetcontent
+        'mediaLeftData': data.fredsClosetSection.image,
+        'mediaRightData': data.fredsClosetSection.content
     }) }}
 
 {% endblock %}

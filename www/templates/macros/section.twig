@@ -1,8 +1,11 @@
 {% import "macros.twig" as macros %}
 
-	{{ macros.flego('section', { 
-	    'colSize':'col-3-4 col--q-small',
-	    'themeClass':'warning',
-	    'blockSize': 'm',
-	    'content': data.contentblock
-	}) }}
+{{ macros.flego('section', { 
+    'gridContainer':'grid-container',
+    'colSize':'col-3-4 col--q-small',
+    'externalThemeClass':'warning',
+    'themeClass':'warning',
+    'blockSize': 'm',
+    'paddingOverrides': 'pb-0',
+    'content': data.contentblock
+}) }}
