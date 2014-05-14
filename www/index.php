@@ -54,15 +54,12 @@ $vars['flegoSection'] = array(
         ),
         array(
             "type" => "intro",
-            "data" => "Flego is built of Fred...."
+            "data" => "Flego blocks are blocks made up from Fred.scss components."
         ),
         array(
-            "type" => "content",
-            "data" => array(
-                "The primary benefit of using design patterns is that we are not constantly re-inventing the wheel when coming up with the general functionality of a site. ",
-                "It encouraged a much more modular approach to development, the idea being that any pattern could be used anywhere on a template. ",
-                "Flego is some dynamic building blocks to help your site get up and running fast. Once you recognise patterns you should delete repeated code and add it to the lego blocks"
-                )
+            "type" => "p",
+            "data" => "Flego is a great tool for bringing your wireframes to life fast. Thus giving you more time to revise the designs more often and refine them sooner."
+                
         ),
         array(
             "type" => "button",

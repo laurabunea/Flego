@@ -12,7 +12,7 @@ $vars['flegoContent'] = array(
     ),
      array(
         "type" => "intro",
-        "data" => "These blocks should be used for starting purposes only. Once you recognise a pattern you should make specific blocks so you dont have  to repeat the code"
+        "data" => "Flego is a great tool for bringing your wireframes to life fast. Thus giving you more time to revise the designs more often and refine them sooner."
     )       
 );
 
