@@ -4,3 +4,34 @@
   'navigation': data.headerData.navigation,
   'themeClass': 'tertiary'
 }) }}
+
+{# contactSection #}
+{{ macros.flego('section', { 
+    'gridContainer':'grid-container-xl',
+    'colSize':'col',
+    'externalThemeClass':'tertiary',
+    'blockSize': 'm',
+    'textCenter': true,
+    'paddingOverrides': 'pb-0',
+    'content': data.page2Header
+}) }}
+
+{# contactSection #}
+{{ macros.flego('section', { 
+    'gridContainer':'grid-container pt-m pb-m',
+    'colSize':'col',
+    'externalThemeClass':'secondary',
+    'blockSize': 'm',
+    'textCenter': true,
+    'content': data.page2Intro
+}) }}
+
+{# portfolioGallery Section  #}
+{{ macros.flego('gallery-list', {
+    'gridContainer': 'grid-container-xl',
+    'themeClass':'primary',
+    'colSize':'col-1-3 col--q-small',
+    'blockSize': 'm',
+    'textCenter':true,
+    'galleryData':data.page2Gallery
+}) }}

@@ -64,7 +64,7 @@ $vars['aboutUsGallery'] = array(
 
         array(
             "type" => "h4",
-            "data" => "Mrs Thinkalot"
+            "data" => "Mr Dopey"
         ),
         "data" => "Second para",
         array(
@@ -89,7 +89,7 @@ $vars['aboutUsGallery'] = array(
         ),
         array(
             "type" => "h4",
-            "data" => "Miss Tired"
+            "data" => "Mr Dolphin"
         ),
         "data" => "I am a paragraph of text ",
         array(

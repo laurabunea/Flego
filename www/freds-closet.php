@@ -6,6 +6,7 @@ $vars = array();
 include_once __DIR__ . "/flego-blocks.php";
 include_once __DIR__ . "/dummyData/typography-heirarchy.php";
 include_once __DIR__ . "/dummyData/page1.php";
+include_once __DIR__ . "/dummyData/page2.php";
 
 //List your sites themes here: 
 $vars['themes'] = array(   
@@ -310,21 +311,5 @@ $vars['typographySecondary'] = array(
     )          
 );
 
-//$vars['dummycontent'] = array(
-//    array(
-//        "type" => "h1",
-//        "data" => "Common media block"
-//    ),
-//    array(
-//        "type" => "intro",
-//        "data" => "Intro para"
-//    ),
-//    array(
-//        "type" => "button",
-//        "label" => "I'm a button",
-//        "class" => "mt-s",
-//        "href" => "clickme",
-//    )
-//);
 
 echo $twig->render('freds-closet.twig', array('siteClass' => '','data' => $vars));
