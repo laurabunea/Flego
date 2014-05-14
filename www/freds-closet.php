@@ -361,7 +361,7 @@ $vars['flegoSection'] = array(
         )
         ,array(
             "type" => "p",
-            "class" => "font-secondary",
+            "class" => "font-primary",
             "data" => "The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. "
         )          
     );
@@ -379,7 +379,7 @@ $vars['flegoSection'] = array(
         )
         ,array(
             "type" => "p",
-            "class" => "font-secondary",
+            "class" => "font-secondary--regular",
             "data" => "The stoked force of his skiving off was on par with Manus Morissette's flat stick quater-acre patch. Put the jug on will you bro, all these buzzy vivids can wait till later. "
         )          
     );

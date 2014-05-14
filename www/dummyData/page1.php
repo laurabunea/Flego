@@ -107,6 +107,7 @@ $vars['aboutUsGallery'] = array(
     )   
 );
 
+
 $vars['portfolioSection'] = array(
     array(
         "type" => "h2",
@@ -117,8 +118,8 @@ $vars['portfolioSection'] = array(
         "data" => "James Cook was cooking up a feed when the tapu chundering event as a beached as Undie 500. Mean while, in the pub, Jonah Lomu and The Topp Twins were up to no good with a bunch of wicked Longest Drink in Towns."
     )
 );
+
 $vars['portfolioGallery'] = array(
-  
         array(
             array(
             "type" => "image-responsive",
@@ -174,8 +175,7 @@ $vars['portfolioGallery'] = array(
             "src" => "assets/images/ph8.jpg",
             "alt" => "alt text"
             )
-        )
-      
+        ) 
 );
 
 $vars['contactSection'] = array(

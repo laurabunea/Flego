@@ -2,7 +2,7 @@ body {
   font-family: $sans-serif-stack;
 }
 
-.font-secondary {
+.font-secondary--regular {
     @include font($font-secondary, $primary-font-weight , normal);
 }
     .font-secondary--light {

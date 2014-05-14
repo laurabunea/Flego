@@ -72,6 +72,7 @@
     'colSize':'col',
     'externalThemeClass':'watermelon',
     'blockSize': 'm',
+    'paddingOverrides': 'pb-0',
     'content': data.contactSection
 }) }}
 
@@ -83,32 +84,3 @@
     'blockSize': 'm',
     'formData':data.formData
 }) }}
-
-
-{#{{ macros.flego('content-block', { 
-    'colSize':'col-3-4--q-large col-3-4--q-xlarge col--q-small',
-    'themeClass':'primary',
-    'blockSize': 'm',
-    'content': data.CopyNS
-}) }}
-
-{{ macros.flego('media', {       
-    'themeClass': 'primary',       
-    'blockSize': 'm',                                          
-    'mediaLeft':'col-3-4 col--q-small',     
-    'mediaRight':'col-1-4 col--q-small',    
-    'mediaLeftData': data.mediaBlock2NS.leftCopy,     
-    'mediaRightData': data.mediaBlock2NS.rightCopy       
-})}}
-
-<div class='block-m block--stacked'>
-    {{ macros.flego('panel', {
-        'blockSize': 'm', 
-        'close':true,
-        'radius':true,
-        'theme':'secondary', 
-        'content':data.panel,
-        'buttonLabel':'Click me',
-        'buttonLink':'/clickme'
-    }) }}
-</div>#}

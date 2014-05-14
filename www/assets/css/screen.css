@@ -4275,7 +4275,7 @@ Try to use these on a limited basis and avoid creating entirely different versio
 body {
   font-family: 'SourceSansPro', 'Open Sans', sans-serif; }
 
-.font-secondary {
+.font-secondary--regular {
   font-family: "georgia", serif;
   font-weight: 400;
   font-style: normal; }
