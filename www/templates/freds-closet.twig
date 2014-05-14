@@ -87,24 +87,39 @@
         'swatchData': data.typography,
         'externalThemeWrapper': 'theme--primary radius'
     }) }}
-   
+    
     <div id='flego-blocks' style='background-color:#EDEDED;' class='pb-xxxl'>
         <div class='grid-container-xl '> 
             {{ macros.flego('content-block', {
                 'content': data.flegoSection, 
             }) }}
         </div>
+        <div class='grid-container text-center'>
+            <a href='' class='btn block-s inline-block theme--primary mr-xs clean-link'  data-showhide-trigger='pageone'>
+                Page 1
+            </a>
+            <a href='' class='btn block-s inline-block theme--primary mr-xs clean-link' data-showhide-trigger='pagetwo'>
+                Page 2
+            </a>
+        </div>
         <div class='block-m pt-0'>
-            <div class='grid-container device-container ' >
+            <div data-showhide-group='devices' class='grid-container device-container showhide-hidden' data-showhide-container='pageone'>
                 {{ macros.lego('device-header', {
                     'splitLeft':"Fred's awesome",
                     'splitRight':'12:00am'
                 }) }}
                 {% include "page1.twig" %}
-                {#{% include "page1.twig" %}#}
-
             </div><!--grid container ends-->
-        </div> 
+        
+            <div  data-showhide-group='devices' class='grid-container device-container showhide-hidden' data-showhide-container='pagetwo'>
+                {{ macros.lego('device-header', {
+                    'splitLeft':"Fred's awesome",
+                    'splitRight':'12:00am'
+                }) }}
+                {#{% include "page2.twig" %}#}
+                <p>Add shit here</p>
+            </div><!--grid container ends-->
+        </div>
     </div><!--theme ends-->
 
 {% endblock %}
