@@ -31,16 +31,32 @@
     }) 
 }}
 
-{{ macros.flego('media', {
+
+{% macro section_nav(options) %}
+    {% import "macros.twig" as macros %}
+    {% set defaults = {
         'gridContainer': 'grid-container',               
-        'themeClass': 'music',                                         
+        'themeClass': 'music',                                      
         'mediaLeft':'col-1-3 col--q-small',
         'paddingOverrideLeft' : 'pb-0--q-small pb-0--q-medium',     
         'mediaRight':'col-2-3 col--q-small',    
         'mediaLeftData': data.NZOnArticle.contentLeft,     
+        'mediaRightData': data.NZOnArticle.contentRight
+        }
+    %}
+
+    {{ macros.flego('media', defaults|merge(options)) }}
+{% endmacro %}
+
+{% import _self as m2 %}
+
+{{ m2.section_nav({
+        'themeClass': 'music',                                      
+        'mediaLeftData': data.NZOnArticle.contentLeft,     
         'mediaRightData': data.NZOnArticle.contentRight      
     }) 
 }}
+
 
 {{ macros.flego('media', {
         'gridContainer': 'grid-container',               

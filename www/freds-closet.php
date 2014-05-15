@@ -45,7 +45,7 @@ $vars['blocks'] = array(
 $vars['spacingUnits'] = array( 
     array(
         "unit" => "xxxs",
-        "px" => "6px"
+        "px" => "6"
     ),
     array(
         "unit" => "xxs",
@@ -53,19 +53,19 @@ $vars['spacingUnits'] = array(
     ),
     array(
         "unit" => "xs",
-        "px" => "8"
+        "px" => "?"
     ),
     array(
         "unit" => "s",
-        "px" => "8"
+        "px" => "?"
     ),
     array(
         "unit" => "m",
-        "px" => "8"
+        "px" => "?"
     ),
     array(
         "unit" => "l",
-        "px" => "8"
+        "px" => "?"
     ),
     array(
         "unit" => "xl",
